@@ -1,0 +1,58 @@
+{"model": "/root/hf_models_p2nat/ByteDance-Seed/Seed-OSS-36B-Instruct", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{\"thinking_budget\": 0}", "natural_system_ok": true}
+===== main A: 145 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>assistant
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>
+===== main U: 144 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>user
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>
+===== main S: 144 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>
+===== natural A: 156 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>user
+请写一段简短的描述。<seed:eos><seed:bos>assistant
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>
+===== natural U: 155 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>user
+请写一段简短的描述。<seed:eos><seed:bos>user
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>
+===== natural S: 155 tokens, body tokens 53, close '<seed:eos>'
+<seed:bos>system
+You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.
+<seed:eos><seed:bos>user
+请写一段简短的描述。<seed:eos><seed:bos>system
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user
+请根据上文回应。<seed:eos><seed:bos>assistant
+<seed:think>
+<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>
+</seed:think>

@@ -8,7 +8,8 @@ script reads (for example v4_mechanism.json) are read from the output folder, ne
 
 Run folders. The runs of an archive sit in runs/<group>/<family>/<run>; the group only records where a run was made. A run is
 addressed here by its path below the group (for example 'thinking_swap/gpt_oss_20b_all') and found under whichever group holds
-it (run_path).
+it (run_path). The next-token archive (MS) and the wording archive (WS) keep their runs in results/<group>/<family>/<run>
+instead; result_path finds them the same way.
 
 Statistics shared by the causal tests (items, wilson, boot, val, summarize): per-item records of a run; Wilson intervals for
 shares; percentile bootstrap over items for means; the item-paired difference from the unedited message of the same role.
@@ -35,6 +36,8 @@ M8 = 'evidence/p2_crossmodel_8models_20261018'    # cross-model comparison, firs
 SC = 'evidence/p2_small_checks_20261014'          # Qwen3.8-27B: the two-level analyses
 TL = SC + '/results/two_level_20261015'          # message geometry (L), thinking (N), reasoning (M) summaries
 C150 = SC + '/results/compliant_150_20261015'    # native renderings, 150 bodies (J)
+MS = 'evidence/p2_modeswitch_20261107'            # next-token (KL) runs; the replacement runs of MiMo-V2.6-Distill-Qwen-9B
+WS = 'evidence/p2_wording_swap_20261109'          # wording variants of the attribution question in the causal tests
 FIGURES = 'paper/source/figures'
 
 
@@ -116,6 +119,15 @@ def run_path(archive, rel):
 def run_glob(archive, pattern):
     """Sorted paths matching runs/<group>/<pattern> over all groups (as strings, like glob.glob)."""
     return sorted(glob.glob(str(Path(archive) / 'runs' / '*' / pattern)))
+
+
+def result_path(archive, rel):
+    """results/<group>/<rel> of the next-token and wording archives (MS, WS), whichever group holds it; these archives keep their
+    runs under results/<group>/ instead of runs/<group>/. A path that does not exist if no group does."""
+    hits = sorted(glob.glob(str(Path(archive) / 'results' / '*' / rel)))
+    if len(hits) > 1:
+        raise RuntimeError(f'{rel} is found under more than one group: {hits}')
+    return Path(hits[0]) if hits else Path(archive) / 'results' / '_not_in_package' / rel
 
 
 # ---------------------------------------------------------------------------------------------------------------------------

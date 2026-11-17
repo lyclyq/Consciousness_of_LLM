@@ -1,0 +1,402 @@
+{
+ "tag": "mimo_vl7b_rl_2508",
+ "order": "main",
+ "n_layers": 36,
+ "keep_layers": [
+  13,
+  18,
+  22,
+  26,
+  31,
+  35
+ ],
+ "n_held_out": 200,
+ "families": 200,
+ "n_bodies_on_disk": 400,
+ "group": "no_index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/hf_models/XiaomiMiMo/MiMo-VL-7B-RL-2508",
+  "tmpl_kwargs": {},
+  "lang": "zh",
+  "fixed_date": null,
+  "natural_system_ok": true
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0275
+  },
+  "2": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.05
+  },
+  "3": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.02
+  },
+  "4": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.015
+  },
+  "5": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.005
+  },
+  "full": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0075
+  },
+  "empty": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0
+  },
+  "6": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0225
+  },
+  "7": {
+   "n_bodies": 196,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.002551020408163265
+  },
+  "8": {
+   "n_bodies": 110,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.004545454545454545
+  },
+  "9": {
+   "n_bodies": 37,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0
+  },
+  "10": {
+   "n_bodies": 1,
+   "defined": true,
+   "index_layers_beyond_first_third": 0,
+   "layers_beyond_first_third": 24,
+   "index_layers_all": 0,
+   "share_A_lowest_median_beyond_first_third": 0.0
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 0.5863173233848644,
+   "M2_ci95": [
+    0.4759349418258095,
+    0.6940078967658346
+   ],
+   "M3_direction_cos": 0.4770608659166562,
+   "M3_ci95": [
+    0.38241165575316766,
+    0.6070547320525416
+   ],
+   "C1_median": 5.712038527821488,
+   "C1_ci95": [
+    4.020490862731239,
+    7.995759723936586
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.6077613442530041,
+   "per_layer": {
+    "13": {
+     "size": 0.6095200391980964,
+     "cos": 0.7264800834172014
+    },
+    "18": {
+     "size": 0.5540580179086885,
+     "cos": 0.551899796208731
+    },
+    "22": {
+     "size": 0.5284048095166708,
+     "cos": 0.3987604332223465
+    },
+    "26": {
+     "size": 0.5742395408211517,
+     "cos": 0.25331764287416814
+    },
+    "31": {
+     "size": 0.598395105948577,
+     "cos": 0.4022219356245814
+    },
+    "35": {
+     "size": 1.0716083285772917,
+     "cos": 0.7775385514575672
+    }
+   }
+  },
+  "A-S": {
+   "defined": true,
+   "M2_size_kept": 0.8373947484968495,
+   "M2_ci95": [
+    0.7880731761414539,
+    0.8838195141803228
+   ],
+   "M3_direction_cos": 0.8165718916758498,
+   "M3_ci95": [
+    0.7768925754872413,
+    0.8362810215239426
+   ],
+   "C1_median": 15.127734713130401,
+   "C1_ci95": [
+    12.454252771219045,
+    18.75874051419019
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.8342672143778256,
+   "per_layer": {
+    "13": {
+     "size": 0.8422772779586337,
+     "cos": 0.8231653384225409
+    },
+    "18": {
+     "size": 0.858413023789023,
+     "cos": 0.8529836216604847
+    },
+    "22": {
+     "size": 0.8325122190350652,
+     "cos": 0.8276308220264064
+    },
+    "26": {
+     "size": 0.7357342411305757,
+     "cos": 0.6303104741775292
+    },
+    "31": {
+     "size": 0.5372137013336968,
+     "cos": 0.5373588304770212
+    },
+    "35": {
+     "size": 1.1479555586358043,
+     "cos": 0.8099784449291585
+    }
+   }
+  },
+  "U-S": {
+   "defined": true,
+   "M2_size_kept": 0.8727058035316846,
+   "M2_ci95": [
+    0.8263178365858249,
+    0.9461939654110194
+   ],
+   "M3_direction_cos": 0.6744692052997574,
+   "M3_ci95": [
+    0.6112231440544522,
+    0.7294755875286094
+   ],
+   "C1_median": 18.994074512550796,
+   "C1_ci95": [
+    15.583026074029128,
+    23.104592521783946
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.7900170710295142,
+   "per_layer": {
+    "13": {
+     "size": 0.8449251078851938,
+     "cos": 0.7082895507127511
+    },
+    "18": {
+     "size": 0.9004864991781754,
+     "cos": 0.7334291033777566
+    },
+    "22": {
+     "size": 0.956676275585819,
+     "cos": 0.6406488598867636
+    },
+    "26": {
+     "size": 0.823799638961169,
+     "cos": 0.48024604004919946
+    },
+    "31": {
+     "size": 0.7028029146506728,
+     "cos": 0.5154681350068114
+    },
+    "35": {
+     "size": 1.124037311287866,
+     "cos": 0.8386621715143371
+    }
+   }
+  }
+ },
+ "words": {
+  "place_before": {
+   "pair": [
+    "医院",
+    "学校"
+   ],
+   "M2_size_kept": 0.39002691967371583,
+   "M2_ci95": [
+    0.3496583499118901,
+    0.42982595191979656
+   ],
+   "M3_direction_cos": 0.8432285998206595,
+   "C1_median": 152.74107171635342
+  },
+  "place_after": {
+   "pair": [
+    "医院",
+    "学校"
+   ],
+   "M2_size_kept": 0.4556493197079799,
+   "M2_ci95": [
+    0.3998625719633604,
+    0.5144953002201673
+   ],
+   "M3_direction_cos": 0.7779027985650677,
+   "C1_median": 81.48423005789792
+  },
+  "time_before": {
+   "pair": [
+    "昨天",
+    "明天"
+   ],
+   "M2_size_kept": 0.49922230759557606,
+   "M2_ci95": [
+    0.46072706321210755,
+    0.5698144837975392
+   ],
+   "M3_direction_cos": 0.5960570472032528,
+   "C1_median": 7.6291698577353175
+  },
+  "time_after": {
+   "pair": [
+    "昨天",
+    "明天"
+   ],
+   "M2_size_kept": 0.6530821449544797,
+   "M2_ci95": [
+    0.5932080903611328,
+    0.7086007105732501
+   ],
+   "M3_direction_cos": 0.6209653348388902,
+   "C1_median": 2.243548615479844
+  },
+  "name_before": {
+   "pair": [
+    "小明",
+    "小红"
+   ],
+   "M2_size_kept": 0.6460156578872465,
+   "M2_ci95": [
+    0.6080987353891752,
+    0.6952273709072351
+   ],
+   "M3_direction_cos": 0.7030473282832747,
+   "C1_median": 2.907793459563467
+  },
+  "name_after": {
+   "pair": [
+    "小明",
+    "小红"
+   ],
+   "M2_size_kept": 0.43754793791441826,
+   "M2_ci95": [
+    0.4024779925160887,
+    0.4951362894571844
+   ],
+   "M3_direction_cos": 0.5723097515765705,
+   "C1_median": 2.707500252846895
+  },
+  "feeling_before": {
+   "pair": [
+    "愉快",
+    "痛苦"
+   ],
+   "M2_size_kept": 0.47328192422700627,
+   "M2_ci95": [
+    0.41656507584709623,
+    0.5317783479336061
+   ],
+   "M3_direction_cos": 0.5717879768767186,
+   "C1_median": 40.99929005714536
+  },
+  "feeling_after": {
+   "pair": [
+    "愉快",
+    "痛苦"
+   ],
+   "M2_size_kept": 0.5285776713084263,
+   "M2_ci95": [
+    0.4710492836995912,
+    0.5957485775950428
+   ],
+   "M3_direction_cos": 0.5962974702214434,
+   "C1_median": 11.102174109606384
+  }
+ },
+ "A-U_minus_max_word_M2": {
+  "before": -0.059698334502382044,
+  "after": -0.06676482156961527
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 0.7575284242630005,
+   "common_ratio": 0.7276434946806518,
+   "cos_first_last": 0.8906168210306327,
+   "share_first": 0.1666118939997037,
+   "share_last": 0.1506116270469322
+  },
+  "A-S": {
+   "total_ratio": 0.7704188227653503,
+   "common_ratio": 0.7339430049806055,
+   "cos_first_last": 0.8629183259205955,
+   "share_first": 0.1626359843877977,
+   "share_last": 0.15066765501408294
+  },
+  "U-S": {
+   "total_ratio": 0.7952629327774048,
+   "common_ratio": 0.7451529865262032,
+   "cos_first_last": 0.8929951139487986,
+   "share_first": 0.19471548529085164,
+   "share_last": 0.16954495609113768
+  }
+ },
+ "verdict": {
+  "prediction": "P2",
+  "M1_no_index_at_any_length": true,
+  "holds": true,
+  "M1_evaluable": true
+ }
+}

@@ -1,0 +1,127 @@
+wording en pron fixed date 2026-10-30 ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. You C. Me. Answer with the letter only.", "Who wrote the message before this question? A. Me B. The system C. You. Answer with the letter only."]
+[load] sdpa attempt failed (ValueError('GptOssForCausalLM does not support an attention implementation through torch.nn.functional.scaled_dot_product_attention yet. Please request the support for this architecture: https://github.com/huggingface/transformers/issues/28005. If you believe this error is a bug, please open an issu); retrying with the default attention
+Fetching 44 files:   0%|          | 0/44 [00:00<?, ?it/s]Fetching 44 files: 100%|██████████| 44/44 [00:00<00:00, 2181.20it/s]
+Loading weights:   0%|          | 0/615 [00:00<?, ?it/s]Loading weights:   0%|          | 1/615 [00:05<53:01,  5.18s/it]Loading weights:   0%|          | 2/615 [00:10<52:22,  5.13s/it]Loading weights:   1%|          | 5/615 [00:12<21:03,  2.07s/it]Loading weights:   1%|          | 6/615 [00:17<27:26,  2.70s/it]Loading weights:   2%|▏         | 13/615 [00:17<07:47,  1.29it/s]Loading weights:   3%|▎         | 18/615 [00:17<04:32,  2.19it/s]Loading weights:   3%|▎         | 21/615 [00:20<05:32,  1.79it/s]Loading weights:   4%|▍         | 24/615 [00:25<08:29,  1.16it/s]Loading weights:   5%|▍         | 30/615 [00:25<04:47,  2.03it/s]Loading weights:   6%|▌         | 36/615 [00:25<02:58,  3.24it/s]Loading weights:   7%|▋         | 40/615 [00:32<07:02,  1.36it/s]Loading weights:   7%|▋         | 46/615 [00:33<04:29,  2.11it/s]Loading weights:   9%|▊         | 53/615 [00:33<02:48,  3.34it/s]Loading weights:   9%|▉         | 58/615 [00:33<02:16,  4.09it/s]Loading weights:  10%|█         | 62/615 [00:33<01:46,  5.19it/s]Loading weights:  11%|█         | 67/615 [00:33<01:17,  7.09it/s]Loading weights:  12%|█▏        | 71/615 [00:36<02:18,  3.94it/s]Loading weights:  12%|█▏        | 74/615 [00:37<02:20,  3.85it/s]Loading weights:  13%|█▎        | 82/615 [00:37<01:19,  6.69it/s]Loading weights:  14%|█▍        | 86/615 [00:39<02:20,  3.77it/s]Loading weights:  15%|█▍        | 90/615 [00:39<01:49,  4.80it/s]Loading weights:  15%|█▌        | 93/615 [00:45<05:01,  1.73it/s]Loading weights:  16%|█▌        | 99/615 [00:45<03:09,  2.73it/s]Loading weights:  17%|█▋        | 102/615 [00:45<02:31,  3.38it/s]Loading weights:  17%|█▋        | 106/615 [00:48<03:25,  2.48it/s]Loading weights:  18%|█▊        | 108/615 [00:48<02:55,  2.89it/s]Loading weights:  18%|█▊        | 110/615 [00:53<05:55,  1.42it/s]Loading weights:  19%|█▊        | 115/615 [00:53<03:36,  2.30it/s]Loading weights:  20%|██        | 123/615 [00:55<03:00,  2.73it/s]Loading weights:  20%|██        | 126/615 [01:00<05:07,  1.59it/s]Loading weights:  22%|██▏       | 133/615 [01:00<03:02,  2.64it/s]Loading weights:  22%|██▏       | 136/615 [01:00<02:28,  3.22it/s]Loading weights:  23%|██▎       | 140/615 [01:03<03:03,  2.59it/s]Loading weights:  23%|██▎       | 142/615 [01:03<02:37,  3.00it/s]Loading weights:  23%|██▎       | 144/615 [01:08<05:53,  1.33it/s]Loading weights:  24%|██▍       | 148/615 [01:08<03:51,  2.01it/s]Loading weights:  25%|██▍       | 152/615 [01:08<02:37,  2.94it/s]Loading weights:  26%|██▌       | 157/615 [01:11<03:06,  2.46it/s]Loading weights:  26%|██▌       | 159/615 [01:11<02:39,  2.86it/s]Loading weights:  26%|██▌       | 161/615 [01:16<05:59,  1.26it/s]Loading weights:  27%|██▋       | 163/615 [01:16<04:44,  1.59it/s]Loading weights:  27%|██▋       | 169/615 [01:16<02:27,  3.03it/s]Loading weights:  28%|██▊       | 172/615 [01:18<02:51,  2.59it/s]Loading weights:  29%|██▊       | 176/615 [01:18<02:05,  3.50it/s]Loading weights:  30%|██▉       | 183/615 [01:18<01:10,  6.12it/s]Loading weights:  30%|███       | 187/615 [01:18<00:54,  7.80it/s]Loading weights:  31%|███       | 191/615 [01:21<01:46,  3.99it/s]Loading weights:  32%|███▏      | 194/615 [01:21<01:43,  4.05it/s]Loading weights:  33%|███▎      | 201/615 [01:21<01:00,  6.83it/s]Loading weights:  33%|███▎      | 206/615 [01:22<00:44,  9.13it/s]Loading weights:  34%|███▍      | 210/615 [01:24<01:37,  4.15it/s]Loading weights:  35%|███▍      | 213/615 [01:29<03:46,  1.77it/s]Loading weights:  36%|███▌      | 220/615 [01:30<02:40,  2.46it/s]Loading weights:  37%|███▋      | 227/615 [01:31<01:46,  3.66it/s]Loading weights:  38%|███▊      | 234/615 [01:31<01:10,  5.43it/s]Loading weights:  39%|███▊      | 237/615 [01:31<01:00,  6.29it/s]Loading weights:  39%|███▉      | 242/615 [01:34<01:38,  3.80it/s]Loading weights:  40%|███▉      | 244/615 [01:34<01:27,  4.24it/s]Loading weights:  40%|████      | 246/615 [01:39<03:54,  1.57it/s]Loading weights:  41%|████      | 252/615 [01:39<02:16,  2.66it/s]Loading weights:  41%|████▏     | 255/615 [01:39<01:47,  3.36it/s]Loading weights:  42%|████▏     | 258/615 [01:43<03:00,  1.97it/s]Loading weights:  42%|████▏     | 260/615 [01:43<02:30,  2.36it/s]Loading weights:  43%|████▎     | 262/615 [01:48<05:03,  1.16it/s]Loading weights:  43%|████▎     | 267/615 [01:48<02:52,  2.01it/s]Loading weights:  44%|████▍     | 271/615 [01:48<01:57,  2.94it/s]Loading weights:  45%|████▍     | 276/615 [01:50<02:16,  2.47it/s]Loading weights:  45%|████▌     | 279/615 [01:53<02:54,  1.93it/s]Loading weights:  47%|████▋     | 286/615 [01:53<01:37,  3.37it/s]Loading weights:  47%|████▋     | 289/615 [01:53<01:18,  4.14it/s]Loading weights:  48%|████▊     | 293/615 [01:54<01:00,  5.29it/s]Loading weights:  48%|████▊     | 296/615 [01:54<01:00,  5.24it/s]Loading weights:  49%|████▉     | 302/615 [01:54<00:38,  8.20it/s]Loading weights:  50%|████▉     | 305/615 [01:54<00:31,  9.71it/s]Loading weights:  51%|█████     | 311/615 [01:55<00:23, 12.80it/s]Loading weights:  51%|█████     | 314/615 [01:55<00:23, 13.05it/s]Loading weights:  52%|█████▏    | 320/615 [01:55<00:16, 17.57it/s]Loading weights:  53%|█████▎    | 323/615 [01:55<00:15, 18.84it/s]Loading weights:  53%|█████▎    | 328/615 [01:55<00:12, 23.13it/s]Loading weights:  54%|█████▍    | 332/615 [01:55<00:13, 20.95it/s]Loading weights:  55%|█████▍    | 337/615 [01:56<00:11, 24.57it/s]Loading weights:  55%|█████▌    | 341/615 [01:56<00:10, 26.09it/s]Loading weights:  56%|█████▌    | 345/615 [01:58<00:58,  4.62it/s]Loading weights:  57%|█████▋    | 348/615 [02:04<02:35,  1.71it/s]Loading weights:  58%|█████▊    | 354/615 [02:04<01:33,  2.79it/s]Loading weights:  58%|█████▊    | 357/615 [02:04<01:14,  3.48it/s]Loading weights:  59%|█████▊    | 361/615 [02:07<01:39,  2.54it/s]Loading weights:  59%|█████▉    | 363/615 [02:07<01:25,  2.96it/s]Loading weights:  59%|█████▉    | 365/615 [02:12<03:16,  1.27it/s]Loading weights:  60%|██████    | 371/615 [02:12<01:47,  2.27it/s]Loading weights:  61%|██████▏   | 378/615 [02:12<01:01,  3.85it/s]Loading weights:  62%|██████▏   | 381/615 [02:13<00:51,  4.50it/s]Loading weights:  63%|██████▎   | 387/615 [02:13<00:34,  6.54it/s]Loading weights:  64%|██████▍   | 395/615 [02:15<00:47,  4.61it/s]Loading weights:  65%|██████▍   | 397/615 [02:15<00:43,  5.00it/s]Loading weights:  65%|██████▍   | 399/615 [02:21<02:05,  1.72it/s]Loading weights:  66%|██████▌   | 405/615 [02:21<01:16,  2.74it/s]Loading weights:  67%|██████▋   | 412/615 [02:23<01:11,  2.83it/s]Loading weights:  67%|██████▋   | 414/615 [02:23<01:03,  3.16it/s]Loading weights:  68%|██████▊   | 416/615 [02:29<02:19,  1.43it/s]Loading weights:  68%|██████▊   | 421/615 [02:29<01:26,  2.24it/s]Loading weights:  69%|██████▉   | 426/615 [02:29<00:56,  3.36it/s]Loading weights:  70%|██████▉   | 429/615 [02:31<01:15,  2.45it/s]Loading weights:  70%|███████   | 432/615 [02:36<02:13,  1.38it/s]Loading weights:  71%|███████▏  | 439/615 [02:36<01:11,  2.46it/s]Loading weights:  72%|███████▏  | 443/615 [02:39<01:18,  2.19it/s]Loading weights:  73%|███████▎  | 447/615 [02:39<00:56,  2.95it/s]Loading weights:  73%|███████▎  | 450/615 [02:44<01:46,  1.54it/s]Loading weights:  74%|███████▍  | 455/615 [02:44<01:08,  2.34it/s]Loading weights:  74%|███████▍  | 458/615 [02:44<00:52,  2.97it/s]Loading weights:  75%|███████▍  | 461/615 [02:47<01:09,  2.22it/s]Loading weights:  75%|███████▌  | 464/615 [02:47<00:52,  2.90it/s]Loading weights:  76%|███████▌  | 466/615 [02:52<01:59,  1.25it/s]Loading weights:  77%|███████▋  | 473/615 [02:52<00:57,  2.45it/s]Loading weights:  78%|███████▊  | 477/615 [02:52<00:41,  3.36it/s]Loading weights:  78%|███████▊  | 481/615 [02:55<00:53,  2.52it/s]Loading weights:  79%|███████▊  | 484/615 [03:00<01:29,  1.46it/s]Loading weights:  80%|███████▉  | 489/615 [03:00<00:56,  2.24it/s]Loading weights:  80%|████████  | 495/615 [03:00<00:33,  3.54it/s]Loading weights:  81%|████████  | 499/615 [03:02<00:42,  2.72it/s]Loading weights:  82%|████████▏ | 502/615 [03:08<01:17,  1.46it/s]Loading weights:  82%|████████▏ | 507/615 [03:08<00:49,  2.20it/s]Loading weights:  83%|████████▎ | 512/615 [03:08<00:31,  3.22it/s]Loading weights:  84%|████████▍ | 516/615 [03:10<00:38,  2.55it/s]Loading weights:  84%|████████▍ | 519/615 [03:12<00:42,  2.28it/s]Loading weights:  85%|████████▍ | 522/615 [03:12<00:31,  2.93it/s]Loading weights:  86%|████████▌ | 529/615 [03:12<00:16,  5.13it/s]Loading weights:  87%|████████▋ | 533/615 [03:15<00:24,  3.30it/s]Loading weights:  87%|████████▋ | 536/615 [03:19<00:46,  1.69it/s]Loading weights:  88%|████████▊ | 539/615 [03:20<00:35,  2.15it/s]Loading weights:  89%|████████▉ | 548/615 [03:22<00:24,  2.72it/s]Loading weights:  90%|████████▉ | 551/615 [03:26<00:33,  1.90it/s]Loading weights:  91%|█████████ | 557/615 [03:26<00:20,  2.88it/s]Loading weights:  92%|█████████▏| 563/615 [03:26<00:12,  4.24it/s]Loading weights:  92%|█████████▏| 566/615 [03:28<00:17,  2.88it/s]Loading weights:  93%|█████████▎| 569/615 [03:28<00:13,  3.52it/s]Loading weights:  93%|█████████▎| 573/615 [03:29<00:08,  4.79it/s]Loading weights:  94%|█████████▍| 579/615 [03:29<00:04,  7.39it/s]Loading weights:  95%|█████████▍| 583/615 [03:36<00:18,  1.73it/s]Loading weights:  95%|█████████▌| 586/615 [03:36<00:13,  2.13it/s]Loading weights:  96%|█████████▌| 591/615 [03:36<00:07,  3.18it/s]Loading weights:  97%|█████████▋| 595/615 [03:36<00:04,  4.29it/s]Loading weights:  98%|█████████▊| 600/615 [03:39<00:04,  3.18it/s]Loading weights:  98%|█████████▊| 603/615 [03:39<00:03,  3.80it/s]Loading weights:  99%|█████████▉| 609/615 [03:39<00:01,  5.96it/s]Loading weights: 100%|█████████▉| 612/615 [03:39<00:00,  7.18it/s]Loading weights: 100%|██████████| 615/615 [03:39<00:00,  2.80it/s]
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae", "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31", "model": "/root/hf_models/openai/gpt-oss-120b", "on_kwargs": "{}", "n_layers": 36, "band": [0, 35], "fit_from": "r05r06_fits/g120/fit_m.pt", "question": "attr", "region": "message", "lang": "en", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU8_A", "swA8_U", "rswU8_A", "rswA8_U"], "batch": 8, "max_new": 3072, "torch": "2.11.0+cu130", "transformers": "5.19.0"}
+base_A 8/150 11s
+base_A 16/150 22s
+base_A 24/150 47s
+base_A 32/150 64s
+base_A 40/150 74s
+base_A 48/150 92s
+base_A 56/150 104s
+base_A 64/150 115s
+base_A 72/150 127s
+base_A 80/150 141s
+base_A 88/150 164s
+base_A 96/150 176s
+base_A 104/150 192s
+base_A 112/150 208s
+base_A 120/150 219s
+base_A 128/150 235s
+base_A 136/150 250s
+base_A 144/150 265s
+base_A 150/150 275s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}}
+base_U 8/150 290s
+base_U 16/150 302s
+base_U 24/150 315s
+base_U 32/150 328s
+base_U 40/150 342s
+base_U 48/150 359s
+base_U 56/150 374s
+base_U 64/150 387s
+base_U 72/150 399s
+base_U 80/150 412s
+base_U 88/150 429s
+base_U 96/150 448s
+base_U 104/150 462s
+base_U 112/150 475s
+base_U 120/150 489s
+base_U 128/150 507s
+base_U 136/150 524s
+base_U 144/150 536s
+base_U 150/150 550s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}}
+swU8_A 8/150 565s
+swU8_A 16/150 583s
+swU8_A 24/150 599s
+swU8_A 32/150 623s
+swU8_A 40/150 638s
+swU8_A 48/150 655s
+swU8_A 56/150 696s
+swU8_A 64/150 797s
+swU8_A 72/150 813s
+swU8_A 80/150 828s
+swU8_A 88/150 846s
+swU8_A 96/150 861s
+swU8_A 104/150 878s
+swU8_A 112/150 902s
+swU8_A 120/150 915s
+swU8_A 128/150 935s
+swU8_A 136/150 955s
+swU8_A 144/150 968s
+swU8_A 150/150 983s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 121, "self": 29}, "you_share": 0.1933, "median_new_tokens": 96, "you_minus_base": {"n_pairs": 150, "mean": -0.8067, "ci95": [-0.8667, -0.74]}}}
+swA8_U 8/150 1002s
+swA8_U 16/150 1013s
+swA8_U 24/150 1038s
+swA8_U 32/150 1063s
+swA8_U 40/150 1090s
+swA8_U 48/150 1116s
+swA8_U 56/150 1131s
+swA8_U 64/150 1152s
+swA8_U 72/150 1169s
+swA8_U 80/150 1184s
+swA8_U 88/150 1195s
+swA8_U 96/150 1224s
+swA8_U 104/150 1240s
+swA8_U 112/150 1258s
+swA8_U 120/150 1280s
+swA8_U 128/150 1299s
+swA8_U 136/150 1316s
+swA8_U 144/150 1333s
+swA8_U 150/150 1350s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "swA8_U": {"n": 150, "finished": 150, "answers": {"user": 94, "self": 56}, "you_share": 0.3733, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.36, "ci95": [0.28, 0.44]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 121, "self": 29}, "you_share": 0.1933, "median_new_tokens": 96, "you_minus_base": {"n_pairs": 150, "mean": -0.8067, "ci95": [-0.8667, -0.74]}}}
+rswU8_A 8/150 1361s
+rswU8_A 16/150 1373s
+rswU8_A 24/150 1385s
+rswU8_A 32/150 1406s
+rswU8_A 40/150 1424s
+rswU8_A 48/150 1442s
+rswU8_A 56/150 1460s
+rswU8_A 64/150 1473s
+rswU8_A 72/150 1489s
+rswU8_A 80/150 1510s
+rswU8_A 88/150 1528s
+rswU8_A 96/150 1551s
+rswU8_A 104/150 1572s
+rswU8_A 112/150 1585s
+rswU8_A 120/150 1603s
+rswU8_A 128/150 1627s
+rswU8_A 136/150 1643s
+rswU8_A 144/150 1659s
+rswU8_A 150/150 1674s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"user": 94, "self": 56}, "you_share": 0.3733, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.36, "ci95": [0.28, 0.44]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 121, "self": 29}, "you_share": 0.1933, "median_new_tokens": 96, "you_minus_base": {"n_pairs": 150, "mean": -0.8067, "ci95": [-0.8667, -0.74]}}}
+rswA8_U 8/150 1687s
+rswA8_U 16/150 1702s
+rswA8_U 24/150 1715s
+rswA8_U 32/150 1730s
+rswA8_U 40/150 1743s
+rswA8_U 48/150 1761s
+rswA8_U 56/150 1777s
+rswA8_U 64/150 1791s
+rswA8_U 72/150 1805s
+rswA8_U 80/150 1823s
+rswA8_U 88/150 1838s
+rswA8_U 96/150 1861s
+rswA8_U 104/150 1875s
+rswA8_U 112/150 1889s
+rswA8_U 120/150 1903s
+rswA8_U 128/150 1920s
+rswA8_U 136/150 1937s
+rswA8_U 144/150 1951s
+rswA8_U 150/150 1965s
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": -0.0133, "ci95": [-0.0333, 0.0]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"user": 94, "self": 56}, "you_share": 0.3733, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.36, "ci95": [0.28, 0.44]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 121, "self": 29}, "you_share": 0.1933, "median_new_tokens": 96, "you_minus_base": {"n_pairs": 150, "mean": -0.8067, "ci95": [-0.8667, -0.74]}}}
+{"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": -0.0133, "ci95": [-0.0333, 0.0]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"user": 94, "self": 56}, "you_share": 0.3733, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.36, "ci95": [0.28, 0.44]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 121, "self": 29}, "you_share": 0.1933, "median_new_tokens": 96, "you_minus_base": {"n_pairs": 150, "mean": -0.8067, "ci95": [-0.8667, -0.74]}}}

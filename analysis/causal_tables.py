@@ -48,6 +48,22 @@ ablation_tex -> stats/v5_appendix_tex_en.tex (from the run summaries)
   tab:self_positions     geometry with and without position compression: layers at which the own message is singled out in at
                          least 80% of the held-out bodies, content and onset (qwen38_nothink/suite_mask/qwen38_27b_*,
                          qwen38_nothink/suite_think/gpt_oss_*, suite_mask/gpt_oss_*_compress)
+v5_mech_tex -> stats/v5_mech_tex_{en,zh}.tex (from v5_mechanism.json and v4_mech_ext.json)
+  tab:self_mech_questions, tab:self_mechanism  as in mech_tex with the fifth readout, MiMo-V2.6-Distill-Qwen-9B in its default
+                         call (its game cells are "--": its unedited game does not separate the sources, so the edit is not tested)
+v5_appendix_tex -> stats/v5_appendix_tex.json (cells and rows of the appendix tables of the next-token measurement, the wording
+  test and the MiMo columns; from the next-token archive evidence/p2_modeswitch_20261107, r09_cluster_mimo_20261110.json and
+  wording_summary_all.json of question_wording.py)
+  mimo_seeds, mimo_cluster, mimo_question  the MiMo cells of tab:self_seeds, tab:self_cluster and tab:self_question
+  kl_main_*      tab:self_kl: main probe, the 25 models; content index (Table tab:self_crossmodel), probability of the control
+                 tokens on the body for A / U / S, the full ratio KL(A||U)/KL(U||S) and the two content ratios, with intervals
+  kl_nat_*       tab:self_kl_natural: natural order (Table tab:self_natural, full ratios) and the three templates that accept only
+                 natural order (Table tab:self_natural3, content ratios)
+  kl_swap_*      tab:self_kl_swap: the replacement of the eight coordinates on the body, five readouts: the share of the content
+                 divergence left (own <- User, own <- System) and closed (User <- own, System <- own), the random controls and the
+                 content ratio after the edit
+  wording_*      tab:self_wording: unedited claims and the changes of removal and installation (family intervals; gap shares in
+                 parentheses except for MiMo) for the three wordings, seven readouts
 
 usage: causal_tables.py --results RES --out OUT [--only NAME[,NAME...]]
 """
@@ -57,7 +73,7 @@ import statistics
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import W3, Roots, arguments, run_path  # noqa: E402
+from common import MS, W3, WS, Roots, arguments, items, prefer, result_path, run_path, summarize  # noqa: E402
 
 
 def mech_tex(A, S):
@@ -747,8 +763,225 @@ def ablation_tex(A, S):
     print('\n'.join(text))
 
 
+# ---------------------------------------------------------------------------------------------------------------------------
+# five readouts (MiMo-V2.6-Distill-Qwen-9B added), the next-token tables and the wording table
+
+def _sg(x, d=2):
+    """signed number in math mode; 0.00 without sign"""
+    s = f'{x:+.{d}f}'
+    return f'\\({abs(x):.{d}f}\\)' if s in ('+0.00', '-0.00', '+0.000', '-0.000') else f'\\({s}\\)'
+
+
+def _ch(s, ci=True, d=2):
+    """item-paired change with its interval; three decimals for a nonzero change below 0.005"""
+    if s is None or 'diff' not in s:
+        return '--'
+    d_ = 3 if abs(s['diff']) < 0.005 and s['diff'] != 0 else d
+    t = _sg(s['diff'], d_)
+    if ci:
+        t += f" [{_sg(s['diff_ci'][0], d_)}, {_sg(s['diff_ci'][1], d_)}]"
+    return t
+
+
+def _val(s):
+    if s is None:
+        return '--'
+    return f"{s['stat']:.2f}" + (f" ({s['finished']}/{s['n']})" if s.get('finished', s['n']) != s['n'] else '')
+
+
+def v5_mech_tex(A, S):
+    """stats/v5_mech_tex_{en,zh}.tex: tab:self_mech_questions and tab:self_mechanism with the five readouts, from v5_mechanism.json
+    (causal_tests.py) and, for the game columns of the first four readouts, v4_mech_ext.json. The MiMo game cells are "--": its
+    unedited game does not separate the sources, so the edit is not tested there. The other tables of mech_tex keep the four
+    readouts."""
+    R = json.load(open(S / 'v5_mechanism.json', encoding='utf-8'))['results']
+    E = json.load(open(S / 'v4_mech_ext.json', encoding='utf-8'))
+    RO = ['qwen_sp', 'qwen_th', 'oss_th', 'oss120_th', 'mimo_th']
+    L = {'en': {'own': 'own', 'User': 'User', 'System': 'System', 'unedited': 'unedited', 'random': 'random', 'k64': '64 dims',
+                'ro': {'qwen_sp': 'Qwen3.8-27B, no thinking', 'qwen_th': 'Qwen3.8-27B, thinking', 'oss_th': 'gpt-oss-20b, thinking',
+                       'oss120_th': 'gpt-oss-120b, thinking', 'mimo_th': 'MiMo-V2.6-Distill-9B, default call'}},
+         'zh': {'own': '自己', 'User': 'User', 'System': 'System', 'unedited': '未编辑', 'random': '随机', 'k64': '64 维',
+                'ro': {'qwen_sp': 'Qwen3.8-27B，不思考', 'qwen_th': 'Qwen3.8-27B，思考', 'oss_th': 'gpt-oss-20b，思考',
+                       'oss120_th': 'gpt-oss-120b，思考', 'mimo_th': 'MiMo-V2.6-Distill-9B，默认调用'}}}
+
+    def acc_range(runs):
+        xs = [s['accuracy'] for s in runs.values() if 'accuracy' in s]
+        if not xs:
+            return '--'
+        lo, hi = min(xs), max(xs)
+        return f'{lo:.2f}' if f'{lo:.2f}' == f'{hi:.2f}' else f'{lo:.2f}--{hi:.2f}'
+
+    def gch(s):
+        return '--' if s is None or 'diff' not in s else _sg(s['diff'])
+
+    def build(lang):
+        t = L[lang]
+        out = ['%% tab:self_mech_questions']
+        for ro in RO:
+            a = R[ro].get('all', {})
+            g = E['games'].get(ro, {}).get('main', {})
+            out.append(f"{t['ro'][ro]} & {_ch(a.get('swU8_A'), False)} & {_ch(a.get('swA8_U'), False)} & {gch(g.get('swU8_A'))} & "
+                       f"{gch(g.get('swA8_U'))} & {acc_range(R[ro].get('all_content', {}))} & {acc_range(R[ro].get('all_arith', {}))} \\\\")
+        out += ['%% end', '%% tab:self_mechanism']
+        rows = [(f"{t['own']}, {t['unedited']}", 'all', 'base_A', 'v'), (f"{t['own']} \\(\\leftarrow\\) {t['User']}", 'all', 'swU8_A', 'c'),
+                (f"{t['own']} \\(\\leftarrow\\) {t['System']}", 'all', 'swS8_A', 'c'),
+                (f"{t['own']} \\(\\leftarrow\\) {t['User']}, {t['random']}", 'all', 'rswU8_A', 'c'),
+                (f"{t['own']} \\(\\leftarrow\\) {t['User']}, {t['k64']}", 'all_k64', 'swU64_A', 'c'),
+                (f"{t['own']} \\(\\leftarrow\\) {t['User']}, {t['k64']}, {t['random']}", 'all_k64', 'rswU64_A', 'c'), None,
+                (f"{t['User']}, {t['unedited']}", 'all', 'base_U', 'v'), (f"{t['User']} \\(\\leftarrow\\) {t['own']}", 'all', 'swA8_U', 'c'),
+                (f"{t['User']} \\(\\leftarrow\\) {t['own']}, {t['random']}", 'all', 'rswA8_U', 'c'),
+                (f"{t['User']} \\(\\leftarrow\\) {t['own']}, {t['k64']}", 'all_k64', 'swA64_U', 'c'),
+                (f"{t['User']} \\(\\leftarrow\\) {t['own']}, {t['k64']}, {t['random']}", 'all_k64', 'rswA64_U', 'c'), None,
+                (f"{t['System']}, {t['unedited']}", 'all', 'base_S', 'v'), (f"{t['System']} \\(\\leftarrow\\) {t['own']}", 'all', 'swA8_S', 'c')]
+        for row in rows:
+            if row is None:
+                out.append('\\midrule')
+                continue
+            lab, run, c, kind = row
+            out.append(f'{lab} & ' + ' & '.join((_val if kind == 'v' else _ch)(R[ro].get(run, {}).get(c)) for ro in RO) + ' \\\\')
+        out.append('%% end')
+        return '\n'.join(out) + '\n'
+
+    for lang in ('en', 'zh'):
+        (S / f'v5_mech_tex_{lang}.tex').write_text(build(lang), encoding='utf-8', newline='\n')
+    print(build('en'))
+
+
+# Table tab:self_crossmodel order and the paper's self-index groups (13 with a self-index, 12 without); next-token setting, name
+KL_MAIN = [('qwen38_nt', 'Qwen3.8-27B', 1), ('gpt_oss_120b_en', 'gpt-oss-120b', 1), ('gpt_oss_20b_en', 'gpt-oss-20b', 1),
+           ('flashnext_nt', 'Qwen3.8-Flash-Next', 1), ('glm53_flash', 'GLM-5.3-Flash', 1), ('mimo_v26_nt', 'MiMo-V2.6-Distill-9B', 1),
+           ('exaone4_32b_en', 'EXAONE-4.0.1-32B', 1), ('glm46v_flash', 'GLM-4.6V-Flash', 1), ('glm47_flash', 'GLM-4.7-Flash', 1),
+           ('r1_distill_llama70b', 'R1-Distill-Llama-70B', 1), ('phi4_en', 'phi-4', 1), ('granite42_30b_en', 'Granite-4.2-30B', 1),
+           ('granite41_30b_en', 'Granite-4.1-30B', 1), ('olmo2_13b_en', 'OLMo-2-13B', 0), ('olmo2_7b_en', 'OLMo-2-7B', 0),
+           ('apertus8b_en', 'Apertus-8B', 0), ('moonlight16b_a3b_instruct', 'Moonlight-16B-A3B', 0), ('mimo7b_rl_0530', 'MiMo-7B-RL', 0),
+           ('mimo_vl7b', 'MiMo-VL-7B', 0), ('ernie45_21b_a3b_thinking', 'ERNIE-4.5-21B-A3B', 0), ('seed_oss_36b', 'Seed-OSS-36B', 0),
+           ('gemma4_31b_en', 'Gemma-4-31B', 0), ('qwen36_27b', 'Qwen3.6-27B', 0), ('qwen36_35b_a3b', 'Qwen3.6-35B-A3B', 0),
+           ('qwen35_27b', 'Qwen3.5-27B', 0)]
+# the content index of Table tab:self_crossmodel (layers singled out on message content; four-stream models: mean of the streams,
+# strongest stream in parentheses)
+KL_CONTENT = {'Qwen3.8-27B': '64/64', 'gpt-oss-120b': '25/36', 'gpt-oss-20b': '20/24', 'Qwen3.8-Flash-Next': '38 (44)/48',
+              'GLM-5.3-Flash': '18 (28)/45', 'MiMo-V2.6-Distill-9B': '32/32', 'EXAONE-4.0.1-32B': '64/64', 'GLM-4.6V-Flash': '40/40',
+              'GLM-4.7-Flash': '34/47', 'R1-Distill-Llama-70B': '0/80', 'phi-4': '35/40', 'Granite-4.2-30B': '30/64',
+              'Granite-4.1-30B': '17/64', 'OLMo-2-13B': '4/40', 'OLMo-2-7B': '5/32', 'Apertus-8B': '0/32', 'Moonlight-16B-A3B': '0/27',
+              'MiMo-7B-RL': '0/36', 'MiMo-VL-7B': '0/36', 'ERNIE-4.5-21B-A3B': '0/28', 'Seed-OSS-36B': '0/64', 'Gemma-4-31B': '0/60',
+              'Qwen3.6-27B': '6/64', 'Qwen3.6-35B-A3B': '1/40', 'Qwen3.5-27B': '13/64'}
+# natural order: Table tab:self_natural (content index in this order) and Table tab:self_natural3
+KL_NAT = [('exaone4_32b_en', 'EXAONE-4.0.1-32B', '64/64'), ('glm46v_flash', 'GLM-4.6V-Flash', '36/40'),
+          ('granite41_30b_en', 'Granite-4.1-30B', '61/64'), ('moonlight16b_a3b_instruct', 'Moonlight-16B-A3B', '27/27'),
+          ('mimo7b_rl_0530', 'MiMo-7B-RL', '34/36'), ('phi4_en', 'phi-4', '25/40'), ('ernie45_21b_a3b_thinking', 'ERNIE-4.5-21B-A3B', '16/28'),
+          ('olmo2_7b_en', 'OLMo-2-7B', '5/32'), ('seed_oss_36b', 'Seed-OSS-36B', '3/64'), ('gemma4_31b_en', 'Gemma-4-31B', '0/60')]
+KL_NAT3 = [('dsv41_flash', 'DeepSeek-V4.1-Flash', '38/40'), ('ministral3_14b_instruct_en', 'Ministral-3-14B-Instruct', '0/40'),
+           ('ministral3_14b_reasoning_en', 'Ministral-3-14B-Reasoning', '0/40')]
+
+
+def v5_appendix_tex(A, S, r):
+    """stats/v5_appendix_tex.json: {block: [cells or rows]} for the appendix tables of the 11-10 revision.
+      mimo_seeds     MiMo cells of tab:self_seeds (own <- User random for the base seeds 20261022..26, then User <- own random);
+                     seed 20261022 = mimo_v26_r05q_all, the others mimo_v26_r06_s1..s4
+      mimo_cluster   MiMo cells of tab:self_cluster, from r09_cluster_mimo_20261110.json (causal_controls.py, families_mimo)
+      mimo_question  MiMo cells of tab:self_question, runs r05q_all, r05q_msg, r05m_all, r05m_msg
+      kl_main_{en,zh}, kl_nat_{en,zh}, kl_swap_{en,zh}, wording_{en,zh}: LaTeX rows of tab:self_kl, tab:self_kl_natural,
+                     tab:self_kl_swap, tab:self_wording
+      kl_main_tally  counts of the self-index groups by the number of content ratios whose interval lies above 1 (printed only)
+    Sources: the next-token archive (results/<group>/modeswitch/<setting>/summary.json and the MiMo replacement runs) and the
+    wording summary (OUT, from question_wording.py, else the archived copy). The content index columns are those of Tables
+    tab:self_crossmodel and tab:self_natural (KL_CONTENT, KL_NAT, KL_NAT3)."""
+    M = r.res(MS)
+    out = {}
+    run = {k: summarize(items(str(result_path(M, f'thinking_swap/mimo_v26_{k}'))), k)
+           for k in ('r05q_all', 'r05q_msg', 'r05m_all', 'r05m_msg', 'r06_s1', 'r06_s2', 'r06_s3', 'r06_s4')}
+    seeds = ['r05q_all', 'r06_s1', 'r06_s2', 'r06_s3', 'r06_s4']
+    out['mimo_seeds'] = [_ch(run[x].get('rswU8_A')) for x in seeds] + [_ch(run[x].get('rswA8_U')) for x in seeds]
+    C = json.load(open(S / 'r09_cluster_mimo_20261110.json', encoding='utf-8'))['results']
+
+    def cl(s):
+        return '--' if not s or 'change' not in s else f"{_sg(s['change'])} [{_sg(s['cluster_ci'][0])}, {_sg(s['cluster_ci'][1])}]"
+    at, co = C['attribution'], C['content']
+    out['mimo_cluster'] = [cl(at.get('own <- User')), '--', cl(at.get('own <- User, random')), '--', cl(at.get('User <- own')),
+                           cl(at.get('User <- own, random')), '--', cl(co.get('swU8_A')), '--', '--', cl(co.get('swA8_U'))]
+    Q = ['r05q_all', 'r05q_msg', 'r05m_all', 'r05m_msg']
+    out['mimo_question'] = ([_val(run['r05q_all'].get('base_A'))] + [_ch(run[x].get('swU8_A')) for x in Q] + [_val(run['r05q_all'].get('base_U'))]
+                            + [_ch(run[x].get('swA8_U')) for x in Q])
+
+    def load(rel):
+        f = result_path(M, f'modeswitch/{rel}') / 'summary.json'
+        if not f.exists():
+            raise FileNotFoundError(rel)
+        return json.loads(f.read_text(encoding='utf-8'))
+
+    def rc(v, d=2):
+        if v is None:
+            return '--'
+        x, lo, hi = (v['ratio'] if 'ratio' in v else v['value']), v['ci95'][0], v['ci95'][1]
+        f = (lambda y: f'{y:.0f}') if x >= 100 else (lambda y: f'{y:.1f}') if x >= 10 else (lambda y: f'{y:.{d}f}')
+        return f'{f(x)} [{f(lo)}, {f(hi)}]'
+
+    def ok(v):
+        return v is not None and v['ci95'][0] > 1
+    for lang in ('en', 'zh'):
+        rows, tally = [], {0: [0, 0, 0], 1: [0, 0, 0]}
+        for tag, name, idx in KL_MAIN:
+            s = load(f'ctrl/{tag}')
+            q = s['ratios']
+            pc = ' / '.join(f"{s['roles'][x]['p_ctrl']['mean']:.2f}" for x in ('A', 'U', 'S'))
+            a, b = q.get('A-U/U-S_kl_content'), q.get('A-S/U-S_kl_content')
+            tally[idx][ok(a) + ok(b)] += 1
+            rows.append(f"{name} & {KL_CONTENT[name]} & {pc} & {rc(q.get('A-U/U-S_kl_body'))} & {rc(a)} & {rc(b)} \\\\")
+        out[f'kl_main_{lang}'] = rows
+    out['kl_main_tally'] = {'with index: none/one/both': tally[1], 'without: none/one/both': tally[0]}
+    for lang in ('en', 'zh'):
+        rows = []
+        for tag, name, ci in KL_NAT:
+            n = load(tag)['orders']['natural']['ratios']
+            rows.append(f"{name} & {ci} & {rc(n.get('A-U/U-S_kl_body'))} & {rc(n.get('A-S/U-S_kl_body'))} \\\\")
+        rows.append('\\midrule')
+        for tag, name, ci in KL_NAT3:
+            q = load(f'nat3/{tag}')['ratios']
+            rows.append(f"{name} & {ci} & {rc(q.get('A-U/U-S_kl_content'))} & {rc(q.get('A-S/U-S_kl_content'))} \\\\")
+        out[f'kl_nat_{lang}'] = rows
+    RO = [('qsp', 'Qwen3.8-27B, no thinking', 'Qwen3.8-27B，不思考'), ('qth', 'Qwen3.8-27B, thinking', 'Qwen3.8-27B，思考'),
+          ('g20', 'gpt-oss-20b, thinking', 'gpt-oss-20b，思考'), ('g120', 'gpt-oss-120b, thinking', 'gpt-oss-120b，思考'),
+          ('m26', 'MiMo-V2.6-Distill-9B, default call', 'MiMo-V2.6-Distill-9B，默认调用')]
+    for lang in ('en', 'zh'):
+        rows = []
+        for t, en, zh in RO:
+            s = load(f'swap/{t}')
+            lf, mv = s['left']['content'], s['moved']['content']
+            ua = mv['U_Ar']['value']
+            rows.append(f"{en if lang == 'en' else zh} & {rc(lf['A_U'])} & {rc(lf['A_S'])} & {rc(mv['U_A'])} & {rc(mv['S_A'])} & "
+                        f"{lf['A_Ur']['value']:.2f} / {abs(ua) if round(ua, 2) == 0 else ua:.2f} & {rc(s['asym']['content']['A_U||U/U||S'])} \\\\")
+        out[f'kl_swap_{lang}'] = rows
+    # wording test: unedited own / User on the option naming the model, removal and installation changes (family intervals); the
+    # edit names are those of the wording summary (去除 removal, 植入 installation, 随机 random)
+    W = json.load(open(prefer(r, WS + '/results/wording_summary_all.json'), encoding='utf-8'))['by_readout']
+    WR = [('qsp', 'Qwen3.8-27B, no thinking, Chinese', 'Qwen3.8-27B，不思考，中文'), ('qth', 'Qwen3.8-27B, thinking, Chinese', 'Qwen3.8-27B，思考，中文'),
+          ('qsp_en', 'Qwen3.8-27B, no thinking, English', 'Qwen3.8-27B，不思考，英文'), ('qth_en', 'Qwen3.8-27B, thinking, English', 'Qwen3.8-27B，思考，英文'),
+          ('g20', 'gpt-oss-20b, thinking', 'gpt-oss-20b，思考'), ('g120', 'gpt-oss-120b, thinking', 'gpt-oss-120b，思考'),
+          ('m26', 'MiMo-V2.6-Distill-9B, default call', 'MiMo-V2.6-Distill-9B，默认调用')]
+    WL = {'en': {'paper': 'main', 'pron': 'pronoun', 'role': 'role name'}, 'zh': {'paper': '原版', 'pron': '代词', 'role': '角色名'}}
+    RND = ('随机，自己的消息', '随机，User 消息')
+    for lang in ('en', 'zh'):
+        rows = []
+        for k, en, zh in WR:
+            rows.append(f"\\multicolumn{{6}}{{l}}{{\\emph{{{en if lang == 'en' else zh}}}}} \\\\")
+            for w in ('paper', 'pron', 'role'):
+                x = W[k]['wordings'][w]
+                a, u = x['unedited']['base_A']['self'], x['unedited']['base_U']['self']
+                rm, ins = x['去除']['self'], x['植入']['self']
+                rr = max(abs(x[n]['self']['mean']) for n in RND if n in x) if any(n in x for n in RND) else None
+                gap = '' if k == 'm26' else f" ({rm['share']:.2f})"  # MiMo: gap shares are unstable (unedited gap 0.31)
+                gi = '' if k == 'm26' else f" ({ins['share']:.2f})"
+                rows.append(f"\\quad {WL[lang][w]} & {a:.2f} & {u:.2f} & {_sg(rm['mean'])} [{_sg(rm['ci_families'][0])}, {_sg(rm['ci_families'][1])}]{gap} & "
+                            f"{_sg(ins['mean'])} [{_sg(ins['ci_families'][0])}, {_sg(ins['ci_families'][1])}]{gi} & {'--' if rr is None else f'{rr:.2f}'} \\\\")
+        out[f'wording_{lang}'] = rows
+    (S / 'v5_appendix_tex.json').write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8')
+    print(json.dumps({k: v for k, v in out.items() if k.startswith('mimo') or k == 'kl_main_tally'}, ensure_ascii=False, indent=1))
+    for k in ('kl_main_en', 'kl_nat_en', 'kl_swap_en', 'wording_en'):
+        print('\n'.join(out[k][:30]))
+
+
 STEPS = [('mech_tex', mech_tex), ('question_tex', question_tex), ('fd_tex', fd_tex), ('cluster_threshold_tex', cluster_threshold_tex),
-         ('exchange_tex', exchange_tex), ('ablation_tex', ablation_tex)]
+         ('exchange_tex', exchange_tex), ('ablation_tex', ablation_tex), ('v5_mech_tex', v5_mech_tex), ('v5_appendix_tex', v5_appendix_tex)]
 
 
 def main(argv=None):
@@ -761,7 +994,7 @@ def main(argv=None):
     for name, fn in STEPS:
         if only is None or name in only:
             print(f'== {name}', flush=True)
-            fn(A, S)
+            fn(A, S, r) if fn is v5_appendix_tex else fn(A, S)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,14 @@
+{
+ "experiment": "P2_thinking_M",
+ "script_sha256": "76be32ae7ee7797ac1622be35cca3178c7c13bc71eab4576e6859497f15c0095",
+ "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98",
+ "model": "/root/data/hf_models/Qwen/Qwen3.8-27B",
+ "on_kwargs": {},
+ "lang": "zh",
+ "question": "这道题的最终答案是多少？只输出数字。",
+ "batch": 16,
+ "max_new": 3072,
+ "n_problems": 120,
+ "torch": "2.5.1+cu124",
+ "transformers": "5.8.0"
+}

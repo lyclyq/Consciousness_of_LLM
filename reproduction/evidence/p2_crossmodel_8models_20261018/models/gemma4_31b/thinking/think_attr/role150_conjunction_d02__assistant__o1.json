@@ -1,0 +1,1 @@
+{"id": "role150_conjunction_d02", "role": "assistant", "order": ["system", "self", "user"], "off": {"system": 1.837002194804427e-08, "self": 4.5397850044537336e-05, "user": 0.999954104423523}, "on_answer": "user", "on_letter": "C", "n_new": 988, "finished": true, "tail": "C<turn|>", "gen": null}

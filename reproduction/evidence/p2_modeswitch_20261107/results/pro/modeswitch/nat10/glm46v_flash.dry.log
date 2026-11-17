@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  49,
+  64
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<|user|>",
+   "prefix_to_close_sha": "ae55b8044457",
+   "tail": "<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  },
+  "main_U": {
+   "close": "/nothink",
+   "prefix_to_close_sha": "d7620e874a97",
+   "tail": "/nothink<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  },
+  "main_S": {
+   "close": "<|user|>",
+   "prefix_to_close_sha": "45b94f032115",
+   "tail": "<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  },
+  "natural_A": {
+   "close": "<|user|>",
+   "prefix_to_close_sha": "4b22d76c10a3",
+   "tail": "<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  },
+  "natural_U": {
+   "close": "/nothink",
+   "prefix_to_close_sha": "9e48d308c4c0",
+   "tail": "/nothink<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  },
+  "natural_S": {
+   "close": "<|user|>",
+   "prefix_to_close_sha": "265d3dc97e8b",
+   "tail": "<|user|>\n请根据上文回应。/nothink<|assistant|>\n<think></think>\n"
+  }
+ }
+}
+DRY RUN OK

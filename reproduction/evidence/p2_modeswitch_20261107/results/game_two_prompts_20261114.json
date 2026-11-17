@@ -1,0 +1,949 @@
+{
+ "source": "Secret game under the two System prompts, all seven mechanism readouts (11-14, NMI version: Fig. 5 and the Extended Data table;\nuser 11-14: both prompts are reported). Reads only the runners' summary.json files; nothing is recomputed from items.\n  first prompt  items games_{zh,en}_secret5.json (a712030b / d24c0a2f), folders *_s5_*\n  second prompt items games_{zh,en}_secret6.json (4d27d8a5 / 26553b13), folders *_s6_*\nPer readout and prompt: the smoke verdict under the release rule fixed in advance (10-26: unedited, setter share >= 0.5 for the\nmodel's own X and <= 0.25 for a User X on finished games, >= 75% finished, control correct in >= 7 of 8 under both unedited\nconditions); the full game where it exists (unedited setter shares, removal swU8_A and installation swA8_U as change from the\nunedited condition with the runner's paired 95% interval, the random-direction edits rswU8_A / rswA8_U); control accuracy.\nAlso the attribution question of the same readouts (for panel c of the NMI Fig. 5, beside the game): unedited rate of \"you\" for\nthe model's own and a User message, and the rate after removal (swU8_A) and installation (swA8_U) with the paired 95% interval,\nall 150 held-out items. Sources as fig_ablation_draft_20261114.py: the Qwen / gpt-oss readouts from the release stats\n(r05r06_20261031.json, r05q_all), MiMo, EXAONE and GLM-5.3 from their run summaries (*_r05q_all/summary.json).\nAnd the two questions that do not concern the source (content, arithmetic; 75 items, one option order): accuracy unedited and\nafter the same two edits, from v4_mechanism.json (all_content, all_arith) and the run summaries (*_content_all, *_arith_all).\nOne standard for all games (user 11-14): a game that does not pass the release rule is not released, whichever part it fails. Its\nfull game is not read here and is not reported: the table and the JSON carry its eight-game check only. Its full-game folders are\nmarked NOT_USED and are not in the paper data package (user 11-14: \"这个原始数据也排除于论文数据包\").",
+ "readouts": {
+  "Qwen3.8-27B, single pass": {
+   "attribution": {
+    "n": 150,
+    "own": 0.7951036254564922,
+    "user": 0.0388440402969718,
+    "removal": {
+     "after": 0.036807269385705395,
+     "change": -0.7582963560707867,
+     "ci95": [
+      -0.7705686474001656,
+      -0.7463211003039032
+     ]
+    },
+    "installation": {
+     "after": 0.5340428609152635,
+     "change": 0.4951988206182917,
+     "ci95": [
+      0.4592195422621444,
+      0.5325809391789759
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 1.0,
+    "user": 0.9733333333333334,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.21,
+     "removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.26,
+      "change": 0.05,
+      "ci95": [
+       0.01,
+       0.1
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.22,
+      "change": 0.01,
+      "ci95": [
+       0.0,
+       0.03
+      ],
+      "n": 100,
+      "finished": 100
+     }
+    },
+    "control_full": {
+     "base_A": 1.0,
+     "base_U": 1.0,
+     "rswA8_U": 1.0,
+     "rswU8_A": 1.0,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   },
+   "second": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.01,
+     "removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.26,
+      "change": 0.25,
+      "ci95": [
+       0.17,
+       0.34
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.01,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     }
+    },
+    "control_full": {
+     "base_A": 1.0,
+     "base_U": 1.0,
+     "rswA8_U": 1.0,
+     "rswU8_A": 1.0,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   }
+  },
+  "Qwen3.8-27B, thinking": {
+   "attribution": {
+    "n": 150,
+    "own": 0.9731543624161074,
+    "user": 0.0,
+    "removal": {
+     "after": 0.013333333333333334,
+     "change": -0.959731543624161,
+     "ci95": [
+      -0.9865771812080537,
+      -0.9261744966442953
+     ]
+    },
+    "installation": {
+     "after": 0.6933333333333334,
+     "change": 0.6933333333333334,
+     "ci95": [
+      0.62,
+      0.7666666666666667
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 0.59,
+      "change": -0.41,
+      "ci95": [
+       -0.51,
+       -0.32
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 99
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 94
+     }
+    },
+    "control_full": {
+     "base_A": 0.99,
+     "base_U": 0.99,
+     "rswA8_U": 1.0,
+     "rswU8_A": 0.99,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   },
+   "second": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 0.96,
+      "change": -0.04,
+      "ci95": [
+       -0.08,
+       -0.01
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 98
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 95
+     }
+    },
+    "control_full": {
+     "base_A": 1.0,
+     "base_U": 1.0,
+     "rswA8_U": 1.0,
+     "rswU8_A": 1.0,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   }
+  },
+  "gpt-oss-20b": {
+   "attribution": {
+    "n": 150,
+    "own": 0.7666666666666667,
+    "user": 0.0,
+    "removal": {
+     "after": 0.006666666666666667,
+     "change": -0.76,
+     "ci95": [
+      -0.8266666666666667,
+      -0.6933333333333334
+     ]
+    },
+    "installation": {
+     "after": 0.46,
+     "change": 0.4563758389261745,
+     "ci95": [
+      0.37583892617449666,
+      0.5369127516778524
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 1.0,
+    "user": 0.96,
+    "removal": {
+     "after": 0.9733333333333334
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.0101,
+     "removal": {
+      "own_share": 0.47,
+      "change": -0.53,
+      "ci95": [
+       -0.63,
+       -0.43
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.567,
+      "change": 0.5625,
+      "ci95": [
+       0.4583,
+       0.6562
+      ],
+      "n": 100,
+      "finished": 97
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.03,
+      "change": 0.0202,
+      "ci95": [
+       0.0,
+       0.0505
+      ],
+      "n": 100,
+      "finished": 100
+     }
+    },
+    "control_full": {
+     "base_A": 0.9091,
+     "base_U": 1.0,
+     "rswA8_U": 0.9691,
+     "rswU8_A": 0.95,
+     "swA8_U": 0.83,
+     "swU8_A": 0.88
+    }
+   },
+   "second": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 0.64,
+      "change": -0.36,
+      "ci95": [
+       -0.45,
+       -0.27
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.7172,
+      "change": 0.7172,
+      "ci95": [
+       0.6263,
+       0.8081
+      ],
+      "n": 100,
+      "finished": 99
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     }
+    },
+    "control_full": {
+     "base_A": 0.98,
+     "base_U": 1.0,
+     "rswA8_U": 1.0,
+     "rswU8_A": 1.0,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   }
+  },
+  "gpt-oss-120b": {
+   "attribution": {
+    "n": 150,
+    "own": 0.9866666666666667,
+    "user": 0.0,
+    "removal": {
+     "after": 0.02666666666666667,
+     "change": -0.96,
+     "ci95": [
+      -0.9866666666666667,
+      -0.9266666666666666
+     ]
+    },
+    "installation": {
+     "after": 0.5133333333333333,
+     "change": 0.5133333333333333,
+     "ci95": [
+      0.43333333333333335,
+      0.5933333333333334
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": false,
+     "separates_sources": true,
+     "control_ok": false,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 0.0,
+     "control_U": 0.5
+    },
+    "released": false
+   },
+   "second": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 100,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 0.0,
+      "change": -1.0,
+      "ci95": [
+       -1.0,
+       -1.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "installation": {
+      "own_share": 0.2,
+      "change": 0.2,
+      "ci95": [
+       0.12,
+       0.28
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_removal": {
+      "own_share": 0.99,
+      "change": -0.01,
+      "ci95": [
+       -0.03,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 100,
+      "finished": 100
+     }
+    },
+    "control_full": {
+     "base_A": 1.0,
+     "base_U": 1.0,
+     "rswA8_U": 1.0,
+     "rswU8_A": 1.0,
+     "swA8_U": 1.0,
+     "swU8_A": 1.0
+    }
+   }
+  },
+  "GLM-5.3-Flash": {
+   "attribution": {
+    "n": 150,
+    "own": 0.3793,
+    "user": 0.0,
+    "removal": {
+     "after": 0.0,
+     "change": -0.3793,
+     "ci95": [
+      -0.4621,
+      -0.3034
+     ]
+    },
+    "installation": {
+     "after": 0.034,
+     "change": 0.034,
+     "ci95": [
+      0.0068,
+      0.068
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 0.9867,
+    "user": 1.0,
+    "removal": {
+     "after": 0.9867
+    },
+    "installation": {
+     "after": 0.973
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 50,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 0.92,
+      "change": -0.08,
+      "ci95": [
+       -0.16,
+       -0.02
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "installation": {
+      "own_share": 0.52,
+      "change": 0.52,
+      "ci95": [
+       0.38,
+       0.66
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 50,
+      "finished": 50
+     }
+    }
+   },
+   "second": {
+    "smoke": {
+     "pass": true,
+     "separates_sources": true,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": true,
+    "main": {
+     "n": 50,
+     "own_A": 1.0,
+     "own_U": 0.0,
+     "removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "installation": {
+      "own_share": 0.66,
+      "change": 0.66,
+      "ci95": [
+       0.52,
+       0.78
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "random_removal": {
+      "own_share": 1.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 50,
+      "finished": 50
+     },
+     "random_installation": {
+      "own_share": 0.0,
+      "change": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n": 50,
+      "finished": 50
+     }
+    }
+   }
+  },
+  "MiMo-V2.6-Distill-Qwen-9B": {
+   "attribution": {
+    "n": 150,
+    "own": 0.4067,
+    "user": 0.0933,
+    "removal": {
+     "after": 0.0,
+     "change": -0.4067,
+     "ci95": [
+      -0.4867,
+      -0.3267
+     ]
+    },
+    "installation": {
+     "after": 0.4867,
+     "change": 0.3933,
+     "ci95": [
+      0.32,
+      0.4733
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 0.96,
+    "user": 0.9333,
+    "removal": {
+     "after": 0.96
+    },
+    "installation": {
+     "after": 0.9867
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 0.9733,
+    "removal": {
+     "after": 0.9867
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": false,
+     "separates_sources": false,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 1.0,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": false
+   },
+   "second": {
+    "smoke": {
+     "pass": false,
+     "separates_sources": false,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.875,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": false
+   }
+  },
+  "EXAONE-4.0.1-32B": {
+   "attribution": {
+    "n": 150,
+    "own": 0.24,
+    "user": 0.0467,
+    "removal": {
+     "after": 0.0671,
+     "change": -0.1745,
+     "ci95": [
+      -0.255,
+      -0.0872
+     ]
+    },
+    "installation": {
+     "after": 0.2467,
+     "change": 0.2,
+     "ci95": [
+      0.12,
+      0.28
+     ]
+    }
+   },
+   "content": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 0.9867
+    }
+   },
+   "arith": {
+    "n": 75,
+    "own": 1.0,
+    "user": 1.0,
+    "removal": {
+     "after": 1.0
+    },
+    "installation": {
+     "after": 1.0
+    }
+   },
+   "first": {
+    "smoke": {
+     "pass": false,
+     "separates_sources": false,
+     "control_ok": false,
+     "own_A": 1.0,
+     "own_U": 1.0,
+     "control_A": 0.5,
+     "control_U": 0.5
+    },
+    "released": false
+   },
+   "second": {
+    "smoke": {
+     "pass": false,
+     "separates_sources": false,
+     "control_ok": true,
+     "own_A": 1.0,
+     "own_U": 0.875,
+     "control_A": 1.0,
+     "control_U": 1.0
+    },
+    "released": false
+   }
+  }
+ }
+}

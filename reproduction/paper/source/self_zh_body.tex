@@ -1,0 +1,82 @@
+% Release copy of self_zh_body.tex of the long version: only the tables that the released scripts parse,
+% verbatim. The text of the long version is not part of the release. Written by paper/scripts/make_release_tables_20261115.py.
+
+\begin{table}[htbp]
+\centering
+\caption{跨模型比较中的模型。参数量：总参数量，MoE 模型另列出每个 token 的激活参数量，均以开发方的说明为准（Qwen3.8-Flash-Next 另有一个 51B 的 n-gram 嵌入）。层数为解码器 block 数。MoE 为混合专家。最后一列是对话模板只加在先前的 Assistant 消息上、而不加在 User 或 System 消息上的格式（正文指消息的文字）。“无”表示三种角色只在角色名上不同。其他模板差别：GLM-4.6V-Flash 在非思考模式下给 User 消息末尾加上 \texttt{/nothink}，DeepSeek-R1-Distill-Llama-70B 把 System 文字放在输入开头，不加角色 token，gpt-oss 的模板把 System 消息渲染为 developer 消息，Granite-4.2 的模板在没有 System 消息的对话开头加入一个空的系统轮次，MiMo-7B-RL、MiMo-VL-7B、Moonlight 与 Apertus 的模板在没有 System 消息的对话开头加入一条默认的系统消息（Apertus 的含调用当天的日期），受测的 System 消息会取代它。VL：视觉语言模型，这里只用文本。}
+\label{tab:self_models}
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{ll>{\raggedright\arraybackslash}p{1.9cm}cccl>{\raggedright\arraybackslash}p{2.8cm}}
+\toprule
+模型 & 开发方 & 架构 & 参数量 & 层数 & 权重 & 模式 & Assistant 历史的格式 \\
+\midrule
+Qwen3.8-27B & 阿里巴巴 & 稠密 & 27B & 64 & BF16 & 两种 & 正文前的空思考块 \\
+Qwen3.8-Flash-Next & 阿里巴巴 & MoE，4 路流 & 125B/6B & 48 & FP8 & 两种 & 正文前的空思考块 \\
+Qwen3.6-27B & 阿里巴巴 & 稠密 & 27B & 64 & BF16 & 两种 & 无 \\
+Qwen3.6-35B-A3B & 阿里巴巴 & MoE & 35B/3B & 40 & BF16 & 两种 & 无 \\
+Qwen3.5-27B & 阿里巴巴 & 稠密 & 27B & 64 & BF16 & 两种 & 无 \\
+GLM-4.6V-Flash & 智谱 AI & 稠密 & 9B & 40 & BF16 & 两种 & 正文前的空思考块 \\
+GLM-4.7-Flash & 智谱 AI & MoE & 30B/3B & 47 & BF16 & 两种 & 正文前的 \texttt{</think>} \\
+GLM-5.3-Flash & 智谱 AI & MoE，混合注意力，4 路流 & 320B/18B & 45 & FP8 & 仅思考 & 正文前的空思考块 \\
+R1-Distill-Llama-70B & DeepSeek & 稠密 & 70B & 80 & BF16 & 仅思考 & 正文后的句末 token \\
+gpt-oss-20b & OpenAI & MoE & 21B/3.6B & 24 & MXFP4 & 仅思考 & 正文前的 final 通道标签 \\
+gpt-oss-120b & OpenAI & MoE & 117B/5.1B & 36 & MXFP4 & 仅思考 & 正文前的 final 通道标签 \\
+Gemma-4-31B & Google & 稠密 & 31B & 60 & BF16 & 两种 & 无 \\
+Seed-OSS-36B & 字节跳动 & 稠密 & 36B & 64 & BF16 & 两种 & 无 \\
+EXAONE-4.0.1-32B & LG & 稠密 & 32B & 64 & BF16 & 两种 & 正文前的空思考块 \\
+Granite-4.2-30B & IBM & 稠密 & 30B & 64 & BF16 & 两种 & 正文前的空思考块 \\
+Granite-4.1-30B & IBM & 稠密 & 30B & 64 & BF16 & 仅非思考 & 无 \\
+OLMo-2-13B & Ai2 & 稠密 & 13B & 40 & BF16 & 仅非思考 & 正文后的文本结束 token \\
+OLMo-2-7B & Ai2 & 稠密 & 7B & 32 & BF16 & 仅非思考 & 正文后的文本结束 token \\
+ERNIE-4.5-21B-A3B & 百度 & MoE & 21B/3B & 28 & BF16 & 仅思考 & 正文外的 response 标签 \\
+MiMo-7B-RL & 小米 & 稠密 & 7B & 36 & BF16 & 两种 & 无 \\
+MiMo-VL-7B & 小米 & 稠密（VL） & 7B & 36 & BF16 & 仅思考 & 无 \\
+MiMo-V2.6-Distill-9B & 小米 & 稠密 & 9B & 32 & BF16 & 两种 & 正文前的空思考块 \\
+Moonlight-16B-A3B & 月之暗面 & MoE & 16B/3B & 27 & BF16 & 仅非思考 & 无 \\
+Apertus-8B & Swiss AI & 稠密 & 8B & 32 & BF16 & 仅非思考 & 无 \\
+phi-4 & 微软 & 稠密 & 14B & 40 & BF16 & 仅非思考 & 无 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{跨模型的两个层级。自我索引：模型自己的消息在至少 80\% 的留出正文中被单独分出（\(R_A\) 最小）的层数，分别在消息内容与回应起点上统计，以及它在最后三分之一层中、在内容或起点上被单独分出的层数，使用非思考渲染（只有思考模式的模型使用思考渲染，四路流模型为四路流的平均，括号内为最强的一路）。不思考：对自己的消息回答“你”的概率、对 User 与 System 消息回答“你”的概率中的较大者，以及前者更大的正文数（共 150 份，两种选项顺序）。思考：在完成推理的条目中，各来源的消息被回答为“你”的比例，以及每种来源的条目数（正文数 \(\times\) 选项顺序数）。$^{a}$在其模板的默认调用下（作为它的思考模式报告），模型不写推理就作答（第~\ref{sec:setup_crossmodel} 节）。}
+\label{tab:self_crossmodel}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+& \multicolumn{3}{c}{自我索引} & \multicolumn{3}{c}{不思考} & \multicolumn{4}{c}{思考} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-11}
+模型 & 内容 & 起点 & 最后三分之一 & 自己 & 外部 & 正文数 & 自己 & User & System & 条目 \\
+\midrule
+Qwen3.8-27B & 64/64 & 64/64 & 21/21 & 0.77 & 0.07 & 150 & 0.96 & 0.00 & 0.00 & 300 \\
+gpt-oss-120b & 25/36 & 33/36 & 12/12 & -- & -- & -- & 0.97 & 0.00 & 0.00 & 300 \\
+gpt-oss-20b & 20/24 & 24/24 & 8/8 & -- & -- & -- & 0.78 & 0.00 & 0.00 & 300 \\
+Qwen3.8-Flash-Next & 38 (44)/48 & 48/48 & 16/16 & 0.15 & 0.14 & 72 & 0.66 & 0.00 & 0.00 & 300 \\
+GLM-5.3-Flash & 18 (28)/45 & 19 (26)/45 & 15/15 & -- & -- & -- & 0.46 & 0.01 & 0.03 & 300 \\
+MiMo-V2.6-Distill-9B$^{a}$ & 32/32 & 32/32 & 10/10 & 0.39 & 0.33 & 123 & 0.35 & 0.05 & 0.12 & 300 \\
+EXAONE-4.0.1-32B & 64/64 & 64/64 & 21/21 & 0.03 & 0.03 & 78 & 0.17 & 0.03 & 0.05 & 300 \\
+GLM-4.6V-Flash & 40/40 & 40/40 & 13/13 & 0.55 & 0.54 & 72 & 0.09 & 0.00 & 0.00 & 300 \\
+GLM-4.7-Flash & 34/47 & 45/47 & 15/15 & 0.37 & 0.30 & 130 & 0.08 & 0.01 & 0.02 & 300 \\
+R1-Distill-Llama-70B & 0/80 & 80/80 & 26/26 & -- & -- & -- & 0.09 & 0.14 & 0.16 & 300 \\
+phi-4 & 35/40 & 35/40 & 13/13 & 0.04 & 0.03 & 104 & -- & -- & -- & -- \\
+Granite-4.2-30B & 30/64 & 59/64 & 16/21 & 0.08 & 0.08 & 62 & 0.00 & 0.00 & 0.00 & 300 \\
+Granite-4.1-30B & 17/64 & 32/64 & 0/21 & 0.05 & 0.05 & 99 & -- & -- & -- & -- \\
+OLMo-2-13B & 4/40 & 13/40 & 0/13 & 0.06 & 0.12 & 3 & -- & -- & -- & -- \\
+OLMo-2-7B & 5/32 & 6/32 & 0/10 & 0.19 & 0.21 & 17 & -- & -- & -- & -- \\
+Apertus-8B & 0/32 & 0/32 & 0/10 & 0.18 & 0.23 & 6 & -- & -- & -- & -- \\
+Moonlight-16B-A3B & 0/27 & 0/27 & 0/9 & 0.66 & 0.59 & 136 & -- & -- & -- & -- \\
+MiMo-7B-RL & 0/36 & 0/36 & 0/12 & 0.15 & 0.18 & 15 & 0.04 & 0.03 & 0.03 & 300 \\
+MiMo-VL-7B & 0/36 & 0/36 & 0/12 & -- & -- & -- & 0.01 & 0.00 & 0.00 & 300 \\
+ERNIE-4.5-21B-A3B & 0/28 & 0/28 & 0/9 & -- & -- & -- & 0.08 & 0.02 & 0.08 & 300 \\
+Seed-OSS-36B & 0/64 & 0/64 & 0/21 & 0.00 & 0.00 & 39 & 0.00 & 0.00 & 0.00 & 300 \\
+Gemma-4-31B & 0/60 & 0/60 & 0/20 & 0.00 & 0.00 & 103 & 0.03 & 0.00 & 0.00 & 300 \\
+Qwen3.6-27B & 6/64 & 1/64 & 0/21 & 0.06 & 0.11 & 9 & 0.00 & 0.00 & 0.00 & 300 \\
+Qwen3.6-35B-A3B & 1/40 & 0/40 & 0/13 & 0.05 & 0.07 & 11 & 0.00 & 0.00 & 0.00 & 300 \\
+Qwen3.5-27B & 13/64 & 0/64 & 0/21 & 0.04 & 0.14 & 0 & 0.02 & 0.00 & 0.00 & 300 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,52 @@
+[main6 DL] 2026-11-08 04:06:25 download allenai/OLMo-2-1124-13B-Instruct@3a5c85baefbb (26 GiB, 151 GiB free, 60 GiB reserved for the other lanes)
+[main6 DL] 2026-11-08 04:22:50 allenai/OLMo-2-1124-13B-Instruct attempt 1 failed
+[main6 DL] 2026-11-08 04:30:10 downloaded allenai/OLMo-2-1124-13B-Instruct 26G
+[main6 RUN] 2026-11-08 04:30:40 render check OK olmo2_13b_en: "natural_system_ok": true
+[main6 RUN] 2026-11-08 04:35:54 start /root/p2_scale_20261015/crossmodel/modeswitch/olmo2_13b_en
+[main6 RUN] 2026-11-08 04:38:46 DONE /root/p2_scale_20261015/crossmodel/modeswitch/olmo2_13b_en: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 1.71, "A-S/U-S_kl_body": 1.05, "A-U/U-S_kl_reply": 0.47, "A-S/U-S_kl_reply": 0.88}, "p_close_main": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl_body_main": {"A-U": 0.1985, "A-S": 0.1215, "U-S": 0.1158}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 04:47:00 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/olmo2_13b_en
+[main6 RUN] 2026-11-08 04:48:25 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/olmo2_13b_en: summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.1985, "kl_content": 0.1956}, "A-S": {"kl_body": 0.1215, "kl_content": 0.1214}, "U-S": {"kl_body": 0.1158, "kl_content": 0.1156}}, "ratios": {"A-U/U-S_kl_body": [1.71, 1.45, 2.0], "A-S/U-S_kl_body": [1.05, 0.87, 1.26], "A-U/U-S_kl_content": [1.69, 1.44, 1.97], "A-S/U-S_kl_content": [1.05, 0.87, 1.26]}}
+[main6 RUN] 2026-11-08 04:48:27 finished olmo2_13b_en; weights deleted (143 GiB free)
+[main6 DL] 2026-11-08 07:58:11 download Qwen/Qwen3.6-27B@6a9e13bd6fc8 (52 GiB, 184 GiB free, 0 GiB reserved for the other lanes)
+[main6 DL] 2026-11-08 08:12:45 downloaded Qwen/Qwen3.6-27B 52G
+[main6 DL] 2026-11-08 08:12:45 download Qwen/Qwen3.5-27B@fc05daec18b0 (52 GiB, 158 GiB free, 0 GiB reserved for the other lanes)
+[main6 RUN] 2026-11-08 08:13:42 render check OK qwen36_27b: "natural_system_ok": false
+[main6 RUN] 2026-11-08 08:13:42 start /root/p2_scale_20261015/crossmodel/modeswitch/qwen36_27b
+[main6 RUN] 2026-11-08 08:15:48 DONE /root/p2_scale_20261015/crossmodel/modeswitch/qwen36_27b: summary: {"mode_switch_main": true, "ratios_main": {"A-U/U-S_kl_body": 39.38, "A-S/U-S_kl_body": 59.02, "A-U/U-S_kl_reply": 0.18, "A-S/U-S_kl_reply": 0.86}, "p_close_main": {"A": 0.559, "U": 0.9538, "S": 0.9769}, "kl_body_main": {"A-U": 0.444, "A-S": 0.6654, "U-S": 0.0113}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 08:15:48 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen36_27b
+[main6 RUN] 2026-11-08 08:20:07 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen36_27b: summary: {"p_ctrl": {"A": 0.5591, "U": 0.9538, "S": 0.9769}, "kl": {"A-U": {"kl_body": 0.444, "kl_content": 0.0175}, "A-S": {"kl_body": 0.6654, "kl_content": 0.0508}, "U-S": {"kl_body": 0.0113, "kl_content": 0.0535}}, "ratios": {"A-U/U-S_kl_body": [39.38, 26.56, 68.91], "A-S/U-S_kl_body": [59.02, 44.84, 89.62], "A-U/U-S_kl_content": [0.33, 0.28, 0.38], "A-S/U-S_kl_content": [0.95, 0.89, 1.02]}}
+[main6 RUN] 2026-11-08 08:20:11 finished qwen36_27b; weights deleted (179 GiB free)
+[main6 DL] 2026-11-08 08:35:00 Qwen/Qwen3.5-27B attempt 1 failed
+[main6 DL] 2026-11-08 08:38:25 downloaded Qwen/Qwen3.5-27B 52G
+[main6 DL] 2026-11-08 08:38:25 download ibm-granite/granite-4.2-30b@9e668ce1c538 (55 GiB, 158 GiB free, 0 GiB reserved for the other lanes)
+[main6 RUN] 2026-11-08 08:39:27 render check OK qwen35_27b: "natural_system_ok": false
+[main6 RUN] 2026-11-08 08:39:27 start /root/p2_scale_20261015/crossmodel/modeswitch/qwen35_27b
+[main6 RUN] 2026-11-08 08:42:49 DONE /root/p2_scale_20261015/crossmodel/modeswitch/qwen35_27b: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 0.82, "A-S/U-S_kl_body": 1.02, "A-U/U-S_kl_reply": 0.85, "A-S/U-S_kl_reply": 0.38}, "p_close_main": {"A": 0.0001, "U": 0.0102, "S": 0.0133}, "kl_body_main": {"A-U": 0.0371, "A-S": 0.046, "U-S": 0.0451}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 08:42:49 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen35_27b
+[main6 RUN] 2026-11-08 08:44:22 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen35_27b: summary: {"p_ctrl": {"A": 0.0002, "U": 0.0103, "S": 0.0135}, "kl": {"A-U": {"kl_body": 0.0371, "kl_content": 0.0207}, "A-S": {"kl_body": 0.046, "kl_content": 0.0227}, "U-S": {"kl_body": 0.0451, "kl_content": 0.0383}}, "ratios": {"A-U/U-S_kl_body": [0.82, 0.68, 1.0], "A-S/U-S_kl_body": [1.02, 0.88, 1.19], "A-U/U-S_kl_content": [0.54, 0.45, 0.65], "A-S/U-S_kl_content": [0.59, 0.54, 0.65]}}
+[main6 RUN] 2026-11-08 08:44:28 finished qwen35_27b; weights deleted (191 GiB free)
+[main6 DL] 2026-11-08 08:53:29 downloaded ibm-granite/granite-4.2-30b 55G
+[main6 DL] 2026-11-08 08:53:29 download zai-org/GLM-4.7-Flash@7dd20894a642 (59 GiB, 155 GiB free, 0 GiB reserved for the other lanes)
+[main6 RUN] 2026-11-08 08:54:42 render check OK granite42_30b_en: "natural_system_ok": true
+[main6 RUN] 2026-11-08 08:54:42 start /root/p2_scale_20261015/crossmodel/modeswitch/granite42_30b_en
+[main6 RUN] 2026-11-08 08:55:56 DONE /root/p2_scale_20261015/crossmodel/modeswitch/granite42_30b_en: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 1.34, "A-S/U-S_kl_body": 0.8, "A-U/U-S_kl_reply": 1.47, "A-S/U-S_kl_reply": 1.79}, "p_close_main": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl_body_main": {"A-U": 0.2272, "A-S": 0.1363, "U-S": 0.1696}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 08:55:56 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/granite42_30b_en
+[main6 RUN] 2026-11-08 08:56:46 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/granite42_30b_en: summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.2272, "kl_content": 0.227}, "A-S": {"kl_body": 0.1363, "kl_content": 0.1363}, "U-S": {"kl_body": 0.1696, "kl_content": 0.1695}}, "ratios": {"A-U/U-S_kl_body": [1.34, 1.13, 1.59], "A-S/U-S_kl_body": [0.8, 0.64, 1.04], "A-U/U-S_kl_content": [1.34, 1.13, 1.59], "A-S/U-S_kl_content": [0.8, 0.64, 1.04]}}
+[main6 RUN] 2026-11-08 08:56:53 finished granite42_30b_en; weights deleted (191 GiB free)
+[main6 DL] 2026-11-08 09:05:42 downloaded zai-org/GLM-4.7-Flash 59G
+[main6 DL] 2026-11-08 09:05:42 download Qwen/Qwen3.6-35B-A3B@995ad96eacd9 (67 GiB, 151 GiB free, 0 GiB reserved for the other lanes)
+[main6 RUN] 2026-11-08 09:06:10 render check OK glm47_flash: "natural_system_ok": true
+[main6 RUN] 2026-11-08 09:06:10 start /root/p2_scale_20261015/crossmodel/modeswitch/glm47_flash
+[main6 RUN] 2026-11-08 09:09:19 DONE /root/p2_scale_20261015/crossmodel/modeswitch/glm47_flash: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 2.09, "A-S/U-S_kl_body": 2.0, "A-U/U-S_kl_reply": 3.36, "A-S/U-S_kl_reply": 2.92}, "p_close_main": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl_body_main": {"A-U": 0.1439, "A-S": 0.1375, "U-S": 0.0688}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 09:09:19 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/glm47_flash
+[main6 RUN] 2026-11-08 09:14:35 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/glm47_flash: summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.1439, "kl_content": 0.1438}, "A-S": {"kl_body": 0.1375, "kl_content": 0.1375}, "U-S": {"kl_body": 0.0688, "kl_content": 0.0688}}, "ratios": {"A-U/U-S_kl_body": [2.09, 1.87, 2.31], "A-S/U-S_kl_body": [2.0, 1.77, 2.22], "A-U/U-S_kl_content": [2.09, 1.87, 2.31], "A-S/U-S_kl_content": [2.0, 1.77, 2.22]}}
+[main6 RUN] 2026-11-08 09:14:39 finished glm47_flash; weights deleted (169 GiB free)
+[main6 DL] 2026-11-08 09:21:37 downloaded Qwen/Qwen3.6-35B-A3B 67G
+[main6 DL] 2026-11-08 09:21:37 all downloads finished
+[main6 RUN] 2026-11-08 09:22:01 render check OK qwen36_35b_a3b: "natural_system_ok": false
+[main6 RUN] 2026-11-08 09:22:01 start /root/p2_scale_20261015/crossmodel/modeswitch/qwen36_35b_a3b
+[main6 RUN] 2026-11-08 09:27:27 DONE /root/p2_scale_20261015/crossmodel/modeswitch/qwen36_35b_a3b: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 0.15, "A-S/U-S_kl_body": 0.68, "A-U/U-S_kl_reply": 0.26, "A-S/U-S_kl_reply": 0.72}, "p_close_main": {"A": 0.953, "U": 0.9575, "S": 0.9284}, "kl_body_main": {"A-U": 0.0033, "A-S": 0.0147, "U-S": 0.0216}, "gate": {"checked": 0, "all_ok": true}}
+[main6 RUN] 2026-11-08 09:27:27 start /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen36_35b_a3b
+[main6 RUN] 2026-11-08 09:30:01 DONE /root/p2_scale_20261015/crossmodel/modeswitch/ctrl/qwen36_35b_a3b: summary: {"p_ctrl": {"A": 0.9534, "U": 0.9577, "S": 0.9286}, "kl": {"A-U": {"kl_body": 0.0033, "kl_content": 0.0257}, "A-S": {"kl_body": 0.0147, "kl_content": 0.089}, "U-S": {"kl_body": 0.0216, "kl_content": 0.1152}}, "ratios": {"A-U/U-S_kl_body": [0.15, 0.13, 0.21], "A-S/U-S_kl_body": [0.68, 0.55, 0.92], "A-U/U-S_kl_content": [0.22, 0.2, 0.25], "A-S/U-S_kl_content": [0.77, 0.73, 0.81]}}
+[main6 RUN] 2026-11-08 09:30:08 finished qwen36_35b_a3b; weights deleted (210 GiB free)
+[main6 RUN] 2026-11-08 09:30:08 main6 queue done

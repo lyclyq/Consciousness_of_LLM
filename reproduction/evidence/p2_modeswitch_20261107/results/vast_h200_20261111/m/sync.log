@@ -1,0 +1,129 @@
+2026-11-12 08:47:39 round 1: changed 1348, verified 1348, still changing 0, manifest 1348, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 08:47:49 round 1: changed 0, verified 0, still changing 0, manifest 1348, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 08:57:53 round 2: listing failed (ssh)
+2026-11-12 09:07:57 round 3: changed 0, verified 0, still changing 0, manifest 1348, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 09:18:00 round 4: changed 0, verified 0, still changing 0, manifest 1348, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 09:28:03 round 5: changed 0, verified 0, still changing 0, manifest 1348, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 09:38:13 round 6: changed 17, verified 17, still changing 0, manifest 1364, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 09:48:24 round 7: changed 17, verified 17, still changing 0, manifest 1380, [mech] 2026-11-12 04:34:15 content control start
+2026-11-12 09:58:38 round 8: changed 32, verified 31, still changing 1, manifest 1408, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 10:08:59 round 9: changed 97, verified 97, still changing 0, manifest 1474, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 10:19:15 round 10: changed 61, verified 16, still changing 45, manifest 1474, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 10:29:40 round 11: changed 104, verified 104, still changing 0, manifest 1561, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 10:39:45 round 12: listing failed (ssh)
+2026-11-12 10:50:06 round 13: changed 88, verified 88, still changing 0, manifest 1636, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 11:00:22 round 14: changed 49, verified 49, still changing 0, manifest 1684, [mech] 2026-11-12 09:56:44 arith control start
+2026-11-12 11:10:38 round 15: changed 52, verified 52, still changing 0, manifest 1717, [mech] 2026-11-12 11:06:16 KL swap start
+2026-11-12 11:20:51 round 16: changed 30, verified 30, still changing 0, manifest 1742, [mech] 2026-11-12 11:06:16 KL swap start
+2026-11-12 11:31:04 round 17: changed 31, verified 31, still changing 0, manifest 1767, [mech] 2026-11-12 11:06:16 KL swap start
+2026-11-12 11:41:17 round 18: changed 33, verified 33, still changing 0, manifest 1793, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 11:51:42 round 19: changed 18, verified 18, still changing 0, manifest 1799, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:02:13 round 20: changed 16, verified 16, still changing 0, manifest 1808, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:12:36 round 21: changed 12, verified 6, still changing 6, manifest 1814, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:23:18 round 22: changed 22, verified 22, still changing 0, manifest 1829, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:33:45 round 23: changed 13, verified 13, still changing 0, manifest 1838, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:44:15 round 24: changed 12, verified 11, still changing 1, manifest 1849, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 12:55:00 round 25: changed 22, verified 22, still changing 0, manifest 1859, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:05:50 round 26: changed 13, verified 13, still changing 0, manifest 1868, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:16:17 round 27: changed 12, verified 12, still changing 0, manifest 1880, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:26:35 round 28: changed 13, verified 3, still changing 10, manifest 1880, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:37:17 round 29: changed 22, verified 22, still changing 0, manifest 1898, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:47:53 round 30: changed 12, verified 12, still changing 0, manifest 1910, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 13:58:31 round 31: changed 13, verified 13, still changing 0, manifest 1919, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 14:08:57 round 32: changed 12, verified 12, still changing 0, manifest 1931, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 14:20:06 round 33: changed 12, verified 10, still changing 2, manifest 1938, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 14:31:07 round 34: changed 25, verified 25, still changing 0, manifest 1952, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 14:42:11 round 35: changed 12, verified 12, still changing 0, manifest 1961, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 14:52:34 round 36: changed 12, verified 12, still changing 0, manifest 1973, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 15:03:00 round 37: changed 13, verified 13, still changing 0, manifest 1982, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 15:13:48 round 38: changed 12, verified 12, still changing 0, manifest 1991, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 15:24:13 round 39: changed 12, verified 12, still changing 0, manifest 2000, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 15:34:35 round 40: changed 13, verified 13, still changing 0, manifest 2012, [part1] 2026-11-12 11:40:53 KL + retention (combined) start
+2026-11-12 15:44:40 round 41: listing failed (ssh)
+2026-11-12 15:55:00 round 42: changed 33, verified 33, still changing 0, manifest 2040, [extra] 2026-11-12 15:41:16 game smoke main start
+2026-11-12 16:05:11 round 43: changed 26, verified 26, still changing 0, manifest 2056, [extra] 2026-11-12 15:41:16 game smoke main start
+2026-11-12 16:15:25 round 44: changed 38, verified 38, still changing 0, manifest 2083, [extra] 2026-11-12 16:11:13 game smoke control start
+2026-11-12 16:26:35 round 45: changed 354, verified 354, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 16:37:45 round 46: changed 313, verified 313, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 16:47:53 round 47: changed 1, verified 1, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 16:58:01 round 48: changed 1, verified 1, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 17:08:07 round 49: changed 1, verified 1, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 17:18:14 round 50: changed 1, verified 1, still changing 0, manifest 2425, [extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+2026-11-12 17:28:21 round 51: changed 5, verified 5, still changing 0, manifest 2428, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 17:38:32 round 52: changed 19, verified 19, still changing 0, manifest 2444, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 17:48:45 round 53: changed 33, verified 33, still changing 0, manifest 2476, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 17:58:58 round 54: changed 33, verified 33, still changing 0, manifest 2508, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:09:08 round 55: changed 17, verified 17, still changing 0, manifest 2524, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:19:18 round 56: changed 17, verified 17, still changing 0, manifest 2540, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:29:21 round 57: changed 0, verified 0, still changing 0, manifest 2540, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:39:25 round 58: changed 0, verified 0, still changing 0, manifest 2540, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:49:28 round 59: changed 0, verified 0, still changing 0, manifest 2540, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 18:59:31 round 60: changed 0, verified 0, still changing 0, manifest 2540, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 19:09:42 round 61: changed 17, verified 17, still changing 0, manifest 2556, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 19:19:53 round 62: changed 24, verified 24, still changing 0, manifest 2578, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 19:30:00 round 63: listing failed (ssh)
+2026-11-12 19:40:11 round 64: changed 17, verified 17, still changing 0, manifest 2594, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 19:50:21 round 65: changed 17, verified 17, still changing 0, manifest 2610, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:00:31 round 66: changed 17, verified 17, still changing 0, manifest 2626, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:10:41 round 67: changed 17, verified 17, still changing 0, manifest 2642, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:20:52 round 68: changed 17, verified 17, still changing 0, manifest 2658, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:30:55 round 69: changed 0, verified 0, still changing 0, manifest 2658, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:40:59 round 70: changed 0, verified 0, still changing 0, manifest 2658, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 20:51:03 round 71: changed 0, verified 0, still changing 0, manifest 2658, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:01:06 round 72: changed 0, verified 0, still changing 0, manifest 2658, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:11:17 round 73: changed 17, verified 17, still changing 0, manifest 2674, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:21:21 round 74: changed 0, verified 0, still changing 0, manifest 2674, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:31:30 round 75: changed 17, verified 17, still changing 0, manifest 2690, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:41:39 round 76: changed 17, verified 17, still changing 0, manifest 2706, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 21:54:28 round 77: changed 24, verified 24, still changing 0, manifest 2728, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:04:31 round 78: changed 0, verified 0, still changing 0, manifest 2728, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:14:42 round 79: changed 17, verified 17, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:24:51 round 80: changed 17, verified 17, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:34:54 round 81: changed 0, verified 0, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:44:57 round 82: changed 0, verified 0, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 22:55:01 round 83: changed 0, verified 0, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:05:04 round 84: changed 0, verified 0, still changing 0, manifest 2744, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:15:14 round 85: changed 17, verified 17, still changing 0, manifest 2760, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:25:26 round 86: changed 33, verified 33, still changing 0, manifest 2776, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:35:29 round 87: changed 0, verified 0, still changing 0, manifest 2776, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:45:32 round 88: changed 0, verified 0, still changing 0, manifest 2776, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-12 23:55:39 round 89: changed 0, verified 0, still changing 0, manifest 2776, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:05:44 round 90: changed 0, verified 0, still changing 0, manifest 2776, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:15:54 round 91: changed 17, verified 17, still changing 0, manifest 2792, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:26:03 round 92: changed 17, verified 17, still changing 0, manifest 2792, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:36:07 round 93: changed 0, verified 0, still changing 0, manifest 2792, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:46:20 round 94: changed 17, verified 17, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 00:56:24 round 95: changed 0, verified 0, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 01:06:29 round 96: changed 0, verified 0, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 01:16:34 round 97: changed 0, verified 0, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 01:26:41 round 98: changed 0, verified 0, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 01:36:45 round 99: changed 0, verified 0, still changing 0, manifest 2808, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 01:47:02 round 100: changed 17, verified 17, still changing 0, manifest 2824, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 02:52:10 restart: sync_h200_20261113.sh (23f6a726) replaces sync_h200_20261112.sh; the old loop's sleep 600 stalled after round 100 while the local PC was suspended. Round numbers restart at 1.
+2026-11-13 02:52:49 round 1: changed 17, verified 17, still changing 0, manifest 2840, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:03:01 round 2: changed 17, verified 17, still changing 0, manifest 2856, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:13:05 round 3: changed 0, verified 0, still changing 0, manifest 2856, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:23:10 round 4: changed 0, verified 0, still changing 0, manifest 2856, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:33:20 round 5: changed 0, verified 0, still changing 0, manifest 2856, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:43:26 round 6: changed 0, verified 0, still changing 0, manifest 2856, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 03:53:38 round 7: changed 17, verified 17, still changing 0, manifest 2872, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:03:50 round 8: changed 24, verified 24, still changing 0, manifest 2894, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:14:04 round 9: changed 33, verified 33, still changing 0, manifest 2926, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:24:17 round 10: changed 33, verified 33, still changing 0, manifest 2958, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:34:32 round 11: changed 33, verified 33, still changing 0, manifest 2974, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:44:45 round 12: changed 33, verified 33, still changing 0, manifest 3006, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 04:54:58 round 13: changed 33, verified 33, still changing 0, manifest 3022, [extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner
+2026-11-13 05:05:15 round 14: changed 60, verified 60, still changing 0, manifest 3063, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 05:15:31 round 15: changed 36, verified 16, still changing 20, manifest 3063, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 05:25:46 round 16: changed 52, verified 52, still changing 0, manifest 3098, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 05:35:58 round 17: changed 17, verified 17, still changing 0, manifest 3114, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 05:46:15 round 18: changed 36, verified 36, still changing 0, manifest 3148, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 05:56:30 round 19: changed 52, verified 52, still changing 0, manifest 3182, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:06:43 round 20: changed 20, verified 20, still changing 0, manifest 3182, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:16:55 round 21: changed 17, verified 17, still changing 0, manifest 3198, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:27:22 round 22: changed 17, verified 17, still changing 0, manifest 3214, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:37:50 round 23: changed 20, verified 20, still changing 0, manifest 3232, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:48:10 round 24: changed 52, verified 52, still changing 0, manifest 3282, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 06:58:27 round 25: changed 33, verified 33, still changing 0, manifest 3314, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 07:08:44 round 26: changed 38, verified 38, still changing 0, manifest 3333, [extra] 2026-11-13 04:56:49 extra done
+2026-11-13 07:17:31 stopped: game300 DONE 07:08:30 UTC, final check final_verify_h200_20261113.sh matched all 3549 remote files (final_20261113/FINAL_MAP.txt).

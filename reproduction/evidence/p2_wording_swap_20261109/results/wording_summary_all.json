@@ -1,0 +1,3921 @@
+{
+ "by_readout": {
+  "qsp": {
+   "label": "Qwen3.8-27B，非思考，中文",
+   "thinking": false,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.7951,
+       "user": 0.1571,
+       "system": 0.0464
+      },
+      "base_U": {
+       "self": 0.0388,
+       "user": 0.9116,
+       "system": 0.0403
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.738,
+       "ci_items": [
+        -0.7498,
+        -0.7262
+       ],
+       "ci_families": [
+        -0.7681,
+        -0.7067
+       ],
+       "share": 0.9759,
+       "share_ci_families": [
+        0.9532,
+        0.9954
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.7358,
+       "ci_items": [
+        0.7205,
+        0.7511
+       ],
+       "ci_families": [
+        0.6984,
+        0.772
+       ],
+       "share": 0.9752,
+       "share_ci_families": [
+        0.9463,
+        1.0016
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.378,
+       "ci_items": [
+        0.342,
+        0.4155
+       ],
+       "ci_families": [
+        0.2733,
+        0.4838
+       ],
+       "share": 0.4999,
+       "share_ci_families": [
+        0.3627,
+        0.6378
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.418,
+       "ci_items": [
+        -0.4597,
+        -0.378
+       ],
+       "ci_families": [
+        -0.5215,
+        -0.3108
+       ],
+       "share": 0.5541,
+       "share_ci_families": [
+        0.4106,
+        0.6996
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.568,
+       "user": 0.2759,
+       "system": 0.1539
+      },
+      "base_U": {
+       "self": 0.3715,
+       "user": 0.4499,
+       "system": 0.1649
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.3523,
+       "ci_items": [
+        -0.3832,
+        -0.3217
+       ],
+       "ci_families": [
+        -0.4208,
+        -0.2868
+       ],
+       "share": 1.7929,
+       "share_ci_families": [
+        1.6207,
+        2.096
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.3541,
+       "ci_items": [
+        0.3257,
+        0.3812
+       ],
+       "ci_families": [
+        0.2873,
+        0.4262
+       ],
+       "share": 2.0357,
+       "share_ci_families": [
+        1.7488,
+        2.616
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0794,
+       "ci_items": [
+        0.0536,
+        0.1063
+       ],
+       "ci_families": [
+        0.0428,
+        0.1138
+       ],
+       "share": 0.4039,
+       "share_ci_families": [
+        0.2403,
+        0.5922
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0421,
+       "ci_items": [
+        -0.0666,
+        -0.0185
+       ],
+       "ci_families": [
+        -0.0812,
+        0.0012
+       ],
+       "share": 0.2419,
+       "share_ci_families": [
+        -0.0102,
+        0.4847
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0118,
+       "ci_items": [
+        -0.0154,
+        -0.0082
+       ],
+       "ci_families": [
+        -0.0165,
+        -0.0072
+       ],
+       "share": 0.0598,
+       "share_ci_families": [
+        0.0356,
+        0.0952
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0007,
+       "ci_items": [
+        -0.0026,
+        0.0041
+       ],
+       "ci_families": [
+        -0.0052,
+        0.0068
+       ],
+       "share": 0.0041,
+       "share_ci_families": [
+        -0.035,
+        0.038
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0019,
+       "ci_items": [
+        -0.0047,
+        0.0008
+       ],
+       "ci_families": [
+        -0.0048,
+        0.001
+       ],
+       "share": -0.0098,
+       "share_ci_families": [
+        -0.0271,
+        0.005
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0025,
+       "ci_items": [
+        -0.0006,
+        0.0055
+       ],
+       "ci_families": [
+        -0.0014,
+        0.0063
+       ],
+       "share": -0.0142,
+       "share_ci_families": [
+        -0.0403,
+        0.0089
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.5251,
+       "user": 0.3359,
+       "system": 0.137
+      },
+      "base_U": {
+       "self": 0.1644,
+       "user": 0.784,
+       "system": 0.0436
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.3888,
+       "ci_items": [
+        -0.4069,
+        -0.3711
+       ],
+       "ci_families": [
+        -0.428,
+        -0.3493
+       ],
+       "share": 1.0779,
+       "share_ci_families": [
+        1.0407,
+        1.1222
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.4901,
+       "ci_items": [
+        0.4599,
+        0.5206
+       ],
+       "ci_families": [
+        0.4427,
+        0.5337
+       ],
+       "share": 1.0937,
+       "share_ci_families": [
+        1.0545,
+        1.1398
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.1972,
+       "ci_items": [
+        0.1785,
+        0.2164
+       ],
+       "ci_families": [
+        0.1511,
+        0.243
+       ],
+       "share": 0.5466,
+       "share_ci_families": [
+        0.438,
+        0.6611
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.2213,
+       "ci_items": [
+        -0.2462,
+        -0.1978
+       ],
+       "ci_families": [
+        -0.2756,
+        -0.1652
+       ],
+       "share": 0.4939,
+       "share_ci_families": [
+        0.3755,
+        0.6178
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0051,
+       "ci_items": [
+        -0.0087,
+        -0.0016
+       ],
+       "ci_families": [
+        -0.0083,
+        -0.0017
+       ],
+       "share": 0.014,
+       "share_ci_families": [
+        0.0049,
+        0.0233
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.002,
+       "ci_items": [
+        -0.0055,
+        0.0014
+       ],
+       "ci_families": [
+        -0.0064,
+        0.0029
+       ],
+       "share": -0.0044,
+       "share_ci_families": [
+        -0.0145,
+        0.0065
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0029,
+       "ci_items": [
+        0.0007,
+        0.005
+       ],
+       "ci_families": [
+        0.0007,
+        0.0052
+       ],
+       "share": 0.008,
+       "share_ci_families": [
+        0.0019,
+        0.0147
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0021,
+       "ci_items": [
+        -0.0047,
+        0.0006
+       ],
+       "ci_families": [
+        -0.0056,
+        0.0013
+       ],
+       "share": 0.0046,
+       "share_ci_families": [
+        -0.0028,
+        0.013
+       ]
+      }
+     }
+    }
+   }
+  },
+  "qth": {
+   "label": "Qwen3.8-27B，思考，中文",
+   "thinking": true,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.9732,
+       "user": 0.0067,
+       "system": 0.0201,
+       "finished": 149
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 0.9867,
+       "system": 0.0133,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 148,
+       "mean": -0.9324,
+       "ci_items": [
+        -0.9662,
+        -0.8919
+       ],
+       "ci_families": [
+        -0.9667,
+        -0.8889
+       ],
+       "share": 0.9583,
+       "share_ci_families": [
+        0.9103,
+        0.9931
+       ]
+      },
+      "user": {
+       "n_pairs": 148,
+       "mean": 0.8919,
+       "ci_items": [
+        0.8378,
+        0.9392
+       ],
+       "ci_families": [
+        0.8041,
+        0.9667
+       ],
+       "share": 0.9103,
+       "share_ci_families": [
+        0.8163,
+        0.9931
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.6533,
+       "ci_items": [
+        0.58,
+        0.7267
+       ],
+       "ci_families": [
+        0.4867,
+        0.8067
+       ],
+       "share": 0.6759,
+       "share_ci_families": [
+        0.5103,
+        0.8299
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.6667,
+       "ci_items": [
+        -0.74,
+        -0.5933
+       ],
+       "ci_families": [
+        -0.82,
+        -0.5
+       ],
+       "share": 0.6849,
+       "share_ci_families": [
+        0.5205,
+        0.8333
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.7467,
+       "user": 0.1,
+       "system": 0.1533,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 0.9733,
+       "system": 0.0267,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.72,
+       "ci_items": [
+        -0.7867,
+        -0.6467
+       ],
+       "ci_families": [
+        -0.84,
+        -0.6
+       ],
+       "share": 0.9643,
+       "share_ci_families": [
+        0.8909,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.86,
+       "ci_items": [
+        0.8,
+        0.9133
+       ],
+       "ci_families": [
+        0.76,
+        0.94
+       ],
+       "share": 0.9847,
+       "share_ci_families": [
+        0.8676,
+        1.093
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.56,
+       "ci_items": [
+        0.48,
+        0.64
+       ],
+       "ci_families": [
+        0.4333,
+        0.6933
+       ],
+       "share": 0.75,
+       "share_ci_families": [
+        0.5515,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.5933,
+       "ci_items": [
+        -0.6733,
+        -0.5133
+       ],
+       "ci_families": [
+        -0.74,
+        -0.4467
+       ],
+       "share": 0.6794,
+       "share_ci_families": [
+        0.504,
+        0.8636
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0333,
+       "ci_items": [
+        -0.04,
+        0.1
+       ],
+       "ci_families": [
+        -0.0133,
+        0.0867
+       ],
+       "share": -0.0446,
+       "share_ci_families": [
+        -0.1263,
+        0.0183
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.04,
+       "ci_items": [
+        -0.0133,
+        0.0933
+       ],
+       "ci_families": [
+        -0.0067,
+        0.1
+       ],
+       "share": 0.0458,
+       "share_ci_families": [
+        -0.0073,
+        0.122
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.02,
+       "ci_items": [
+        -0.0067,
+        0.0533
+       ],
+       "ci_families": [
+        -0.02,
+        0.08
+       ],
+       "share": -0.0229,
+       "share_ci_families": [
+        -0.0945,
+        0.0227
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.84,
+       "user": 0.0667,
+       "system": 0.0933,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.84,
+       "ci_items": [
+        -0.8933,
+        -0.78
+       ],
+       "ci_families": [
+        -0.9333,
+        -0.7267
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        1.0,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.9333,
+       "ci_items": [
+        0.8933,
+        0.9733
+       ],
+       "ci_families": [
+        0.8667,
+        0.9867
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        1.0,
+        1.0
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": 0.7651,
+       "ci_items": [
+        0.6913,
+        0.8322
+       ],
+       "ci_families": [
+        0.6351,
+        0.8859
+       ],
+       "share": 0.912,
+       "share_ci_families": [
+        0.705,
+        1.1532
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": -0.7785,
+       "ci_items": [
+        -0.8456,
+        -0.7047
+       ],
+       "ci_families": [
+        -0.9,
+        -0.6467
+       ],
+       "share": 0.8345,
+       "share_ci_families": [
+        0.6711,
+        1.0074
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": -0.0067,
+       "ci_items": [
+        -0.0671,
+        0.0537
+       ],
+       "ci_families": [
+        -0.0604,
+        0.0473
+       ],
+       "share": 0.008,
+       "share_ci_families": [
+        -0.0574,
+        0.0769
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": 0.0403,
+       "ci_items": [
+        -0.0067,
+        0.0872
+       ],
+       "ci_families": [
+        -0.0201,
+        0.1067
+       ],
+       "share": 0.0432,
+       "share_ci_families": [
+        -0.0219,
+        0.1128
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "qsp_en": {
+   "label": "Qwen3.8-27B，非思考，英文",
+   "thinking": false,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.6982,
+       "user": 0.1721,
+       "system": 0.1281
+      },
+      "base_U": {
+       "self": 0.0764,
+       "user": 0.8437,
+       "system": 0.0774
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.6182,
+       "ci_items": [
+        -0.6419,
+        -0.5945
+       ],
+       "ci_families": [
+        -0.6498,
+        -0.5868
+       ],
+       "share": 0.9943,
+       "share_ci_families": [
+        0.9724,
+        1.015
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.5184,
+       "ci_items": [
+        0.4763,
+        0.5611
+       ],
+       "ci_families": [
+        0.4694,
+        0.5663
+       ],
+       "share": 0.7719,
+       "share_ci_families": [
+        0.7149,
+        0.829
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.2222,
+       "ci_items": [
+        0.197,
+        0.2478
+       ],
+       "ci_families": [
+        0.1603,
+        0.2904
+       ],
+       "share": 0.3573,
+       "share_ci_families": [
+        0.2603,
+        0.4666
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.3076,
+       "ci_items": [
+        -0.3466,
+        -0.27
+       ],
+       "ci_families": [
+        -0.3783,
+        -0.2404
+       ],
+       "share": 0.4581,
+       "share_ci_families": [
+        0.3562,
+        0.5706
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0144,
+       "ci_items": [
+        -0.0183,
+        -0.0105
+       ],
+       "ci_families": [
+        -0.0214,
+        -0.0076
+       ],
+       "share": 0.0232,
+       "share_ci_families": [
+        0.0119,
+        0.0353
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.004,
+       "ci_items": [
+        0.001,
+        0.0069
+       ],
+       "ci_families": [
+        -0.0019,
+        0.0102
+       ],
+       "share": 0.006,
+       "share_ci_families": [
+        -0.0028,
+        0.0151
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0028,
+       "ci_items": [
+        0.0013,
+        0.0043
+       ],
+       "ci_families": [
+        0.001,
+        0.0047
+       ],
+       "share": 0.0045,
+       "share_ci_families": [
+        0.0016,
+        0.0077
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.005,
+       "ci_items": [
+        -0.0076,
+        -0.0024
+       ],
+       "ci_families": [
+        -0.0092,
+        -0.0006
+       ],
+       "share": 0.0074,
+       "share_ci_families": [
+        0.0009,
+        0.0138
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.5654,
+       "user": 0.1752,
+       "system": 0.2568
+      },
+      "base_U": {
+       "self": 0.2654,
+       "user": 0.5265,
+       "system": 0.2029
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.3598,
+       "ci_items": [
+        -0.3823,
+        -0.3375
+       ],
+       "ci_families": [
+        -0.3838,
+        -0.334
+       ],
+       "share": 1.1994,
+       "share_ci_families": [
+        1.1232,
+        1.2908
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.1822,
+       "ci_items": [
+        0.1501,
+        0.2152
+       ],
+       "ci_families": [
+        0.137,
+        0.2262
+       ],
+       "share": 0.5186,
+       "share_ci_families": [
+        0.4244,
+        0.5974
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.1352,
+       "ci_items": [
+        0.1215,
+        0.1487
+       ],
+       "ci_families": [
+        0.105,
+        0.1629
+       ],
+       "share": 0.4508,
+       "share_ci_families": [
+        0.3751,
+        0.5242
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.1372,
+       "ci_items": [
+        -0.158,
+        -0.1165
+       ],
+       "ci_families": [
+        -0.1782,
+        -0.0922
+       ],
+       "share": 0.3905,
+       "share_ci_families": [
+        0.2787,
+        0.4981
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0055,
+       "ci_items": [
+        -0.0097,
+        -0.0015
+       ],
+       "ci_families": [
+        -0.0119,
+        0.0012
+       ],
+       "share": 0.0182,
+       "share_ci_families": [
+        -0.004,
+        0.0399
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0043,
+       "ci_items": [
+        -0.0072,
+        -0.0015
+       ],
+       "ci_families": [
+        -0.009,
+        0.0006
+       ],
+       "share": -0.0122,
+       "share_ci_families": [
+        -0.0259,
+        0.0016
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0012,
+       "ci_items": [
+        -0.0013,
+        0.0036
+       ],
+       "ci_families": [
+        -0.0016,
+        0.0039
+       ],
+       "share": 0.0038,
+       "share_ci_families": [
+        -0.0051,
+        0.0136
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0003,
+       "ci_items": [
+        -0.0033,
+        0.0028
+       ],
+       "ci_families": [
+        -0.0045,
+        0.0041
+       ],
+       "share": 0.0008,
+       "share_ci_families": [
+        -0.0119,
+        0.013
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.5744,
+       "user": 0.2985,
+       "system": 0.1254
+      },
+      "base_U": {
+       "self": 0.1672,
+       "user": 0.7715,
+       "system": 0.0588
+      }
+     },
+     "unparsed": {},
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.4357,
+       "ci_items": [
+        -0.4657,
+        -0.4058
+       ],
+       "ci_families": [
+        -0.4727,
+        -0.398
+       ],
+       "share": 1.0698,
+       "share_ci_families": [
+        1.0322,
+        1.115
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.3327,
+       "ci_items": [
+        0.2902,
+        0.3764
+       ],
+       "ci_families": [
+        0.2626,
+        0.3925
+       ],
+       "share": 0.7034,
+       "share_ci_families": [
+        0.5673,
+        0.821
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.1279,
+       "ci_items": [
+        0.1125,
+        0.1441
+       ],
+       "ci_families": [
+        0.0947,
+        0.1638
+       ],
+       "share": 0.3139,
+       "share_ci_families": [
+        0.2388,
+        0.3957
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.1954,
+       "ci_items": [
+        -0.2224,
+        -0.1697
+       ],
+       "ci_families": [
+        -0.2472,
+        -0.1453
+       ],
+       "share": 0.4131,
+       "share_ci_families": [
+        0.3145,
+        0.5134
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.013,
+       "ci_items": [
+        -0.0172,
+        -0.0085
+       ],
+       "ci_families": [
+        -0.0189,
+        -0.0075
+       ],
+       "share": 0.032,
+       "share_ci_families": [
+        0.0174,
+        0.0487
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0022,
+       "ci_items": [
+        -0.0015,
+        0.0057
+       ],
+       "ci_families": [
+        -0.0035,
+        0.0086
+       ],
+       "share": 0.0045,
+       "share_ci_families": [
+        -0.0072,
+        0.0187
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0033,
+       "ci_items": [
+        0.0011,
+        0.0055
+       ],
+       "ci_families": [
+        0.0006,
+        0.0061
+       ],
+       "share": 0.0081,
+       "share_ci_families": [
+        0.0015,
+        0.0148
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0047,
+       "ci_items": [
+        -0.0073,
+        -0.002
+       ],
+       "ci_families": [
+        -0.0084,
+        -0.001
+       ],
+       "share": 0.0099,
+       "share_ci_families": [
+        0.0023,
+        0.0175
+       ]
+      }
+     }
+    }
+   }
+  },
+  "qth_en": {
+   "label": "Qwen3.8-27B，思考，英文",
+   "thinking": true,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.8867,
+       "user": 0.0933,
+       "system": 0.02,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": -0.8859,
+       "ci_items": [
+        -0.9329,
+        -0.8389
+       ],
+       "ci_families": [
+        -0.9733,
+        -0.78
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        1.0,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": 0.698,
+       "ci_items": [
+        0.6174,
+        0.7718
+       ],
+       "ci_families": [
+        0.5133,
+        0.8784
+       ],
+       "share": 0.7704,
+       "share_ci_families": [
+        0.5724,
+        0.9516
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0133,
+       "ci_items": [
+        0.0,
+        0.0333
+       ],
+       "ci_families": [
+        0.0,
+        0.04
+       ],
+       "share": 0.015,
+       "share_ci_families": [
+        0.0,
+        0.0465
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0133,
+       "ci_items": [
+        -0.0333,
+        0.0
+       ],
+       "ci_families": [
+        -0.04,
+        0.0
+       ],
+       "share": 0.0147,
+       "share_ci_families": [
+        -0.0,
+        0.0455
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0133,
+       "ci_items": [
+        -0.0533,
+        0.02
+       ],
+       "ci_families": [
+        -0.0533,
+        0.02
+       ],
+       "share": 0.015,
+       "share_ci_families": [
+        -0.0246,
+        0.0583
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0133,
+       "ci_items": [
+        -0.0133,
+        0.04
+       ],
+       "ci_families": [
+        -0.0133,
+        0.0467
+       ],
+       "share": 0.0147,
+       "share_ci_families": [
+        -0.015,
+        0.0534
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.72,
+       "user": 0.0667,
+       "system": 0.2133,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 145,
+       "mean": -0.7103,
+       "ci_items": [
+        -0.7793,
+        -0.6345
+       ],
+       "ci_families": [
+        -0.8299,
+        -0.589
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        1.0,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 145,
+       "mean": 0.6069,
+       "ci_items": [
+        0.5172,
+        0.6897
+       ],
+       "ci_families": [
+        0.3901,
+        0.7933
+       ],
+       "share": 0.6519,
+       "share_ci_families": [
+        0.4331,
+        0.8333
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0133,
+       "ci_items": [
+        0.0,
+        0.0333
+       ],
+       "ci_families": [
+        0.0,
+        0.0333
+       ],
+       "share": 0.0185,
+       "share_ci_families": [
+        0.0,
+        0.0476
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0533,
+       "ci_items": [
+        -0.0933,
+        -0.02
+       ],
+       "ci_families": [
+        -0.1267,
+        -0.0067
+       ],
+       "share": 0.0571,
+       "share_ci_families": [
+        0.0071,
+        0.1319
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0533,
+       "ci_items": [
+        -0.1067,
+        0.0
+       ],
+       "ci_families": [
+        -0.12,
+        0.0133
+       ],
+       "share": 0.0741,
+       "share_ci_families": [
+        -0.0202,
+        0.1638
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.02,
+       "ci_items": [
+        -0.0133,
+        0.0533
+       ],
+       "ci_families": [
+        -0.0067,
+        0.0467
+       ],
+       "share": 0.0214,
+       "share_ci_families": [
+        -0.007,
+        0.0526
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.8993,
+       "user": 0.0671,
+       "system": 0.0336,
+       "finished": 149
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 148,
+       "mean": -0.8986,
+       "ci_items": [
+        -0.9459,
+        -0.8446
+       ],
+       "ci_families": [
+        -0.9795,
+        -0.8067
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        1.0,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 148,
+       "mean": 0.8649,
+       "ci_items": [
+        0.8041,
+        0.9189
+       ],
+       "ci_families": [
+        0.7651,
+        0.9524
+       ],
+       "share": 0.9275,
+       "share_ci_families": [
+        0.8429,
+        0.9926
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0067,
+       "ci_items": [
+        0.0,
+        0.02
+       ],
+       "ci_families": [
+        0.0,
+        0.02
+       ],
+       "share": 0.0075,
+       "share_ci_families": [
+        0.0,
+        0.0229
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0067,
+       "ci_items": [
+        -0.02,
+        0.0
+       ],
+       "ci_families": [
+        -0.02,
+        0.0
+       ],
+       "share": 0.0072,
+       "share_ci_families": [
+        -0.0,
+        0.0221
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": -0.0403,
+       "ci_items": [
+        -0.0872,
+        0.0067
+       ],
+       "ci_families": [
+        -0.0867,
+        0.0
+       ],
+       "share": 0.0448,
+       "share_ci_families": [
+        -0.0,
+        0.1024
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": 0.0268,
+       "ci_items": [
+        -0.0134,
+        0.0671
+       ],
+       "ci_families": [
+        -0.0067,
+        0.0604
+       ],
+       "share": 0.0288,
+       "share_ci_families": [
+        -0.0071,
+        0.0672
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "g20": {
+   "label": "gpt-oss-20b，思考",
+   "thinking": true,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.7667,
+       "user": 0.2333,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 149
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.76,
+       "ci_items": [
+        -0.8267,
+        -0.6933
+       ],
+       "ci_families": [
+        -0.9333,
+        -0.56
+       ],
+       "share": 0.9912,
+       "share_ci_families": [
+        0.9722,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.76,
+       "ci_items": [
+        0.6933,
+        0.8267
+       ],
+       "ci_families": [
+        0.56,
+        0.9333
+       ],
+       "share": 0.9912,
+       "share_ci_families": [
+        0.9722,
+        1.0
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 147,
+       "mean": 0.3197,
+       "ci_items": [
+        0.2449,
+        0.3946
+       ],
+       "ci_families": [
+        0.1477,
+        0.5135
+       ],
+       "share": 0.4196,
+       "share_ci_families": [
+        0.2114,
+        0.6325
+       ]
+      },
+      "user": {
+       "n_pairs": 147,
+       "mean": -0.3197,
+       "ci_items": [
+        -0.3946,
+        -0.2449
+       ],
+       "ci_families": [
+        -0.5135,
+        -0.1477
+       ],
+       "share": 0.4196,
+       "share_ci_families": [
+        0.2114,
+        0.6325
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.6333,
+       "user": 0.2933,
+       "system": 0.0733,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.2483,
+       "user": 0.745,
+       "system": 0.0067,
+       "finished": 149
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": -0.4295,
+       "ci_items": [
+        -0.5369,
+        -0.3154
+       ],
+       "ci_families": [
+        -0.64,
+        -0.1745
+       ],
+       "share": 1.125,
+       "share_ci_families": [
+        0.5833,
+        1.619
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": 0.4899,
+       "ci_items": [
+        0.3826,
+        0.5906
+       ],
+       "ci_families": [
+        0.2533,
+        0.6913
+       ],
+       "share": 1.0909,
+       "share_ci_families": [
+        0.6552,
+        1.5167
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 149,
+       "mean": 0.0134,
+       "ci_items": [
+        -0.0872,
+        0.1208
+       ],
+       "ci_families": [
+        -0.1533,
+        0.18
+       ],
+       "share": 0.0351,
+       "share_ci_families": [
+        -0.5385,
+        0.4085
+       ]
+      },
+      "user": {
+       "n_pairs": 149,
+       "mean": -0.1611,
+       "ci_items": [
+        -0.2685,
+        -0.0604
+       ],
+       "ci_families": [
+        -0.3133,
+        -0.0203
+       ],
+       "share": 0.3582,
+       "share_ci_families": [
+        0.0577,
+        0.6447
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0333,
+       "ci_items": [
+        -0.0467,
+        0.1133
+       ],
+       "ci_families": [
+        -0.0667,
+        0.16
+       ],
+       "share": -0.1053,
+       "share_ci_families": [
+        -0.5882,
+        0.14
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.04,
+       "ci_items": [
+        -0.1133,
+        0.0267
+       ],
+       "ci_families": [
+        -0.1533,
+        0.0533
+       ],
+       "share": -0.1045,
+       "share_ci_families": [
+        -0.4815,
+        0.092
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 148,
+       "mean": -0.0338,
+       "ci_items": [
+        -0.1014,
+        0.0338
+       ],
+       "ci_families": [
+        -0.1208,
+        0.0476
+       ],
+       "share": -0.0877,
+       "share_ci_families": [
+        -0.45,
+        0.1111
+       ]
+      },
+      "user": {
+       "n_pairs": 148,
+       "mean": 0.0405,
+       "ci_items": [
+        -0.027,
+        0.1081
+       ],
+       "ci_families": [
+        -0.0411,
+        0.1275
+       ],
+       "share": -0.0896,
+       "share_ci_families": [
+        -0.375,
+        0.0886
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.8667,
+       "user": 0.1,
+       "system": 0.0333,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 0.9933,
+       "system": 0.0067,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.86,
+       "ci_items": [
+        -0.9133,
+        -0.8
+       ],
+       "ci_families": [
+        -0.9733,
+        -0.72
+       ],
+       "share": 0.9923,
+       "share_ci_families": [
+        0.9764,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.8933,
+       "ci_items": [
+        0.84,
+        0.94
+       ],
+       "ci_families": [
+        0.76,
+        0.9867
+       ],
+       "share": 1.0,
+       "share_ci_families": [
+        0.9795,
+        1.0259
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.5533,
+       "ci_items": [
+        0.4733,
+        0.6333
+       ],
+       "ci_families": [
+        0.3533,
+        0.76
+       ],
+       "share": 0.6385,
+       "share_ci_families": [
+        0.42,
+        0.845
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.5533,
+       "ci_items": [
+        -0.6333,
+        -0.4667
+       ],
+       "ci_families": [
+        -0.7533,
+        -0.3467
+       ],
+       "share": 0.6194,
+       "share_ci_families": [
+        0.4154,
+        0.8108
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0533,
+       "ci_items": [
+        -0.0067,
+        0.1133
+       ],
+       "ci_families": [
+        -0.06,
+        0.1867
+       ],
+       "share": -0.0615,
+       "share_ci_families": [
+        -0.2545,
+        0.0634
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0467,
+       "ci_items": [
+        -0.1,
+        0.0067
+       ],
+       "ci_families": [
+        -0.18,
+        0.06
+       ],
+       "share": -0.0522,
+       "share_ci_families": [
+        -0.2414,
+        0.0643
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0067,
+       "ci_items": [
+        0.0,
+        0.02
+       ],
+       "ci_families": [
+        0.0,
+        0.02
+       ],
+       "share": -0.0075,
+       "share_ci_families": [
+        -0.0268,
+        -0.0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "g120": {
+   "label": "gpt-oss-120b，思考",
+   "thinking": true,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.9867,
+       "user": 0.0133,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.96,
+       "ci_items": [
+        -0.9867,
+        -0.9267
+       ],
+       "ci_families": [
+        -1.0,
+        -0.9067
+       ],
+       "share": 0.973,
+       "share_ci_families": [
+        0.9189,
+        1.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.96,
+       "ci_items": [
+        0.9267,
+        0.9867
+       ],
+       "ci_families": [
+        0.9067,
+        1.0
+       ],
+       "share": 0.973,
+       "share_ci_families": [
+        0.9189,
+        1.0
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.1133,
+       "ci_items": [
+        0.0667,
+        0.1667
+       ],
+       "ci_families": [
+        0.0133,
+        0.2467
+       ],
+       "share": 0.1149,
+       "share_ci_families": [
+        0.0136,
+        0.2517
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.1133,
+       "ci_items": [
+        -0.1667,
+        -0.0667
+       ],
+       "ci_families": [
+        -0.2467,
+        -0.0133
+       ],
+       "share": 0.1149,
+       "share_ci_families": [
+        0.0136,
+        0.2517
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 1.0,
+       "user": 0.0,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0133,
+       "user": 0.9867,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.8067,
+       "ci_items": [
+        -0.8667,
+        -0.74
+       ],
+       "ci_families": [
+        -0.88,
+        -0.7267
+       ],
+       "share": 0.8176,
+       "share_ci_families": [
+        0.7365,
+        0.8966
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.8067,
+       "ci_items": [
+        0.74,
+        0.8667
+       ],
+       "ci_families": [
+        0.7267,
+        0.88
+       ],
+       "share": 0.8176,
+       "share_ci_families": [
+        0.7365,
+        0.8966
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.36,
+       "ci_items": [
+        0.28,
+        0.44
+       ],
+       "ci_families": [
+        0.1933,
+        0.5333
+       ],
+       "share": 0.3649,
+       "share_ci_families": [
+        0.1973,
+        0.5405
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.36,
+       "ci_items": [
+        -0.44,
+        -0.28
+       ],
+       "ci_families": [
+        -0.5333,
+        -0.1933
+       ],
+       "share": 0.3649,
+       "share_ci_families": [
+        0.1973,
+        0.5405
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0133,
+       "ci_items": [
+        -0.0333,
+        0.0
+       ],
+       "ci_families": [
+        -0.0333,
+        0.0
+       ],
+       "share": -0.0135,
+       "share_ci_families": [
+        -0.0345,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0133,
+       "ci_items": [
+        0.0,
+        0.0333
+       ],
+       "ci_families": [
+        0.0,
+        0.0333
+       ],
+       "share": -0.0135,
+       "share_ci_families": [
+        -0.0345,
+        -0.0
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.9867,
+       "user": 0.0133,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0,
+       "user": 1.0,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.96,
+       "ci_items": [
+        -0.9867,
+        -0.9267
+       ],
+       "ci_families": [
+        -0.9867,
+        -0.9267
+       ],
+       "share": 0.973,
+       "share_ci_families": [
+        0.9467,
+        0.9932
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.96,
+       "ci_items": [
+        0.9267,
+        0.9867
+       ],
+       "ci_families": [
+        0.9267,
+        0.9867
+       ],
+       "share": 0.973,
+       "share_ci_families": [
+        0.9467,
+        0.9932
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.2533,
+       "ci_items": [
+        0.1867,
+        0.32
+       ],
+       "ci_families": [
+        0.1267,
+        0.4
+       ],
+       "share": 0.2568,
+       "share_ci_families": [
+        0.1284,
+        0.4054
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.2533,
+       "ci_items": [
+        -0.32,
+        -0.1867
+       ],
+       "ci_families": [
+        -0.4,
+        -0.1267
+       ],
+       "share": 0.2568,
+       "share_ci_families": [
+        0.1284,
+        0.4054
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        -0.02,
+        0.02
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        -0.02,
+        0.02
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": 0.0,
+       "share_ci_families": [
+        0.0,
+        0.0
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0,
+       "ci_items": [
+        0.0,
+        0.0
+       ],
+       "ci_families": [
+        0.0,
+        0.0
+       ],
+       "share": -0.0,
+       "share_ci_families": [
+        -0.0,
+        -0.0
+       ]
+      }
+     }
+    }
+   }
+  },
+  "m26": {
+   "label": "MiMo-V2.6，默认调用",
+   "thinking": true,
+   "wordings": {
+    "paper": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.4067,
+       "user": 0.5933,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.0933,
+       "user": 0.9067,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.4067,
+       "ci_items": [
+        -0.4867,
+        -0.3333
+       ],
+       "ci_families": [
+        -0.58,
+        -0.2333
+       ],
+       "share": 1.2979,
+       "share_ci_families": [
+        1.0,
+        2.1154
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.4067,
+       "ci_items": [
+        0.3333,
+        0.4867
+       ],
+       "ci_families": [
+        0.2333,
+        0.58
+       ],
+       "share": 1.2979,
+       "share_ci_families": [
+        1.0,
+        2.1154
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.3867,
+       "ci_items": [
+        0.3067,
+        0.4667
+       ],
+       "ci_families": [
+        0.2867,
+        0.48
+       ],
+       "share": 1.234,
+       "share_ci_families": [
+        0.878,
+        2.4762
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.3867,
+       "ci_items": [
+        -0.4667,
+        -0.3067
+       ],
+       "ci_families": [
+        -0.48,
+        -0.2867
+       ],
+       "share": 1.234,
+       "share_ci_families": [
+        0.878,
+        2.4762
+       ]
+      }
+     }
+    },
+    "pron": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.4533,
+       "user": 0.5067,
+       "system": 0.04,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.1533,
+       "user": 0.7267,
+       "system": 0.12,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.3867,
+       "ci_items": [
+        -0.4667,
+        -0.3067
+       ],
+       "ci_families": [
+        -0.4933,
+        -0.2667
+       ],
+       "share": 1.2889,
+       "share_ci_families": [
+        1.0755,
+        1.7273
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.4267,
+       "ci_items": [
+        0.3467,
+        0.5067
+       ],
+       "ci_families": [
+        0.3267,
+        0.5133
+       ],
+       "share": 1.9394,
+       "share_ci_families": [
+        1.3864,
+        3.2
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.3333,
+       "ci_items": [
+        0.26,
+        0.4067
+       ],
+       "ci_families": [
+        0.2133,
+        0.4533
+       ],
+       "share": 1.1111,
+       "share_ci_families": [
+        0.973,
+        1.3488
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.2667,
+       "ci_items": [
+        -0.34,
+        -0.1933
+       ],
+       "ci_families": [
+        -0.3733,
+        -0.1533
+       ],
+       "share": 1.2121,
+       "share_ci_families": [
+        1.0,
+        1.6111
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0133,
+       "ci_items": [
+        -0.0333,
+        0.0
+       ],
+       "ci_families": [
+        -0.04,
+        0.0
+       ],
+       "share": 0.0444,
+       "share_ci_families": [
+        -0.0,
+        0.125
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0133,
+       "ci_items": [
+        -0.0133,
+        0.04
+       ],
+       "ci_families": [
+        0.0,
+        0.04
+       ],
+       "share": 0.0606,
+       "share_ci_families": [
+        0.0,
+        0.2069
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.0067,
+       "ci_items": [
+        -0.0533,
+        0.04
+       ],
+       "ci_families": [
+        -0.0667,
+        0.0533
+       ],
+       "share": -0.0222,
+       "share_ci_families": [
+        -0.2432,
+        0.1707
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.0533,
+       "ci_items": [
+        0.0067,
+        0.1067
+       ],
+       "ci_families": [
+        0.0,
+        0.1067
+       ],
+       "share": -0.2424,
+       "share_ci_families": [
+        -0.6296,
+        -0.0
+       ]
+      }
+     }
+    },
+    "role": {
+     "n_items": 150,
+     "unedited": {
+      "base_A": {
+       "self": 0.6,
+       "user": 0.4,
+       "system": 0.0,
+       "finished": 150
+      },
+      "base_U": {
+       "self": 0.3533,
+       "user": 0.6467,
+       "system": 0.0,
+       "finished": 150
+      }
+     },
+     "unparsed": {
+      "base_A": 0,
+      "base_U": 0,
+      "rswA8_U": 0,
+      "rswU8_A": 0,
+      "swA8_U": 0,
+      "swU8_A": 0
+     },
+     "去除": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.5067,
+       "ci_items": [
+        -0.5933,
+        -0.42
+       ],
+       "ci_families": [
+        -0.6667,
+        -0.36
+       ],
+       "share": 2.0541,
+       "share_ci_families": [
+        1.7674,
+        4.4375
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.5067,
+       "ci_items": [
+        0.42,
+        0.5933
+       ],
+       "ci_families": [
+        0.36,
+        0.6667
+       ],
+       "share": 2.0541,
+       "share_ci_families": [
+        1.7674,
+        4.4375
+       ]
+      }
+     },
+     "植入": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.48,
+       "ci_items": [
+        0.4,
+        0.56
+       ],
+       "ci_families": [
+        0.3133,
+        0.6467
+       ],
+       "share": 1.9459,
+       "share_ci_families": [
+        1.587,
+        4.125
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.48,
+       "ci_items": [
+        -0.56,
+        -0.4
+       ],
+       "ci_families": [
+        -0.6467,
+        -0.3133
+       ],
+       "share": 1.9459,
+       "share_ci_families": [
+        1.587,
+        4.125
+       ]
+      }
+     },
+     "随机，自己的消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": 0.0067,
+       "ci_items": [
+        -0.0333,
+        0.0467
+       ],
+       "ci_families": [
+        -0.0333,
+        0.04
+       ],
+       "share": -0.027,
+       "share_ci_families": [
+        -0.16,
+        0.1282
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": -0.0067,
+       "ci_items": [
+        -0.0467,
+        0.0333
+       ],
+       "ci_families": [
+        -0.04,
+        0.0333
+       ],
+       "share": -0.027,
+       "share_ci_families": [
+        -0.16,
+        0.1282
+       ]
+      }
+     },
+     "随机，User 消息": {
+      "n": 150,
+      "self": {
+       "n_pairs": 150,
+       "mean": -0.02,
+       "ci_items": [
+        -0.0533,
+        0.0133
+       ],
+       "ci_families": [
+        -0.0867,
+        0.0267
+       ],
+       "share": -0.0811,
+       "share_ci_families": [
+        -0.3462,
+        0.125
+       ]
+      },
+      "user": {
+       "n_pairs": 150,
+       "mean": 0.02,
+       "ci_items": [
+        -0.0133,
+        0.0533
+       ],
+       "ci_families": [
+        -0.0267,
+        0.0867
+       ],
+       "share": -0.0811,
+       "share_ci_families": [
+        -0.3462,
+        0.125
+       ]
+      }
+     }
+    }
+   }
+  }
+ },
+ "contrasts": {
+  "qsp | pron - role | 去除 | self": {
+   "diff_share": 0.715,
+   "n": 150,
+   "ci_families": [
+    0.5443,
+    1.0199
+   ]
+  },
+  "qsp | pron - role | 去除 | user": {
+   "diff_share": 0.9421,
+   "n": 150,
+   "ci_families": [
+    0.6757,
+    1.4832
+   ]
+  },
+  "qsp | pron - role | 植入 | self": {
+   "diff_share": -0.1428,
+   "n": 150,
+   "ci_families": [
+    -0.2492,
+    -0.0168
+   ]
+  },
+  "qsp | pron - role | 植入 | user": {
+   "diff_share": -0.252,
+   "n": 150,
+   "ci_families": [
+    -0.4177,
+    -0.0924
+   ]
+  },
+  "qsp | pron - paper | 去除 | self": {
+   "diff_share": 0.8171,
+   "n": 150,
+   "ci_families": [
+    0.6434,
+    1.1215
+   ]
+  },
+  "qsp | pron - paper | 去除 | user": {
+   "diff_share": 1.0605,
+   "n": 150,
+   "ci_families": [
+    0.786,
+    1.6101
+   ]
+  },
+  "qsp | pron - paper | 植入 | self": {
+   "diff_share": -0.096,
+   "n": 150,
+   "ci_families": [
+    -0.2105,
+    0.0532
+   ]
+  },
+  "qsp | pron - paper | 植入 | user": {
+   "diff_share": -0.3121,
+   "n": 150,
+   "ci_families": [
+    -0.4579,
+    -0.1471
+   ]
+  },
+  "qsp | role - paper | 去除 | self": {
+   "diff_share": 0.1021,
+   "n": 150,
+   "ci_families": [
+    0.0726,
+    0.1399
+   ]
+  },
+  "qsp | role - paper | 去除 | user": {
+   "diff_share": 0.1185,
+   "n": 150,
+   "ci_families": [
+    0.0861,
+    0.1578
+   ]
+  },
+  "qsp | role - paper | 植入 | self": {
+   "diff_share": 0.0468,
+   "n": 150,
+   "ci_families": [
+    -0.0176,
+    0.1032
+   ]
+  },
+  "qsp | role - paper | 植入 | user": {
+   "diff_share": -0.0602,
+   "n": 150,
+   "ci_families": [
+    -0.1139,
+    -0.0108
+   ]
+  },
+  "qth | pron - role | 去除 | self": {
+   "diff_share": -0.0357,
+   "n": 150,
+   "ci_families": [
+    -0.1091,
+    0.0
+   ]
+  },
+  "qth | pron - role | 去除 | user": {
+   "diff_share": -0.0153,
+   "n": 150,
+   "ci_families": [
+    -0.1324,
+    0.0938
+   ]
+  },
+  "qth | pron - role | 植入 | self": {
+   "diff_share": -0.162,
+   "n": 150,
+   "ci_families": [
+    -0.3813,
+    0.0819
+   ]
+  },
+  "qth | pron - role | 植入 | user": {
+   "diff_share": -0.1551,
+   "n": 150,
+   "ci_families": [
+    -0.3587,
+    0.0465
+   ]
+  },
+  "qth | pron - paper | 去除 | self": {
+   "diff_share": 0.006,
+   "n": 150,
+   "ci_families": [
+    -0.0677,
+    0.0709
+   ]
+  },
+  "qth | pron - paper | 去除 | user": {
+   "diff_share": 0.0744,
+   "n": 150,
+   "ci_families": [
+    -0.0072,
+    0.1716
+   ]
+  },
+  "qth | pron - paper | 植入 | self": {
+   "diff_share": 0.0741,
+   "n": 150,
+   "ci_families": [
+    -0.1577,
+    0.3259
+   ]
+  },
+  "qth | pron - paper | 植入 | user": {
+   "diff_share": -0.0055,
+   "n": 150,
+   "ci_families": [
+    -0.1972,
+    0.1875
+   ]
+  },
+  "qth | role - paper | 去除 | self": {
+   "diff_share": 0.0417,
+   "n": 150,
+   "ci_families": [
+    0.007,
+    0.0884
+   ]
+  },
+  "qth | role - paper | 去除 | user": {
+   "diff_share": 0.0897,
+   "n": 150,
+   "ci_families": [
+    0.0071,
+    0.1849
+   ]
+  },
+  "qth | role - paper | 植入 | self": {
+   "diff_share": 0.2361,
+   "n": 150,
+   "ci_families": [
+    0.0447,
+    0.4755
+   ]
+  },
+  "qth | role - paper | 植入 | user": {
+   "diff_share": 0.1496,
+   "n": 150,
+   "ci_families": [
+    -0.0261,
+    0.3674
+   ]
+  },
+  "qsp_en | pron - role | 去除 | self": {
+   "diff_share": 0.1295,
+   "n": 150,
+   "ci_families": [
+    0.0712,
+    0.2014
+   ]
+  },
+  "qsp_en | pron - role | 去除 | user": {
+   "diff_share": -0.1848,
+   "n": 150,
+   "ci_families": [
+    -0.2816,
+    -0.0809
+   ]
+  },
+  "qsp_en | pron - role | 植入 | self": {
+   "diff_share": 0.1368,
+   "n": 150,
+   "ci_families": [
+    0.0898,
+    0.1866
+   ]
+  },
+  "qsp_en | pron - role | 植入 | user": {
+   "diff_share": -0.0226,
+   "n": 150,
+   "ci_families": [
+    -0.0805,
+    0.0309
+   ]
+  },
+  "qsp_en | pron - paper | 去除 | self": {
+   "diff_share": 0.2051,
+   "n": 150,
+   "ci_families": [
+    0.1309,
+    0.2972
+   ]
+  },
+  "qsp_en | pron - paper | 去除 | user": {
+   "diff_share": -0.2533,
+   "n": 150,
+   "ci_families": [
+    -0.3183,
+    -0.1895
+   ]
+  },
+  "qsp_en | pron - paper | 植入 | self": {
+   "diff_share": 0.0935,
+   "n": 150,
+   "ci_families": [
+    0.0266,
+    0.1568
+   ]
+  },
+  "qsp_en | pron - paper | 植入 | user": {
+   "diff_share": -0.0677,
+   "n": 150,
+   "ci_families": [
+    -0.1369,
+    -0.0025
+   ]
+  },
+  "qsp_en | role - paper | 去除 | self": {
+   "diff_share": 0.0755,
+   "n": 150,
+   "ci_families": [
+    0.0456,
+    0.1127
+   ]
+  },
+  "qsp_en | role - paper | 去除 | user": {
+   "diff_share": -0.0685,
+   "n": 150,
+   "ci_families": [
+    -0.1651,
+    0.008
+   ]
+  },
+  "qsp_en | role - paper | 植入 | self": {
+   "diff_share": -0.0434,
+   "n": 150,
+   "ci_families": [
+    -0.0915,
+    0.0059
+   ]
+  },
+  "qsp_en | role - paper | 植入 | user": {
+   "diff_share": -0.045,
+   "n": 150,
+   "ci_families": [
+    -0.0986,
+    0.0046
+   ]
+  },
+  "qth_en | pron - role | 去除 | self": {
+   "diff_share": 0.0,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0
+   ]
+  },
+  "qth_en | pron - role | 去除 | user": {
+   "diff_share": -0.2757,
+   "n": 150,
+   "ci_families": [
+    -0.4828,
+    -0.1144
+   ]
+  },
+  "qth_en | pron - role | 植入 | self": {
+   "diff_share": 0.0111,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0333
+   ]
+  },
+  "qth_en | pron - role | 植入 | user": {
+   "diff_share": 0.0499,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.125
+   ]
+  },
+  "qth_en | pron - paper | 去除 | self": {
+   "diff_share": 0.0,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0
+   ]
+  },
+  "qth_en | pron - paper | 去除 | user": {
+   "diff_share": -0.1185,
+   "n": 150,
+   "ci_families": [
+    -0.3489,
+    0.0964
+   ]
+  },
+  "qth_en | pron - paper | 植入 | self": {
+   "diff_share": 0.0035,
+   "n": 150,
+   "ci_families": [
+    -0.0165,
+    0.0291
+   ]
+  },
+  "qth_en | pron - paper | 植入 | user": {
+   "diff_share": 0.0424,
+   "n": 150,
+   "ci_families": [
+    -0.012,
+    0.1214
+   ]
+  },
+  "qth_en | role - paper | 去除 | self": {
+   "diff_share": 0.0,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0
+   ]
+  },
+  "qth_en | role - paper | 去除 | user": {
+   "diff_share": 0.1572,
+   "n": 150,
+   "ci_families": [
+    -0.034,
+    0.3915
+   ]
+  },
+  "qth_en | role - paper | 植入 | self": {
+   "diff_share": -0.0076,
+   "n": 150,
+   "ci_families": [
+    -0.0241,
+    0.0
+   ]
+  },
+  "qth_en | role - paper | 植入 | user": {
+   "diff_share": -0.0075,
+   "n": 150,
+   "ci_families": [
+    -0.024,
+    0.0
+   ]
+  },
+  "g20 | pron - role | 去除 | self": {
+   "diff_share": 0.1327,
+   "n": 150,
+   "ci_families": [
+    -0.3836,
+    0.6667
+   ]
+  },
+  "g20 | pron - role | 去除 | user": {
+   "diff_share": 0.0909,
+   "n": 150,
+   "ci_families": [
+    -0.3459,
+    0.5429
+   ]
+  },
+  "g20 | pron - role | 植入 | self": {
+   "diff_share": -0.6034,
+   "n": 150,
+   "ci_families": [
+    -1.1903,
+    -0.1486
+   ]
+  },
+  "g20 | pron - role | 植入 | user": {
+   "diff_share": -0.2612,
+   "n": 150,
+   "ci_families": [
+    -0.6395,
+    0.1184
+   ]
+  },
+  "g20 | pron - paper | 去除 | self": {
+   "diff_share": 0.1338,
+   "n": 150,
+   "ci_families": [
+    -0.3818,
+    0.6667
+   ]
+  },
+  "g20 | pron - paper | 去除 | user": {
+   "diff_share": 0.0997,
+   "n": 150,
+   "ci_families": [
+    -0.3197,
+    0.5441
+   ]
+  },
+  "g20 | pron - paper | 植入 | self": {
+   "diff_share": -0.3846,
+   "n": 150,
+   "ci_families": [
+    -0.9774,
+    0.0317
+   ]
+  },
+  "g20 | pron - paper | 植入 | user": {
+   "diff_share": -0.0614,
+   "n": 150,
+   "ci_families": [
+    -0.398,
+    0.2429
+   ]
+  },
+  "g20 | role - paper | 去除 | self": {
+   "diff_share": 0.0011,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0053
+   ]
+  },
+  "g20 | role - paper | 去除 | user": {
+   "diff_share": 0.0088,
+   "n": 150,
+   "ci_families": [
+    0.0,
+    0.0284
+   ]
+  },
+  "g20 | role - paper | 植入 | self": {
+   "diff_share": 0.2188,
+   "n": 150,
+   "ci_families": [
+    0.0352,
+    0.3947
+   ]
+  },
+  "g20 | role - paper | 植入 | user": {
+   "diff_share": 0.1998,
+   "n": 150,
+   "ci_families": [
+    0.0175,
+    0.376
+   ]
+  },
+  "g120 | pron - role | 去除 | self": {
+   "diff_share": -0.1554,
+   "n": 150,
+   "ci_families": [
+    -0.2304,
+    -0.0804
+   ]
+  },
+  "g120 | pron - role | 去除 | user": {
+   "diff_share": -0.1554,
+   "n": 150,
+   "ci_families": [
+    -0.2304,
+    -0.0804
+   ]
+  },
+  "g120 | pron - role | 植入 | self": {
+   "diff_share": 0.1081,
+   "n": 150,
+   "ci_families": [
+    -0.0085,
+    0.2333
+   ]
+  },
+  "g120 | pron - role | 植入 | user": {
+   "diff_share": 0.1081,
+   "n": 150,
+   "ci_families": [
+    -0.0085,
+    0.2333
+   ]
+  },
+  "g120 | pron - paper | 去除 | self": {
+   "diff_share": -0.1554,
+   "n": 150,
+   "ci_families": [
+    -0.2271,
+    -0.0878
+   ]
+  },
+  "g120 | pron - paper | 去除 | user": {
+   "diff_share": -0.1554,
+   "n": 150,
+   "ci_families": [
+    -0.2271,
+    -0.0878
+   ]
+  },
+  "g120 | pron - paper | 植入 | self": {
+   "diff_share": 0.25,
+   "n": 150,
+   "ci_families": [
+    0.1293,
+    0.3753
+   ]
+  },
+  "g120 | pron - paper | 植入 | user": {
+   "diff_share": 0.25,
+   "n": 150,
+   "ci_families": [
+    0.1293,
+    0.3753
+   ]
+  },
+  "g120 | role - paper | 去除 | self": {
+   "diff_share": 0.0,
+   "n": 150,
+   "ci_families": [
+    -0.04,
+    0.0531
+   ]
+  },
+  "g120 | role - paper | 去除 | user": {
+   "diff_share": 0.0,
+   "n": 150,
+   "ci_families": [
+    -0.04,
+    0.0531
+   ]
+  },
+  "g120 | role - paper | 植入 | self": {
+   "diff_share": 0.1419,
+   "n": 150,
+   "ci_families": [
+    0.0726,
+    0.2189
+   ]
+  },
+  "g120 | role - paper | 植入 | user": {
+   "diff_share": 0.1419,
+   "n": 150,
+   "ci_families": [
+    0.0726,
+    0.2189
+   ]
+  },
+  "m26 | pron - role | 去除 | self": {
+   "diff_share": -0.7652,
+   "n": 150,
+   "ci_families": [
+    -2.0511,
+    0.1806
+   ]
+  },
+  "m26 | pron - role | 去除 | user": {
+   "diff_share": -0.1147,
+   "n": 150,
+   "ci_families": [
+    -1.325,
+    1.4979
+   ]
+  },
+  "m26 | pron - role | 植入 | self": {
+   "diff_share": -0.8348,
+   "n": 150,
+   "ci_families": [
+    -1.7157,
+    -0.0476
+   ]
+  },
+  "m26 | pron - role | 植入 | user": {
+   "diff_share": -0.7338,
+   "n": 150,
+   "ci_families": [
+    -1.3556,
+    0.1875
+   ]
+  },
+  "m26 | pron - paper | 去除 | self": {
+   "diff_share": -0.009,
+   "n": 150,
+   "ci_families": [
+    -0.3188,
+    0.5926
+   ]
+  },
+  "m26 | pron - paper | 去除 | user": {
+   "diff_share": 0.6415,
+   "n": 150,
+   "ci_families": [
+    0.8995,
+    2.0619
+   ]
+  },
+  "m26 | pron - paper | 植入 | self": {
+   "diff_share": -0.1229,
+   "n": 150,
+   "ci_families": [
+    -0.4667,
+    0.201
+   ]
+  },
+  "m26 | pron - paper | 植入 | user": {
+   "diff_share": -0.0219,
+   "n": 150,
+   "ci_families": [
+    0.1523,
+    0.5152
+   ]
+  },
+  "m26 | role - paper | 去除 | self": {
+   "diff_share": 0.7562,
+   "n": 150,
+   "ci_families": [
+    0.4469,
+    2.8413
+   ]
+  },
+  "m26 | role - paper | 去除 | user": {
+   "diff_share": 0.7562,
+   "n": 150,
+   "ci_families": [
+    0.4469,
+    2.8413
+   ]
+  },
+  "m26 | role - paper | 植入 | self": {
+   "diff_share": 0.7119,
+   "n": 150,
+   "ci_families": [
+    0.3433,
+    2.8414
+   ]
+  },
+  "m26 | role - paper | 植入 | user": {
+   "diff_share": 0.7119,
+   "n": 150,
+   "ci_families": [
+    0.3433,
+    2.8414
+   ]
+  }
+ }
+}

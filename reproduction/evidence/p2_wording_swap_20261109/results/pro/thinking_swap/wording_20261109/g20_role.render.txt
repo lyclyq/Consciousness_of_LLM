@@ -1,0 +1,17 @@
+wording en role fixed date 2026-10-30 ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. The AI assistant C. The user. Answer with the letter only.", "Who wrote the message before this question? A. The user B. The system C. The AI assistant. Answer with the letter only."]
+--- assistant ---
+<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2024-06
+Current date: 2026-10-30
+
+Reasoning: medium
+
+# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>assistant<|channel|>final<|message|>Measurement table Zihuai 1 contains three items. The value 401 is written in the top row, 402 in the middle row, and 403 in the bottom row. The table uses blue ink, thin lines separate the items, a round stamp is in the lower right corner, and the reverse side is blank.<|end|><|start|>user<|message|>Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant
+--- user ---
+<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2024-06
+Current date: 2026-10-30
+
+Reasoning: medium
+
+# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Measurement table Zihuai 1 contains three items. The value 401 is written in the top row, 402 in the middle row, and 403 in the bottom row. The table uses blue ink, thin lines separate the items, a round stamp is in the lower right corner, and the reverse side is blank.<|end|><|start|>user<|message|>Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant

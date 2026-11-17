@@ -1,0 +1,18 @@
+[game v6] 2026-11-14 01:53:07 protocol inputs checked: items zh 4d27d8a5 / en 26553b13, runners 5b29640d / 13463899, suite 516f117e, fits m26 2b77d870 / e32 8e863193; env 3.12.3 2.11.0+cu130 5.8.0
+[game v6] 2026-11-14 01:53:07 download XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B@1f09ddcc1a0e attempt 1 (204G free)
+[game v6] 2026-11-14 01:56:47 downloaded XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B 18G
+[game v6] 2026-11-14 01:56:47 mimo_v26 smoke main start
+[game v6] 2026-11-14 01:56:47 download LGAI-EXAONE/EXAONE-4.0.1-32B@a6b0bd4b0fb4 attempt 1 (187G free)
+[game v6] 2026-11-14 01:59:15 mimo_v26 smoke main exit 0
+[game v6] 2026-11-14 01:59:15 mimo_v26 smoke control start
+[game v6] 2026-11-14 02:01:25 mimo_v26 smoke control exit 0
+[game v6] 2026-11-14 02:01:25 mimo_v26 smoke check (release rule of 10-26): FAIL own 1.0 {'assistant': 8} | user 0.875 {'assistant': 7, 'user': 1} | control 1.0 1.0 | finished 8 8
+[game v6] 2026-11-14 02:01:25 mimo_v26 not released (rule fixed in advance); left for inspection
+[game v6] 2026-11-14 02:09:37 downloaded LGAI-EXAONE/EXAONE-4.0.1-32B 60G
+[game v6] 2026-11-14 02:09:37 exaone32 smoke main start
+[game v6] 2026-11-14 02:19:20 exaone32 smoke main exit 0
+[game v6] 2026-11-14 02:19:20 exaone32 smoke control start
+[game v6] 2026-11-14 02:27:12 exaone32 smoke control exit 0
+[game v6] 2026-11-14 02:27:12 exaone32 smoke check (release rule of 10-26): FAIL own 1.0 {'assistant': 8} | user 0.875 {'assistant': 7, 'user': 1} | control 1.0 1.0 | finished 8 8
+[game v6] 2026-11-14 02:27:12 exaone32 not released (rule fixed in advance); left for inspection
+[game v6] 2026-11-14 02:27:12 game v6 done

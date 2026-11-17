@@ -1,0 +1,404 @@
+{
+ "method": "Does the next-token divergence follow from the geometry of the last layer? (11-14, user: \"可以加统计\"; theory check for the NMI\nframework: geometry, share kept and next-token KL are three readings of one difference h^A - h^U.)\nFor small differences KL(A || U) is a quadratic form of the last-layer difference, KL ~ (1/2) d^T F d with F the Fisher matrix of\nthe output distribution. If the output metric does not single out or hide the role directions, the KL ratio of the paper,\nKL(self) / KL(U || S), should be about the squared ratio of the last-layer distances, 1 / R_A^2, with R_A the distance ratio of the\ngeometry (User-System distance over the mean distance of Assistant to the two). Tested across the 25 models of the main probe:\n  y = log10 of the content-KL ratio self / external (as Fig. 2a; smaller of A-U and A-S over U-S, ratio of sums over bodies),\n  x = -log10 of the mean R_A over the 75 held-out bodies at a given layer, message content (the paper's cross-model geometry:\n      mean residual state over the body tokens; summary files of the geometry runs, rendering as in Table tab:self_crossmodel;\n      the two four-stream models, Qwen3.8-Flash-Next and GLM-5.3-Flash, as everywhere in the paper: the mean of the four streams,\n      from their stream geometry files).\nReported: Spearman rho of y with x at the last layer (one-sided permutation test, 20,000), the least-squares slope of y on x\n(prediction 2; bootstrap over models, 10,000), the same rho at earlier depths, and rho of y with the share of layers that carry the\nself-index (the statistic of the paper, rho = 0.82) for comparison. Nothing is fitted to choose a layer. Read-only.",
+ "models": [
+  {
+   "tag": "qwen38_27b",
+   "name": "Qwen3.8-27B",
+   "group": "self-reference",
+   "kl_ratio": 2.6891865626239086,
+   "layers": 64,
+   "share_layers_content": 1.0,
+   "R_A": {
+    "0.25": 0.45427200198173523,
+    "0.5": 0.6075043678283691,
+    "0.75": 0.4994489550590515,
+    "1.0": 0.3549565076828003
+   }
+  },
+  {
+   "tag": "qwen38_flashnext",
+   "name": "Qwen3.8-Flash-Next",
+   "group": "self-reference",
+   "kl_ratio": 1.0117060653443462,
+   "layers": 48,
+   "share_layers_content": 0.7916666666666666,
+   "R_A": {
+    "0.25": 0.5429999828338623,
+    "0.5": 0.7200000286102295,
+    "0.75": 0.6800000071525574,
+    "1.0": 0.7910000085830688
+   }
+  },
+  {
+   "tag": "gpt_oss_20b_en",
+   "name": "gpt-oss-20b",
+   "group": "self-reference",
+   "kl_ratio": 34.673405603696274,
+   "layers": 24,
+   "share_layers_content": 0.8333333333333334,
+   "R_A": {
+    "0.25": 0.5829153060913086,
+    "0.5": 0.4349941611289978,
+    "0.75": 0.17609357833862305,
+    "1.0": 0.06631497293710709
+   }
+  },
+  {
+   "tag": "gpt_oss_120b_en",
+   "name": "gpt-oss-120b",
+   "group": "self-reference",
+   "kl_ratio": 9.658593998884974,
+   "layers": 36,
+   "share_layers_content": 0.6944444444444444,
+   "R_A": {
+    "0.25": 0.7919151186943054,
+    "0.5": 0.564038872718811,
+    "0.75": 0.4743131995201111,
+    "1.0": 0.4198240041732788
+   }
+  },
+  {
+   "tag": "glm53_flash",
+   "name": "GLM-5.3-Flash",
+   "group": "self-reference",
+   "kl_ratio": 1.1275054329394334,
+   "layers": 45,
+   "share_layers_content": 0.4,
+   "R_A": {
+    "0.25": 0.9169999957084656,
+    "0.5": 0.9139999747276306,
+    "0.75": 0.75,
+    "1.0": 0.5370000004768372
+   }
+  },
+  {
+   "tag": "exaone4_32b_en",
+   "name": "EXAONE-4.0.1-32B",
+   "group": "self-reference",
+   "kl_ratio": 12.766030699277344,
+   "layers": 64,
+   "share_layers_content": 1.0,
+   "R_A": {
+    "0.25": 0.15752924978733063,
+    "0.5": 0.09060902893543243,
+    "0.75": 0.0815841406583786,
+    "1.0": 0.06360618025064468
+   }
+  },
+  {
+   "tag": "mimo_v26_distill_qwen9b",
+   "name": "MiMo-V2.6-Distill-Qwen-9B",
+   "group": "self-reference",
+   "kl_ratio": 5.145132477911407,
+   "layers": 32,
+   "share_layers_content": 1.0,
+   "R_A": {
+    "0.25": 0.7017362713813782,
+    "0.5": 0.4215354025363922,
+    "0.75": 0.2635224163532257,
+    "1.0": 0.28309667110443115
+   }
+  },
+  {
+   "tag": "glm46v_flash",
+   "name": "GLM-4.6V-Flash",
+   "group": "self-index only",
+   "kl_ratio": 64.83831602744539,
+   "layers": 40,
+   "share_layers_content": 1.0,
+   "R_A": {
+    "0.25": 0.13956673443317413,
+    "0.5": 0.0860990583896637,
+    "0.75": 0.056779440492391586,
+    "1.0": 0.13098296523094177
+   }
+  },
+  {
+   "tag": "glm47_flash",
+   "name": "GLM-4.7-Flash",
+   "group": "self-index only",
+   "kl_ratio": 1.9972644569784563,
+   "layers": 47,
+   "share_layers_content": 0.723404255319149,
+   "R_A": {
+    "0.25": 0.7975829839706421,
+    "0.5": 0.6399185657501221,
+    "0.75": 0.4797237515449524,
+    "1.0": 0.48968470096588135
+   }
+  },
+  {
+   "tag": "r1_distill_llama70b",
+   "name": "DeepSeek-R1-Distill-Llama-70B",
+   "group": "self-index only",
+   "kl_ratio": 0.05418201050629961,
+   "layers": 80,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.7453402280807495,
+    "0.5": 1.7698620557785034,
+    "0.75": 1.7736729383468628,
+    "1.0": 1.8261603116989136
+   }
+  },
+  {
+   "tag": "phi4_en",
+   "name": "phi-4",
+   "group": "self-index only",
+   "kl_ratio": 2.339566340178386,
+   "layers": 40,
+   "share_layers_content": 0.875,
+   "R_A": {
+    "0.25": 0.5379073619842529,
+    "0.5": 0.5325973033905029,
+    "0.75": 0.49818816781044006,
+    "1.0": 0.5277577638626099
+   }
+  },
+  {
+   "tag": "granite42_30b_en",
+   "name": "Granite-4.2-30B",
+   "group": "self-index only",
+   "kl_ratio": 0.8038843152078803,
+   "layers": 64,
+   "share_layers_content": 0.46875,
+   "R_A": {
+    "0.25": 0.7584918737411499,
+    "0.5": 0.6989601850509644,
+    "0.75": 1.0361909866333008,
+    "1.0": 1.241140604019165
+   }
+  },
+  {
+   "tag": "granite41_30b_en",
+   "name": "Granite-4.1-30B",
+   "group": "self-index only",
+   "kl_ratio": 0.643188460333568,
+   "layers": 64,
+   "share_layers_content": 0.265625,
+   "R_A": {
+    "0.25": 0.9176585674285889,
+    "0.5": 1.4082458019256592,
+    "0.75": 1.3341587781906128,
+    "1.0": 1.1812041997909546
+   }
+  },
+  {
+   "tag": "olmo2_13b_en",
+   "name": "OLMo-2-13B",
+   "group": "neither",
+   "kl_ratio": 1.049716696336138,
+   "layers": 40,
+   "share_layers_content": 0.1,
+   "R_A": {
+    "0.25": 0.9981802105903625,
+    "0.5": 0.893779993057251,
+    "0.75": 0.8935970067977905,
+    "1.0": 0.9738711714744568
+   }
+  },
+  {
+   "tag": "olmo2_7b_en",
+   "name": "OLMo-2-7B",
+   "group": "neither",
+   "kl_ratio": 1.1100059197926968,
+   "layers": 32,
+   "share_layers_content": 0.15625,
+   "R_A": {
+    "0.25": 1.1481465101242065,
+    "0.5": 1.0728775262832642,
+    "0.75": 0.971342146396637,
+    "1.0": 0.9401430487632751
+   }
+  },
+  {
+   "tag": "apertus8b_en",
+   "name": "Apertus-8B",
+   "group": "neither",
+   "kl_ratio": 0.3943562338429285,
+   "layers": 32,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.9713037014007568,
+    "0.5": 1.8064475059509277,
+    "0.75": 1.607512354850769,
+    "1.0": 1.5284721851348877
+   }
+  },
+  {
+   "tag": "moonlight16b_a3b_instruct",
+   "name": "Moonlight-16B-A3B",
+   "group": "neither",
+   "kl_ratio": 0.8640839559657436,
+   "layers": 27,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.194286584854126,
+    "0.5": 1.02519953250885,
+    "0.75": 0.9154468774795532,
+    "1.0": 0.9478566646575928
+   }
+  },
+  {
+   "tag": "mimo7b_rl_0530",
+   "name": "MiMo-7B-RL",
+   "group": "neither",
+   "kl_ratio": 0.5662577899067831,
+   "layers": 36,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.0571476221084595,
+    "0.5": 1.0656261444091797,
+    "0.75": 1.0823038816452026,
+    "1.0": 1.5785247087478638
+   }
+  },
+  {
+   "tag": "mimo_vl7b_rl_2508",
+   "name": "MiMo-VL-7B-RL-2508",
+   "group": "neither",
+   "kl_ratio": 0.20092331313129758,
+   "layers": 36,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.6910443305969238,
+    "0.5": 1.7946840524673462,
+    "0.75": 1.8418277502059937,
+    "1.0": 1.907212734222412
+   }
+  },
+  {
+   "tag": "ernie45_21b_a3b_thinking",
+   "name": "ERNIE-4.5-21B-A3B",
+   "group": "neither",
+   "kl_ratio": 0.30645215529416603,
+   "layers": 28,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.7520991563796997,
+    "0.5": 1.7193892002105713,
+    "0.75": 1.6626653671264648,
+    "1.0": 1.5908021926879883
+   }
+  },
+  {
+   "tag": "seed_oss_36b",
+   "name": "Seed-OSS-36B",
+   "group": "neither",
+   "kl_ratio": 0.15795097340965672,
+   "layers": 64,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.737623929977417,
+    "0.5": 1.7982114553451538,
+    "0.75": 1.6535261869430542,
+    "1.0": 1.8698298931121826
+   }
+  },
+  {
+   "tag": "gemma4_31b_en",
+   "name": "Gemma-4-31B",
+   "group": "neither",
+   "kl_ratio": 1.0704966452686,
+   "layers": 60,
+   "share_layers_content": 0.0,
+   "R_A": {
+    "0.25": 1.2877085208892822,
+    "0.5": 1.1744574308395386,
+    "0.75": 1.0220444202423096,
+    "1.0": 0.9621915817260742
+   }
+  },
+  {
+   "tag": "qwen36_27b",
+   "name": "Qwen3.6-27B",
+   "group": "neither",
+   "kl_ratio": 0.32689695277116887,
+   "layers": 64,
+   "share_layers_content": 0.09375,
+   "R_A": {
+    "0.25": 1.4024302959442139,
+    "0.5": 1.5679572820663452,
+    "0.75": 1.5605734586715698,
+    "1.0": 0.9325795769691467
+   }
+  },
+  {
+   "tag": "qwen36_35b_a3b",
+   "name": "Qwen3.6-35B-A3B",
+   "group": "neither",
+   "kl_ratio": 0.2229149393301218,
+   "layers": 40,
+   "share_layers_content": 0.025,
+   "R_A": {
+    "0.25": 1.401084065437317,
+    "0.5": 1.3915603160858154,
+    "0.75": 1.5014936923980713,
+    "1.0": 1.6398617029190063
+   }
+  },
+  {
+   "tag": "qwen35_27b",
+   "name": "Qwen3.5-27B",
+   "group": "neither",
+   "kl_ratio": 0.5398432374077673,
+   "layers": 64,
+   "share_layers_content": 0.203125,
+   "R_A": {
+    "0.25": 0.8979015350341797,
+    "0.5": 1.32721745967865,
+    "0.75": 1.4278945922851562,
+    "1.0": 1.1100856065750122
+   }
+  }
+ ],
+ "results": {
+  "0.25": {
+   "spearman": 0.8400000000000001,
+   "p_one_sided": 0.0,
+   "slope": 2.072894509405639,
+   "intercept": -0.059854597044305125,
+   "slope_ci95": [
+    1.5965927772500166,
+    2.9634929393817333
+   ],
+   "pearson_log": 0.8316784517952268
+  },
+  "0.5": {
+   "spearman": 0.9215384615384615,
+   "p_one_sided": 0.0,
+   "slope": 1.8117283353844957,
+   "intercept": -0.08800674366792662,
+   "slope_ci95": [
+    1.4129148387777153,
+    2.882234679194664
+   ],
+   "pearson_log": 0.880708407018478
+  },
+  "0.75": {
+   "spearman": 0.9692307692307693,
+   "p_one_sided": 0.0,
+   "slope": 1.6599280950498132,
+   "intercept": -0.1594230570645666,
+   "slope_ci95": [
+    1.3642320207200553,
+    2.220383104965454
+   ],
+   "pearson_log": 0.9316108608135143
+  },
+  "1.0": {
+   "spearman": 0.9384615384615383,
+   "p_one_sided": 0.0,
+   "slope": 1.574009294100061,
+   "intercept": -0.17517693084218983,
+   "slope_ci95": [
+    1.2507670333237852,
+    2.132197535691297
+   ],
+   "pearson_log": 0.9174787516310259
+  },
+  "share_of_layers_content": {
+   "spearman": 0.8230928803110625
+  }
+ }
+}

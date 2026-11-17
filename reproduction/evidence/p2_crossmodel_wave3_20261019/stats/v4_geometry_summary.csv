@@ -1,0 +1,7 @@
+model,mode,position,n_layers,layers_A_apart_all_heldout,layers_A_apart_80pct,last_third_80pct,last_third_size,layers_80pct,median_R_A
+qwen35_27b,non_thinking,content,64,8,13,0,21,0 1 2 3 4 5 6 7 8 9 10 11 12,1.3048
+qwen35_27b,non_thinking,onset,64,0,0,0,21,,1.1662
+granite41_30b,non_thinking,content,64,17,17,0,21,0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16,1.2673
+granite41_30b,non_thinking,onset,64,22,32,0,21,5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36,0.8643
+granite42_30b,non_thinking,content,64,22,30,0,21,0 1 2 3 4 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31,0.826
+granite42_30b,non_thinking,onset,64,42,59,16,21,0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 58 61 62,0.6295

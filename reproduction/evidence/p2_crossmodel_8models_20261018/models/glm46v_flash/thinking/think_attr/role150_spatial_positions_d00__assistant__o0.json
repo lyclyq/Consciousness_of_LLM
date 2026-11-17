@@ -1,0 +1,1 @@
+{"id": "role150_spatial_positions_d00", "role": "assistant", "order": ["self", "user", "system"], "off": {"self": 0.005545909982174635, "user": 0.0004552360624074936, "system": 3.265183750045253e-06}, "on_answer": "user", "on_letter": "B", "n_new": 401, "finished": true, "tail": "\n<|begin_of_box|>B<|end_of_box|><|user|>"}

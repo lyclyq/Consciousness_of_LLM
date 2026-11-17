@@ -1,0 +1,688 @@
+{
+ "tests": {
+  "main": {
+   "retention": {
+    "self - words": {
+     "n": 25,
+     "medians": {
+      "neither": 0.16391066440717028,
+      "self-index only": 0.22777113995927856,
+      "self-reference": 0.395021643869586
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": 0.46753045474609506,
+     "p_spearman": 0.0093,
+     "p_jonckheere": 0.0075,
+     "p_selfref_above_rest": 0.01015
+    },
+    "self - U-S (self-specific)": {
+     "n": 25,
+     "medians": {
+      "neither": -0.03965283950487125,
+      "self-index only": 0.09305174818859341,
+      "self-reference": 0.13838852813733982
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": 0.6143616384875289,
+     "p_spearman": 0.00095,
+     "p_jonckheere": 0.00145,
+     "p_selfref_above_rest": 0.0043
+    },
+    "U-S - words (role-general)": {
+     "n": 25,
+     "medians": {
+      "neither": 0.26061405669238435,
+      "self-index only": 0.15524185411911381,
+      "self-reference": 0.1957670773469382
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": -0.2724487970273063,
+     "p_spearman": 0.9059,
+     "p_jonckheere": 0.92435,
+     "p_selfref_above_rest": 0.7888
+    }
+   },
+   "kl": {
+    "log10 self / words": {
+     "n": 25,
+     "medians": {
+      "neither": 0.10109380494532746,
+      "self-index only": 0.5106373972290016,
+      "self-reference": 0.9960134678921471
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": 0.557792117272699,
+     "p_spearman": 0.0032,
+     "p_jonckheere": 0.005,
+     "p_selfref_above_rest": 0.00315
+    },
+    "log10 self / U||S (self-specific)": {
+     "n": 25,
+     "medians": {
+      "neither": -0.33592181212807926,
+      "self-index only": 0.10281456427459161,
+      "self-reference": 0.7113965615445523
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": 0.6767544927685913,
+     "p_spearman": 0.00015,
+     "p_jonckheere": 0.0001,
+     "p_selfref_above_rest": 0.00065
+    },
+    "log10 U||S / words (role-general)": {
+     "n": 25,
+     "medians": {
+      "neither": 0.459918022779067,
+      "self-index only": 0.08685734592471554,
+      "self-reference": 0.37357444089835956
+     },
+     "counts": {
+      "neither": 12,
+      "self-index only": 6,
+      "self-reference": 7
+     },
+     "spearman_group": -0.22253451360245627,
+     "p_spearman": 0.85885,
+     "p_jonckheere": 0.8709,
+     "p_selfref_above_rest": 0.5314
+    }
+   }
+  },
+  "natural": {
+   "retention": {
+    "self - words": {
+     "n": 17,
+     "medians": {
+      "neither": 0.04661763744267913,
+      "self-index only": 0.4198698622873167,
+      "self-reference": 0.4572268128669573
+     },
+     "counts": {
+      "neither": 4,
+      "self-index only": 8,
+      "self-reference": 5
+     },
+     "spearman_group": 0.3104947253508504,
+     "p_spearman": 0.11425,
+     "p_jonckheere": 0.11865,
+     "p_selfref_above_rest": 0.25395
+    },
+    "self - U-S (self-specific)": {
+     "n": 13,
+     "medians": {
+      "neither": -0.23353397368922635,
+      "self-index only": 0.10635397725795281,
+      "self-reference": 0.2275214487620525
+     },
+     "counts": {
+      "neither": 3,
+      "self-index only": 7,
+      "self-reference": 3
+     },
+     "spearman_group": 0.7867957924694431,
+     "p_spearman": 0.00095,
+     "p_jonckheere": 0.00095,
+     "p_selfref_above_rest": 0.03815
+    },
+    "U-S - words (role-general)": {
+     "n": 13,
+     "medians": {
+      "neither": 0.3199988268214083,
+      "self-index only": 0.15626797441226437,
+      "self-reference": 0.08529044627231114
+     },
+     "counts": {
+      "neither": 3,
+      "self-index only": 7,
+      "self-reference": 3
+     },
+     "spearman_group": -0.1513068831672006,
+     "p_spearman": 0.7164,
+     "p_jonckheere": 0.7094,
+     "p_selfref_above_rest": 0.7703
+    }
+   },
+   "kl": {
+    "log10 self / words": {
+     "n": 17,
+     "medians": {
+      "neither": -0.05656554166692538,
+      "self-index only": 0.20637205179290902,
+      "self-reference": 0.5432315837625324
+     },
+     "counts": {
+      "neither": 4,
+      "self-index only": 8,
+      "self-reference": 5
+     },
+     "spearman_group": 0.6143831799495549,
+     "p_spearman": 0.00495,
+     "p_jonckheere": 0.00765,
+     "p_selfref_above_rest": 0.0144
+    },
+    "log10 self / U||S (self-specific)": {
+     "n": 13,
+     "medians": {
+      "neither": -0.5316549778598164,
+      "self-index only": 0.3134162877374047,
+      "self-reference": 0.37298494285753225
+     },
+     "counts": {
+      "neither": 3,
+      "self-index only": 7,
+      "self-reference": 3
+     },
+     "spearman_group": 0.6657502859356826,
+     "p_spearman": 0.00805,
+     "p_jonckheere": 0.00815,
+     "p_selfref_above_rest": 0.14305
+    },
+    "log10 U||S / words (role-general)": {
+     "n": 13,
+     "medians": {
+      "neither": 0.6122790373789255,
+      "self-index only": 0.034602010748423805,
+      "self-reference": 0.1702466409050001
+     },
+     "counts": {
+      "neither": 3,
+      "self-index only": 7,
+      "self-reference": 3
+     },
+     "spearman_group": -0.24209101306752095,
+     "p_spearman": 0.80355,
+     "p_jonckheere": 0.7884,
+     "p_selfref_above_rest": 0.7186
+    }
+   }
+  }
+ },
+ "per_model": {
+  "main": [
+   {
+    "name": "Qwen3.8-27B",
+    "group": "self-reference",
+    "self - words": 0.6002937834310383,
+    "self - U-S (self-specific)": 0.4904139041962123,
+    "U-S - words (role-general)": 0.10987987923482606,
+    "log10 self / words": 1.2226640733118292,
+    "log10 self / U||S (self-specific)": 0.42962093249757977,
+    "log10 U||S / words (role-general)": 0.7930431408142495,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Qwen3.8-Flash-Next",
+    "group": "self-reference",
+    "self - words": 0.4767958329909687,
+    "self - U-S (self-specific)": 0.11437029032260493,
+    "U-S - words (role-general)": 0.3624255426683638,
+    "log10 self / words": 0.7285984617433995,
+    "log10 self / U||S (self-specific)": 0.005054353668686285,
+    "log10 U||S / words (role-general)": 0.7235441080747133,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "gpt-oss-20b",
+    "group": "self-reference",
+    "self - words": 0.395021643869586,
+    "self - U-S (self-specific)": 0.39727904366183525,
+    "U-S - words (role-general)": -0.0022573997922492595,
+    "log10 self / words": 1.9135709408257526,
+    "log10 self / U||S (self-specific)": 1.5399964999273932,
+    "log10 U||S / words (role-general)": 0.37357444089835956,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "gpt-oss-120b",
+    "group": "self-reference",
+    "self - words": -0.09774931573146106,
+    "self - U-S (self-specific)": -0.03587412984361105,
+    "U-S - words (role-general)": -0.061875185887850015,
+    "log10 self / words": 1.4172451738229932,
+    "log10 self / U||S (self-specific)": 0.9849139107873872,
+    "log10 U||S / words (role-general)": 0.4323312630356061,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "GLM-5.3-Flash",
+    "group": "self-reference",
+    "self - words": 0.33415560548427803,
+    "self - U-S (self-specific)": 0.13838852813733982,
+    "U-S - words (role-general)": 0.1957670773469382,
+    "log10 self / words": 0.3636737215178627,
+    "log10 self / U||S (self-specific)": 0.052118643223995266,
+    "log10 U||S / words (role-general)": 0.3115550782938674,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "EXAONE-4.0.1-32B",
+    "group": "self-reference",
+    "self - words": 0.22877660684286388,
+    "self - U-S (self-specific)": -0.0026415117808346045,
+    "U-S - words (role-general)": 0.2314181186236985,
+    "log10 self / words": 0.4584442635344945,
+    "log10 self / U||S (self-specific)": 1.1060558844703114,
+    "log10 U||S / words (role-general)": -0.6476116209358169,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "MiMo-V2.6-Distill-Qwen-9B",
+    "group": "self-reference",
+    "self - words": 0.625051129215308,
+    "self - U-S (self-specific)": 0.4123318674828045,
+    "U-S - words (role-general)": 0.2127192617325036,
+    "log10 self / words": 0.9960134678921471,
+    "log10 self / U||S (self-specific)": 0.7113965615445523,
+    "log10 U||S / words (role-general)": 0.28461690634759473,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "GLM-4.6V-Flash",
+    "group": "self-index only",
+    "self - words": 0.29985220034644167,
+    "self - U-S (self-specific)": 0.15239835849763494,
+    "U-S - words (role-general)": 0.14745384184880672,
+    "log10 self / words": 1.679910484456424,
+    "log10 self / U||S (self-specific)": 1.8118317268815174,
+    "log10 U||S / words (role-general)": -0.13192124242509345,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "GLM-4.7-Flash",
+    "group": "self-index only",
+    "self - words": 0.3001167130306781,
+    "self - U-S (self-specific)": 0.353373173982644,
+    "U-S - words (role-general)": -0.0532564609519659,
+    "log10 self / words": 0.30426326882576993,
+    "log10 self / U||S (self-specific)": 0.30043557343471944,
+    "log10 U||S / words (role-general)": 0.0038276953910504966,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "DeepSeek-R1-Distill-Llama-70B",
+    "group": "self-index only",
+    "self - words": 0.050768935776619784,
+    "self - U-S (self-specific)": -0.19444097613389622,
+    "U-S - words (role-general)": 0.245209911910516,
+    "log10 self / words": -1.0962578873850433,
+    "log10 self / U||S (self-specific)": -1.266144883843424,
+    "log10 U||S / words (role-general)": 0.1698869964583806,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "phi-4",
+    "group": "self-index only",
+    "self - words": 0.3276037659148983,
+    "self - U-S (self-specific)": 0.1645738995254774,
+    "U-S - words (role-general)": 0.1630298663894209,
+    "log10 self / words": 0.7916043454209323,
+    "log10 self / U||S (self-specific)": 0.36913536445229234,
+    "log10 U||S / words (role-general)": 0.42246898096863994,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Granite-4.2-30B",
+    "group": "self-index only",
+    "self - words": 0.15569007957211545,
+    "self - U-S (self-specific)": 0.03370513787955187,
+    "U-S - words (role-general)": 0.12198494169256358,
+    "log10 self / words": 0.7170115256322332,
+    "log10 self / U||S (self-specific)": -0.09480644488553622,
+    "log10 U||S / words (role-general)": 0.8118179705177695,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Granite-4.1-30B",
+    "group": "self-index only",
+    "self - words": 0.10339569637531637,
+    "self - U-S (self-specific)": -0.1357716862291214,
+    "U-S - words (role-general)": 0.23916738260443776,
+    "log10 self / words": -0.9704975999256745,
+    "log10 self / U||S (self-specific)": -0.19166175601708602,
+    "log10 U||S / words (role-general)": -0.7788358439085885,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "OLMo-2-13B",
+    "group": "neither",
+    "self - words": 0.4339461385886153,
+    "self - U-S (self-specific)": 0.04137019862033009,
+    "U-S - words (role-general)": 0.3925759399682852,
+    "log10 self / words": 0.6531327999469816,
+    "log10 self / U||S (self-specific)": 0.021072104956199236,
+    "log10 U||S / words (role-general)": 0.6320606949907823,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "OLMo-2-7B",
+    "group": "neither",
+    "self - words": 0.2480904819119873,
+    "self - U-S (self-specific)": -0.056157949623414805,
+    "U-S - words (role-general)": 0.3042484315354021,
+    "log10 self / words": 0.7355077195465534,
+    "log10 self / U||S (self-specific)": 0.045325294936609396,
+    "log10 U||S / words (role-general)": 0.690182424609944,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Apertus-8B",
+    "group": "neither",
+    "self - words": -0.26780823705409196,
+    "self - U-S (self-specific)": -0.0034531348469079848,
+    "U-S - words (role-general)": -0.264355102207184,
+    "log10 self / words": 0.5068311753490106,
+    "log10 self / U||S (self-specific)": -0.4041112896111611,
+    "log10 U||S / words (role-general)": 0.9109424649601716,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Moonlight-16B-A3B",
+    "group": "neither",
+    "self - words": 0.1666516405407279,
+    "self - U-S (self-specific)": -0.16682611801941882,
+    "U-S - words (role-general)": 0.3334777585601467,
+    "log10 self / words": 0.25672446787896586,
+    "log10 self / U||S (self-specific)": -0.0634440586307714,
+    "log10 U||S / words (role-general)": 0.32016852650973726,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "MiMo-7B-RL",
+    "group": "neither",
+    "self - words": 0.2878576502995467,
+    "self - U-S (self-specific)": -0.04027947041494151,
+    "U-S - words (role-general)": 0.3281371207144882,
+    "log10 self / words": 0.19862852488460148,
+    "log10 self / U||S (self-specific)": -0.24698581042677636,
+    "log10 U||S / words (role-general)": 0.4456143353113779,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "MiMo-VL-7B-RL-2508",
+    "group": "neither",
+    "self - words": 0.13319474747485838,
+    "self - U-S (self-specific)": -0.07846064476778103,
+    "U-S - words (role-general)": 0.2116553922426394,
+    "log10 self / words": -0.11859926174799316,
+    "log10 self / U||S (self-specific)": -0.696969669140912,
+    "log10 U||S / words (role-general)": 0.5783704073929189,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "ERNIE-4.5-21B-A3B",
+    "group": "neither",
+    "self - words": -0.3890481278841179,
+    "self - U-S (self-specific)": -0.026348172149291096,
+    "U-S - words (role-general)": -0.36269995573482683,
+    "log10 self / words": -0.08966187994134729,
+    "log10 self / U||S (self-specific)": -0.5136373198851406,
+    "log10 U||S / words (role-general)": 0.42397543994379333,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Seed-OSS-36B",
+    "group": "neither",
+    "self - words": 0.18970442924591568,
+    "self - U-S (self-specific)": -0.293947707296785,
+    "U-S - words (role-general)": 0.4836521365427007,
+    "log10 self / words": -0.1888564483313433,
+    "log10 self / U||S (self-specific)": -0.8014776933097034,
+    "log10 U||S / words (role-general)": 0.61262124497836,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Gemma-4-31B",
+    "group": "neither",
+    "self - words": 0.07698542675975645,
+    "self - U-S (self-specific)": -0.17551911522212915,
+    "U-S - words (role-general)": 0.2525045419818856,
+    "log10 self / words": 0.3382138959664132,
+    "log10 self / U||S (self-specific)": 0.029585310636885746,
+    "log10 U||S / words (role-general)": 0.3086285853295274,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Qwen3.6-27B",
+    "group": "neither",
+    "self - words": 0.0327757124448686,
+    "self - U-S (self-specific)": -0.00933047540273979,
+    "U-S - words (role-general)": 0.04210618784760839,
+    "log10 self / words": -0.15009108490180917,
+    "log10 self / U||S (self-specific)": -0.48558912775500745,
+    "log10 U||S / words (role-general)": 0.33549804285319834,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Qwen3.6-35B-A3B",
+    "group": "neither",
+    "self - words": 0.24646893714758178,
+    "self - U-S (self-specific)": -0.022254634255301275,
+    "U-S - words (role-general)": 0.26872357140288305,
+    "log10 self / words": -0.17763911471750396,
+    "log10 self / U||S (self-specific)": -0.6518608249642601,
+    "log10 U||S / words (role-general)": 0.47422171024675613,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Qwen3.5-27B",
+    "group": "neither",
+    "self - words": 0.16116968827361267,
+    "self - U-S (self-specific)": -0.03902620859480099,
+    "U-S - words (role-general)": 0.20019589686841366,
+    "log10 self / words": 0.0035590850060534455,
+    "log10 self / U||S (self-specific)": -0.26773233464499746,
+    "log10 U||S / words (role-general)": 0.27129141965105086,
+    "kl_self_pair": "A-U"
+   }
+  ],
+  "natural": [
+   {
+    "name": "Qwen3.8-27B",
+    "group": "self-reference",
+    "self - words": 0.5686438302101843,
+    "self - U-S (self-specific)": NaN,
+    "U-S - words (role-general)": NaN,
+    "log10 self / words": 1.497752166533598,
+    "log10 self / U||S (self-specific)": NaN,
+    "log10 U||S / words (role-general)": NaN,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "gpt-oss-20b",
+    "group": "self-reference",
+    "self - words": 0.3067224823089141,
+    "self - U-S (self-specific)": NaN,
+    "U-S - words (role-general)": NaN,
+    "log10 self / words": 2.0007250170524733,
+    "log10 self / U||S (self-specific)": NaN,
+    "log10 U||S / words (role-general)": NaN,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "EXAONE-4.0.1-32B",
+    "group": "self-reference",
+    "self - words": 0.4572268128669573,
+    "self - U-S (self-specific)": 0.2275214487620525,
+    "U-S - words (role-general)": 0.22970536410490483,
+    "log10 self / words": 0.3656994210486474,
+    "log10 self / U||S (self-specific)": 0.7689626408304602,
+    "log10 U||S / words (role-general)": -0.40326321978181273,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Gemma-4-31B",
+    "group": "self-reference",
+    "self - words": 0.2070541862847221,
+    "self - U-S (self-specific)": 0.12176374001241097,
+    "U-S - words (role-general)": 0.08529044627231114,
+    "log10 self / words": 0.27376052416179836,
+    "log10 self / U||S (self-specific)": -0.1719907058270517,
+    "log10 U||S / words (role-general)": 0.44575122998885003,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "DeepSeek-V4.1-Flash",
+    "group": "self-reference",
+    "self - words": 0.46370394515368124,
+    "self - U-S (self-specific)": 0.3922796118496067,
+    "U-S - words (role-general)": 0.07142433330407455,
+    "log10 self / words": 0.5432315837625324,
+    "log10 self / U||S (self-specific)": 0.37298494285753225,
+    "log10 U||S / words (role-general)": 0.1702466409050001,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "GLM-4.6V-Flash",
+    "group": "self-index only",
+    "self - words": 0.5000862805215928,
+    "self - U-S (self-specific)": 0.10635397725795281,
+    "U-S - words (role-general)": 0.39373230326363995,
+    "log10 self / words": 1.060943790347018,
+    "log10 self / U||S (self-specific)": 0.3134162877374047,
+    "log10 U||S / words (role-general)": 0.7475275026096132,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Granite-4.1-30B",
+    "group": "self-index only",
+    "self - words": 0.471638550377502,
+    "self - U-S (self-specific)": 0.31537057596523765,
+    "U-S - words (role-general)": 0.15626797441226437,
+    "log10 self / words": 0.402256280045132,
+    "log10 self / U||S (self-specific)": 0.36765426929670814,
+    "log10 U||S / words (role-general)": 0.034602010748423805,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "MiMo-7B-RL",
+    "group": "self-index only",
+    "self - words": 0.11081285451475492,
+    "self - U-S (self-specific)": 0.029964908552145175,
+    "U-S - words (role-general)": 0.08084794596260975,
+    "log10 self / words": -0.21119872624633096,
+    "log10 self / U||S (self-specific)": 0.30748951306130273,
+    "log10 U||S / words (role-general)": -0.5186882393076337,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Moonlight-16B-A3B",
+    "group": "self-index only",
+    "self - words": 0.4352993164187347,
+    "self - U-S (self-specific)": 0.21065188661323697,
+    "U-S - words (role-general)": 0.22464742980549773,
+    "log10 self / words": 0.1293742963344903,
+    "log10 self / U||S (self-specific)": 0.4336609260724843,
+    "log10 U||S / words (role-general)": -0.3042866297379941,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "phi-4",
+    "group": "self-index only",
+    "self - words": 0.3206193832313004,
+    "self - U-S (self-specific)": 0.20906788800764176,
+    "U-S - words (role-general)": 0.11155149522365865,
+    "log10 self / words": 0.660749952440697,
+    "log10 self / U||S (self-specific)": 0.45361242183342254,
+    "log10 U||S / words (role-general)": 0.2071375306072745,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "ERNIE-4.5-21B-A3B",
+    "group": "self-index only",
+    "self - words": 0.07991575825800801,
+    "self - U-S (self-specific)": 0.07194858254519454,
+    "U-S - words (role-general)": 0.007967175712813468,
+    "log10 self / words": -0.07294478364137554,
+    "log10 self / U||S (self-specific)": 0.1791724721010083,
+    "log10 U||S / words (role-general)": -0.2521172557423838,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "DeepSeek-R1-Distill-Llama-70B",
+    "group": "self-index only",
+    "self - words": 0.40444040815589877,
+    "self - U-S (self-specific)": NaN,
+    "U-S - words (role-general)": NaN,
+    "log10 self / words": -0.900322977783547,
+    "log10 self / U||S (self-specific)": NaN,
+    "log10 U||S / words (role-general)": NaN,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "OLMo-2-7B",
+    "group": "self-index only",
+    "self - words": 0.4926427672399203,
+    "self - U-S (self-specific)": 0.024879320123979864,
+    "U-S - words (role-general)": 0.4677634471159404,
+    "log10 self / words": 0.28336980725132777,
+    "log10 self / U||S (self-specific)": -0.4236567220110837,
+    "log10 U||S / words (role-general)": 0.7070265292624115,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Seed-OSS-36B",
+    "group": "neither",
+    "self - words": 0.0067704217531763256,
+    "self - U-S (self-specific)": 0.014326436053981428,
+    "U-S - words (role-general)": -0.007556014300805103,
+    "log10 self / words": -0.6918579063729222,
+    "log10 self / U||S (self-specific)": -0.528766377583826,
+    "log10 U||S / words (role-general)": -0.16309152878909614,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Apertus-8B",
+    "group": "neither",
+    "self - words": 0.7375850767577825,
+    "self - U-S (self-specific)": NaN,
+    "U-S - words (role-general)": NaN,
+    "log10 self / words": 0.23593360603125826,
+    "log10 self / U||S (self-specific)": NaN,
+    "log10 U||S / words (role-general)": NaN,
+    "kl_self_pair": "A-U"
+   },
+   {
+    "name": "Ministral-3-14B-Instruct",
+    "group": "neither",
+    "self - words": -0.1426811294696546,
+    "self - U-S (self-specific)": -0.487766475609432,
+    "U-S - words (role-general)": 0.34508534613977737,
+    "log10 self / words": -0.1937551428529599,
+    "log10 self / U||S (self-specific)": -0.863992220020875,
+    "log10 U||S / words (role-general)": 0.670237077167915,
+    "kl_self_pair": "A-S"
+   },
+   {
+    "name": "Ministral-3-14B-Reasoning",
+    "group": "neither",
+    "self - words": 0.08646485313218194,
+    "self - U-S (self-specific)": -0.23353397368922635,
+    "U-S - words (role-general)": 0.3199988268214083,
+    "log10 self / words": 0.08062405951910913,
+    "log10 self / U||S (self-specific)": -0.5316549778598164,
+    "log10 U||S / words (role-general)": 0.6122790373789255,
+    "kl_self_pair": "A-S"
+   }
+  ]
+ }
+}

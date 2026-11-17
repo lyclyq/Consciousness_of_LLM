@@ -1,0 +1,121 @@
+2026-11-08 18:57:41 start deepseek-ai/DeepSeek-V4.1-Flash-1017 (ModelScope), 554 GiB free
+2026-11-08 18:57:42 listing identical to 10-19 (80 files)
+2026-11-08 18:57:43 ok LICENSE
+2026-11-08 18:57:43 ok .gitattributes
+2026-11-08 18:57:43 ok config.json
+2026-11-08 18:57:43 ok README.md
+2026-11-08 18:57:43 ok configuration.json
+2026-11-08 18:57:43 ok encoding/README.md
+2026-11-08 18:57:44 ok encoding/test_encoding.py
+2026-11-08 18:57:44 ok encoding/tests/test_input_2.json
+2026-11-08 18:57:44 ok encoding/encoding.py
+2026-11-08 18:57:44 ok encoding/tests/test_input_1.json
+2026-11-08 18:57:44 ok encoding/tests/test_input_4.json
+2026-11-08 18:57:44 ok encoding/tests/test_output_1.txt
+2026-11-08 18:57:44 ok encoding/tests/test_input_3.json
+2026-11-08 18:57:45 ok encoding/tests/test_output_2.txt
+2026-11-08 18:57:45 ok encoding/tests/test_input_5.json
+2026-11-08 18:57:45 ok inference/README.md
+2026-11-08 18:57:45 ok encoding/tests/test_output_3.txt
+2026-11-08 18:57:45 ok encoding/tests/test_output_5.txt
+2026-11-08 18:57:46 ok encoding/tests/test_output_4.txt
+2026-11-08 18:57:46 ok inference/engram.py
+2026-11-08 18:57:46 ok inference/config.json
+2026-11-08 18:57:46 ok inference/generate.py
+2026-11-08 18:57:46 ok inference/convert.py
+2026-11-08 18:57:46 ok inference/image_processor.py
+2026-11-08 18:57:46 ok inference/kernel.py
+2026-11-08 18:57:46 ok inference/requirements.txt
+2026-11-08 18:57:47 ok inference/model.py
+2026-11-08 18:57:47 ok inference/run.sh
+2026-11-08 18:57:47 ok inference/vision.py
+2026-11-08 19:10:43 ok model-00001-of-00048.safetensors
+2026-11-08 19:38:17 ok model-00004-of-00048.safetensors
+2026-11-08 20:15:42 ok model-00002-of-00048.safetensors
+2026-11-08 20:27:43 ok model-00006-of-00048.safetensors
+2026-11-08 21:21:54 ok model-00005-of-00048.safetensors
+2026-11-08 21:30:34 ok model-00003-of-00048.safetensors
+2026-11-08 21:58:47 ok model-00008-of-00048.safetensors
+2026-11-08 22:13:32 ok model-00010-of-00048.safetensors
+2026-11-08 23:17:39 ok model-00007-of-00048.safetensors
+2026-11-09 01:06:11 ok model-00011-of-00048.safetensors
+2026-11-09 01:20:45 ok model-00012-of-00048.safetensors
+2026-11-09 02:23:29 ok model-00015-of-00048.safetensors
+2026-11-09 03:01:27 ok model-00009-of-00048.safetensors
+2026-11-09 03:22:15 ok model-00013-of-00048.safetensors
+2026-11-09 04:17:41 ok model-00018-of-00048.safetensors
+2026-11-09 05:00:12 ok model-00014-of-00048.safetensors
+2026-11-09 05:15:28 ok model-00019-of-00048.safetensors
+2026-11-09 05:46:44 ok model-00017-of-00048.safetensors
+2026-11-09 06:28:00 ok model-00021-of-00048.safetensors
+2026-11-09 06:35:49 [p8] listing identical to 10-19; 28 files to start, 4 left by the 11-08 run (last, after it exits); 343 GiB to go, 421 GiB free
+2026-11-09 06:36:23 ok model-00016-of-00048.safetensors
+2026-11-09 06:49:18 [v3] file list failed
+2026-11-09 06:52:53 [v3] listing identical to 10-19; 20 files not started, 11 being written by the earlier runs (last, after they exit); 344 GiB to go, 422 GiB free
+2026-11-09 07:51:23 incomplete: 48 of 80 files
+2026-11-09 08:06:59 [p8] incomplete: 48 of 80 files
+2026-11-09 09:05:56 [v3] ok model-00034-of-00048.safetensors
+2026-11-09 09:25:41 [v3] ok model-00035-of-00048.safetensors
+2026-11-09 09:28:16 [v3] ok model-00039-of-00048.safetensors
+2026-11-09 09:31:32 [v3] ok model-00038-of-00048.safetensors
+2026-11-09 09:33:20 [v3] ok model-00032-of-00048.safetensors
+2026-11-09 09:35:13 [v3] ok model-00037-of-00048.safetensors
+2026-11-09 09:45:34 [v3] ok model-00033-of-00048.safetensors
+2026-11-09 09:57:47 [v3] ok model-00043-of-00048.safetensors
+2026-11-09 10:01:32 [v3] ok model-00036-of-00048.safetensors
+2026-11-09 10:16:20 [v3] ok model-00045-of-00048.safetensors
+2026-11-09 10:16:32 [v3] ok model.safetensors.index.json
+2026-11-09 10:18:46 [v3] ok model-00044-of-00048.safetensors
+2026-11-09 10:18:46 [v3] ok tokenizer_config.json
+2026-11-09 10:34:08 [v3] ok model-00046-of-00048.safetensors
+2026-11-09 10:58:16 [v3] ok model-00040-of-00048.safetensors
+2026-11-09 11:14:00 [v3] ok tokenizer.json
+2026-11-09 11:18:01 [v3] ok model-00041-of-00048.safetensors
+2026-11-09 11:36:07 [v3] ok model-00042-of-00048.safetensors
+2026-11-09 12:11:40 [v3] ok model-00020-of-00048.safetensors
+2026-11-09 12:14:31 [v3] ok model-00022-of-00048.safetensors
+2026-11-09 12:30:15 [v3] ok model-00023-of-00048.safetensors
+2026-11-09 12:54:05 [v3] ok model-00024-of-00048.safetensors
+2026-11-09 13:44:28 [v3] ok model-00025-of-00048.safetensors
+2026-11-09 14:26:31 [v3] ok model-00027-of-00048.safetensors
+2026-11-09 14:31:04 [v3] ok model-00026-of-00048.safetensors
+2026-11-09 14:34:00 [v3] ok model-00031-of-00048.safetensors
+2026-11-09 14:36:05 [v3] ok model-00030-of-00048.safetensors
+2026-11-09 16:02:54 [v3] ok model-00029-of-00048.safetensors
+2026-11-09 16:17:18 [v3] ok model-00028-of-00048.safetensors
+2026-11-09 18:19:14 [v3] ok model-00047-of-00048.safetensors
+2026-11-09 20:37:56 [v3] ok model-00048-of-00048.safetensors
+2026-11-09 20:37:56 [v3] incomplete: 79 of 80 files
+2026-11-10 06:41:09 [fin] all 80 listed files have their marker and listed size (80 markers; v3 counted 79 because ls leaves out .gitattributes.ok)
+2026-11-10 06:41:09 [fin] no tpl_probe copy: .gitattributes
+2026-11-10 06:41:09 [fin] no tpl_probe copy: LICENSE
+2026-11-10 06:41:09 [fin] same as tpl_probe: README.md
+2026-11-10 06:41:09 [fin] same as tpl_probe: config.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: configuration.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/README.md
+2026-11-10 06:41:09 [fin] same as tpl_probe: encoding/encoding.py
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/test_encoding.py
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_input_1.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_input_2.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_input_3.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_input_4.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_input_5.json
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_output_1.txt
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_output_2.txt
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_output_3.txt
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_output_4.txt
+2026-11-10 06:41:09 [fin] no tpl_probe copy: encoding/tests/test_output_5.txt
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/README.md
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/config.json
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/convert.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/engram.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/generate.py
+2026-11-10 06:41:09 [fin] no tpl_probe copy: inference/image_processor.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/kernel.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/model.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/requirements.txt
+2026-11-10 06:41:09 [fin] no tpl_probe copy: inference/run.sh
+2026-11-10 06:41:09 [fin] same as tpl_probe: inference/vision.py
+2026-11-10 06:41:09 [fin] same as tpl_probe: tokenizer.json
+2026-11-10 06:41:09 [fin] same as tpl_probe: tokenizer_config.json
+2026-11-10 06:41:09 DONE 476G

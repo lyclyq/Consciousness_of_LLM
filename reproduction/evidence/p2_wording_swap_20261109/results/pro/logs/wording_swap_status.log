@@ -1,0 +1,12 @@
+2026-11-09 00:03:28 start (wrapper 9a66f12f, r05 01ab63dd, suite 516f117e, smoke check 10c2dc30)
+2026-11-09 00:03:28 pron smoke start
+2026-11-09 00:07:55 pron smoke exit 0
+smoke pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 00:07:55 pron full start
+2026-11-09 00:12:37 pron full exit 0 | {"base_A": {"n": 150, "p_self": 0.568, "p_user": 0.2759, "p_system": 0.1539, "mass_min": 0.9936}, "base_U": {"n": 150, "p_self": 0.3715, "p_user": 0.4499, "p_system": 0.1649, "mass_min": 0.9683}, "rswA8_U": {"n": 150, "p_self": 0.3695, "p_user": 0.4523, "p_system": 0.1653, "mass_min": 0.971, "you_minus_base": {"n_pairs": 150, "mean": -0.0019, "ci95": [-0.0047, 0.0009]}}, "rswU8_A": {"n": 150, "p_s
+2026-11-09 00:12:37 role smoke start
+2026-11-09 00:13:06 role smoke exit 0
+smoke role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 00:13:06 role full start
+2026-11-09 00:17:46 role full exit 0 | {"base_A": {"n": 150, "p_self": 0.5251, "p_user": 0.3359, "p_system": 0.137, "mass_min": 0.9951}, "base_U": {"n": 150, "p_self": 0.1644, "p_user": 0.784, "p_system": 0.0436, "mass_min": 0.9656}, "rswA8_U": {"n": 150, "p_self": 0.1673, "p_user": 0.7819, "p_system": 0.0435, "mass_min": 0.9729, "you_minus_base": {"n_pairs": 150, "mean": 0.0029, "ci95": [0.0008, 0.005]}}, "rswU8_A": {"n": 150, "p_self
+2026-11-09 00:17:46 wording queue done

@@ -1,0 +1,53 @@
+{
+ "criterion_rel": 0.02,
+ "bodies": [
+  {
+   "id": "role150_numeric_records_c00",
+   "max_rel": 0.0,
+   "ok": true,
+   "kinds": [
+    "kl_body",
+    "kl_content"
+   ],
+   "ours": {
+    "A-U": {
+     "kl_body": 0.31183990836143494,
+     "kl_content": 0.3013417422771454
+    },
+    "A-S": {
+     "kl_body": 0.28722643852233887,
+     "kl_content": 0.28722432255744934
+    },
+    "U-S": {
+     "kl_body": 0.15856562554836273,
+     "kl_content": 0.15856507420539856
+    }
+   }
+  },
+  {
+   "id": "role150_numeric_records_c01",
+   "max_rel": 0.0,
+   "ok": true,
+   "kinds": [
+    "kl_body",
+    "kl_content"
+   ],
+   "ours": {
+    "A-U": {
+     "kl_body": 0.21464934945106506,
+     "kl_content": 0.18923313915729523
+    },
+    "A-S": {
+     "kl_body": 0.3171500861644745,
+     "kl_content": 0.31714802980422974
+    },
+    "U-S": {
+     "kl_body": 0.22494597733020782,
+     "kl_content": 0.22484570741653442
+    }
+   }
+  }
+ ],
+ "ok": true,
+ "script_sha256": "144e196a963d189be9475119807eb8c95580bae1531ec1a5812a029be27a6207"
+}

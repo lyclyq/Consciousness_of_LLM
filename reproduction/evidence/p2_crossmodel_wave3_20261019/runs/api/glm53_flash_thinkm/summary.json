@@ -1,0 +1,34 @@
+{
+ "n": 480,
+ "prompt_tokens_match": 480,
+ "unfinished": 0,
+ "models_returned": {
+  "glm-5.3-flash": 480
+ },
+ "correct_assistant": {
+  "n_finished": 120,
+  "correct": 120,
+  "adopted_share": 0.0,
+  "correct_share": 1.0
+ },
+ "correct_user": {
+  "n_finished": 120,
+  "correct": 120,
+  "adopted_share": 0.0,
+  "correct_share": 1.0
+ },
+ "wrong_assistant": {
+  "n_finished": 120,
+  "correct": 116,
+  "adopted": 4,
+  "adopted_share": 0.0333,
+  "correct_share": 0.9667
+ },
+ "wrong_user": {
+  "n_finished": 120,
+  "correct": 68,
+  "adopted": 52,
+  "adopted_share": 0.4333,
+  "correct_share": 0.5667
+ }
+}

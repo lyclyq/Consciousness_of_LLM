@@ -1,0 +1,104 @@
+{
+ "base_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "self": 115,
+   "user": 35
+  },
+  "you_share": 0.7667,
+  "median_new_tokens": 66
+ },
+ "base_S": {
+  "n": 150,
+  "finished": 127,
+  "answers": {
+   "user": 13,
+   "system": 114
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 345
+ },
+ "base_U": {
+  "n": 150,
+  "finished": 149,
+  "answers": {
+   "user": 149
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 155
+ },
+ "rswS8_U": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 150
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 155,
+  "you_minus_base": {
+   "n_pairs": 149,
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "rswU8_S": {
+  "n": 150,
+  "finished": 118,
+  "answers": {
+   "system": 107,
+   "user": 11
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 460,
+  "you_minus_base": {
+   "n_pairs": 103,
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "swS8_U": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 148,
+   "system": 1,
+   "self": 1
+  },
+  "you_share": 0.0067,
+  "median_new_tokens": 152,
+  "you_minus_base": {
+   "n_pairs": 149,
+   "mean": 0.0067,
+   "ci95": [
+    0.0,
+    0.0201
+   ]
+  }
+ },
+ "swU8_S": {
+  "n": 150,
+  "finished": 147,
+  "answers": {
+   "user": 145,
+   "self": 1,
+   "system": 1
+  },
+  "you_share": 0.0068,
+  "median_new_tokens": 160,
+  "you_minus_base": {
+   "n_pairs": 126,
+   "mean": 0.0079,
+   "ci95": [
+    0.0,
+    0.0238
+   ]
+  }
+ }
+}

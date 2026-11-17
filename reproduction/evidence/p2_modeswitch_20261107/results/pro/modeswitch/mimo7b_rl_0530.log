@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/451 [00:00<?, ?it/s]Loading weights:   0%|          | 1/451 [00:00<01:09,  6.50it/s]Loading weights:   0%|          | 2/451 [00:00<01:25,  5.24it/s]Loading weights:   4%|▍         | 18/451 [00:00<00:08, 51.12it/s]Loading weights:   9%|▉         | 41/451 [00:00<00:04, 101.57it/s]Loading weights:  14%|█▍        | 65/451 [00:00<00:02, 136.59it/s]Loading weights:  20%|█▉        | 88/451 [00:00<00:02, 162.79it/s]Loading weights:  24%|██▎       | 107/451 [00:00<00:02, 159.74it/s]Loading weights:  28%|██▊       | 126/451 [00:01<00:01, 164.96it/s]Loading weights:  33%|███▎      | 149/451 [00:01<00:01, 178.62it/s]Loading weights:  37%|███▋      | 168/451 [00:01<00:01, 168.86it/s]Loading weights:  43%|████▎     | 193/451 [00:01<00:01, 190.91it/s]Loading weights:  47%|████▋     | 213/451 [00:01<00:01, 193.30it/s]Loading weights:  52%|█████▏    | 233/451 [00:01<00:01, 175.85it/s]Loading weights:  57%|█████▋    | 257/451 [00:01<00:01, 182.65it/s]Loading weights:  62%|██████▏   | 279/451 [00:01<00:00, 188.60it/s]Loading weights:  66%|██████▋   | 299/451 [00:01<00:00, 185.66it/s]Loading weights:  71%|███████   | 318/451 [00:02<00:00, 179.28it/s]Loading weights:  75%|███████▌  | 339/451 [00:02<00:00, 181.46it/s]Loading weights:  79%|███████▉  | 358/451 [00:02<00:00, 176.30it/s]Loading weights:  84%|████████▎ | 377/451 [00:02<00:00, 173.90it/s]Loading weights:  89%|████████▊ | 400/451 [00:02<00:00, 185.89it/s]Loading weights:  93%|█████████▎| 419/451 [00:02<00:00, 177.15it/s]Loading weights:  97%|█████████▋| 437/451 [00:02<00:00, 173.47it/s]Loading weights: 100%|██████████| 451/451 [00:02<00:00, 161.42it/s]
+[load] unexpected 0 missing 0 mismatched 0
+1 bodies, 1s, last role150_numeric_records_d00: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0441 A-S 0.1150 U-S 0.1003
+10 bodies, 3s, last role150_numeric_records_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0334 A-S 0.0818 U-S 0.0706
+20 bodies, 5s, last role150_object_properties_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0695 A-S 0.1111 U-S 0.0752
+30 bodies, 7s, last role150_temporal_order_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0625 A-S 0.0965 U-S 0.0735
+40 bodies, 9s, last role150_spatial_positions_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0606 A-S 0.0723 U-S 0.0620
+50 bodies, 11s, last role150_classification_facts_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0407 A-S 0.0609 U-S 0.0718
+60 bodies, 14s, last role150_ordinary_events_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0557 A-S 0.0642 U-S 0.0644
+70 bodies, 16s, last role150_comparison_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0445 A-S 0.0740 U-S 0.0861
+80 bodies, 18s, last role150_containment_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0345 A-S 0.0883 U-S 0.0727
+90 bodies, 20s, last role150_causal_events_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0735 A-S 0.1155 U-S 0.1275
+100 bodies, 22s, last role150_negation_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0266 A-S 0.0535 U-S 0.0644
+110 bodies, 25s, last role150_conjunction_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0340 A-S 0.0709 U-S 0.0737
+120 bodies, 27s, last role150_disjunction_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0705 A-S 0.0784 U-S 0.1054
+130 bodies, 29s, last role150_ordered_sequence_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0456 A-S 0.0989 U-S 0.0695
+140 bodies, 32s, last role150_state_change_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0254 A-S 0.0702 U-S 0.0916
+150 bodies, 34s, last role150_revision_records_c04: p_close A 0.000 U 0.000 S 0.000 | kl_body A-U 0.0333 A-S 0.0568 U-S 0.0688
+finished: 150/150 bodies on disk
+summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 0.57, "A-S/U-S_kl_body": 1.0, "A-U/U-S_kl_reply": 0.43, "A-S/U-S_kl_reply": 2.22}, "p_close_main": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl_body_main": {"A-U": 0.0452, "A-S": 0.0798, "U-S": 0.0798}, "gate": {"checked": 0, "all_ok": true}}

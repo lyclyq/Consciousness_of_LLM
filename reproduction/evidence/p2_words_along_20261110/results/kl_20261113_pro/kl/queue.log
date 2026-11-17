@@ -1,0 +1,386 @@
+[klw RUN] 2026-11-11 00:25:16 start mimo_v26_nt
+[klw DL] 2026-11-11 00:32:00 downloaded MiMo-VL-7B 16G
+[klw DL] 2026-11-11 00:32:00 lane DL done
+[klw RUN] 2026-11-11 00:33:30 DONE mimo_v26_nt: summary (content): A-U/U-S 6.21, A-S/U-S 5.15; words/U-S median 0.519 [0.407, 0.637] (max 0.919); words/A-U median 0.0836; check max rel 0.00e+00
+[klw RUN] 2026-11-11 00:33:31 start qwen38_nt
+[klw ext DL] 2026-11-11 00:38:30 download XiaomiMiMo/MiMo-7B-RL-0530@ee8dd14ecd59 (15 GiB, 41 GiB free)
+[klw ext DL] 2026-11-11 00:43:02 downloaded XiaomiMiMo/MiMo-7B-RL-0530 15G
+[klw ext DL] 2026-11-11 00:43:02 download swiss-ai/Apertus-8B-Instruct-2509@b946d40447b2 (15 GiB, 26 GiB free)
+[klw ext DL] 2026-11-11 00:50:22 downloaded swiss-ai/Apertus-8B-Instruct-2509 16G
+[klw ext DL] 2026-11-11 00:50:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw RUN] 2026-11-11 00:50:23 DONE qwen38_nt: summary (content): A-U/U-S 4.00, A-S/U-S 2.69; words/U-S median 0.161 [0.132, 0.199] (max 0.506); words/A-U median 0.0403; check max rel 0.00e+00
+[klw RUN] 2026-11-11 00:50:23 start qwen38_think
+[klw ext DL] 2026-11-11 00:52:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 00:54:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 00:56:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 00:58:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:00:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:02:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:04:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:06:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw RUN] 2026-11-11 01:07:08 DONE qwen38_think: summary (content): A-U/U-S 8.53, A-S/U-S 6.48; words/U-S median 0.271 [0.222, 0.333] (max 0.863); words/A-U median 0.0318; check max rel 0.00e+00
+[klw RUN] 2026-11-11 01:07:08 start gpt_oss_20b_en
+[klw ext DL] 2026-11-11 01:08:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:10:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:12:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:14:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw RUN] 2026-11-11 01:15:54 DONE gpt_oss_20b_en: summary (content): A-U/U-S 34.67, A-S/U-S 37.36; words/U-S median 0.423 [0.377, 0.462] (max 0.923); words/A-U median 0.0122; check max rel 0.00e+00
+[klw RUN] 2026-11-11 01:15:54 start mimo_vl7b
+[klw ext DL] 2026-11-11 01:16:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:18:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw ext DL] 2026-11-11 01:20:22 waiting for 24 GiB free (11) for allenai/OLMo-2-1124-7B-Instruct
+[klw RUN] 2026-11-11 01:21:03 DONE mimo_vl7b: summary (content): A-U/U-S 0.20, A-S/U-S 0.54; words/U-S median 0.264 [0.227, 0.297] (max 0.390); words/A-U median 1.3140; check max rel 0.00e+00
+[klw RUN] 2026-11-11 01:21:04 MiMo-VL-7B weights deleted
+[klw RUN] 2026-11-11 01:21:04 lane RUN done
+[klw ext RUN] 2026-11-11 01:21:30 the first five settings are finished: extension starts
+[klw ext RUN] 2026-11-11 01:21:30 start mimo7b_rl_0530
+[klw ext DL] 2026-11-11 01:22:22 download allenai/OLMo-2-1124-7B-Instruct@470b1fba1ae0 (14 GiB, 27 GiB free)
+[klw ext RUN] 2026-11-11 01:26:10 DONE mimo7b_rl_0530: summary (content): A-U/U-S 0.57, A-S/U-S 1.00; words/U-S median 0.358 [0.313, 0.399] (max 0.634); words/A-U median 0.6330; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 01:26:11 weights of mimo7b_rl_0530 deleted (36 GiB free)
+[klw ext RUN] 2026-11-11 01:26:11 start apertus8b_en
+[klw ext DL] 2026-11-11 01:30:40 downloaded allenai/OLMo-2-1124-7B-Instruct 14G
+[klw ext DL] 2026-11-11 01:30:40 waiting for 30 GiB free (28) for zai-org/GLM-4.6V-Flash
+[klw ext RUN] 2026-11-11 01:31:40 DONE apertus8b_en: summary (content): A-U/U-S 0.39, A-S/U-S 0.89; words/U-S median 0.123 [0.104, 0.143] (max 0.235); words/A-U median 0.3113; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 01:31:41 weights of apertus8b_en deleted (43 GiB free)
+[klw ext RUN] 2026-11-11 01:31:41 start olmo2_7b_en
+[klw ext DL] 2026-11-11 01:32:40 download zai-org/GLM-4.6V-Flash@411bb4d77144 (20 GiB, 43 GiB free)
+[klw ext RUN] 2026-11-11 01:36:21 DONE olmo2_7b_en: summary (content): A-U/U-S 1.11, A-S/U-S 1.15; words/U-S median 0.204 [0.171, 0.232] (max 0.384); words/A-U median 0.1839; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 01:36:22 weights of olmo2_7b_en deleted (48 GiB free)
+[klw ext DL] 2026-11-11 01:41:32 zai-org/GLM-4.6V-Flash attempt 1 failed
+[klw ext DL] 2026-11-11 01:43:39 downloaded zai-org/GLM-4.6V-Flash 20G
+[klw ext DL] 2026-11-11 01:43:39 download allenai/OLMo-2-1124-13B-Instruct@3a5c85baefbb (26 GiB, 37 GiB free)
+[klw ext RUN] 2026-11-11 01:44:22 start glm46v_flash
+[klw ext RUN] 2026-11-11 01:51:14 DONE glm46v_flash: summary (content): A-U/U-S 64.84, A-S/U-S 67.15; words/U-S median 1.355 [1.163, 1.592] (max 4.602); words/A-U median 0.0209; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 01:51:14 weights of glm46v_flash deleted (33 GiB free)
+[klw ext DL] 2026-11-11 01:57:43 downloaded allenai/OLMo-2-1124-13B-Instruct 26G
+[klw ext DL] 2026-11-11 01:57:43 waiting for 38 GiB free (31) for microsoft/phi-4
+[klw ext RUN] 2026-11-11 01:58:14 start olmo2_13b_en
+[klw ext DL] 2026-11-11 01:59:43 waiting for 38 GiB free (31) for microsoft/phi-4
+[klw ext DL] 2026-11-11 02:01:43 waiting for 38 GiB free (31) for microsoft/phi-4
+[klw ext DL] 2026-11-11 02:03:43 waiting for 38 GiB free (31) for microsoft/phi-4
+[klw ext RUN] 2026-11-11 02:04:47 DONE olmo2_13b_en: summary (content): A-U/U-S 1.69, A-S/U-S 1.05; words/U-S median 0.233 [0.184, 0.277] (max 0.586); words/A-U median 0.1379; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 02:04:48 weights of olmo2_13b_en deleted (56 GiB free)
+[klw ext DL] 2026-11-11 02:05:43 download microsoft/phi-4@2db69c1c3e91 (28 GiB, 56 GiB free)
+[klw p3 SMOKE] 2026-11-11 03:12:39 start /root/p2_scale_20261015/crossmodel/words_along/kl/_smoke_p3/mimo_v26_nt
+[klw p3 SMOKE] 2026-11-11 03:14:45 ended /root/p2_scale_20261015/crossmodel/words_along/kl/_smoke_p3/mimo_v26_nt: check: [{"id": "role150_numeric_records_c00", "max_rel": 0.0, "ok": true}, {"id": "role150_numeric_records_c01", "max_rel": 0.0, "ok": true}] [smoke] 1 phase-3 bodies measured: stopping 
+[klw p3 SMOKE] 2026-11-11 03:14:45 start /root/p2_scale_20261015/crossmodel/words_along/kl/_smoke_p3/gpt_oss_20b_en
+[klw p3 SMOKE] 2026-11-11 03:16:29 ended /root/p2_scale_20261015/crossmodel/words_along/kl/_smoke_p3/gpt_oss_20b_en: check: [{"id": "role150_numeric_records_c00", "max_rel": 0.0, "ok": true}, {"id": "role150_numeric_records_c01", "max_rel": 0.0, "ok": true}] [smoke] 1 phase-3 bodies measured: stopping 
+[klw p3 SMOKE] 2026-11-11 03:16:29 lane SMOKE done
+[klw ext DL] 2026-11-11 03:24:16 downloaded microsoft/phi-4 28G
+[klw ext DL] 2026-11-11 03:24:16 waiting for 40 GiB free (29) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw ext RUN] 2026-11-11 03:24:49 start phi4_en
+[klw ext DL] 2026-11-11 03:26:16 waiting for 40 GiB free (29) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw ext DL] 2026-11-11 03:28:16 waiting for 40 GiB free (29) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw ext DL] 2026-11-11 03:30:16 waiting for 40 GiB free (29) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw ext RUN] 2026-11-11 03:30:31 DONE phi4_en: summary (content): A-U/U-S 3.63, A-S/U-S 2.34; words/U-S median 0.378 [0.313, 0.482] (max 1.072); words/A-U median 0.1040; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 03:30:33 weights of phi4_en deleted (56 GiB free)
+[klw ext DL] 2026-11-11 03:32:16 download moonshotai/Moonlight-16B-A3B-Instruct@4e735b07a89f (30 GiB, 56 GiB free)
+[klw ext DL] 2026-11-11 03:47:13 downloaded moonshotai/Moonlight-16B-A3B-Instruct 30G
+[klw ext DL] 2026-11-11 03:47:13 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext RUN] 2026-11-11 03:47:33 start moonlight16b_a3b_instruct
+[klw ext DL] 2026-11-11 03:49:14 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext DL] 2026-11-11 03:51:14 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext DL] 2026-11-11 03:53:14 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext DL] 2026-11-11 03:55:14 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext DL] 2026-11-11 03:57:14 waiting for 51 GiB free (27) for baidu/ERNIE-4.5-21B-A3B-Thinking
+[klw ext RUN] 2026-11-11 03:58:36 DONE moonlight16b_a3b_instruct: summary (content): A-U/U-S 0.86, A-S/U-S 0.97; words/U-S median 0.478 [0.384, 0.575] (max 0.765); words/A-U median 0.5537; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 03:58:37 weights of moonlight16b_a3b_instruct deleted (56 GiB free)
+[klw ext DL] 2026-11-11 03:59:14 download baidu/ERNIE-4.5-21B-A3B-Thinking@4341bb42644d (41 GiB, 56 GiB free)
+[klw ext DL] 2026-11-11 04:20:00 downloaded baidu/ERNIE-4.5-21B-A3B-Thinking 41G
+[klw ext DL] 2026-11-11 04:20:00 lane ext DL done
+[klw ext RUN] 2026-11-11 04:20:38 start ernie45_21b_a3b_thinking
+[klw ext RUN] 2026-11-11 04:33:59 DONE ernie45_21b_a3b_thinking: summary (content): A-U/U-S 0.31, A-S/U-S 0.72; words/U-S median 0.377 [0.322, 0.445] (max 0.871); words/A-U median 1.2293; check max rel 0.00e+00
+[klw ext RUN] 2026-11-11 04:33:59 weights of ernie45_21b_a3b_thinking deleted (16 GiB free)
+[klw ext RUN] 2026-11-11 04:33:59 lane ext RUN done
+[klw p3 DEPTH] 2026-11-11 04:34:00 the extension is finished: depth starts
+[klw p3 DEPTH] 2026-11-11 04:34:00 start /root/p2_scale_20261015/crossmodel/words_along/kl/p3_mimo_v26_nt
+[klw orders DL] 2026-11-11 04:34:44 waiting for 30 GiB free (16) for zai-org/GLM-4.6V-Flash
+[klw orders DL] 2026-11-11 04:44:44 waiting for 30 GiB free (16) for zai-org/GLM-4.6V-Flash
+[klw refs] 2026-11-11 04:49:18 waiting for the KL-words outputs on the three reference copies
+[klw p3 DEPTH] 2026-11-11 04:51:47 DONE /root/p2_scale_20261015/crossmodel/words_along/kl/p3_mimo_v26_nt: summary (content): A-U/U-S 11.37, A-S/U-S 9.77; words/U-S median 0.392 [0.368, 0.419] (max 1.321); words/A-U median 0.0344; check max rel 0.00e+00
+[klw p3 DEPTH] 2026-11-11 04:51:47 start /root/p2_scale_20261015/crossmodel/words_along/kl/p3_gpt_oss_20b_en
+[klw orders DL] 2026-11-11 04:54:44 waiting for 30 GiB free (16) for zai-org/GLM-4.6V-Flash
+[klw orders DL] 2026-11-11 05:04:44 waiting for 30 GiB free (16) for zai-org/GLM-4.6V-Flash
+[klw orders DL] 2026-11-11 05:05:44 download zai-org/GLM-4.6V-Flash@411bb4d77144 (20 GiB, 36 GiB free)
+[klw p3 DEPTH] 2026-11-11 05:10:18 DONE /root/p2_scale_20261015/crossmodel/words_along/kl/p3_gpt_oss_20b_en: summary (content): A-U/U-S 48.45, A-S/U-S 51.14; words/U-S median 0.373 [0.356, 0.390] (max 1.053); words/A-U median 0.0077; check max rel 0.00e+00
+[klw p3 DEPTH] 2026-11-11 05:10:18 start /root/p2_scale_20261015/crossmodel/words_along/kl/p3_qwen38_nt
+[klw orders DL] 2026-11-11 05:19:39 downloaded zai-org/GLM-4.6V-Flash 20G
+[klw orders DL] 2026-11-11 05:19:39 download allenai/OLMo-2-1124-7B-Instruct@470b1fba1ae0 (14 GiB, 29 GiB free)
+[klw orders DL] 2026-11-11 05:26:08 downloaded allenai/OLMo-2-1124-7B-Instruct 14G
+[klw orders DL] 2026-11-11 05:26:08 download XiaomiMiMo/MiMo-7B-RL-0530@ee8dd14ecd59 (15 GiB, 34 GiB free)
+[klw orders DL] 2026-11-11 05:38:51 downloaded XiaomiMiMo/MiMo-7B-RL-0530 15G
+[klw orders DL] 2026-11-11 05:38:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw p3 DEPTH] 2026-11-11 05:45:42 DONE /root/p2_scale_20261015/crossmodel/words_along/kl/p3_qwen38_nt: summary (content): A-U/U-S 7.21, A-S/U-S 5.40; words/U-S median 0.177 [0.162, 0.192] (max 0.470); words/A-U median 0.0245; check max rel 0.00e+00
+[klw p3 DEPTH] 2026-11-11 05:45:42 start /root/p2_scale_20261015/crossmodel/words_along/kl/p3_qwen38_think
+[klw orders DL] 2026-11-11 05:48:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw orders DL] 2026-11-11 05:58:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw orders DL] 2026-11-11 06:08:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw orders DL] 2026-11-11 06:18:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw p3 DEPTH] 2026-11-11 06:21:04 DONE /root/p2_scale_20261015/crossmodel/words_along/kl/p3_qwen38_think: summary (content): A-U/U-S 16.90, A-S/U-S 14.57; words/U-S median 0.298 [0.280, 0.326] (max 0.798); words/A-U median 0.0176; check max rel 0.00e+00
+[klw p3 DEPTH] 2026-11-11 06:21:04 lane p3 DEPTH done
+[klw orders RUN] 2026-11-11 06:21:45 the depth part is finished: natural order and the rest start
+[klw orders RUN] 2026-11-11 06:21:45 start qwen38_nt (natural)
+[klw orders DL] 2026-11-11 06:28:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw orders RUN] 2026-11-11 06:37:31 ended qwen38_nt: summary (content, qwen38_nt): words/A-U median 0.0318 [0.0274, 0.0348] (max 0.0763); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 06:37:31 start gpt_oss_20b_en (natural)
+[klw orders DL] 2026-11-11 06:38:51 waiting for 40 GiB free (20) for moonshotai/Moonlight-16B-A3B-Instruct
+[klw orders RUN] 2026-11-11 06:45:11 ended gpt_oss_20b_en: [load] sdpa attempt failed (ValueError('GptOssForCausalLM does not support an attention implementation through torch.nn.functional.scaled_dot_product_attention yet. Please request the support for this architecture: https://github.com/huggingface/transformers/issues/28005. If you believe this error is a bug, please open an issu); retrying with the default attention summary (content, gpt_oss_20b_en): words/A-U median 0.0100 [0.0089, 0.0116] (max 0.0250); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 06:45:11 start ernie45_21b_a3b_thinking (natural)
+[klw refs] 2026-11-11 06:45:19 deleted /root/hf_models/Qwen/Qwen3.8-27B (52G)
+[klw refs] 2026-11-11 06:45:20 deleted /root/hf_models/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B (18G)
+[klw refs] 2026-11-11 06:45:21 deleted /root/hf_models/openai/gpt-oss-20b (13G)
+[klw refs] 2026-11-11 06:45:21 reference copies deleted (102 GiB free)
+[klw orders DL] 2026-11-11 06:45:51 download moonshotai/Moonlight-16B-A3B-Instruct@4e735b07a89f (30 GiB, 102 GiB free)
+[klw orders DL] 2026-11-11 06:55:24 downloaded moonshotai/Moonlight-16B-A3B-Instruct 30G
+[klw orders DL] 2026-11-11 06:55:24 download microsoft/phi-4@2db69c1c3e91 (28 GiB, 72 GiB free)
+[klw orders DL] 2026-11-11 06:55:26 microsoft/phi-4 attempt 1 failed
+[klw orders RUN] 2026-11-11 06:58:53 ended ernie45_21b_a3b_thinking: summary (content, ernie45_21b_a3b_thinking): A-U/U-S 2.75, A-S/U-S 1.51; words/U-S median 1.787 [1.485, 2.203] (max 3.583); words/A-U median 0.6508 [0.5660, 0.7742] (max 1.3050); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 06:58:54 kept ERNIE weights deleted (112 GiB free)
+[klw orders RUN] 2026-11-11 06:58:54 start glm46v_flash (natural)
+[klw orders RUN] 2026-11-11 07:05:13 ended glm46v_flash: summary (content, glm46v_flash): A-U/U-S 4.29, A-S/U-S 2.06; words/U-S median 0.179 [0.153, 0.200] (max 0.467); words/A-U median 0.0416 [0.0346, 0.0472] (max 0.1087); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 07:05:14 weights of glm46v_flash deleted (127 GiB free)
+[klw orders RUN] 2026-11-11 07:05:14 start olmo2_7b_en (natural)
+[klw orders RUN] 2026-11-11 07:09:59 ended olmo2_7b_en: summary (content, olmo2_7b_en): A-U/U-S 1.36, A-S/U-S 0.38; words/U-S median 0.196 [0.161, 0.229] (max 0.424); words/A-U median 0.1445 [0.1192, 0.1682] (max 0.3121); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 07:10:00 weights of olmo2_7b_en deleted (136 GiB free)
+[klw orders RUN] 2026-11-11 07:10:00 start mimo7b_rl_0530 (natural)
+[klw orders RUN] 2026-11-11 07:14:28 ended mimo7b_rl_0530: summary (content, mimo7b_rl_0530): A-U/U-S 3.34, A-S/U-S 2.03; words/U-S median 3.301 [2.784, 3.665] (max 5.539); words/A-U median 0.9879 [0.8250, 1.1289] (max 1.6574); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 07:14:29 weights of mimo7b_rl_0530 deleted (147 GiB free)
+[klw orders RUN] 2026-11-11 07:14:29 start moonlight16b_a3b_instruct (natural)
+[klw orders RUN] 2026-11-11 07:26:01 ended moonlight16b_a3b_instruct: summary (content, moonlight16b_a3b_instruct): A-U/U-S 4.12, A-S/U-S 2.71; words/U-S median 2.015 [1.781, 2.303] (max 3.427); words/A-U median 0.4893 [0.4462, 0.5416] (max 0.8322); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 07:26:02 weights of moonlight16b_a3b_instruct deleted (175 GiB free)
+[klw orders DL] 2026-11-11 07:41:13 microsoft/phi-4 attempt 2 failed
+[klw orders DL] 2026-11-11 07:51:57 downloaded microsoft/phi-4 28G
+[klw orders DL] 2026-11-11 07:51:57 download swiss-ai/Apertus-8B-Instruct-2509@b946d40447b2 (15 GiB, 162 GiB free)
+[klw orders DL] 2026-11-11 07:51:58 swiss-ai/Apertus-8B-Instruct-2509 attempt 1 failed
+[klw orders RUN] 2026-11-11 07:52:02 start phi4_en (natural)
+[klw orders RUN] 2026-11-11 07:57:45 ended phi4_en: summary (content, phi4_en): A-U/U-S 2.88, A-S/U-S 2.84; words/U-S median 0.621 [0.534, 0.733] (max 1.245); words/A-U median 0.2157 [0.1782, 0.2570] (max 0.4324); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 07:57:46 weights of phi4_en deleted (183 GiB free)
+[klw orders DL] 2026-11-11 08:05:00 downloaded swiss-ai/Apertus-8B-Instruct-2509 16G
+[klw orders DL] 2026-11-11 08:05:00 download Qwen/Qwen3.6-27B@6a9e13bd6fc8 (52 GiB, 175 GiB free)
+[klw orders DL] 2026-11-11 08:06:25 download Qwen/Qwen3.6-27B@6a9e13bd6fc8 (52 GiB, 175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 the depth part is finished: natural order and the rest start
+[klw orders RUN] 2026-11-11 08:06:25 already DONE: qwen38_nt (natural)
+[klw orders RUN] 2026-11-11 08:06:25 already DONE: gpt_oss_20b_en (natural)
+[klw orders RUN] 2026-11-11 08:06:25 no kept ERNIE weights at /root/hf_models_keep_20261111/baidu/ERNIE-4.5-21B-A3B-Thinking: ERNIE natural not run
+[klw orders RUN] 2026-11-11 08:06:25 weights of glm46v_flash deleted (175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 weights of olmo2_7b_en deleted (175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 weights of mimo7b_rl_0530 deleted (175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 weights of moonlight16b_a3b_instruct deleted (175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 weights of phi4_en deleted (175 GiB free)
+[klw orders RUN] 2026-11-11 08:06:25 start apertus8b_en (natural)
+[klw orders RUN] 2026-11-11 08:11:36 ended apertus8b_en: summary (content, apertus8b_en): words/A-U median 0.5809 [0.4764, 0.6861] (max 1.0415); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 08:11:37 weights of apertus8b_en deleted (172 GiB free)
+[klw orders DL] 2026-11-11 08:22:35 downloaded Qwen/Qwen3.6-27B 52G
+[klw orders DL] 2026-11-11 08:22:35 download Qwen/Qwen3.5-27B@fc05daec18b0 (52 GiB, 138 GiB free)
+[klw orders RUN] 2026-11-11 08:22:37 start qwen36_27b (main)
+[klw orders RUN] 2026-11-11 08:38:54 ended qwen36_27b: summary (content, qwen36_27b): A-U/U-S 0.33, A-S/U-S 0.95; words/U-S median 0.462 [0.346, 0.564] (max 1.658); words/A-U median 1.4128 [1.1128, 1.6534] (max 5.0728); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 08:38:54 start p3_qwen36_27b
+[klw orders DL] 2026-11-11 08:47:22 Qwen/Qwen3.5-27B attempt 1 failed
+[klw orders DL] 2026-11-11 09:10:23 downloaded Qwen/Qwen3.5-27B 52G
+[klw orders DL] 2026-11-11 09:10:23 download ibm-granite/granite-4.1-30b@4fae6278f713 (54 GiB, 86 GiB free)
+[klw orders RUN] 2026-11-11 09:14:07 ended p3_qwen36_27b: summary (content): A-U/U-S 0.36, A-S/U-S 0.96; words/U-S median 0.439 [0.406, 0.470] (max 1.121); words/A-U median 1.2291; check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 09:14:08 weights of qwen36_27b deleted (123 GiB free)
+[klw orders RUN] 2026-11-11 09:14:08 start qwen35_27b (main)
+[klw orders DL] 2026-11-11 09:18:52 ibm-granite/granite-4.1-30b attempt 1 failed
+[klw orders RUN] 2026-11-11 09:30:15 ended qwen35_27b: summary (content, qwen35_27b): A-U/U-S 0.54, A-S/U-S 0.59; words/U-S median 0.535 [0.403, 0.609] (max 1.641); words/A-U median 0.9918 [0.7604, 1.1056] (max 3.0395); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 09:30:17 weights of qwen35_27b deleted (156 GiB free)
+[klw orders DL] 2026-11-11 12:02:19 downloaded ibm-granite/granite-4.1-30b 54G
+[klw orders DL] 2026-11-11 12:02:19 download ibm-granite/granite-4.2-30b@9e668ce1c538 (55 GiB, 136 GiB free)
+[klw orders RUN] 2026-11-11 12:03:17 start granite41_30b_en (main,natural)
+[klw orders RUN] 2026-11-11 12:18:42 ended granite41_30b_en: summary (content, granite41_30b_en): A-U/U-S 0.90, A-S/U-S 0.64; words/U-S median 6.009 [4.751, 7.334] (max 14.849); words/A-U median 6.6663 [5.3189, 8.0417] (max 16.4718); check max rel 0.00e+00 summary (content, granite41_30b_en): A-U/U-S 4.15, A-S/U-S 2.33; words/U-S median 0.923 [0.779, 1.068] (max 1.772); words/A-U median 0.2223 [0.1881, 0.2585] (max 0.4267); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 12:18:44 weights of granite41_30b_en deleted (136 GiB free)
+[klw orders DL] 2026-11-11 12:19:16 downloaded ibm-granite/granite-4.2-30b 55G
+[klw orders DL] 2026-11-11 12:19:16 download google/gemma-4-31B-it@842da3794eaa (59 GiB, 135 GiB free)
+[klw orders RUN] 2026-11-11 12:19:44 start granite42_30b_en (main)
+[klw orders RUN] 2026-11-11 12:29:48 ended granite42_30b_en: summary (content, granite42_30b_en): A-U/U-S 1.34, A-S/U-S 0.80; words/U-S median 0.154 [0.129, 0.184] (max 0.345); words/A-U median 0.1152 [0.1006, 0.1352] (max 0.2579); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 12:29:50 weights of granite42_30b_en deleted (175 GiB free)
+[klw orders DL] 2026-11-11 13:12:17 downloaded google/gemma-4-31B-it 59G
+[klw orders DL] 2026-11-11 13:12:17 download zai-org/GLM-4.7-Flash@7dd20894a642 (59 GiB, 131 GiB free)
+[klw orders RUN] 2026-11-11 13:12:50 start gemma4_31b_en (main,natural)
+[klw orders RUN] 2026-11-11 13:36:40 ended gemma4_31b_en: summary (content, gemma4_31b_en): A-U/U-S 1.90, A-S/U-S 1.07; words/U-S median 0.491 [0.417, 0.575] (max 0.870); words/A-U median 0.2592 [0.2261, 0.2890] (max 0.4589); check max rel 0.00e+00 summary (content, gemma4_31b_en): A-U/U-S 2.00, A-S/U-S 0.67; words/U-S median 0.358 [0.267, 0.476] (max 0.619); words/A-U median 0.1787 [0.1427, 0.2202] (max 0.3087); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 13:36:41 weights of gemma4_31b_en deleted (132 GiB free)
+[klw orders DL] 2026-11-11 13:37:26 zai-org/GLM-4.7-Flash attempt 1 failed
+[klw orders DL] 2026-11-11 13:39:34 downloaded zai-org/GLM-4.7-Flash 59G
+[klw orders DL] 2026-11-11 13:39:34 download LGAI-EXAONE/EXAONE-4.0.1-32B@a6b0bd4b0fb4 (60 GiB, 132 GiB free)
+[klw orders RUN] 2026-11-11 13:39:41 start glm47_flash (main)
+[klw orders DL] 2026-11-11 13:52:02 LGAI-EXAONE/EXAONE-4.0.1-32B attempt 1 failed
+[klw orders RUN] 2026-11-11 14:00:39 ended glm47_flash: summary (content, glm47_flash): A-U/U-S 2.09, A-S/U-S 2.00; words/U-S median 0.991 [0.867, 1.103] (max 1.529); words/A-U median 0.4744 [0.4089, 0.5288] (max 0.7318); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 14:00:41 weights of glm47_flash deleted (150 GiB free)
+[klw orders DL] 2026-11-11 14:11:35 LGAI-EXAONE/EXAONE-4.0.1-32B attempt 2 failed
+[klw orders DL] 2026-11-11 14:13:41 downloaded LGAI-EXAONE/EXAONE-4.0.1-32B 60G
+[klw orders DL] 2026-11-11 14:13:41 download openai/gpt-oss-120b@b5c939de8f75 (61 GiB, 130 GiB free)
+[klw orders RUN] 2026-11-11 14:14:41 start exaone4_32b_en (main,natural)
+[klw orders DL] 2026-11-11 14:29:14 openai/gpt-oss-120b attempt 1 failed
+[klw orders RUN] 2026-11-11 14:33:09 ended exaone4_32b_en: summary (content, exaone4_32b_en): A-U/U-S 13.01, A-S/U-S 12.77; words/U-S median 4.442 [4.162, 4.961] (max 7.486); words/A-U median 0.3415 [0.2979, 0.4108] (max 0.5754); check max rel 0.00e+00 summary (content, exaone4_32b_en): A-U/U-S 5.87, A-S/U-S 6.31; words/U-S median 2.531 [2.301, 2.828] (max 3.980); words/A-U median 0.4308 [0.3396, 0.5384] (max 0.6776); check max rel 0.00e+00 
+[klw orders RUN] 2026-11-11 14:33:09 EXAONE mechanism battery starts (mech_exaone_pro_20261111.sh)
+[klw orders RUN] 2026-11-11 14:39:06 EXAONE mechanism battery exit 1
+[klw orders RUN] 2026-11-11 14:39:06 EXAONE mechanism battery not DONE: weights kept, see modeswitch/mech_e32/status.log
+[klw orders DL] 2026-11-11 14:46:39 openai/gpt-oss-120b attempt 2 failed
+[klw orders DL] 2026-11-11 15:02:12 openai/gpt-oss-120b attempt 3 failed
+[klw orders DL] 2026-11-11 15:23:16 openai/gpt-oss-120b attempt 4 failed
+[klw orders DL] 2026-11-11 15:25:19 openai/gpt-oss-120b attempt 5 failed
+[klw orders DL] 2026-11-11 15:27:21 openai/gpt-oss-120b attempt 6 failed
+[klw orders DL] 2026-11-11 15:29:21 download FAILED openai/gpt-oss-120b
+[klw orders DL] 2026-11-11 15:29:21 waiting for 77 GiB free (8) for Qwen/Qwen3.6-35B-A3B
+[klw orders RUN] 2026-11-11 15:29:28 skip gpt_oss_120b_en: download failed
+[klw g120] 2026-11-11 15:37:20 original/ and metal/ of the partial gpt-oss-120b download removed (not part of the paper checkpoint; 69 GiB free)
+[klw orders DL] 2026-11-11 15:39:21 waiting for 77 GiB free (69) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 15:49:22 waiting for 77 GiB free (69) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 15:59:22 waiting for 77 GiB free (69) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:09:23 waiting for 77 GiB free (69) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:19:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:29:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:39:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:49:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 16:59:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:09:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:19:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:29:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:39:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:49:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 17:59:23 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 18:09:24 waiting for 77 GiB free (68) for Qwen/Qwen3.6-35B-A3B
+[klw orders DL] 2026-11-11 18:15:24 download Qwen/Qwen3.6-35B-A3B@995ad96eacd9 (67 GiB, 203 GiB free)
+[klw orders DL] 2026-11-11 18:39:16 downloaded Qwen/Qwen3.6-35B-A3B 67G
+[klw orders DL] 2026-11-11 18:39:16 download ByteDance-Seed/Seed-OSS-36B-Instruct@497f1dca95eb (68 GiB, 99 GiB free)
+[klw orders RUN] 2026-11-11 18:39:29 start qwen36_35b_a3b (main)
+[klw orders RUN] 2026-11-11 18:39:43 ended qwen36_35b_a3b: [load] sdpa attempt failed (OutOfMemoryError('CUDA out of memory. Tried to allocate 65.39 GiB. GPU 0 has a total capacity of 94.97 GiB of which 24.45 GiB is free. Process 196379 has 69.86 GiB memory in use. Including non-PyTorch memory, this process has 642.00 MiB memory in use. Of the allocated memory 15.00 KiB is allocated b); retrying with the default attention torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 65.39 GiB. GPU 0 has a total capacity of 94.97 GiB of which 24.41 GiB is free. Process 196379 has 69.90 GiB memory in use. Including non-PyTorch memory, this process has 642.00 MiB memory in use. Of the allocated memory 15.00 KiB is allocated by PyTorch, and 1.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf) 
+[klw orders RUN] 2026-11-11 18:39:43 NOT DONE qwen36_35b_a3b (weights kept), see /root/p2_scale_20261015/crossmodel/words_along/kl/orders_qwen36_35b_a3b.log
+[klw orders DL] 2026-11-11 18:59:01 downloaded ByteDance-Seed/Seed-OSS-36B-Instruct 68G
+[klw orders DL] 2026-11-11 18:59:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders RUN] 2026-11-11 18:59:43 start seed_oss_36b (main,natural)
+[klw orders RUN] 2026-11-11 19:00:00 ended seed_oss_36b: [load] sdpa attempt failed (OutOfMemoryError('CUDA out of memory. Tried to allocate 67.34 GiB. GPU 0 has a total capacity of 94.97 GiB of which 16.83 GiB is free. Process 196379 has 77.58 GiB memory in use. Including non-PyTorch memory, this process has 550.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by ); retrying with the default attention torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 67.34 GiB. GPU 0 has a total capacity of 94.97 GiB of which 16.83 GiB is free. Process 196379 has 77.58 GiB memory in use. Including non-PyTorch memory, this process has 550.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf) 
+[klw orders RUN] 2026-11-11 19:00:00 NOT DONE seed_oss_36b (weights kept), see /root/p2_scale_20261015/crossmodel/words_along/kl/orders_seed_oss_36b.log
+[klw orders DL] 2026-11-11 19:09:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 19:19:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 19:29:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 19:39:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 19:49:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 19:59:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:09:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:19:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:29:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:39:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:49:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 20:59:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:09:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:19:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:29:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:39:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:49:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 21:59:01 waiting for 142 GiB free (32) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:09:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:19:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:29:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:39:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:49:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 22:59:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:09:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:19:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:29:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:39:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:49:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-11 23:59:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:09:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:19:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:29:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:39:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:49:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 00:59:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 01:09:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 01:19:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 01:29:02 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 01:39:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 01:46:28 completing the gpt-oss-120b download with the paper's ignore_patterns (31 GiB free)
+[klw g120] 2026-11-12 01:46:30 downloaded 61G
+[klw g120] 2026-11-12 01:46:30 start gpt_oss_120b_en (main)
+[klw orders DL] 2026-11-12 01:49:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 01:59:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 02:01:32 ended gpt_oss_120b_en: [load] sdpa attempt failed (ValueError('GptOssForCausalLM does not support an attention implementation through torch.nn.functional.scaled_dot_product_attention yet. Please request the support for this architecture: https://github.com/huggingface/transformers/issues/28005. If you believe this error is a bug, please open an issu); retrying with the default attention summary (content, gpt_oss_120b_en): A-U/U-S 9.66, A-S/U-S 10.52; words/U-S median 0.370 [0.345, 0.408] (max 0.602); words/A-U median 0.0383 [0.0333, 0.0450] (max 0.0623); check max rel 0.00e+00 
+[klw g120] 2026-11-12 02:01:32 start p3_gpt_oss_120b_en
+[klw orders DL] 2026-11-12 02:09:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 02:19:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 02:29:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 02:32:28 ended p3_gpt_oss_120b_en: [load] sdpa attempt failed (ValueError('GptOssForCausalLM does not support an attention implementation through torch.nn.functional.scaled_dot_product_attention yet. Please request the support for this architecture: https://github.com/huggingface/transformers/issues/28005. If you believe this error is a bug, please open an issu); retrying with the default attention summary (content): A-U/U-S 15.40, A-S/U-S 15.09; words/U-S median 0.304 [0.289, 0.322] (max 0.430); words/A-U median 0.0197; check max rel 0.00e+00 
+[klw g120] 2026-11-12 02:32:28 start qwen36_35b_a3b (main)
+[klw orders DL] 2026-11-12 02:39:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 02:49:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 02:59:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 03:04:03 ended qwen36_35b_a3b: [load] sdpa attempt failed (OutOfMemoryError('CUDA out of memory. Tried to allocate 65.39 GiB. GPU 0 has a total capacity of 94.97 GiB of which 24.45 GiB is free. Process 196379 has 69.86 GiB memory in use. Including non-PyTorch memory, this process has 642.00 MiB memory in use. Of the allocated memory 15.00 KiB is allocated b); retrying with the default attention torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 65.39 GiB. GPU 0 has a total capacity of 94.97 GiB of which 24.41 GiB is free. Process 196379 has 69.90 GiB memory in use. Including non-PyTorch memory, this process has 642.00 MiB memory in use. Of the allocated memory 15.00 KiB is allocated by PyTorch, and 1.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf) summary (content, qwen36_35b_a3b): A-U/U-S 0.22, A-S/U-S 0.77; words/U-S median 0.336 [0.290, 0.386] (max 0.784); words/A-U median 1.5054 [1.2762, 1.7714] (max 3.5170); check max rel 0.00e+00 
+[klw g120] 2026-11-12 03:04:03 start seed_oss_36b (main,natural)
+[klw orders DL] 2026-11-12 03:09:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw orders DL] 2026-11-12 03:19:03 waiting for 142 GiB free (31) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 03:23:07 ended seed_oss_36b: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 67.34 GiB. GPU 0 has a total capacity of 94.97 GiB of which 16.83 GiB is free. Process 196379 has 77.58 GiB memory in use. Including non-PyTorch memory, this process has 550.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf) summary (content, seed_oss_36b): A-U/U-S 0.16, A-S/U-S 0.65; words/U-S median 0.244 [0.168, 0.328] (max 0.436); words/A-U median 1.5447 [1.1458, 1.9139] (max 2.7611); check max rel 0.00e+00 summary (content, seed_oss_36b): A-U/U-S 1.16, A-S/U-S 0.30; words/U-S median 1.456 [1.037, 1.867] (max 2.968); words/A-U median 1.2526 [0.9211, 1.5613] (max 2.5542); check max rel 0.00e+00 
+[klw g120] 2026-11-12 03:23:08 weights of gpt_oss_120b_en deleted (92 GiB free)
+[klw g120] 2026-11-12 03:23:08 download mistralai/Ministral-3-14B-Instruct-2512-BF16@3cea74c1ebaf (~26 GiB, 92 GiB free)
+[klw orders DL] 2026-11-12 03:29:03 waiting for 142 GiB free (84) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 03:35:44 mistralai/Ministral-3-14B-Instruct-2512-BF16 attempt 1 failed
+[klw orders DL] 2026-11-12 03:39:03 waiting for 142 GiB free (70) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 03:40:50 mistralai/Ministral-3-14B-Instruct-2512-BF16 attempt 2 failed
+[klw g120] 2026-11-12 03:42:53 downloaded mistralai/Ministral-3-14B-Instruct-2512-BF16 27G
+[klw g120] 2026-11-12 03:42:53 start natural/ministral3_14b_instruct_en (natural3)
+[klw orders DL] 2026-11-12 03:49:03 waiting for 142 GiB free (66) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 03:50:38 ended natural/ministral3_14b_instruct_en: summary (content, ministral3_14b_instruct_en): A-U/U-S 1.12, A-S/U-S 0.14; words/U-S median 0.214 [0.182, 0.243] (max 0.428); words/A-U median 0.1900 [0.1629, 0.2192] (max 0.3803); check max rel 0.00e+00 
+[klw g120] 2026-11-12 03:50:40 weights of ministral3_14b_instruct_en deleted (92 GiB free)
+[klw g120] 2026-11-12 03:50:40 download mistralai/Ministral-3-14B-Reasoning-2512@51f9210f3cd2 (~26 GiB, 92 GiB free)
+[klw orders DL] 2026-11-12 03:59:03 waiting for 142 GiB free (76) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 04:00:23 mistralai/Ministral-3-14B-Reasoning-2512 attempt 1 failed
+[klw g120] 2026-11-12 04:06:00 mistralai/Ministral-3-14B-Reasoning-2512 attempt 2 failed
+[klw g120] 2026-11-12 04:08:18 mistralai/Ministral-3-14B-Reasoning-2512 attempt 3 failed
+[klw orders DL] 2026-11-12 04:09:03 waiting for 142 GiB free (66) for deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+[klw g120] 2026-11-12 04:10:40 mistralai/Ministral-3-14B-Reasoning-2512 attempt 4 failed
+[klw g120] 2026-11-12 04:12:55 mistralai/Ministral-3-14B-Reasoning-2512 attempt 5 failed
+[klw g120] 2026-11-12 04:15:17 mistralai/Ministral-3-14B-Reasoning-2512 attempt 6 failed
+[klw g120] 2026-11-12 04:17:17 download FAILED mistralai/Ministral-3-14B-Reasoning-2512
+[klw g120] 2026-11-12 04:17:19 weights of qwen36_35b_a3b deleted (133 GiB free)
+[klw g120] 2026-11-12 04:17:20 weights of seed_oss_36b deleted (200 GiB free)
+[klw g120] 2026-11-12 04:17:20 follow-up done
+[klw orders RUN] 2026-11-12 04:17:21 weights of exaone4_32b_en deleted after the mechanism battery (260 GiB free)
+[klw orders DL] 2026-11-12 04:18:03 download deepseek-ai/DeepSeek-R1-Distill-Llama-70B@b1c0b44b4369 (132 GiB, 260 GiB free)
+[klw minr] 2026-11-12 04:18:40 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 1 failed
+[klw minr] 2026-11-12 04:19:53 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 2 failed
+[klw minr] 2026-11-12 04:21:12 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 3 failed
+[klw minr] 2026-11-12 04:22:25 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 4 failed
+[klw minr] 2026-11-12 04:23:38 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 5 failed
+[klw minr] 2026-11-12 04:24:50 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 6 failed
+[klw minr] 2026-11-12 04:25:50 download completion FAILED mistralai/Ministral-3-14B-Reasoning-2512
+[klw minr] 2026-11-12 04:26:05 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 1 failed
+[klw minr] 2026-11-12 04:27:18 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 2 failed
+[klw minr] 2026-11-12 04:28:31 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 3 failed
+[klw minr] 2026-11-12 04:29:45 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 4 failed
+[klw minr] 2026-11-12 04:30:58 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 5 failed
+[klw minr] 2026-11-12 04:32:11 mistralai/Ministral-3-14B-Reasoning-2512 completion attempt 6 failed
+[klw minr] 2026-11-12 04:33:11 download completion FAILED mistralai/Ministral-3-14B-Reasoning-2512
+[klw orders DL] 2026-11-12 04:35:58 deepseek-ai/DeepSeek-R1-Distill-Llama-70B attempt 1 failed
+[klw orders DL] 2026-11-12 04:54:31 deepseek-ai/DeepSeek-R1-Distill-Llama-70B attempt 2 failed
+[klw orders DL] 2026-11-12 05:18:37 deepseek-ai/DeepSeek-R1-Distill-Llama-70B attempt 3 failed
+[klw orders DL] 2026-11-12 05:20:50 deepseek-ai/DeepSeek-R1-Distill-Llama-70B attempt 4 failed
+[klw orders DL] 2026-11-12 05:23:02 deepseek-ai/DeepSeek-R1-Distill-Llama-70B attempt 5 failed
+[klw minr] 2026-11-12 05:23:03 file-by-file completion: complete: False; failed ['chat_template.jinja', 'processor_config.json']; missing ['chat_template.jinja', 'processor_config.json']
+[klw minr] 2026-11-12 05:23:03 download completion FAILED mistralai/Ministral-3-14B-Reasoning-2512
+[klw orders] 2026-11-12 05:24:32 STOP_KLW set (user 11-12: R1 moved to server3); the remaining PRO cells continue in pro_tail_20261112.sh
+[klw tail] 2026-11-12 05:25:35 old lanes exited, STOP_KLW removed; tail starts (128 GiB free)
+[klw tail] 2026-11-12 05:25:41 partial R1 download deleted (R1 runs on server3; 260 GiB free)
+[klw tail] 2026-11-12 05:25:41 download Qwen/Qwen3.8-Flash-Next-FP8@236dfdf2 file by file (~173 GiB, 260 GiB free)
+[klw minr] 2026-11-12 05:37:15 chat_template.jinja and processor_config.json fetched with curl from hf-mirror at commit 51f9210f, git blob sha1 equal to the repository listing (aaa7e7bf4ecc, a37d728b12fd); download complete
+[klw minr] 2026-11-12 05:37:15 start natural/ministral3_14b_reasoning_en (natural3)
+[klw minr] 2026-11-12 05:43:39 ended natural/ministral3_14b_reasoning_en: summary (content, ministral3_14b_reasoning_en): A-U/U-S 0.75, A-S/U-S 0.29; words/U-S median 0.244 [0.198, 0.276] (max 0.469); words/A-U median 0.3252 [0.2620, 0.3755] (max 0.6239); check max rel 0.00e+00 
+[klw minr] 2026-11-12 05:43:40 weights of ministral3_14b_reasoning_en deleted (286 GiB free)
+[klw r1pro] 2026-11-12 10:24:40 cancelled before it started (user 11-12: all R1 measurements on server3, where its paper geometry, thinking, natural and retention runs are; its two KL runs are redone there)
+[klw tail] 2026-11-12 10:37:48 Flash-Next download: complete: False; failed ['.gitattributes']; missing ['.gitattributes'] (173G)
+[klw minr] 2026-11-12 10:37:48 already DONE: natural/ministral3_14b_reasoning_en
+[klw tail] 2026-11-12 10:37:48 tail done
+[klw fnrun] 2026-11-12 10:38:17 download check: ACCEPT yes: 141 needed, missing [], 131 shards in the index, missing shards []
+[klw fnrun] 2026-11-12 10:38:17 start flashnext_nt (main)
+[klw fnrun] 2026-11-12 10:54:22 ended flashnext_nt: 
+[klw fnrun2] 2026-11-12 11:05:48 start flashnext_nt (main), placement 90 GiB GPU + 46 GiB CPU
+[klw fnrun2] 2026-11-12 11:24:47 ended flashnext_nt (exit 137):  | peak 11:24:09 usage_gib 43 total_cache 15 total_rss 26 total_shmem 13 total_mapped_file 1  failcnt 2
+[klw fnrun2] 2026-11-12 12:55:13 /dev/shm/qwen8b_hf (13 GiB, created 2026-08-21, not this project) deleted with the user OK (11-12) to free container memory
+[klw fnrun2] 2026-11-12 12:55:13 start flashnext_nt (main), placement 84 GiB GPU + 52 GiB CPU
+[klw fnrun2] 2026-11-12 13:22:23 ended flashnext_nt (exit 1): AttributeError: 'NoneType' object has no attribute 'grouped_matmul'  | peak 13:18:45 usage_gib 43 total_cache 2 total_rss 40 total_shmem 0 total_mapped_file 2  failcnt 2
+[klw fnrun2] 2026-11-12 13:44:00 FP8 kernel restored to the 11-07 paper run: refs/v4 -> 03ae3193 (cached 11-07 03:18) in the local HF cache; its tree listing pruned to the 13 torch-cuda files present (git blob sha1 verified; original kept as .orig_20261112), since offline loading refused the snapshot for missing rocm/xpu files; load_finegrained_fp8_kernel has grouped_matmul, suite backend hub-kernel as in modeswitch/ctrl/flashnext_nt.log
+[klw fnrun2] 2026-11-12 13:44:00 start flashnext_nt (main), placement 84 GiB GPU + 52 GiB CPU
+[klw fnrun2] 2026-11-12 14:10:30 ended flashnext_nt (exit 137): AttributeError: 'NoneType' object has no attribute 'grouped_matmul'  | peak 14:07:09 usage_gib 43 total_cache 0 total_rss 41 total_shmem 0 total_mapped_file 0  failcnt 2
+[klw fnrun2] 2026-11-12 14:11:52 start flashnext_nt (main), placement 90 GiB GPU + 46 GiB CPU
+[klw fnrun2] 2026-11-13 10:06:14 ended flashnext_nt (exit 0): AttributeError: 'NoneType' object has no attribute 'grouped_matmul' summary (content, flashnext_nt): A-U/U-S 1.70, A-S/U-S 1.01; words/U-S median 0.189 [0.158, 0.214] (max 0.553); words/A-U median 0.1111 [0.0924, 0.1240] (max 0.3254); check max rel 0.00e+00  | peak 14:07:09 usage_gib 43 total_cache 0 total_rss 41 total_shmem 0 total_mapped_file 0  failcnt 2
+[klw fnrun2] 2026-11-13 10:06:15 weights of flashnext_nt deleted (285 GiB free)

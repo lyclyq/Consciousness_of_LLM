@@ -1,0 +1,164 @@
+{
+ "base_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "self": 115,
+   "user": 34,
+   "system": 1
+  },
+  "you_share": 0.7667,
+  "median_new_tokens": 66
+ },
+ "base_S": {
+  "n": 150,
+  "finished": 116,
+  "answers": {
+   "system": 103,
+   "user": 13
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 412
+ },
+ "base_U": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 148,
+   "self": 1,
+   "system": 1
+  },
+  "you_share": 0.0067,
+  "median_new_tokens": 154
+ },
+ "idA8_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "self": 115,
+   "user": 33,
+   "system": 2
+  },
+  "you_share": 0.7667,
+  "median_new_tokens": 84,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": 0.0,
+   "ci95": [
+    -0.0467,
+    0.0467
+   ]
+  }
+ },
+ "rswA8_U": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 150
+  },
+  "you_share": 0.0,
+  "median_new_tokens": 154,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": -0.0067,
+   "ci95": [
+    -0.02,
+    0.0
+   ]
+  }
+ },
+ "rswU8_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 24,
+   "self": 122,
+   "system": 4
+  },
+  "you_share": 0.8133,
+  "median_new_tokens": 65,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": 0.0467,
+   "ci95": [
+    -0.0133,
+    0.1067
+   ]
+  }
+ },
+ "swA8_S": {
+  "n": 150,
+  "finished": 125,
+  "answers": {
+   "system": 118,
+   "user": 6,
+   "self": 1
+  },
+  "you_share": 0.008,
+  "median_new_tokens": 606,
+  "you_minus_base": {
+   "n_pairs": 103,
+   "mean": 0.0097,
+   "ci95": [
+    0.0,
+    0.0291
+   ]
+  }
+ },
+ "swA8_U": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 71,
+   "self": 77,
+   "system": 2
+  },
+  "you_share": 0.5133,
+  "median_new_tokens": 97,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": 0.5067,
+   "ci95": [
+    0.4267,
+    0.5867
+   ]
+  }
+ },
+ "swS8_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 118,
+   "system": 18,
+   "self": 14
+  },
+  "you_share": 0.0933,
+  "median_new_tokens": 138,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": -0.6733,
+   "ci95": [
+    -0.7467,
+    -0.5933
+   ]
+  }
+ },
+ "swU8_A": {
+  "n": 150,
+  "finished": 150,
+  "answers": {
+   "user": 148,
+   "self": 2
+  },
+  "you_share": 0.0133,
+  "median_new_tokens": 149,
+  "you_minus_base": {
+   "n_pairs": 150,
+   "mean": -0.7533,
+   "ci95": [
+    -0.82,
+    -0.6867
+   ]
+  }
+ }
+}

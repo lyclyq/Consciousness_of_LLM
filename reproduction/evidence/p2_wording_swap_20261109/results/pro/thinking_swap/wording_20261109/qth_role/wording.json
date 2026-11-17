@@ -1,0 +1,19 @@
+{
+ "wording": "role",
+ "lang": "zh",
+ "options": {
+  "self": "AI 助手",
+  "user": "用户",
+  "system": "系统"
+ },
+ "fixed_date": null,
+ "questions_orders_1_2": [
+  "这个问题之前的那条消息是谁写的？A. AI 助手 B. 用户 C. 系统。只回答字母。",
+  "这个问题之前的那条消息是谁写的？A. 系统 B. AI 助手 C. 用户。只回答字母。"
+ ],
+ "paper_options": {
+  "self": "你（AI 助手）",
+  "user": "用户",
+  "system": "系统"
+ }
+}

@@ -11,6 +11,7 @@ runtime        checkpoint reading by memory map, model build, per-layer staging 
                the rendering with DeepSeek's own encoder.
 natural        the natural-order runner (geometry and self-reference): python -m selfindex.dsv41.natural
 problems       the reasoning problems without thinking: python -m selfindex.dsv41.problems
+next_token     the next-token measurement in the natural order: python -m selfindex.dsv41.next_token
 check_kernels  checks of kernel_torch against float64 references written from the kernel source: python -m selfindex.dsv41.check_kernels
 check_forward  checks of the runner's forward paths against the official forward on a small random model:
                python -m selfindex.dsv41.check_forward

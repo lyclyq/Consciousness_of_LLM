@@ -1,0 +1,94 @@
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter
+Loading weights:   0%|          | 0/1872 [00:00<?, ?it/s]Loading weights:   5%|▍         | 91/1872 [00:01<00:32, 55.10it/s]Loading weights:   5%|▌         | 97/1872 [00:03<01:08, 25.84it/s]Loading weights:   7%|▋         | 131/1872 [00:03<00:43, 40.25it/s]Loading weights:   9%|▉         | 164/1872 [00:03<00:29, 57.20it/s]Loading weights:  10%|█         | 195/1872 [00:04<00:31, 53.65it/s]Loading weights:  11%|█         | 207/1872 [00:04<00:30, 55.20it/s]Loading weights:  12%|█▏        | 228/1872 [00:05<00:42, 38.70it/s]Loading weights:  13%|█▎        | 236/1872 [00:05<00:40, 40.43it/s]Loading weights:  14%|█▍        | 266/1872 [00:06<00:51, 31.28it/s]Loading weights:  15%|█▍        | 272/1872 [00:06<00:51, 31.28it/s]Loading weights:  16%|█▌        | 299/1872 [00:08<00:56, 28.03it/s]Loading weights:  16%|█▌        | 304/1872 [00:08<00:54, 28.83it/s]Loading weights:  18%|█▊        | 332/1872 [00:09<00:51, 29.71it/s]Loading weights:  18%|█▊        | 336/1872 [00:09<01:12, 21.27it/s]Loading weights:  19%|█▉        | 365/1872 [00:10<01:04, 23.51it/s]Loading weights:  20%|█▉        | 368/1872 [00:11<01:18, 19.07it/s]Loading weights:  22%|██▏       | 404/1872 [00:11<00:39, 37.60it/s]Loading weights:  22%|██▏       | 417/1872 [00:15<01:52, 12.95it/s]Loading weights:  27%|██▋       | 504/1872 [00:15<00:36, 37.94it/s]Loading weights:  29%|██▉       | 540/1872 [00:17<00:49, 26.97it/s]Loading weights:  30%|███       | 562/1872 [00:21<01:25, 15.39it/s]Loading weights:  31%|███       | 578/1872 [00:23<01:42, 12.65it/s]Loading weights:  32%|███▏      | 606/1872 [00:25<01:32, 13.68it/s]Loading weights:  33%|███▎      | 615/1872 [00:29<02:31,  8.28it/s]Loading weights:  34%|███▍      | 640/1872 [00:29<01:42, 12.04it/s]Loading weights:  35%|███▍      | 651/1872 [00:33<02:31,  8.06it/s]Loading weights:  40%|███▉      | 745/1872 [00:33<00:46, 24.24it/s]Loading weights:  47%|████▋     | 882/1872 [00:33<00:17, 56.78it/s]Loading weights:  53%|█████▎    | 984/1872 [00:33<00:09, 88.89it/s]Loading weights:  57%|█████▋    | 1058/1872 [00:40<00:29, 27.90it/s]Loading weights:  59%|█████▉    | 1110/1872 [00:45<00:37, 20.34it/s]Loading weights:  61%|██████▏   | 1147/1872 [00:50<00:46, 15.65it/s]Loading weights:  66%|██████▌   | 1228/1872 [00:50<00:26, 24.39it/s]Loading weights:  73%|███████▎  | 1368/1872 [00:50<00:11, 45.67it/s]Loading weights:  90%|█████████ | 1689/1872 [00:50<00:01, 114.09it/s]Loading weights: 100%|██████████| 1872/1872 [00:50<00:00, 36.75it/s] 
+[transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] This FP8 model spans multiple CUDA devices in one process; routing its FP8 linear and experts layers through Triton/grouped_mm instead of DeepGEMM (DeepGEMM's cached kernels are bound to a single CUDA context and corrupt across devices). Run tensor/expert parallel (one device per process) to use the faster DeepGEMM path.
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f", "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98", "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash", "on_kwargs": "{}", "n_layers": 45, "band": [0, 44], "fit_from": "/root/glm53/out/mech/fits/fit_q.pt", "question": "attr", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U"], "batch": 16, "max_new": 3072, "torch": "2.6.0+cu124", "transformers": "5.19.0"}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+base_A 16/150 3378s
+base_A 32/150 4393s
+base_A 48/150 5025s
+base_A 64/150 6367s
+base_A 80/150 6605s
+base_A 96/150 9698s
+base_A 112/150 10363s
+base_A 128/150 10873s
+base_A 144/150 14201s
+base_A 150/150 14864s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}}
+base_U 16/150 15304s
+base_U 32/150 15522s
+base_U 48/150 15800s
+base_U 64/150 16128s
+base_U 80/150 16518s
+base_U 96/150 16802s
+base_U 112/150 17374s
+base_U 128/150 18022s
+base_U 144/150 20065s
+base_U 150/150 20274s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter
+Loading weights:   0%|          | 0/1872 [00:00<?, ?it/s]Loading weights:   5%|▍         | 91/1872 [00:01<00:37, 47.16it/s]Loading weights:   5%|▌         | 96/1872 [00:08<03:18,  8.93it/s]Loading weights:   7%|▋         | 132/1872 [00:08<01:59, 14.58it/s]Loading weights:   9%|▊         | 162/1872 [00:10<01:44, 16.43it/s]Loading weights:   9%|▉         | 167/1872 [00:14<03:35,  7.92it/s]Loading weights:  22%|██▏       | 405/1872 [00:14<00:31, 47.14it/s]Loading weights:  29%|██▉       | 540/1872 [00:19<00:35, 37.93it/s]Loading weights:  32%|███▏      | 593/1872 [00:26<00:57, 22.17it/s]Loading weights:  34%|███▎      | 629/1872 [00:32<01:20, 15.51it/s]Loading weights:  35%|███▍      | 654/1872 [00:32<01:09, 17.41it/s]Loading weights:  42%|████▏     | 778/1872 [00:32<00:33, 33.08it/s]Loading weights:  49%|████▉     | 916/1872 [00:32<00:16, 57.31it/s]Loading weights:  56%|█████▌    | 1050/1872 [00:35<00:14, 57.98it/s]Loading weights:  59%|█████▉    | 1104/1872 [00:37<00:15, 48.40it/s]Loading weights:  61%|██████    | 1143/1872 [00:38<00:17, 41.96it/s]Loading weights:  63%|██████▎   | 1171/1872 [00:40<00:20, 33.93it/s]Loading weights:  64%|██████▎   | 1191/1872 [00:42<00:25, 26.26it/s]Loading weights:  65%|██████▌   | 1225/1872 [00:43<00:23, 27.20it/s]Loading weights:  66%|██████▌   | 1236/1872 [00:44<00:27, 23.20it/s]Loading weights:  67%|██████▋   | 1258/1872 [00:45<00:25, 23.87it/s]Loading weights:  68%|██████▊   | 1265/1872 [00:47<00:34, 17.65it/s]Loading weights:  69%|██████▉   | 1293/1872 [00:48<00:29, 19.68it/s]Loading weights:  71%|███████   | 1324/1872 [00:49<00:23, 23.27it/s]Loading weights:  71%|███████   | 1328/1872 [00:50<00:33, 16.23it/s]Loading weights:  73%|███████▎  | 1364/1872 [00:52<00:29, 17.38it/s]Loading weights:  75%|███████▍  | 1395/1872 [00:52<00:19, 24.81it/s]Loading weights:  75%|███████▍  | 1401/1872 [00:53<00:24, 19.11it/s]Loading weights:  76%|███████▋  | 1428/1872 [00:54<00:20, 21.94it/s]Loading weights:  76%|███████▋  | 1432/1872 [00:55<00:24, 17.83it/s]Loading weights:  80%|████████  | 1501/1872 [00:55<00:07, 46.93it/s]Loading weights:  95%|█████████▌| 1786/1872 [00:55<00:00, 210.22it/s]Loading weights: 100%|██████████| 1872/1872 [00:55<00:00, 33.63it/s] 
+[transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] This FP8 model spans multiple CUDA devices in one process; routing its FP8 linear and experts layers through Triton/grouped_mm instead of DeepGEMM (DeepGEMM's cached kernels are bound to a single CUDA context and corrupt across devices). Run tensor/expert parallel (one device per process) to use the faster DeepGEMM path.
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f", "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98", "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash", "on_kwargs": "{}", "n_layers": 45, "band": [0, 44], "fit_from": "/root/glm53/out/mech/fits/fit_q.pt", "question": "attr", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU8_A", "swA8_U", "rswU8_A", "rswA8_U"], "batch": 16, "max_new": 3072, "torch": "2.6.0+cu124", "transformers": "5.19.0"}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+swU8_A 16/150 433s
+swU8_A 32/150 781s
+swU8_A 48/150 963s
+swU8_A 64/150 1394s
+swU8_A 80/150 1657s
+swU8_A 96/150 2028s
+swU8_A 112/150 2557s
+swU8_A 128/150 3042s
+swU8_A 144/150 3615s
+swU8_A 150/150 3799s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 74, "you_minus_base": {"n_pairs": 145, "mean": -0.3793, "ci95": [-0.4621, -0.3034]}}}
+swA8_U 16/150 4291s
+swA8_U 32/150 7400s
+swA8_U 48/150 8139s
+swA8_U 64/150 9565s
+swA8_U 80/150 10306s
+swA8_U 96/150 11079s
+swA8_U 112/150 14207s
+swA8_U 128/150 17069s
+swA8_U 144/150 17888s
+swA8_U 150/150 18235s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "swA8_U": {"n": 150, "finished": 147, "answers": {"self": 5, "user": 142}, "you_share": 0.034, "median_new_tokens": 170, "you_minus_base": {"n_pairs": 147, "mean": 0.034, "ci95": [0.0068, 0.068]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 74, "you_minus_base": {"n_pairs": 145, "mean": -0.3793, "ci95": [-0.4621, -0.3034]}}}
+rswU8_A 16/150 21160s
+rswU8_A 32/150 21780s
+rswU8_A 48/150 24264s
+rswU8_A 64/150 27329s
+rswU8_A 80/150 27940s
+rswU8_A 96/150 30249s
+rswU8_A 112/150 30778s
+rswU8_A 128/150 31449s
+rswU8_A 144/150 32087s
+rswU8_A 150/150 32357s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswU8_A": {"n": 150, "finished": 149, "answers": {"user": 93, "self": 56}, "you_share": 0.3758, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 144, "mean": 0.0069, "ci95": [-0.0972, 0.1111]}}, "swA8_U": {"n": 150, "finished": 147, "answers": {"self": 5, "user": 142}, "you_share": 0.034, "median_new_tokens": 170, "you_minus_base": {"n_pairs": 147, "mean": 0.034, "ci95": [0.0068, 0.068]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 74, "you_minus_base": {"n_pairs": 145, "mean": -0.3793, "ci95": [-0.4552, -0.3034]}}}
+rswA8_U 16/150 32774s
+rswA8_U 32/150 33060s
+rswA8_U 48/150 33416s
+rswA8_U 64/150 33765s
+rswA8_U 80/150 34232s
+rswA8_U 96/150 34587s
+rswA8_U 112/150 34947s
+rswA8_U 128/150 35706s
+rswA8_U 144/150 36478s
+rswA8_U 150/150 36740s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 103, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU8_A": {"n": 150, "finished": 149, "answers": {"user": 93, "self": 56}, "you_share": 0.3758, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 144, "mean": 0.0069, "ci95": [-0.0972, 0.1111]}}, "swA8_U": {"n": 150, "finished": 147, "answers": {"self": 5, "user": 142}, "you_share": 0.034, "median_new_tokens": 170, "you_minus_base": {"n_pairs": 147, "mean": 0.034, "ci95": [0.0068, 0.068]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 74, "you_minus_base": {"n_pairs": 145, "mean": -0.3793, "ci95": [-0.4621, -0.3034]}}}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 103, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU8_A": {"n": 150, "finished": 149, "answers": {"user": 93, "self": 56}, "you_share": 0.3758, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 144, "mean": 0.0069, "ci95": [-0.0972, 0.1111]}}, "swA8_U": {"n": 150, "finished": 147, "answers": {"self": 5, "user": 142}, "you_share": 0.034, "median_new_tokens": 170, "you_minus_base": {"n_pairs": 147, "mean": 0.034, "ci95": [0.0068, 0.068]}}, "swU8_A": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 74, "you_minus_base": {"n_pairs": 145, "mean": -0.3793, "ci95": [-0.4621, -0.3034]}}}

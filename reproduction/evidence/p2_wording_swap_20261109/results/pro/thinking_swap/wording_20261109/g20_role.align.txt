@@ -1,0 +1,3 @@
+wording en role fixed date 2026-10-30 ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. The AI assistant C. The user. Answer with the letter only.", "Who wrote the message before this question? A. The user B. The system C. The AI assistant. Answer with the letter only."]
+assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 median 29
+user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 median 29

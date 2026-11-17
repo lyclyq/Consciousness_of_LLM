@@ -1,0 +1,43 @@
+[mech e32] 2026-11-11 14:33:09 start: model /root/hf_models_p2nat/LGAI-EXAONE/EXAONE-4.0.1-32B, runner be6b3c83, games 13463899, swap ae35b120
+[mech e32] 2026-11-11 14:33:09 fits start
+[mech e32] 2026-11-11 14:39:06 fits exit 137 | mech_exaone_pro_20261111.sh: line 36: 166792 Killed                  ( flock -x 9; CUDA_VISIBLE_DEVICES=0 "$@" ) 9> $LOCK
+[mech e32] 2026-11-11 14:39:06 fits FAILED
+[mech e32] 2026-11-11 14:49:02 fits retry start (memory log fits_mem.log)
+[mech e32] 2026-11-11 16:10:12 fits retry exit 0 | fits written; median over layers: share q 0.2586 share m 0.2558 overlap q-m 0.8362 | peak 15:02:09 usage_gib 56 total_cache 28 total_rss 27 total_shmem 13 total_mapped_file 0 total_dirty 0  proc_rss_gib 27 failcnt 2
+[mech e32] 2026-11-11 16:10:46 resume (battery b3221664)
+[mech e32] 2026-11-11 16:10:46 start: model /root/hf_models_p2nat/LGAI-EXAONE/EXAONE-4.0.1-32B, runner be6b3c83, games 13463899, swap ae35b120
+[mech e32] 2026-11-11 16:10:46 smoke start
+smoke exaone32_r05_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+[mech e32] 2026-11-11 16:18:59 smoke PASS
+[mech e32] 2026-11-11 16:18:59 r05q_all start
+[mech e32] 2026-11-11 17:48:57 r05q_all exit 0 | 900 items
+[mech e32] 2026-11-11 17:48:57 content control start
+[mech e32] 2026-11-11 18:32:15 content control exit 0 | 300 items
+[mech e32] 2026-11-11 18:32:15 arith control start
+[mech e32] 2026-11-11 20:04:47 arith control exit 0 | 300 items
+[mech e32] 2026-11-11 20:04:54 KL swap start
+[mech e32] 2026-11-11 20:11:09 KL swap DONE: summary: {"left_moved": {"full": {"A_U": 0.259, "A_S": 0.276, "A_Ur": 0.914, "U_A": 0.508, "S_A": 0.471, "U_Ar": 0.101}, "content": {"A_U": 0.26, "A_S": 0.277, "A_Ur": 0.916, "U_A": 0.504, "S_A": 0.468, "U_Ar": 0.099}}, "dose": {"A_U": 0.0167, "A_S": 0.0168, "U_A": 0.0235, "S_A": 0.0235, "A_Ur": 0.0146, "U_Ar": 0.0151}}
+[mech e32] 2026-11-11 20:11:09 r05q_msg start
+[mech e32] 2026-11-11 20:46:10 r05q_msg exit 0 | 600 items
+[mech e32] 2026-11-11 20:46:10 r05m_msg start
+[mech e32] 2026-11-11 21:24:20 r05m_msg exit 0 | 600 items
+[mech e32] 2026-11-11 21:24:20 r05m_all start
+[mech e32] 2026-11-11 21:50:12 r05m_all exit 0 | 600 items
+[mech e32] 2026-11-11 21:50:12 r06_s1 start
+[mech e32] 2026-11-11 22:38:45 r06_s1 exit 0 | 600 items
+[mech e32] 2026-11-11 22:38:46 r06_s2 start
+[mech e32] 2026-11-11 23:17:29 r06_s2 exit 0 | 600 items
+[mech e32] 2026-11-11 23:17:29 r06_s3 start
+[mech e32] 2026-11-11 23:54:03 r06_s3 exit 0 | 600 items
+[mech e32] 2026-11-11 23:54:03 r06_s4 start
+[mech e32] 2026-11-12 00:21:04 r06_s4 exit 0 | 600 items
+[mech e32] 2026-11-12 00:21:04 all_k64 start
+[mech e32] 2026-11-12 01:17:43 all_k64 exit 0 | 900 items
+[mech e32] 2026-11-12 01:17:43 game smoke start (runner 13463899, items d24c0a2f)
+[mech e32] 2026-11-12 01:46:28 game smoke check: FAIL own 1.0 {'assistant': 8} | user 1.0 {'assistant': 8} | control 0.5 0.5 | finished 8 8
+[mech e32] 2026-11-12 01:46:28 game not released (rule fixed in advance); left for inspection
+[mech e32] 2026-11-12 01:46:28 mech e32 done
+[mech e32] 2026-11-12 01:46:28 resume: battery exit 0
+[mech e32] 2026-11-12 01:46:28 gpt-oss-120b KL words (g120_kl_words_20261111.sh ea0a6e64)
+[mech e32] 2026-11-12 04:17:20 g120 exit 0
+[mech e32] 2026-11-12 04:17:21 weights deleted

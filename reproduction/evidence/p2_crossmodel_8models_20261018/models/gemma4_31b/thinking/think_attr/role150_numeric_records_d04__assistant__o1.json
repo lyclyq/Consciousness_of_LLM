@@ -1,0 +1,1 @@
+{"id": "role150_numeric_records_d04", "role": "assistant", "order": ["system", "self", "user"], "off": {"system": 2.061149695364861e-09, "self": 1.5534973272224306e-06, "user": 0.9999982118606567}, "on_answer": "user", "on_letter": "C", "n_new": 499, "finished": true, "tail": "C<turn|>", "gen": null}

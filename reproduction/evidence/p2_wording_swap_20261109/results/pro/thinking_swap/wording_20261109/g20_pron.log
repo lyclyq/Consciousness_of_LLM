@@ -1,0 +1,241 @@
+wording en pron fixed date 2026-10-30 ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. You C. Me. Answer with the letter only.", "Who wrote the message before this question? A. Me B. The system C. You. Answer with the letter only."]
+[load] sdpa attempt failed (ValueError('GptOssForCausalLM does not support an attention implementation through torch.nn.functional.scaled_dot_product_attention yet. Please request the support for this architecture: https://github.com/huggingface/transformers/issues/28005. If you believe this error is a bug, please open an issu); retrying with the default attention
+Fetching 44 files:   0%|          | 0/44 [00:00<?, ?it/s]Fetching 44 files: 100%|██████████| 44/44 [00:00<00:00, 2030.00it/s]
+Loading weights:   0%|          | 0/411 [00:00<?, ?it/s]Loading weights:   0%|          | 1/411 [00:10<1:09:31, 10.17s/it]Loading weights:   1%|          | 5/411 [00:10<11:06,  1.64s/it]  Loading weights:   1%|▏         | 6/411 [00:11<10:18,  1.53s/it]Loading weights:   2%|▏         | 7/411 [00:12<07:53,  1.17s/it]Loading weights:   3%|▎         | 13/411 [00:12<02:33,  2.60it/s]Loading weights:   4%|▍         | 16/411 [00:12<01:46,  3.71it/s]Loading weights:   5%|▌         | 21/411 [00:12<01:19,  4.91it/s]Loading weights:   6%|▌         | 24/411 [00:14<01:42,  3.78it/s]Loading weights:   8%|▊         | 31/411 [00:14<00:55,  6.87it/s]Loading weights:   9%|▊         | 35/411 [00:14<00:42,  8.77it/s]Loading weights:   9%|▉         | 39/411 [00:15<00:48,  7.65it/s]Loading weights:  10%|█         | 42/411 [00:16<01:13,  5.00it/s]Loading weights:  12%|█▏        | 48/411 [00:16<00:45,  7.90it/s]Loading weights:  13%|█▎        | 53/411 [00:16<00:33, 10.78it/s]Loading weights:  14%|█▍        | 57/411 [00:17<00:38,  9.23it/s]Loading weights:  15%|█▍        | 60/411 [00:18<01:02,  5.64it/s]Loading weights:  16%|█▌        | 65/411 [00:18<00:44,  7.72it/s]Loading weights:  18%|█▊        | 72/411 [00:19<00:37,  8.96it/s]Loading weights:  18%|█▊        | 75/411 [00:20<00:58,  5.71it/s]Loading weights:  20%|█▉        | 82/411 [00:20<00:38,  8.46it/s]Loading weights:  22%|██▏       | 89/411 [00:21<00:34,  9.42it/s]Loading weights:  22%|██▏       | 92/411 [00:22<00:53,  6.02it/s]Loading weights:  24%|██▍       | 99/411 [00:22<00:34,  9.14it/s]Loading weights:  25%|██▍       | 102/411 [00:22<00:29, 10.49it/s]Loading weights:  26%|██▌       | 107/411 [00:23<00:31,  9.80it/s]Loading weights:  27%|██▋       | 110/411 [00:24<00:50,  6.00it/s]Loading weights:  28%|██▊       | 116/411 [00:24<00:32,  8.98it/s]Loading weights:  29%|██▉       | 119/411 [00:24<00:27, 10.53it/s]Loading weights:  30%|███       | 124/411 [00:25<00:30,  9.53it/s]Loading weights:  31%|███       | 127/411 [00:26<00:48,  5.87it/s]Loading weights:  32%|███▏      | 131/411 [00:26<00:38,  7.36it/s]Loading weights:  34%|███▍      | 140/411 [00:27<00:27,  9.98it/s]Loading weights:  35%|███▍      | 143/411 [00:28<00:43,  6.19it/s]Loading weights:  36%|███▋      | 150/411 [00:28<00:27,  9.48it/s]Loading weights:  37%|███▋      | 153/411 [00:28<00:23, 10.89it/s]Loading weights:  38%|███▊      | 157/411 [00:29<00:27,  9.32it/s]Loading weights:  39%|███▉      | 160/411 [00:30<00:44,  5.64it/s]Loading weights:  41%|████      | 167/411 [00:30<00:26,  9.14it/s]Loading weights:  41%|████▏     | 170/411 [00:31<00:22, 10.65it/s]Loading weights:  43%|████▎     | 175/411 [00:31<00:24,  9.61it/s]Loading weights:  43%|████▎     | 178/411 [00:32<00:39,  5.88it/s]Loading weights:  45%|████▍     | 183/411 [00:32<00:27,  8.41it/s]Loading weights:  45%|████▌     | 186/411 [00:33<00:22,  9.98it/s]Loading weights:  46%|████▋     | 191/411 [00:33<00:23,  9.36it/s]Loading weights:  47%|████▋     | 194/411 [00:34<00:38,  5.60it/s]Loading weights:  49%|████▉     | 201/411 [00:35<00:22,  9.33it/s]Loading weights:  50%|████▉     | 205/411 [00:35<00:17, 11.63it/s]Loading weights:  51%|█████     | 209/411 [00:35<00:20,  9.76it/s]Loading weights:  52%|█████▏    | 212/411 [00:36<00:34,  5.83it/s]Loading weights:  52%|█████▏    | 214/411 [00:37<00:29,  6.57it/s]Loading weights:  54%|█████▍    | 221/411 [00:37<00:16, 11.44it/s]Loading weights:  55%|█████▍    | 225/411 [00:37<00:19,  9.62it/s]Loading weights:  55%|█████▌    | 228/411 [00:39<00:32,  5.69it/s]Loading weights:  57%|█████▋    | 234/411 [00:39<00:20,  8.81it/s]Loading weights:  58%|█████▊    | 237/411 [00:39<00:16, 10.36it/s]Loading weights:  59%|█████▉    | 243/411 [00:39<00:16, 10.17it/s]Loading weights:  60%|█████▉    | 246/411 [00:41<00:27,  6.07it/s]Loading weights:  61%|██████    | 251/411 [00:41<00:18,  8.61it/s]Loading weights:  62%|██████▏   | 255/411 [00:41<00:14, 10.98it/s]Loading weights:  63%|██████▎   | 259/411 [00:42<00:22,  6.87it/s]Loading weights:  64%|██████▎   | 262/411 [00:43<00:24,  6.05it/s]Loading weights:  65%|██████▌   | 268/411 [00:43<00:15,  9.40it/s]Loading weights:  66%|██████▌   | 271/411 [00:43<00:12, 11.09it/s]Loading weights:  67%|██████▋   | 277/411 [00:43<00:12, 10.45it/s]Loading weights:  68%|██████▊   | 280/411 [00:45<00:20,  6.28it/s]Loading weights:  70%|██████▉   | 286/411 [00:45<00:13,  8.98it/s]Loading weights:  72%|███████▏  | 294/411 [00:47<00:18,  6.36it/s]Loading weights:  73%|███████▎  | 300/411 [00:47<00:13,  8.44it/s]Loading weights:  74%|███████▍  | 305/411 [00:47<00:09, 10.88it/s]Loading weights:  75%|███████▌  | 310/411 [00:47<00:09, 10.23it/s]Loading weights:  76%|███████▌  | 313/411 [00:49<00:15,  6.28it/s]Loading weights:  78%|███████▊  | 320/411 [00:49<00:09,  9.72it/s]Loading weights:  79%|███████▉  | 324/411 [00:49<00:07, 11.90it/s]Loading weights:  80%|███████▉  | 328/411 [00:49<00:08,  9.90it/s]Loading weights:  81%|████████  | 331/411 [00:51<00:13,  5.89it/s]Loading weights:  82%|████████▏ | 337/411 [00:51<00:08,  8.96it/s]Loading weights:  83%|████████▎ | 341/411 [00:51<00:06, 11.28it/s]Loading weights:  84%|████████▍ | 345/411 [00:52<00:06,  9.58it/s]Loading weights:  85%|████████▍ | 348/411 [00:53<00:10,  5.79it/s]Loading weights:  86%|████████▌ | 354/411 [00:53<00:06,  8.94it/s]Loading weights:  87%|████████▋ | 357/411 [00:53<00:05, 10.53it/s]Loading weights:  88%|████████▊ | 361/411 [00:53<00:05,  9.27it/s]Loading weights:  89%|████████▊ | 364/411 [00:55<00:08,  5.59it/s]Loading weights:  90%|█████████ | 371/411 [00:55<00:04,  9.29it/s]Loading weights:  91%|█████████ | 374/411 [00:55<00:03, 10.84it/s]Loading weights:  92%|█████████▏| 379/411 [00:57<00:05,  5.67it/s]Loading weights:  94%|█████████▍| 388/411 [00:57<00:02,  9.61it/s]Loading weights:  95%|█████████▌| 391/411 [00:57<00:01, 10.84it/s]Loading weights:  96%|█████████▌| 394/411 [00:58<00:01,  8.77it/s]Loading weights:  97%|█████████▋| 398/411 [00:59<00:02,  5.94it/s]Loading weights:  98%|█████████▊| 404/411 [00:59<00:00,  8.93it/s]Loading weights: 100%|█████████▉| 410/411 [00:59<00:00, 12.65it/s]Loading weights: 100%|██████████| 411/411 [00:59<00:00,  6.91it/s]
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae", "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31", "model": "/root/hf_models/openai/gpt-oss-20b", "on_kwargs": "{}", "n_layers": 24, "band": [0, 23], "fit_from": "r05r06_fits/g20/fit_m.pt", "question": "attr", "region": "message", "lang": "en", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU8_A", "swA8_U", "rswU8_A", "rswA8_U"], "batch": 4, "max_new": 3072, "torch": "2.11.0+cu130", "transformers": "5.19.0"}
+base_A 4/150 12s
+base_A 8/150 19s
+base_A 12/150 27s
+base_A 16/150 31s
+base_A 20/150 36s
+base_A 24/150 40s
+base_A 28/150 47s
+base_A 32/150 53s
+base_A 36/150 66s
+base_A 40/150 72s
+base_A 44/150 78s
+base_A 48/150 82s
+base_A 52/150 93s
+base_A 56/150 103s
+base_A 60/150 110s
+base_A 64/150 116s
+base_A 68/150 120s
+base_A 72/150 128s
+base_A 76/150 139s
+base_A 80/150 150s
+base_A 84/150 168s
+base_A 88/150 180s
+base_A 92/150 195s
+base_A 96/150 203s
+base_A 100/150 215s
+base_A 104/150 224s
+base_A 108/150 234s
+base_A 112/150 244s
+base_A 116/150 253s
+base_A 120/150 263s
+base_A 124/150 273s
+base_A 128/150 281s
+base_A 132/150 296s
+base_A 136/150 303s
+base_A 140/150 310s
+base_A 144/150 315s
+base_A 148/150 336s
+base_A 150/150 339s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}}
+base_U 4/150 355s
+base_U 8/150 369s
+base_U 12/150 387s
+base_U 16/150 399s
+base_U 20/150 424s
+base_U 24/150 458s
+base_U 28/150 556s
+base_U 32/150 575s
+base_U 36/150 595s
+base_U 40/150 615s
+base_U 44/150 623s
+base_U 48/150 632s
+base_U 52/150 644s
+base_U 56/150 657s
+base_U 60/150 669s
+base_U 64/150 684s
+base_U 68/150 699s
+base_U 72/150 714s
+base_U 76/150 735s
+base_U 80/150 756s
+base_U 84/150 771s
+base_U 88/150 790s
+base_U 92/150 807s
+base_U 96/150 823s
+base_U 100/150 838s
+base_U 104/150 861s
+base_U 108/150 882s
+base_U 112/150 902s
+base_U 116/150 1128s
+base_U 120/150 1149s
+base_U 124/150 1195s
+base_U 128/150 1233s
+base_U 132/150 1267s
+base_U 136/150 1283s
+base_U 140/150 1295s
+base_U 144/150 1318s
+base_U 148/150 1329s
+base_U 150/150 1351s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}}
+swU8_A 4/150 1363s
+swU8_A 8/150 1375s
+swU8_A 12/150 1390s
+swU8_A 16/150 1405s
+swU8_A 20/150 1420s
+swU8_A 24/150 1448s
+swU8_A 28/150 1515s
+swU8_A 32/150 1641s
+swU8_A 36/150 1656s
+swU8_A 40/150 1672s
+swU8_A 44/150 1683s
+swU8_A 48/150 1695s
+swU8_A 52/150 1706s
+swU8_A 56/150 1720s
+swU8_A 60/150 1729s
+swU8_A 64/150 1749s
+swU8_A 68/150 1761s
+swU8_A 72/150 1775s
+swU8_A 76/150 1790s
+swU8_A 80/150 1806s
+swU8_A 84/150 1818s
+swU8_A 88/150 1833s
+swU8_A 92/150 1848s
+swU8_A 96/150 1864s
+swU8_A 100/150 1879s
+swU8_A 104/150 1892s
+swU8_A 108/150 1904s
+swU8_A 112/150 1920s
+swU8_A 116/150 1933s
+swU8_A 120/150 1966s
+swU8_A 124/150 2192s
+swU8_A 128/150 2254s
+swU8_A 132/150 2300s
+swU8_A 136/150 2316s
+swU8_A 140/150 2333s
+swU8_A 144/150 2346s
+swU8_A 148/150 2371s
+swU8_A 150/150 2380s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "swU8_A": {"n": 150, "finished": 149, "answers": {"user": 117, "system": 2, "self": 30}, "you_share": 0.2013, "median_new_tokens": 155, "you_minus_base": {"n_pairs": 149, "mean": -0.4295, "ci95": [-0.5369, -0.3221]}}}
+swA8_U 4/150 2396s
+swA8_U 8/150 2412s
+swA8_U 12/150 2428s
+swA8_U 16/150 2444s
+swA8_U 20/150 2457s
+swA8_U 24/150 2473s
+swA8_U 28/150 2490s
+swA8_U 32/150 2504s
+swA8_U 36/150 2519s
+swA8_U 40/150 2544s
+swA8_U 44/150 2555s
+swA8_U 48/150 2567s
+swA8_U 52/150 2580s
+swA8_U 56/150 2589s
+swA8_U 60/150 2597s
+swA8_U 64/150 2619s
+swA8_U 68/150 2634s
+swA8_U 72/150 2648s
+swA8_U 76/150 2656s
+swA8_U 80/150 2664s
+swA8_U 84/150 2673s
+swA8_U 88/150 2681s
+swA8_U 92/150 2691s
+swA8_U 96/150 2707s
+swA8_U 100/150 2725s
+swA8_U 104/150 2739s
+swA8_U 108/150 2752s
+swA8_U 112/150 2772s
+swA8_U 116/150 2790s
+swA8_U 120/150 2803s
+swA8_U 124/150 2824s
+swA8_U 128/150 2847s
+swA8_U 132/150 2863s
+swA8_U 136/150 2879s
+swA8_U 140/150 2890s
+swA8_U 144/150 2907s
+swA8_U 148/150 2924s
+swA8_U 150/150 2936s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "swA8_U": {"n": 150, "finished": 150, "answers": {"system": 23, "user": 88, "self": 39}, "you_share": 0.26, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 149, "mean": 0.0134, "ci95": [-0.0872, 0.1208]}}, "swU8_A": {"n": 150, "finished": 149, "answers": {"user": 117, "system": 2, "self": 30}, "you_share": 0.2013, "median_new_tokens": 155, "you_minus_base": {"n_pairs": 149, "mean": -0.4295, "ci95": [-0.5369, -0.3221]}}}
+rswU8_A 4/150 2945s
+rswU8_A 8/150 2952s
+rswU8_A 12/150 2959s
+rswU8_A 16/150 2964s
+rswU8_A 20/150 2969s
+rswU8_A 24/150 2977s
+rswU8_A 28/150 2984s
+rswU8_A 32/150 2991s
+rswU8_A 36/150 2997s
+rswU8_A 40/150 3003s
+rswU8_A 44/150 3008s
+rswU8_A 48/150 3014s
+rswU8_A 52/150 3021s
+rswU8_A 56/150 3033s
+rswU8_A 60/150 3044s
+rswU8_A 64/150 3050s
+rswU8_A 68/150 3056s
+rswU8_A 72/150 3065s
+rswU8_A 76/150 3076s
+rswU8_A 80/150 3086s
+rswU8_A 84/150 3101s
+rswU8_A 88/150 3116s
+rswU8_A 92/150 3128s
+rswU8_A 96/150 3142s
+rswU8_A 100/150 3155s
+rswU8_A 104/150 3165s
+rswU8_A 108/150 3178s
+rswU8_A 112/150 3193s
+rswU8_A 116/150 3203s
+rswU8_A 120/150 3213s
+rswU8_A 124/150 3224s
+rswU8_A 128/150 3232s
+rswU8_A 132/150 3247s
+rswU8_A 136/150 3261s
+rswU8_A 140/150 3275s
+rswU8_A 144/150 3279s
+rswU8_A 148/150 3291s
+rswU8_A 150/150 3296s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 38, "self": 100, "system": 12}, "you_share": 0.6667, "median_new_tokens": 75, "you_minus_base": {"n_pairs": 150, "mean": 0.0333, "ci95": [-0.04, 0.1133]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"system": 23, "user": 88, "self": 39}, "you_share": 0.26, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 149, "mean": 0.0134, "ci95": [-0.0872, 0.1141]}}, "swU8_A": {"n": 150, "finished": 149, "answers": {"user": 117, "system": 2, "self": 30}, "you_share": 0.2013, "median_new_tokens": 155, "you_minus_base": {"n_pairs": 149, "mean": -0.4295, "ci95": [-0.5369, -0.3154]}}}
+rswA8_U 4/150 3310s
+rswA8_U 8/150 3326s
+rswA8_U 12/150 3341s
+rswA8_U 16/150 3358s
+rswA8_U 20/150 3372s
+rswA8_U 24/150 3425s
+rswA8_U 28/150 3654s
+rswA8_U 32/150 3695s
+rswA8_U 36/150 3719s
+rswA8_U 40/150 3736s
+rswA8_U 44/150 3744s
+rswA8_U 48/150 3755s
+rswA8_U 52/150 3768s
+rswA8_U 56/150 3775s
+rswA8_U 60/150 3783s
+rswA8_U 64/150 3801s
+rswA8_U 68/150 3819s
+rswA8_U 72/150 3838s
+rswA8_U 76/150 3855s
+rswA8_U 80/150 3872s
+rswA8_U 84/150 3888s
+rswA8_U 88/150 3912s
+rswA8_U 92/150 3939s
+rswA8_U 96/150 3954s
+rswA8_U 100/150 3970s
+rswA8_U 104/150 3992s
+rswA8_U 108/150 4013s
+rswA8_U 112/150 4033s
+rswA8_U 116/150 4056s
+rswA8_U 120/150 4071s
+rswA8_U 124/150 4088s
+rswA8_U 128/150 4105s
+rswA8_U 132/150 4124s
+rswA8_U 136/150 4140s
+rswA8_U 140/150 4156s
+rswA8_U 144/150 4170s
+rswA8_U 148/150 4183s
+rswA8_U 150/150 4197s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "rswA8_U": {"n": 150, "finished": 149, "answers": {"user": 116, "self": 33}, "you_share": 0.2215, "median_new_tokens": 169, "you_minus_base": {"n_pairs": 148, "mean": -0.0338, "ci95": [-0.1014, 0.0338]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 38, "self": 100, "system": 12}, "you_share": 0.6667, "median_new_tokens": 75, "you_minus_base": {"n_pairs": 150, "mean": 0.0333, "ci95": [-0.0467, 0.1133]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"system": 23, "user": 88, "self": 39}, "you_share": 0.26, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 149, "mean": 0.0134, "ci95": [-0.0872, 0.1141]}}, "swU8_A": {"n": 150, "finished": 149, "answers": {"user": 117, "system": 2, "self": 30}, "you_share": 0.2013, "median_new_tokens": 155, "you_minus_base": {"n_pairs": 149, "mean": -0.4295, "ci95": [-0.5369, -0.3221]}}}
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "rswA8_U": {"n": 150, "finished": 149, "answers": {"user": 116, "self": 33}, "you_share": 0.2215, "median_new_tokens": 169, "you_minus_base": {"n_pairs": 148, "mean": -0.0338, "ci95": [-0.1014, 0.0338]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 38, "self": 100, "system": 12}, "you_share": 0.6667, "median_new_tokens": 75, "you_minus_base": {"n_pairs": 150, "mean": 0.0333, "ci95": [-0.0467, 0.1133]}}, "swA8_U": {"n": 150, "finished": 150, "answers": {"system": 23, "user": 88, "self": 39}, "you_share": 0.26, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 149, "mean": 0.0134, "ci95": [-0.0872, 0.1141]}}, "swU8_A": {"n": 150, "finished": 149, "answers": {"user": 117, "system": 2, "self": 30}, "you_share": 0.2013, "median_new_tokens": 155, "you_minus_base": {"n_pairs": 149, "mean": -0.4295, "ci95": [-0.5369, -0.3221]}}}

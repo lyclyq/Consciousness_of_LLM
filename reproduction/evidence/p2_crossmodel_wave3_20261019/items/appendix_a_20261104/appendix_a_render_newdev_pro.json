@@ -1,0 +1,183 @@
+{
+ "script": "render_appendix_a_newdev_20261104.py",
+ "transformers": "5.8.0",
+ "hf_root": "/root/hf_models",
+ "body_id": "role150_numeric_records_d00",
+ "models": {
+  "swiss-ai/Apertus-8B-Instruct-2509": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "56f72c27fa2e565312a830b7315a455c79fb452fdbe7a5b7595d8a094f282b07",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    },
+    "tokenizer_config.json": {
+     "sha256": "b89e07508603d6e1f2c8642f366c2469063c3eddae0585f1e67934ee98498ab1",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    },
+    "tokenizer.json": {
+     "sha256": "bb201fb226cde11f66c3cf51c5344fb37b1611f00c21e75c324546d854eff2e1",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    },
+    "special_tokens_map.json": {
+     "sha256": "3a3f3af9c9cbc9cf89c719d3de130913dcd626ac5061cdf3cd9ff21728f9d58f",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    },
+    "generation_config.json": {
+     "sha256": "e369bbb1bb3bdbf09bfad42a9ba4202eb06f19fd1eb12fb44d84aa75a5b7af3f",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    },
+    "config.json": {
+     "sha256": "9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25",
+     "commit": "b946d40447b2b597999b9c86d44bee0b452c919f"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\nKnowledge cutoff: 2024-04\nCurrent date: 2026-11-03<|system_end|><|developer_start|>Deliberation: disabled\nTool Capabilities: disabled<|developer_end|><|assistant_start|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|assistant_end|><|user_start|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|user_end|><|assistant_start|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\nKnowledge cutoff: 2024-04\nCurrent date: 2026-11-03<|system_end|><|developer_start|>Deliberation: disabled\nTool Capabilities: disabled<|developer_end|><|user_start|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|user_end|><|user_start|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|user_end|><|assistant_start|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<s><|system_start|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|system_end|><|developer_start|>Deliberation: disabled\nTool Capabilities: disabled<|developer_end|><|user_start|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|user_end|><|assistant_start|>",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\nKnowledge cutoff: 2024-04\nCurrent date: 2026-11-03<|system_end|><|developer_start|>Deliberation: disabled\nTool Capabilities: disabled<|developer_end|><|user_start|>Please write a short description.<|user_end|><|assistant_start|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|assistant_end|><|user_start|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|user_end|><|assistant_start|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\nKnowledge cutoff: 2024-04\nCurrent date: 2026-11-03<|system_end|><|developer_start|>Deliberation: disabled\nTool Capabilities: disabled<|developer_end|><|user_start|>Please write a short description.<|user_end|><|user_start|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|user_end|><|user_start|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|user_end|><|assistant_start|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "error": "TemplateError: Invalid message role"
+     }
+    }
+   }
+  },
+  "XiaomiMiMo/MiMo-VL-7B-RL-2508": {
+   "lang": "zh",
+   "files": {
+    "chat_template.json": {
+     "sha256": "4757062314f864cf47b9ce6ea4bd921590611c5b90f0860c523831756edc4fa1",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    },
+    "tokenizer_config.json": {
+     "sha256": "cfeae2f7f1c2c2ca25c51d6fe03c0003a2965eb84ed97b405120d84cc73889f4",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    },
+    "tokenizer.json": {
+     "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    },
+    "special_tokens_map.json": {
+     "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    },
+    "generation_config.json": {
+     "sha256": "91299bcc334095eb7d4352d16bce2500e3ef0b88c731e608f31a98ac8b307096",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    },
+    "config.json": {
+     "sha256": "577c695f5f2fcd9c0d94f01f77f61bc85f5405884f8d38915efd5e80b07a426d",
+     "commit": "ec4ebdc29b83b94aa7f62670c78376250dad8dbc"
+    }
+   },
+   "tokenizer_class": "Qwen2Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|im_start|>system\nYou are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\n<|im_start|>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>system\nYou are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\n<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "59a64ebb4df6d1489d09a91267cf3ceb106162d4a893c4f84833cfb8c897ff63",
+     "commit": "1f09ddcc1a0ea45751ae0dfe2af20d533168c46f"
+    },
+    "tokenizer_config.json": {
+     "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b",
+     "commit": "1f09ddcc1a0ea45751ae0dfe2af20d533168c46f"
+    },
+    "tokenizer.json": {
+     "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+     "commit": "1f09ddcc1a0ea45751ae0dfe2af20d533168c46f"
+    },
+    "generation_config.json": {
+     "sha256": "aaed5b26f1cae55c1ceb58fc483c3cd65ee8d386b61daec3d7a9df82432d9205",
+     "commit": "1f09ddcc1a0ea45751ae0dfe2af20d533168c46f"
+    },
+    "config.json": {
+     "sha256": "407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633",
+     "commit": "1f09ddcc1a0ea45751ae0dfe2af20d533168c46f"
+    }
+   },
+   "tokenizer_class": "Qwen2Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>assistant\n<think></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|im_start|>assistant\n<think></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|><|im_start|>assistant\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  }
+ }
+}

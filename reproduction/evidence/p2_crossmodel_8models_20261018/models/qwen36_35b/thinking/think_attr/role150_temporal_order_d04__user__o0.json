@@ -1,0 +1,1 @@
+{"id": "role150_temporal_order_d04", "role": "user", "order": ["self", "user", "system"], "off": {"self": 0.017363056540489197, "user": 0.9479909539222717, "system": 0.02862684801220894}, "on_answer": "user", "on_letter": "B", "n_new": 506, "finished": true, "tail": "\n\nB<|im_end|>", "gen": null}

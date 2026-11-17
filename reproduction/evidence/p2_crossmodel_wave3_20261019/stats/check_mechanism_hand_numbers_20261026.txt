@@ -1,0 +1,28 @@
+1. Gap closed, all layers, 8 dims: qwen_sp removal 1.001 installation 0.645, qwen_th removal 0.993 installation 0.627, oss_th removal 0.991 installation 0.667
+removal closes ... of the gap                              | paper 0.99--1.00     | recomputed 0.99--1.00             | OK [in tex]
+installation closes                                        | paper 0.63--0.67     | recomputed 0.63--0.67             | OK [in tex]
+2. gpt-oss k64: gap 0.7600 (8-dim run 0.7600); random 64 dims: removal -0.1000, installation -0.0067
+k64 removal                                                | paper -0.75          | recomputed -0.75                  | OK [in tex]
+k64 installation vs 8 dims                                 | paper +0.58 / +0.51  | recomputed +0.58 / +0.51          | OK [in tex]
+k64 / 8-dim share of the gap                               | paper 0.76 / 0.67    | recomputed 0.76 / 0.67            | OK [in tex]
+3. own-step rows used: 12 without thinking, 15 with (paper tables: 1 + 11 and 6 + 9); not in the paper: [('deepseek_flash_thinkm', 'thinking'), ('qwen35_122b_fp8_M', 'single_pass')]
+own-step single_pass, with self-index (max / min)          | paper +0.14 / -0.12  | recomputed +0.14 / -0.12          | OK [in tex]
+own-step single_pass, without self-index (max / min)       | paper +0.07 / -0.17  | recomputed +0.07 / -0.17          | OK
+own-step thinking, with self-index (max / min)             | paper +0.14 / -0.81  | recomputed +0.14 / -0.81          | OK [in tex]
+own-step thinking, without self-index (max / min)          | paper +0.07 / -0.39  | recomputed +0.07 / -0.39          | OK
+4. user-written wrong step not adopted (adoption index < 0.5): 10 problems; role gap > 0.1 in 10; installation k64/128/256 x L31/L39 moves the index by > 0.1 in [8, 10, 9, 9, 9, 9] problems, of which [7, 9, 8, 8, 8, 8] are among the not-adopted ones, which carry 0.93--0.94 of the mean change
+"concentrated ... in the 8--10 problems"                   | paper 8--10          | recomputed 8--10 (not adopted: 10) | OK [in tex]  (rule not recorded; |change| > 0.1 in the installation cells)
+correct step, installation: max |change P(correct)|        | paper 0.018          | recomputed 0.0181                 | OK [in tex]
+  ... intervals include zero                               | paper yes            | recomputed True                   | OK
+  ... L47 states moved toward the own step                 | paper 70--88%        | recomputed 70--88%                | OK [in tex]  (k >= 64 only: 71--88%)
+correct step, removal: drop of P(correct)                  | paper 0.03--0.08     | recomputed 0.03--0.08             | OK [in tex]
+  ... median change zero                                   | paper 0              | recomputed |median| <= 0.0010     | OK [in tex]
+  ... |change| > 0.1 in only N of the 60 problems          | paper 7--12          | recomputed 7--12                  | OK [in tex]  (per cell (k32 L31, L39, ..., full L39) [7, 8, 11, 8, 12, 10, 12, 11, 12, 11]; 90% of change 5--10, drop > 0.1 6--11, drop > 0.3 3--7, answer changes 0--6)
+user-written correct step as accurate as own               | paper 0.97 / 0.95    | recomputed 0.97 / 0.95            | OK [in tex]  (mean P(correct digit), user / own)
+own messages claimed with P > 0.5                          | paper 97.7%          | recomputed 97.7% (293/300)        | OK [in tex]  (mean P(you) 0.770)
+parameters                                                 | paper 27,356,728,560 | recomputed 27,356,728,560         | OK [in tex]  (dtypes ['torch.bfloat16'], quantized False)
+architecture                                               | paper Qwen3_5ForC.   | recomputed Qwen3_5ForConditionalG | OK [in tex]
+blocks: linear / full, full at 3, 7, ..., 63               | paper 64: 48 / 16    | recomputed 64: 48 / 16            | OK [in tex]
+revision 1d4bf0f2ff60, 248,320-entry vocabulary            | paper see text       | recomputed not in pilot_identity.json | NOTE  (this file records neither; the revision is noted only in the wave-3 README)
+
+all checks OK

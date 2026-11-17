@@ -1,0 +1,77 @@
+{"model": "/root/hf_models_p2nat/XiaomiMiMo/MiMo-7B-RL-0530", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{\"enable_thinking\": false}", "natural_system_ok": true}
+===== main A: 97 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>
+<|im_start|>assistant
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+===== main U: 97 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>
+<|im_start|>user
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+===== main S: 80 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+===== natural A: 110 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>
+<|im_start|>user
+请写一段简短的描述。<|im_end|>
+<|im_start|>assistant
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+===== natural U: 110 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>
+<|im_start|>user
+请写一段简短的描述。<|im_end|>
+<|im_start|>user
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+===== natural S: 110 tokens, body tokens 55, close '<|im_end|>'
+<|im_start|>system
+You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>
+<|im_start|>user
+请写一段简短的描述。<|im_end|>
+<|im_start|>system
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>
+<|im_start|>user
+请根据上文回应。<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

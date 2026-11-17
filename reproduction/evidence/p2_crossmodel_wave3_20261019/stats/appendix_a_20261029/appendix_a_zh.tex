@@ -1,0 +1,283 @@
+本附录给出每个模型对一道题实际收到的输入：150 份正文中的第一份，加上第一种选项顺序的归属问题，由模型自己的对话模板在运行用到的每种模板设置下渲染。每条渲染都由模型运行时所用修订版本的 tokenizer 与模板文件生成（附录~\ref{app:config}），并与模板的 token 化输出一致（运行中做过同样的检查）。\PH{正文}、\PH{问题}、\PH{请求}分别代表正文、问题，以及自然顺序开头的请求（“请写一段简短的描述。”），语言与该模型测试所用的语言相同（英文文本见表~\ref{tab:self_items}，中文文本在数据包中）；\NL{}表示换行，其余每个字符都是模板的原样输出。gpt-oss 模板会插入渲染当天的日期（\PH{日期}）。DeepSeek 模型的 token 名称含 U+FF5C 与 U+2581 两个字符，这里印作 | 与 \_。各种设置下渲染完全相同的模型合为一块。同一块中三条渲染开头有一大段相同的文本时，这段文本只在 Start 一行印一次，在各条渲染中记作\PH{开头}。没有\NL{}的断行只是排版折行。
+
+\subsection{主探针}
+\label{app:templates_main}
+
+对话为 [\textit{角色}：正文] [user：问题]，其后是生成提示。
+
+\paragraph{Qwen3.8-27B、Qwen3.8-Flash-Next} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     <|im_start|>system\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.\NL{}\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Qwen3.6-27B、Qwen3.6-35B-A3B、Qwen3.5-27B} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     <|im_start|>system\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{GLM-4.6V-Flash} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|>\NL{}<think></think>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{正文}/nothink<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+System     [gMASK]<sop><|system|>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|>\NL{}<think></think>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}<|assistant|>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}<|assistant|>\NL{}
+System     [gMASK]<sop><|system|>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}<|assistant|>\NL{}
+\end{Rendering}
+\paragraph{GLM-4.7-Flash} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|></think>\PH{正文}<|user|>\PH{问题}<|assistant|></think>
+User       [gMASK]<sop><|user|>\PH{正文}<|user|>\PH{问题}<|assistant|></think>
+System     [gMASK]<sop><|system|>\PH{正文}<|user|>\PH{问题}<|assistant|></think>
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|></think>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+User       [gMASK]<sop><|user|>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+System     [gMASK]<sop><|system|>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+\end{Rendering}
+\paragraph{GLM-5.3-Flash} （中文题目）
+\noindent 思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|system|>Reasoning Effort: Max<|assistant|><think></think>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+User       [gMASK]<sop><|system|>Reasoning Effort: Max<|user|>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+System     [gMASK]<sop><|system|>Reasoning Effort: Max<|system|>\PH{正文}<|user|>\PH{问题}<|assistant|><think>
+\end{Rendering}
+\paragraph{DeepSeek-R1-Distill-Llama-70B} （中文题目）
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|Assistant|>\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|><think>\NL{}
+User       <|begin_of_sentence|><|User|>\PH{正文}<|User|>\PH{问题}<|Assistant|><think>\NL{}
+System     <|begin_of_sentence|>\PH{正文}<|User|>\PH{问题}<|Assistant|><think>\NL{}
+\end{Rendering}
+\paragraph{gpt-oss-20b、gpt-oss-120b} （英文题目）
+\noindent 思考：
+\begin{Rendering}
+Start      <|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\NL{}Knowledge cutoff: 2024-06\NL{}Current date: \PH{日期}\NL{}\NL{}Reasoning: medium\NL{}\NL{}# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|>
+Assistant  \PH{开头}<|start|>assistant<|channel|>final<|message|>\PH{正文}<|end|><|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+User       \PH{开头}<|start|>user<|message|>\PH{正文}<|end|><|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+System     \PH{开头}<|start|>developer<|message|># Instructions\NL{}\NL{}\PH{正文}\NL{}\NL{}<|end|><|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+\end{Rendering}
+\paragraph{Gemma-4-31B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <bos><|turn>model\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+User       <bos><|turn>user\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+System     <bos><|turn>system\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <bos><|turn>system\NL{}<|think|>\NL{}<turn|>\NL{}<|turn>model\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}
+User       <bos><|turn>system\NL{}<|think|>\NL{}<turn|>\NL{}<|turn>user\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}
+System     <bos><|turn>system\NL{}<|think|>\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}
+\end{Rendering}
+\paragraph{Seed-OSS-36B} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>assistant\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+User       <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+System     <seed:bos>system\NL{}\PH{正文}<seed:eos><seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <seed:bos>assistant\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}
+User       <seed:bos>user\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}
+System     <seed:bos>system\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}
+\end{Rendering}
+\paragraph{EXAONE-4.0.1-32B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  [|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       [|user|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     [|system|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  [|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+User       [|user|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+System     [|system|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.2-30B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+User       <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+System     <|im_start|>system\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.1-30B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|start_of_role|>assistant<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+User       <|start_of_role|>user<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+System     <|start_of_role|>system<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+\end{Rendering}
+\paragraph{OLMo-2-13B、OLMo-2-7B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|endoftext|><|assistant|>\NL{}\PH{正文}<|endoftext|>\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+User       <|endoftext|><|user|>\NL{}\PH{正文}\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+System     <|endoftext|><|system|>\NL{}\PH{正文}\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+\end{Rendering}
+
+\subsection{自然对话顺序}
+\label{app:templates_natural}
+
+对话为 [user：请求] [\textit{角色}：正文] [user：问题]，其后是生成提示，模型见附录~\ref{app:natural}。前六个模型的模板在 user 轮之后保留 System 消息的位置。
+
+\paragraph{Seed-OSS-36B} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Start      <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{请求}<seed:eos>
+Assistant  \PH{开头}<seed:bos>assistant\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+User       \PH{开头}<seed:bos>user\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+System     \PH{开头}<seed:bos>system\NL{}\PH{正文}<seed:eos><seed:bos>user\NL{}\PH{问题}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+\end{Rendering}
+\paragraph{Gemma-4-31B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <bos><|turn>user\NL{}\PH{请求}<turn|>\NL{}<|turn>model\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+User       <bos><|turn>user\NL{}\PH{请求}<turn|>\NL{}<|turn>user\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+System     <bos><|turn>user\NL{}\PH{请求}<turn|>\NL{}<|turn>system\NL{}\PH{正文}<turn|>\NL{}<|turn>user\NL{}\PH{问题}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+\end{Rendering}
+\paragraph{EXAONE-4.0.1-32B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  [|user|]\NL{}\PH{请求}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       [|user|]\NL{}\PH{请求}[|endofturn|]\NL{}[|user|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     [|user|]\NL{}\PH{请求}[|endofturn|]\NL{}[|system|]\NL{}\PH{正文}[|endofturn|]\NL{}[|user|]\NL{}\PH{问题}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\paragraph{GLM-4.6V-Flash} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  [gMASK]<sop><|user|>\NL{}\PH{请求}/nothink<|assistant|>\NL{}<think></think>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{请求}/nothink<|user|>\NL{}\PH{正文}/nothink<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+System     [gMASK]<sop><|user|>\NL{}\PH{请求}/nothink<|system|>\NL{}\PH{正文}<|user|>\NL{}\PH{问题}/nothink<|assistant|>\NL{}<think></think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.1-30B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|start_of_role|>user<|end_of_role|>\PH{请求}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+User       <|start_of_role|>user<|end_of_role|>\PH{请求}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+System     <|start_of_role|>user<|end_of_role|>\PH{请求}<|end_of_text|>\NL{}<|start_of_role|>system<|end_of_role|>\PH{正文}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{问题}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+\end{Rendering}
+\paragraph{OLMo-2-7B} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|endoftext|><|user|>\NL{}\PH{请求}\NL{}<|assistant|>\NL{}\PH{正文}<|endoftext|>\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+User       <|endoftext|><|user|>\NL{}\PH{请求}\NL{}<|user|>\NL{}\PH{正文}\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+System     <|endoftext|><|user|>\NL{}\PH{请求}\NL{}<|system|>\NL{}\PH{正文}\NL{}<|user|>\NL{}\PH{问题}\NL{}<|assistant|>\NL{}
+\end{Rendering}
+
+接下来三个模型的模板不在原位保留 System 消息，因此只比较两种角色：Qwen3.8 模板报错，gpt-oss 模板略去这条消息，DeepSeek-R1-Distill-Llama-70B 模板把它的文本移到输入开头。
+
+\paragraph{Qwen3.8-27B} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|im_start|>user\NL{}\PH{请求}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{请求}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{正文}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{问题}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     \Note{模板报错：System message must be at the beginning.}
+\end{Rendering}
+\paragraph{gpt-oss-20b} （英文题目）
+\noindent 思考：
+\begin{Rendering}
+Start      <|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\NL{}Knowledge cutoff: 2024-06\NL{}Current date: \PH{日期}\NL{}\NL{}Reasoning: medium\NL{}\NL{}# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>\PH{请求}<|end|>
+Assistant  \PH{开头}<|start|>assistant<|channel|>final<|message|>\PH{正文}<|end|><|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+User       \PH{开头}<|start|>user<|message|>\PH{正文}<|end|><|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+System     \Note{模板略去这条消息：} \PH{开头}<|start|>user<|message|>\PH{问题}<|end|><|start|>assistant
+\end{Rendering}
+\paragraph{DeepSeek-R1-Distill-Llama-70B} （中文题目）
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|User|>\PH{请求}<|Assistant|>\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|><think>\NL{}
+User       <|begin_of_sentence|><|User|>\PH{请求}<|User|>\PH{正文}<|User|>\PH{问题}<|Assistant|><think>\NL{}
+System     \Note{模板把这条消息移到开头：} <|begin_of_sentence|>\PH{正文}<|User|>\PH{请求}<|User|>\PH{问题}<|Assistant|><think>\NL{}
+\end{Rendering}
+
+最后三个模板不接受主探针，并把被测的 User 消息与请求和问题并入同一个 user 轮。DeepSeek-V4.1-Flash 没有对话模板，它的输入由发布附带的提示编码器（\texttt{encoding/\allowbreak encoding.py}）生成，分为 chat 模式与推理强度为“high”的思考模式。
+
+\paragraph{DeepSeek-V4.1-Flash} （中文题目）
+\noindent 不思考：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|User|>\PH{请求}<|Assistant|></think>\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|></think>
+User       <|begin_of_sentence|><|User|>\PH{请求}\NL{}\NL{}\PH{正文}\NL{}\NL{}\PH{问题}<|Assistant|></think>
+System     <|begin_of_sentence|><|User|>\PH{请求}<|System|>\PH{正文}<|User|>\PH{问题}<|Assistant|></think>
+\end{Rendering}
+\noindent 思考：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{请求}<|Assistant|></think>\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|><think>
+User       <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{请求}\NL{}\NL{}\PH{正文}\NL{}\NL{}\PH{问题}<|Assistant|><think>
+System     <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{请求}<|System|>\PH{正文}<|User|>\PH{问题}<|Assistant|><think>
+\end{Rendering}
+\paragraph{Ministral-3-14B-Instruct} （英文题目）
+\noindent 不思考：
+\begin{Rendering}
+Start      <s>[SYSTEM_PROMPT]You are Ministral-3-14B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\NL{}You power an AI assistant called Le Chat.\NL{}Your knowledge base was last updated on 2023-10-01.\NL{}The current date is \LB{}today\RB{}.\NL{}\NL{}When you're not sure about some information or when the user's request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don't have the information and avoid making up anything.\NL{}If the user's question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. "What are some good restaurants around me?" => "Where are you?" or "When is the next flight to Tokyo" => "Where do you travel from?").\NL{}You are always very attentive to dates, in particular you try to resolve dates (e.g. "yesterday" is \LB{}yesterday\RB{}) and when asked about information at specific dates, you discard information that is at another date.\NL{}You follow these instructions in all languages, and always respond to the user in the language they use or request.\NL{}Next sections describe the capabilities that you have.\NL{}\NL{}# WEB BROWSING INSTRUCTIONS\NL{}\NL{}You cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\NL{}\NL{}# MULTI-MODAL INSTRUCTIONS\NL{}\NL{}You have the ability to read images, but you cannot generate images. You also cannot read nor transcribe audio files or videos.\NL{}\NL{}# TOOL CALLING INSTRUCTIONS\NL{}\NL{}You may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\NL{}\NL{}1. When the request requires up-to-date information.\NL{}2. When the request requires specific data that you do not have in your knowledge base.\NL{}3. When the request involves actions that you cannot perform without tools.\NL{}\NL{}Always prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT]
+Assistant  \PH{开头}[INST]\PH{请求}[/INST]\PH{正文}</s>[INST]\PH{问题}[/INST]
+User       \PH{开头}[INST]\PH{请求}\NL{}\NL{}\PH{正文}\NL{}\NL{}\PH{问题}[/INST]
+System     \PH{开头}[INST]\PH{请求}[/INST][SYSTEM_PROMPT]\PH{正文}[/SYSTEM_PROMPT][INST]\PH{问题}[/INST]
+\end{Rendering}
+\paragraph{Ministral-3-14B-Reasoning} （英文题目）
+\noindent 思考：
+\begin{Rendering}
+Start      <s>[SYSTEM_PROMPT]# HOW YOU SHOULD THINK AND ANSWER\NL{}\NL{}First draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\NL{}\NL{}Your thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.[/SYSTEM_PROMPT]
+Assistant  \PH{开头}[INST]\PH{请求}[/INST]\PH{正文}</s>[INST]\PH{问题}[/INST]
+User       \PH{开头}[INST]\PH{请求}\NL{}\NL{}\PH{正文}\NL{}\NL{}\PH{问题}[/INST]
+System     \PH{开头}[INST]\PH{请求}[/INST][SYSTEM_PROMPT]\PH{正文}[/SYSTEM_PROMPT][INST]\PH{问题}[/INST]
+\end{Rendering}
+
+在主探针下，DeepSeek-V4.1-Flash 的编码器不给开头的 Assistant 消息任何角色 token，Ministral 模板直接拒绝这样的对话，三者都把开头的 User 消息与问题合并。Ministral 各块中的\PH{开头}即上面自然顺序块中 Start 一行的文本。
+
+\paragraph{DeepSeek-V4.1-Flash} （中文题目）
+\noindent 不思考（未运行，仅作对照）：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|>\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|></think>
+User       <|begin_of_sentence|><|User|>\PH{正文}\NL{}\NL{}\PH{问题}<|Assistant|></think>
+System     <|begin_of_sentence|><|System|>\PH{正文}<|User|>\PH{问题}<|Assistant|></think>
+\end{Rendering}
+\noindent 思考（未运行，仅作对照）：
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}\PH{正文}<|end_of_sentence|><|User|>\PH{问题}<|Assistant|><think>
+User       <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{正文}\NL{}\NL{}\PH{问题}<|Assistant|><think>
+System     <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}\PH{正文}<|User|>\PH{问题}<|Assistant|><think>
+\end{Rendering}
+\paragraph{Ministral-3-14B-Instruct} （英文题目）
+\noindent 不思考（未运行，仅作对照）：
+\begin{Rendering}
+Assistant  \Note{模板报错：Conversation must start with a user or system message, got assistant.}
+User       \PH{开头}[INST]\PH{正文}\NL{}\NL{}\PH{问题}[/INST]
+System     <s>[SYSTEM_PROMPT]\PH{正文}[/SYSTEM_PROMPT][INST]\PH{问题}[/INST]
+\end{Rendering}
+\paragraph{Ministral-3-14B-Reasoning} （英文题目）
+\noindent 思考（未运行，仅作对照）：
+\begin{Rendering}
+Assistant  \Note{模板报错：Conversation must start with a user or system message, got assistant.}
+User       \PH{开头}[INST]\PH{正文}\NL{}\NL{}\PH{问题}[/INST]
+System     <s>[SYSTEM_PROMPT]\PH{正文}[/SYSTEM_PROMPT][INST]\PH{问题}[/INST]
+\end{Rendering}

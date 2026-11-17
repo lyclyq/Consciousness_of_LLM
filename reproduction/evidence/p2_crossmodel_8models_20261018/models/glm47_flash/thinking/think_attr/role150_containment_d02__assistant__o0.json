@@ -1,0 +1,1 @@
+{"id": "role150_containment_d02", "role": "assistant", "order": ["self", "user", "system"], "off": {"self": 0.17436961829662323, "user": 0.7814704775810242, "system": 0.038907118141651154}, "on_answer": null, "on_letter": null, "n_new": 679, "finished": true, "tail": "我无法回答这个问题，因为您没有提供“这个问题之前的那条消息”。请提供上下文，以便我能够正确回答。<|user|>", "gen": null, "batch": 16}

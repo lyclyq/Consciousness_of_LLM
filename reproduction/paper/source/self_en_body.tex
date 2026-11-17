@@ -1,0 +1,82 @@
+% Release copy of self_en_body.tex of the long version: only the tables that the released scripts parse,
+% verbatim. The text of the long version is not part of the release. Written by paper/scripts/make_release_tables_20261115.py.
+
+\begin{table}[htbp]
+\centering
+\caption{Models in the cross-model comparison. Parameters: total, and active per token for MoE models, as stated by the developers (Qwen3.8-Flash-Next has in addition a 51B n-gram embedding). Layers are decoder blocks. MoE, mixture of experts. The last column gives the formatting that the chat template applies to an earlier Assistant message and not to User or System messages (body: the text of the message). The entry ``none'' means that the three roles differ only in the role name. Further template differences: GLM-4.6V-Flash appends \texttt{/nothink} to User messages in its non-thinking mode, DeepSeek-R1-Distill-Llama-70B places System text at the start of the input without a role token, the gpt-oss template renders a System message as a developer message, the Granite-4.2 template opens a conversation without a System message with an empty system turn, and the templates of MiMo-7B-RL, MiMo-VL-7B, Moonlight, and Apertus open a conversation without a System message with a default system message (Apertus: with the date of the call), which a System message under test replaces. VL: vision-language model, used with text only.}
+\label{tab:self_models}
+\scriptsize
+\setlength{\tabcolsep}{2.3pt}
+\begin{tabular}{ll>{\raggedright\arraybackslash}p{1.65cm}cccl>{\raggedright\arraybackslash}p{2.5cm}}
+\toprule
+Model & Developer & Architecture & Parameters & Layers & Weights & Modes & Assistant history \\
+\midrule
+Qwen3.8-27B & Alibaba & dense & 27B & 64 & BF16 & both & empty think block before body \\
+Qwen3.8-Flash-Next & Alibaba & MoE, 4 streams & 125B/6B & 48 & FP8 & both & empty think block before body \\
+Qwen3.6-27B & Alibaba & dense & 27B & 64 & BF16 & both & none \\
+Qwen3.6-35B-A3B & Alibaba & MoE & 35B/3B & 40 & BF16 & both & none \\
+Qwen3.5-27B & Alibaba & dense & 27B & 64 & BF16 & both & none \\
+GLM-4.6V-Flash & Zhipu AI & dense & 9B & 40 & BF16 & both & empty think block before body \\
+GLM-4.7-Flash & Zhipu AI & MoE & 30B/3B & 47 & BF16 & both & \texttt{</think>} before body \\
+GLM-5.3-Flash & Zhipu AI & MoE, hybrid, 4 streams & 320B/18B & 45 & FP8 & thinking & empty think block before body \\
+R1-Distill-Llama-70B & DeepSeek & dense & 70B & 80 & BF16 & thinking & end-of-sentence token after body \\
+gpt-oss-20b & OpenAI & MoE & 21B/3.6B & 24 & MXFP4 & thinking & final-channel tag before body \\
+gpt-oss-120b & OpenAI & MoE & 117B/5.1B & 36 & MXFP4 & thinking & final-channel tag before body \\
+Gemma-4-31B & Google & dense & 31B & 60 & BF16 & both & none \\
+Seed-OSS-36B & ByteDance & dense & 36B & 64 & BF16 & both & none \\
+EXAONE-4.0.1-32B & LG & dense & 32B & 64 & BF16 & both & empty think block before body \\
+Granite-4.2-30B & IBM & dense & 30B & 64 & BF16 & both & empty think block before body \\
+Granite-4.1-30B & IBM & dense & 30B & 64 & BF16 & non-thinking & none \\
+OLMo-2-13B & Ai2 & dense & 13B & 40 & BF16 & non-thinking & end-of-text token after body \\
+OLMo-2-7B & Ai2 & dense & 7B & 32 & BF16 & non-thinking & end-of-text token after body \\
+ERNIE-4.5-21B-A3B & Baidu & MoE & 21B/3B & 28 & BF16 & thinking & response tags around body \\
+MiMo-7B-RL & Xiaomi & dense & 7B & 36 & BF16 & both & none \\
+MiMo-VL-7B & Xiaomi & dense (VL) & 7B & 36 & BF16 & thinking & none \\
+MiMo-V2.6-Distill-9B & Xiaomi & dense & 9B & 32 & BF16 & both & empty think block before body \\
+Moonlight-16B-A3B & Moonshot AI & MoE & 16B/3B & 27 & BF16 & non-thinking & none \\
+Apertus-8B & Swiss AI & dense & 8B & 32 & BF16 & non-thinking & none \\
+phi-4 & Microsoft & dense & 14B & 40 & BF16 & non-thinking & none \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The two levels across models. Self-index: layers at which the model's own message is singled out (smallest \(R_A\)) in at least 80\% of the held-out bodies, on message content and at the response onset, and the layers of the last third of the depth at which it is singled out at content or onset, under the non-thinking rendering (models with only a thinking mode: thinking rendering, four-stream models: mean of the four streams, with the strongest stream in parentheses). Without thinking: probability of ``you'' for the model's own messages and the larger of that for User and System messages, and the number of the 150 bodies in which the former is larger (two option orders). With thinking: share of finished items answered ``you'' for messages of each source, and the number of items per source (bodies \(\times\) option orders). $^{a}$In the default call of its template, reported as its thinking mode, the model answers without written reasoning (Section~\ref{sec:setup_crossmodel}).}
+\label{tab:self_crossmodel}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccccc}
+\toprule
+& \multicolumn{3}{c}{Self-index} & \multicolumn{3}{c}{Without thinking} & \multicolumn{4}{c}{With thinking} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-11}
+Model & content & onset & last third & own & other & bodies & own & User & System & items \\
+\midrule
+Qwen3.8-27B & 64/64 & 64/64 & 21/21 & 0.77 & 0.07 & 150 & 0.96 & 0.00 & 0.00 & 300 \\
+gpt-oss-120b & 25/36 & 33/36 & 12/12 & -- & -- & -- & 0.97 & 0.00 & 0.00 & 300 \\
+gpt-oss-20b & 20/24 & 24/24 & 8/8 & -- & -- & -- & 0.78 & 0.00 & 0.00 & 300 \\
+Qwen3.8-Flash-Next & 38 (44)/48 & 48/48 & 16/16 & 0.15 & 0.14 & 72 & 0.66 & 0.00 & 0.00 & 300 \\
+GLM-5.3-Flash & 18 (28)/45 & 19 (26)/45 & 15/15 & -- & -- & -- & 0.46 & 0.01 & 0.03 & 300 \\
+MiMo-V2.6-Distill-9B$^{a}$ & 32/32 & 32/32 & 10/10 & 0.39 & 0.33 & 123 & 0.35 & 0.05 & 0.12 & 300 \\
+EXAONE-4.0.1-32B & 64/64 & 64/64 & 21/21 & 0.03 & 0.03 & 78 & 0.17 & 0.03 & 0.05 & 300 \\
+GLM-4.6V-Flash & 40/40 & 40/40 & 13/13 & 0.55 & 0.54 & 72 & 0.09 & 0.00 & 0.00 & 300 \\
+GLM-4.7-Flash & 34/47 & 45/47 & 15/15 & 0.37 & 0.30 & 130 & 0.08 & 0.01 & 0.02 & 300 \\
+R1-Distill-Llama-70B & 0/80 & 80/80 & 26/26 & -- & -- & -- & 0.09 & 0.14 & 0.16 & 300 \\
+phi-4 & 35/40 & 35/40 & 13/13 & 0.04 & 0.03 & 104 & -- & -- & -- & -- \\
+Granite-4.2-30B & 30/64 & 59/64 & 16/21 & 0.08 & 0.08 & 62 & 0.00 & 0.00 & 0.00 & 300 \\
+Granite-4.1-30B & 17/64 & 32/64 & 0/21 & 0.05 & 0.05 & 99 & -- & -- & -- & -- \\
+OLMo-2-13B & 4/40 & 13/40 & 0/13 & 0.06 & 0.12 & 3 & -- & -- & -- & -- \\
+OLMo-2-7B & 5/32 & 6/32 & 0/10 & 0.19 & 0.21 & 17 & -- & -- & -- & -- \\
+Apertus-8B & 0/32 & 0/32 & 0/10 & 0.18 & 0.23 & 6 & -- & -- & -- & -- \\
+Moonlight-16B-A3B & 0/27 & 0/27 & 0/9 & 0.66 & 0.59 & 136 & -- & -- & -- & -- \\
+MiMo-7B-RL & 0/36 & 0/36 & 0/12 & 0.15 & 0.18 & 15 & 0.04 & 0.03 & 0.03 & 300 \\
+MiMo-VL-7B & 0/36 & 0/36 & 0/12 & -- & -- & -- & 0.01 & 0.00 & 0.00 & 300 \\
+ERNIE-4.5-21B-A3B & 0/28 & 0/28 & 0/9 & -- & -- & -- & 0.08 & 0.02 & 0.08 & 300 \\
+Seed-OSS-36B & 0/64 & 0/64 & 0/21 & 0.00 & 0.00 & 39 & 0.00 & 0.00 & 0.00 & 300 \\
+Gemma-4-31B & 0/60 & 0/60 & 0/20 & 0.00 & 0.00 & 103 & 0.03 & 0.00 & 0.00 & 300 \\
+Qwen3.6-27B & 6/64 & 1/64 & 0/21 & 0.06 & 0.11 & 9 & 0.00 & 0.00 & 0.00 & 300 \\
+Qwen3.6-35B-A3B & 1/40 & 0/40 & 0/13 & 0.05 & 0.07 & 11 & 0.00 & 0.00 & 0.00 & 300 \\
+Qwen3.5-27B & 13/64 & 0/64 & 0/21 & 0.04 & 0.14 & 0 & 0.02 & 0.00 & 0.00 & 300 \\
+\bottomrule
+\end{tabular}
+\end{table}

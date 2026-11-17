@@ -1,0 +1,14 @@
+[moonlight_compat] /root/hf_models_p2nat/moonshotai/Moonlight-16B-A3B-Instruct: tokenizer with TikTokenTokenizer special ids, native DeepseekV3 (trust_remote_code=False)
+{"model": "/root/hf_models_p2nat/moonshotai/Moonlight-16B-A3B-Instruct", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{}", "natural_system_ok": true}
+===== main A: 73 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_assistant|>assistant<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>
+===== main U: 73 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>
+===== main S: 64 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>
+===== natural A: 83 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>请写一段简短的描述。<|im_end|><|im_assistant|>assistant<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>
+===== natural U: 83 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>请写一段简短的描述。<|im_end|><|im_user|>user<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>
+===== natural S: 83 tokens, body tokens 48, close '<|im_end|>'
+<|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>请写一段简短的描述。<|im_end|><|im_system|>system<|im_middle|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>

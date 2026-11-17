@@ -1,0 +1,1 @@
+{"id": "role150_temporal_order_c04", "split": "confirmation", "category": "temporal_order", "roles": {"assistant": {"n_body_tokens": 72, "n_tokens": 100}, "user": {"n_body_tokens": 72, "n_tokens": 100}, "system": {"n_body_tokens": 72, "n_tokens": 95}}}

@@ -1,0 +1,1517 @@
+{
+ "n_problems": 120,
+ "all": {
+  "n": 120,
+  "correct_assistant": {
+   "accuracy": 0.9666666666666667,
+   "adopt_rate": 0.0,
+   "adoption_index": 0.015604787114349412,
+   "min_digit_mass": 0.9971592764777597
+  },
+  "correct_user": {
+   "accuracy": 0.975,
+   "adopt_rate": 0.0,
+   "adoption_index": 0.007008064074120741,
+   "min_digit_mass": 0.9980551029722733
+  },
+  "correct_role_effect": {
+   "d_adoption_index": 0.008596723040228675,
+   "ci": [
+    -0.007008406410543206,
+    0.02998127238443736
+   ],
+   "d_accuracy": -0.008333333333333333,
+   "ci_acc": [
+    -0.05,
+    0.025
+   ]
+  },
+  "wrong_assistant": {
+   "accuracy": 0.041666666666666664,
+   "adopt_rate": 0.9166666666666666,
+   "adoption_index": 0.9399673011950469,
+   "min_digit_mass": 0.9597379103652202
+  },
+  "wrong_user": {
+   "accuracy": 0.14166666666666666,
+   "adopt_rate": 0.75,
+   "adoption_index": 0.8296826763957037,
+   "min_digit_mass": 0.9751835118026975
+  },
+  "wrong_role_effect": {
+   "d_adoption_index": 0.11028462479934327,
+   "ci": [
+    0.05881168419276157,
+    0.16762778032935272
+   ],
+   "d_accuracy": -0.1,
+   "ci_acc": [
+    -0.15833333333333333,
+    -0.041666666666666664
+   ]
+  },
+  "patch": [
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "0",
+    "a": 0.9513032328677337,
+    "gap_closed": -0.10278796063650635
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "3",
+    "a": 0.9498340434308886,
+    "gap_closed": -0.08946616315550525
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "7",
+    "a": 0.9510036498469189,
+    "gap_closed": -0.10007150744677241
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "15",
+    "a": 0.9460912603902608,
+    "gap_closed": -0.05552867597234083
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "23",
+    "a": 0.9435928407759957,
+    "gap_closed": -0.03287438831609818
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "31",
+    "a": 0.9494007127468166,
+    "gap_closed": -0.08553696010602803
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "39",
+    "a": 0.9493301914310461,
+    "gap_closed": -0.0848975118066956
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "47",
+    "a": 0.9403390803139864,
+    "gap_closed": -0.003371087489447577
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "55",
+    "a": 0.9399303232140824,
+    "gap_closed": 0.0003352958858204334
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "63",
+    "a": 0.9399673011950469,
+    "gap_closed": -0.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "all",
+    "a": 0.951177381353718,
+    "gap_closed": -0.10164680869221082
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "0",
+    "a": 0.9373857340086702,
+    "gap_closed": 0.023408223866869186
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "3",
+    "a": 0.9375677930150046,
+    "gap_closed": 0.0217574134600184
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "7",
+    "a": 0.9390613299278007,
+    "gap_closed": 0.00821484652910227
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "15",
+    "a": 0.9404253469029854,
+    "gap_closed": -0.004153305220667818
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "23",
+    "a": 0.9272077928286715,
+    "gap_closed": 0.11569616698239331
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "31",
+    "a": 0.8522124874878433,
+    "gap_closed": 0.7957121300169326
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "39",
+    "a": 0.8088555408480711,
+    "gap_closed": 1.188848949575033
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "47",
+    "a": 0.9215750736394223,
+    "gap_closed": 0.16677055019308706
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "55",
+    "a": 0.9436951609528006,
+    "gap_closed": -0.033802171105322514
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "63",
+    "a": 0.9399673011950469,
+    "gap_closed": -0.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "all",
+    "a": 0.7001118165493683,
+    "gap_closed": 2.174876915817436
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "0",
+    "a": 0.9387946780757233,
+    "gap_closed": 0.010632698088760505
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "3",
+    "a": 0.9518683220970157,
+    "gap_closed": -0.1079118773230812
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "7",
+    "a": 0.969116204696776,
+    "gap_closed": -0.2643061401783238
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "15",
+    "a": 0.9555694752384881,
+    "gap_closed": -0.14147188759837118
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "23",
+    "a": 0.943868581221675,
+    "gap_closed": -0.0353746502173473
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "31",
+    "a": 0.9412968167821499,
+    "gap_closed": -0.012055312238872976
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "39",
+    "a": 0.9321948775970657,
+    "gap_closed": 0.07047603972106488
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "47",
+    "a": 0.8676206596856434,
+    "gap_closed": 0.6559993438889078
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "55",
+    "a": 0.8272909360481889,
+    "gap_closed": 1.0216869790495857
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "63",
+    "a": 0.8296826763957037,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "all",
+    "a": 0.8296826763957037,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "0",
+    "a": 0.9379058362782134,
+    "gap_closed": 0.018692224057380413
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "3",
+    "a": 0.9470391414207654,
+    "gap_closed": -0.06412353706226338
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "7",
+    "a": 0.9556310000778647,
+    "gap_closed": -0.14202976082402294
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "15",
+    "a": 0.949946941710346,
+    "gap_closed": -0.09048986233082353
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "23",
+    "a": 0.9204839838318104,
+    "gap_closed": 0.17666394929198262
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "31",
+    "a": 0.8564573117002977,
+    "gap_closed": 0.7572224110721781
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "39",
+    "a": 0.8319899019888949,
+    "gap_closed": 0.979079354013408
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "47",
+    "a": 0.8365256474794559,
+    "gap_closed": 0.9379517217726169
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "55",
+    "a": 0.829192648326578,
+    "gap_closed": 1.0044433035884854
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "63",
+    "a": 0.8296826763957037,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "all",
+    "a": 0.8296826763957037,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "0",
+    "a": 0.7915889459001885,
+    "gap_closed": -0.34541288565676925
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "3",
+    "a": 0.7562968484179419,
+    "gap_closed": -0.6654221122054258
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "7",
+    "a": 0.849368536981753,
+    "gap_closed": 0.17850049924789246
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "15",
+    "a": 0.913933078711683,
+    "gap_closed": 0.7639360651520392
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "23",
+    "a": 0.8994470390747747,
+    "gap_closed": 0.6325846672281241
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "31",
+    "a": 0.8291381725507768,
+    "gap_closed": -0.004937259803146404
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "39",
+    "a": 0.8255873740656993,
+    "gap_closed": -0.037133937187124794
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "47",
+    "a": 0.8303809420970041,
+    "gap_closed": 0.006331487299982553
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "55",
+    "a": 0.8298560687308287,
+    "gap_closed": 0.0015722258242299057
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "63",
+    "a": 0.8296826763957037,
+    "gap_closed": 0.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "all",
+    "a": 0.791752173370732,
+    "gap_closed": -0.34393282920428986
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "0",
+    "a": 0.8244451586931478,
+    "gap_closed": -0.04749091464095967
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "3",
+    "a": 0.8304013751829189,
+    "gap_closed": 0.006516763225361943
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "7",
+    "a": 0.8306287382020993,
+    "gap_closed": 0.008578365371572572
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "15",
+    "a": 0.7808756105456692,
+    "gap_closed": -0.4425554871210401
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "23",
+    "a": 0.7823858804953737,
+    "gap_closed": -0.4288611942633336
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "31",
+    "a": 0.9344475960821929,
+    "gap_closed": 0.9499503659472311
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "39",
+    "a": 0.9343317882724325,
+    "gap_closed": 0.948900284759839
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "47",
+    "a": 0.8631832529092893,
+    "gap_closed": 0.3037647049580853
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "55",
+    "a": 0.8267165029678759,
+    "gap_closed": -0.026895620610983433
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "63",
+    "a": 0.8296826763957037,
+    "gap_closed": 0.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "all",
+    "a": 0.9008829612048345,
+    "gap_closed": 0.6456048151650854
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "0",
+    "a": 0.8200262981339148,
+    "gap_closed": -0.08755869895153688
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "3",
+    "a": 0.7915650160164489,
+    "gap_closed": -0.3456298686114023
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "7",
+    "a": 0.8136091379208702,
+    "gap_closed": -0.1457459596392373
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "15",
+    "a": 0.7466786136161809,
+    "gap_closed": -0.7526349473514018
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "23",
+    "a": 0.7449060138585328,
+    "gap_closed": -0.7687079018622708
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "31",
+    "a": 0.781618467075327,
+    "gap_closed": -0.43581967484431194
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "39",
+    "a": 0.8086837357205255,
+    "gap_closed": -0.19040678347851817
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "47",
+    "a": 0.920202169314021,
+    "gap_closed": 0.820780712479301
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "55",
+    "a": 0.9446216484706035,
+    "gap_closed": 1.0422030476507937
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "63",
+    "a": 0.9399673011950469,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "all",
+    "a": 0.9399673011950469,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "0",
+    "a": 0.8190588142445023,
+    "gap_closed": -0.09633130792738245
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "3",
+    "a": 0.7959221416849337,
+    "gap_closed": -0.3061218621561749
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "7",
+    "a": 0.7912677810652883,
+    "gap_closed": -0.348325030803788
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "15",
+    "a": 0.7899306355389013,
+    "gap_closed": -0.36044952711340356
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "23",
+    "a": 0.7299276280259853,
+    "gap_closed": -0.9045236228641771
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "31",
+    "a": 0.9544425793666977,
+    "gap_closed": 1.1312538189071035
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "39",
+    "a": 0.9481341058499143,
+    "gap_closed": 1.0740520690869326
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "47",
+    "a": 0.9395937250101684,
+    "gap_closed": 0.9966126177102361
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "55",
+    "a": 0.9403261992334585,
+    "gap_closed": 1.0032542889733234
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "63",
+    "a": 0.9399673011950469,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "all",
+    "a": 0.9399673011950469,
+    "gap_closed": 1.0
+   }
+  ]
+ },
+ "confirmation": {
+  "n": 60,
+  "correct_assistant": {
+   "accuracy": 0.9666666666666667,
+   "adopt_rate": 0.0,
+   "adoption_index": 0.018948048956982013,
+   "min_digit_mass": 0.9984203604835784
+  },
+  "correct_user": {
+   "accuracy": 0.9833333333333333,
+   "adopt_rate": 0.0,
+   "adoption_index": 0.011615846292090896,
+   "min_digit_mass": 0.9993406826080786
+  },
+  "correct_role_effect": {
+   "d_adoption_index": 0.00733220266489112,
+   "ci": [
+    -0.020786668449985855,
+    0.04552846465098105
+   ],
+   "d_accuracy": -0.016666666666666666,
+   "ci_acc": [
+    -0.06666666666666667,
+    0.03333333333333333
+   ]
+  },
+  "wrong_assistant": {
+   "accuracy": 0.03333333333333333,
+   "adopt_rate": 0.9166666666666666,
+   "adoption_index": 0.9576354659358962,
+   "min_digit_mass": 0.9833993223874131
+  },
+  "wrong_user": {
+   "accuracy": 0.15,
+   "adopt_rate": 0.7333333333333333,
+   "adoption_index": 0.8342260598487585,
+   "min_digit_mass": 0.9751835118026975
+  },
+  "wrong_role_effect": {
+   "d_adoption_index": 0.1234094060871377,
+   "ci": [
+    0.05554230797501742,
+    0.20065437580622647
+   ],
+   "d_accuracy": -0.11666666666666667,
+   "ci_acc": [
+    -0.2,
+    -0.05
+   ]
+  },
+  "patch": [
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "0",
+    "a": 0.9612878080513233,
+    "gap_closed": -0.02959533013916475
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "3",
+    "a": 0.9612410890400711,
+    "gap_closed": -0.02921676084907995
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "7",
+    "a": 0.9633020738631024,
+    "gap_closed": -0.04591714770270491
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "15",
+    "a": 0.95852210434957,
+    "gap_closed": -0.007184528649685858
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "23",
+    "a": 0.9580577993910633,
+    "gap_closed": -0.003422214469364384
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "31",
+    "a": 0.9631534932311558,
+    "gap_closed": -0.0447131824892134
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "39",
+    "a": 0.9627813377739447,
+    "gap_closed": -0.041697565859891254
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "47",
+    "a": 0.9568750298164524,
+    "gap_closed": 0.006161897569678199
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "55",
+    "a": 0.9572681429611486,
+    "gap_closed": 0.0029764584920557637
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "63",
+    "a": 0.9576354659358962,
+    "gap_closed": -0.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "role_header",
+    "layer": "all",
+    "a": 0.9610451147576723,
+    "gap_closed": -0.027628759669814575
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "0",
+    "a": 0.9526361238353214,
+    "gap_closed": 0.04051021927003585
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "3",
+    "a": 0.9473481582108436,
+    "gap_closed": 0.08335918672024781
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "7",
+    "a": 0.9498088204416905,
+    "gap_closed": 0.06342016984247915
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "15",
+    "a": 0.9473368910433572,
+    "gap_closed": 0.08345048581845832
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "23",
+    "a": 0.9382694516361347,
+    "gap_closed": 0.15692494530025858
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "31",
+    "a": 0.8816649090191324,
+    "gap_closed": 0.6155977840386172
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "39",
+    "a": 0.849187332065627,
+    "gap_closed": 0.8787671645846464
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "47",
+    "a": 0.9400850671717127,
+    "gap_closed": 0.14221281278828474
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "55",
+    "a": 0.9620507482372243,
+    "gap_closed": -0.03577751843494383
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "63",
+    "a": 0.9576354659358962,
+    "gap_closed": -0.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body",
+    "layer": "all",
+    "a": 0.7429676643764146,
+    "gap_closed": 1.7394768224385395
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "0",
+    "a": 0.954933519569748,
+    "gap_closed": 0.021894168781919028
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "3",
+    "a": 0.9634708191323732,
+    "gap_closed": -0.047284509191760686
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "7",
+    "a": 0.9875288651915403,
+    "gap_closed": -0.24222950424489306
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "15",
+    "a": 0.968193928374482,
+    "gap_closed": -0.08555638320737594
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "23",
+    "a": 0.958022702251495,
+    "gap_closed": -0.003137818484640953
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "31",
+    "a": 0.9536433006762007,
+    "gap_closed": 0.03234895447820781
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "39",
+    "a": 0.9567279539545052,
+    "gap_closed": 0.007353669466250164
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "47",
+    "a": 0.8626598044080566,
+    "gap_closed": 0.7695982384096285
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "55",
+    "a": 0.8345718254876954,
+    "gap_closed": 0.9971982229726257
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "63",
+    "a": 0.8342260598487585,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "post",
+    "layer": "all",
+    "a": 0.8342260598487585,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "0",
+    "a": 0.9512410268309082,
+    "gap_closed": 0.0518148438415871
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "3",
+    "a": 0.9596843868694407,
+    "gap_closed": -0.016602631829357957
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "7",
+    "a": 0.97033257915395,
+    "gap_closed": -0.10288610585394538
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "15",
+    "a": 0.9608697386998024,
+    "gap_closed": -0.026207668170953866
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "23",
+    "a": 0.9401177465626349,
+    "gap_closed": 0.1419480080869385
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "31",
+    "a": 0.8661356761008515,
+    "gap_closed": 0.7414328675274392
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "39",
+    "a": 0.8418960401707597,
+    "gap_closed": 0.93784930529051
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "47",
+    "a": 0.8396048860556089,
+    "gap_closed": 0.95641477925068
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "55",
+    "a": 0.8333058981176005,
+    "gap_closed": 1.0074561717808475
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "63",
+    "a": 0.8342260598487585,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "assistant",
+    "donor": "user",
+    "region": "body_post",
+    "layer": "all",
+    "a": 0.8342260598487585,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "0",
+    "a": 0.8267231635178843,
+    "gap_closed": -0.0607967947400744
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "3",
+    "a": 0.8066418331058035,
+    "gap_closed": -0.2235180252263606
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "7",
+    "a": 0.8862475385089728,
+    "gap_closed": 0.4215357670831231
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "15",
+    "a": 0.9262123412081104,
+    "gap_closed": 0.7453749618923017
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "23",
+    "a": 0.9175320286831258,
+    "gap_closed": 0.6750374341445744
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "31",
+    "a": 0.8333464550189892,
+    "gap_closed": -0.0071275347451900525
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "39",
+    "a": 0.8337149143073999,
+    "gap_closed": -0.004141868578459554
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "47",
+    "a": 0.8339709260608906,
+    "gap_closed": -0.0020673771631941414
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "55",
+    "a": 0.833623717075836,
+    "gap_closed": -0.004880849783015533
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "63",
+    "a": 0.8342260598487585,
+    "gap_closed": 0.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "role_header",
+    "layer": "all",
+    "a": 0.8283664411408267,
+    "gap_closed": -0.04748113530174871
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "0",
+    "a": 0.830762562687134,
+    "gap_closed": -0.02806509869417086
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "3",
+    "a": 0.8506750472254271,
+    "gap_closed": 0.13328795509358624
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "7",
+    "a": 0.8545079511676577,
+    "gap_closed": 0.16434639758802794
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "15",
+    "a": 0.8046404209558189,
+    "gap_closed": -0.2397356881537022
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "23",
+    "a": 0.812033117391046,
+    "gap_closed": -0.17983185529668944
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "31",
+    "a": 0.9525004429066821,
+    "gap_closed": 0.958390343232117
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "39",
+    "a": 0.9556352887939205,
+    "gap_closed": 0.9837923444784795
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "47",
+    "a": 0.859514502703318,
+    "gap_closed": 0.20491503570403397
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "55",
+    "a": 0.8349676552394559,
+    "gap_closed": 0.006009229071030229
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "63",
+    "a": 0.8342260598487585,
+    "gap_closed": 0.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body",
+    "layer": "all",
+    "a": 0.9286628059328673,
+    "gap_closed": 0.7652313472558834
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "0",
+    "a": 0.8283785601234596,
+    "gap_closed": -0.047382933851655734
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "3",
+    "a": 0.8124136124722053,
+    "gap_closed": -0.17674866177665358
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "7",
+    "a": 0.8287448347658746,
+    "gap_closed": -0.04441497011187087
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "15",
+    "a": 0.7624484073145658,
+    "gap_closed": -0.5816222183543412
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "23",
+    "a": 0.7838081520475927,
+    "gap_closed": -0.40854185592276854
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "31",
+    "a": 0.8216559314970083,
+    "gap_closed": -0.10185713350629533
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "39",
+    "a": 0.8415416853092823,
+    "gap_closed": 0.05927931826653728
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "47",
+    "a": 0.9393674069325618,
+    "gap_closed": 0.8519719073079765
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "55",
+    "a": 0.9630364397396343,
+    "gap_closed": 1.043764685164472
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "63",
+    "a": 0.9576354659358962,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "post",
+    "layer": "all",
+    "a": 0.9576354659358962,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "0",
+    "a": 0.826785636829088,
+    "gap_closed": -0.06029056662355976
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "3",
+    "a": 0.8233801535720517,
+    "gap_closed": -0.08788557226382436
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "7",
+    "a": 0.8250592097350675,
+    "gap_closed": -0.07427999537748702
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "15",
+    "a": 0.8386305554273099,
+    "gap_closed": 0.03569011243309467
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "23",
+    "a": 0.7804383907114052,
+    "gap_closed": -0.4358474029068303
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "31",
+    "a": 0.9678440923819335,
+    "gap_closed": 1.0827216236567017
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "39",
+    "a": 0.960802899889824,
+    "gap_closed": 1.0256660659373997
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "47",
+    "a": 0.9580459862757472,
+    "gap_closed": 1.0033264914958033
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "55",
+    "a": 0.9577595963839166,
+    "gap_closed": 1.0010058426821433
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "63",
+    "a": 0.9576354659358962,
+    "gap_closed": 1.0
+   },
+   {
+    "recipient": "user",
+    "donor": "assistant",
+    "region": "body_post",
+    "layer": "all",
+    "a": 0.9576354659358962,
+    "gap_closed": 1.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,234 @@
+{
+ "readouts": {
+  "Qwen3.8-27B, single pass": {
+   "runs": {
+    "paper_all": {
+     "removal": -0.013123759031295777,
+     "installation": 0.0036406260697791973,
+     "n": 150
+    },
+    "r05q_all": {
+     "removal": -0.014609541098276774,
+     "installation": 0.004072316439511875,
+     "n": 150
+    },
+    "r06_s1": {
+     "removal": 0.004941763877868652,
+     "installation": 0.0027453623494754233,
+     "n": 150
+    },
+    "r06_s2": {
+     "removal": 0.0007977132002512613,
+     "installation": 0.002082917632845541,
+     "n": 150
+    },
+    "r06_s3": {
+     "removal": -0.015240592956542969,
+     "installation": 0.00036044200882315633,
+     "n": 150
+    },
+    "r06_s4": {
+     "removal": 0.01235297719637553,
+     "installation": 0.0018049529443184534,
+     "n": 150
+    }
+   },
+   "fitted_removal": -0.7582963560707867,
+   "max_abs_random_removal": 0.015240592956542969,
+   "max_abs_random_installation": 0.004072316439511875
+  },
+  "Qwen3.8-27B, thinking": {
+   "runs": {
+    "paper_all": {
+     "removal": 0.020134228187919462,
+     "installation": 0.0,
+     "n": 149
+    },
+    "r05q_all": {
+     "removal": -0.033783783783783786,
+     "installation": 0.0,
+     "n": 148
+    },
+    "r06_s1": {
+     "removal": -0.05405405405405406,
+     "installation": 0.0,
+     "n": 148
+    },
+    "r06_s2": {
+     "removal": -0.053691275167785234,
+     "installation": 0.0,
+     "n": 149
+    },
+    "r06_s3": {
+     "removal": -0.06711409395973154,
+     "installation": 0.0,
+     "n": 149
+    },
+    "r06_s4": {
+     "removal": -0.026845637583892617,
+     "installation": 0.0,
+     "n": 149
+    }
+   },
+   "fitted_removal": -0.959731543624161,
+   "max_abs_random_removal": 0.06711409395973154,
+   "max_abs_random_installation": 0.0
+  },
+  "gpt-oss-20b": {
+   "runs": {
+    "paper_all": {
+     "removal": 0.04666666666666667,
+     "installation": -0.006666666666666667,
+     "n": 150
+    },
+    "r05q_all": {
+     "removal": 0.04666666666666667,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s1": {
+     "removal": 0.0,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s2": {
+     "removal": -0.03333333333333333,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s3": {
+     "removal": -0.013333333333333334,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s4": {
+     "removal": -0.02666666666666667,
+     "installation": 0.0,
+     "n": 150
+    }
+   },
+   "fitted_removal": -0.76,
+   "max_abs_random_removal": 0.04666666666666667,
+   "max_abs_random_installation": 0.006666666666666667
+  },
+  "gpt-oss-120b": {
+   "runs": {
+    "paper_all": {
+     "removal": -0.013333333333333334,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r05q_all": {
+     "removal": 0.006666666666666667,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s1": {
+     "removal": -0.02,
+     "installation": 0.006666666666666667,
+     "n": 150
+    },
+    "r06_s2": {
+     "removal": 0.0,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s3": {
+     "removal": -0.02666666666666667,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s4": {
+     "removal": -0.04666666666666667,
+     "installation": 0.0,
+     "n": 150
+    }
+   },
+   "fitted_removal": -0.96,
+   "max_abs_random_removal": 0.04666666666666667,
+   "max_abs_random_installation": 0.006666666666666667
+  },
+  "MiMo-V2.6-Distill-Qwen-9B": {
+   "runs": {
+    "r05q_all": {
+     "removal": -0.1133,
+     "installation": -0.0133,
+     "n": 150
+    },
+    "r06_s1": {
+     "removal": -0.1467,
+     "installation": -0.0133,
+     "n": 150
+    },
+    "r06_s2": {
+     "removal": -0.08,
+     "installation": -0.0133,
+     "n": 150
+    },
+    "r06_s3": {
+     "removal": -0.0667,
+     "installation": 0.0067,
+     "n": 150
+    },
+    "r06_s4": {
+     "removal": -0.08,
+     "installation": 0.0,
+     "n": 150
+    }
+   },
+   "fitted_removal": -0.4067,
+   "max_abs_random_removal": 0.1467,
+   "max_abs_random_installation": 0.0133
+  },
+  "EXAONE-4.0.1-32B": {
+   "runs": {
+    "r05q_all": {
+     "removal": -0.04,
+     "installation": 0.0,
+     "n": 150
+    },
+    "r06_s1": {
+     "removal": 0.0,
+     "installation": -0.0067,
+     "n": 150
+    },
+    "r06_s2": {
+     "removal": -0.0336,
+     "installation": -0.0067,
+     "n": 149
+    },
+    "r06_s3": {
+     "removal": -0.04,
+     "installation": -0.0267,
+     "n": 150
+    },
+    "r06_s4": {
+     "removal": -0.0533,
+     "installation": 0.0067,
+     "n": 150
+    }
+   },
+   "fitted_removal": -0.1745,
+   "max_abs_random_removal": 0.0533,
+   "max_abs_random_installation": 0.0267
+  },
+  "GLM-5.3-Flash": {
+   "runs": {
+    "r05q_all": {
+     "removal": 0.0069,
+     "installation": 0.0,
+     "n": 144
+    }
+   },
+   "fitted_removal": -0.3793,
+   "max_abs_random_removal": 0.0069,
+   "max_abs_random_installation": 0.0
+  }
+ },
+ "overall": {
+  "max_abs_random_removal": 0.1467,
+  "max_abs_random_installation": 0.0267,
+  "max_abs_random_any": 0.1467,
+  "min_abs_fitted_removal": 0.1745
+ }
+}

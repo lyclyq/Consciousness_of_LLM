@@ -1,0 +1,1 @@
+{"id": "role150_spatial_positions_c01", "split": "confirmation", "category": "spatial_positions", "roles": {"assistant": {"n_body_tokens": 72, "n_tokens": 86}, "user": {"n_body_tokens": 72, "n_tokens": 85}, "system": {"n_body_tokens": 72, "n_tokens": 84}}}

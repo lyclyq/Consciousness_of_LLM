@@ -1,0 +1,8 @@
+smoke start 2026-11-10 13:09:22
+1 rc=0 1 gate lines; finished: 2/2 bodies on disk
+2 rc=0 finished: 1/1 bodies on disk
+3 rc=0 finished: 1/1 bodies on disk
+extract b150_main_phi4_en rc=0
+extract b150_natural_phi4_en rc=0
+extract b150_main_phi4_en_roles rc=0
+smoke end 2026-11-10 13:10:48

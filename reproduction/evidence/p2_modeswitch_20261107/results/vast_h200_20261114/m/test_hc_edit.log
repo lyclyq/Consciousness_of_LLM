@@ -1,0 +1,15 @@
+PASS proj 2d
+PASS back 2d
+PASS gram 2d
+PASS top_eig 2d
+PASS random 2d
+PASS proj 4s
+PASS back 4s
+PASS identity edit
+PASS edit sets coords
+PASS edit keeps complement
+PASS gram 4s
+PASS top_eig 4s
+PASS random 4s orthonormal
+PASS share 4s
+ALL PASS

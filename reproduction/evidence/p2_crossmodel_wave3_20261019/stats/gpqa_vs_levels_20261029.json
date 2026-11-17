@@ -1,0 +1,130 @@
+{
+ "n": 14,
+ "models": {
+  "DeepSeek-R1-Distill-Llama-70B": {
+   "gpqa": 65.2,
+   "group": 1,
+   "index": 1.0,
+   "claim": -0.068
+  },
+  "EXAONE-4.0.1-32B": {
+   "gpqa": 74.3,
+   "group": 2,
+   "index": 1.0,
+   "claim": 0.12
+  },
+  "GLM-4.7-Flash": {
+   "gpqa": 75.2,
+   "group": 1,
+   "index": 1.0,
+   "claim": 0.056
+  },
+  "Gemma-4-31B": {
+   "gpqa": 84.3,
+   "group": 0,
+   "index": 0.0,
+   "claim": 0.027
+  },
+  "Granite-4.1-30B": {
+   "gpqa": 45.76,
+   "group": 1,
+   "index": 0.578,
+   "claim": -0.01
+  },
+  "Granite-4.2-30B": {
+   "gpqa": 66.41,
+   "group": 1,
+   "index": 0.922,
+   "claim": 0.003
+  },
+  "Qwen3.5-27B": {
+   "gpqa": 85.5,
+   "group": 0,
+   "index": 0.203,
+   "claim": 0.022
+  },
+  "Qwen3.6-27B": {
+   "gpqa": 87.8,
+   "group": 0,
+   "index": 0.094,
+   "claim": 0.0
+  },
+  "Qwen3.6-35B-A3B": {
+   "gpqa": 86.0,
+   "group": 0,
+   "index": 0.025,
+   "claim": 0.0
+  },
+  "Qwen3.8-27B": {
+   "gpqa": 89.2,
+   "group": 3,
+   "index": 1.0,
+   "claim": 0.96
+  },
+  "Qwen3.8-Flash-Next": {
+   "gpqa": 91.7,
+   "group": 2,
+   "index": 1.0,
+   "claim": 0.659
+  },
+  "Seed-OSS-36B": {
+   "gpqa": 71.4,
+   "group": 0,
+   "index": 0.0,
+   "claim": 0.004
+  },
+  "gpt-oss-120b": {
+   "gpqa": 80.1,
+   "group": 2,
+   "index": 0.944,
+   "claim": 0.973
+  },
+  "gpt-oss-20b": {
+   "gpqa": 71.5,
+   "group": 2,
+   "index": 1.0,
+   "claim": 0.777
+  }
+ },
+ "rank": {
+  "group": {
+   "rho": 0.043724399557254,
+   "p": 0.8834,
+   "ci95": [
+    -0.6545432048734146,
+    0.5715986222068181
+   ]
+  },
+  "selfref": {
+   "rho": 0.31433011119429655,
+   "p": 0.29638,
+   "ci95": [
+    -0.2778964726230244,
+    0.7337825968387683
+   ]
+  },
+  "index": {
+   "rho": -0.025193005144203452,
+   "p": 0.93512,
+   "ci95": [
+    -0.5828697215726858,
+    0.5139849013568837
+   ]
+  },
+  "claim": {
+   "rho": 0.42244249985333543,
+   "p": 0.13349,
+   "ci95": [
+    -0.2772773299111324,
+    0.825503355704698
+   ]
+  }
+ },
+ "mannwhitney": {
+  "median_with": 80.1,
+  "n_with": 5,
+  "median_without": 75.2,
+  "n_without": 9,
+  "p": 0.2977022977022977
+ }
+}

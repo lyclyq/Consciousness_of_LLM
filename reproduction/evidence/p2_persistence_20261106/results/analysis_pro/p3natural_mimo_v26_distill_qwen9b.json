@@ -1,0 +1,295 @@
+{
+ "tag": "mimo_v26_distill_qwen9b",
+ "order": "natural",
+ "n_layers": 32,
+ "keep_layers": [
+  12,
+  16,
+  19,
+  23,
+  27,
+  31
+ ],
+ "n_held_out": 200,
+ "families": 200,
+ "n_bodies_on_disk": 400,
+ "group": "index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/hf_models/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+  "tmpl_kwargs": {
+   "enable_thinking": false
+  },
+  "lang": "zh",
+  "fixed_date": null,
+  "natural_system_ok": true
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 0.985
+  },
+  "2": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 0.985
+  },
+  "3": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 0.995
+  },
+  "4": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "5": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 0.995
+  },
+  "full": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "empty": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "6": {
+   "n_bodies": 200,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 0.995
+  },
+  "7": {
+   "n_bodies": 196,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "8": {
+   "n_bodies": 110,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "9": {
+   "n_bodies": 37,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "10": {
+   "n_bodies": 1,
+   "defined": true,
+   "index_layers_beyond_first_third": 21,
+   "layers_beyond_first_third": 21,
+   "index_layers_all": 32,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 1.2057247001111429,
+   "M2_ci95": [
+    1.1771311880035678,
+    1.233709441206805
+   ],
+   "M3_direction_cos": 0.763336961542795,
+   "M3_ci95": [
+    0.7488316369988078,
+    0.7763178099697925
+   ],
+   "C1_median": 919.353854910459,
+   "C1_ci95": [
+    887.6061929111065,
+    950.9810922029749
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 1.0720809194237044,
+   "per_layer": {
+    "12": {
+     "size": 1.04331812888524,
+     "cos": 0.8723128690418951
+    },
+    "16": {
+     "size": 1.0374326442073472,
+     "cos": 0.8139415394181156
+    },
+    "19": {
+     "size": 1.1638579694868958,
+     "cos": 0.7632086690814719
+    },
+    "23": {
+     "size": 1.3276494556193819,
+     "cos": 0.7634652540041181
+    },
+    "27": {
+     "size": 1.344112278353464,
+     "cos": 0.7440195009085718
+    },
+    "31": {
+     "size": 1.2475914307353901,
+     "cos": 0.6722349637828869
+    }
+   }
+  },
+  "A-S": {
+   "defined": true,
+   "M2_size_kept": 1.2973992149613154,
+   "M2_ci95": [
+    1.2715065128494163,
+    1.3239395186180445
+   ],
+   "M3_direction_cos": 0.7557903889612049,
+   "M3_ci95": [
+    0.7391618550622394,
+    0.7715312800209818
+   ],
+   "C1_median": 809.2555864280134,
+   "C1_ci95": [
+    776.8284277370046,
+    842.5701447060662
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 1.1510648843893416,
+   "per_layer": {
+    "12": {
+     "size": 0.9992070253210624,
+     "cos": 0.8893308392723893
+    },
+    "16": {
+     "size": 1.0411696373710988,
+     "cos": 0.8168740496466124
+    },
+    "19": {
+     "size": 1.2025777783735423,
+     "cos": 0.7651897236931172
+    },
+    "23": {
+     "size": 1.3922206515490885,
+     "cos": 0.7463910542292925
+    },
+    "27": {
+     "size": 1.4866381043664965,
+     "cos": 0.7213765905057082
+    },
+    "31": {
+     "size": 1.4533077301263981,
+     "cos": 0.6464239089973453
+    }
+   }
+  },
+  "U-S": {
+   "defined": true,
+   "M2_size_kept": 0.7501529661869697,
+   "M2_ci95": [
+    0.7274881738853405,
+    0.7747574671836247
+   ],
+   "M3_direction_cos": 0.5715256397035178,
+   "M3_ci95": [
+    0.542812145351571,
+    0.5979552526670997
+   ],
+   "C1_median": 186.03661346962272,
+   "C1_ci95": [
+    174.38741161334238,
+    198.6157887250667
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.7969757974316383,
+   "per_layer": {
+    "12": {
+     "size": 0.9026613267091511,
+     "cos": 0.8516984058495141
+    },
+    "16": {
+     "size": 0.8430047012670349,
+     "cos": 0.7275515327054433
+    },
+    "19": {
+     "size": 0.7632414369650465,
+     "cos": 0.5631839461451932
+    },
+    "23": {
+     "size": 0.7349483839773104,
+     "cos": 0.4732099017294764
+    },
+    "27": {
+     "size": 0.7370644954088929,
+     "cos": 0.4666346520912051
+    },
+    "31": {
+     "size": 0.7120804293645133,
+     "cos": 0.5798673332618425
+    }
+   }
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 1.0288856029510498,
+   "common_ratio": 0.9356906475061639,
+   "cos_first_last": 0.9217168509450109,
+   "share_first": 0.20552473956936196,
+   "share_last": 0.16694865213206916
+  },
+  "A-S": {
+   "total_ratio": 1.023156762123108,
+   "common_ratio": 0.9484334336903423,
+   "cos_first_last": 0.9199295580454062,
+   "share_first": 0.18377795790453458,
+   "share_last": 0.158093403847055
+  },
+  "U-S": {
+   "total_ratio": 0.8823642730712891,
+   "common_ratio": 0.7553954280912777,
+   "cos_first_last": 0.8598923573628044,
+   "share_first": 0.14410378904992668,
+   "share_last": 0.10561008357720045
+  }
+ },
+ "verdict": {
+  "prediction": "P1",
+  "M1_index_at_every_length": true,
+  "M2_at_least_0.8_and_reliable": true,
+  "holds": true,
+  "M1_evaluable": true
+ }
+}

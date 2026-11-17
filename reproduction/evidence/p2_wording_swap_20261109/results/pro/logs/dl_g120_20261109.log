@@ -1,0 +1,5 @@
+2026-11-09 01:45:24 start openai/gpt-oss-120b@b5c939de8f754692c1647ca79fbf85e8c1e70f8a -> /root/hf_models/openai/gpt-oss-120b (203 GiB free)
+Fetching 26 files:   0%|          | 0/26 [00:00<?, ?it/s]Fetching 26 files:   4%|▍         | 1/26 [00:03<01:24,  3.40s/it]Fetching 26 files:  15%|█▌        | 4/26 [00:03<00:17,  1.29it/s]Fetching 26 files:  31%|███       | 8/26 [14:56<40:44, 135.80s/it]Fetching 26 files:  62%|██████▏   | 16/26 [27:35<18:18, 109.80s/it]Fetching 26 files:  69%|██████▉   | 18/26 [28:02<12:16, 92.05s/it] Fetching 26 files: 100%|██████████| 26/26 [28:02<00:00, 64.72s/it]
+snapshot /root/hf_models/openai/gpt-oss-120b
+sha256 check: 16 LFS files, 0 mismatched []
+2026-11-09 02:17:46 DONE 61G

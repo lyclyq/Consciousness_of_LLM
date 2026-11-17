@@ -1,0 +1,14 @@
+{
+ "experiment": "P2_thinking_M",
+ "script_sha256": "76be32ae7ee7797ac1622be35cca3178c7c13bc71eab4576e6859497f15c0095",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/openai/gpt-oss-120b",
+ "on_kwargs": {},
+ "lang": "en",
+ "question": "What is the final answer to this problem? Output only the number.",
+ "batch": 16,
+ "max_new": 3072,
+ "n_problems": 120,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.19.0"
+}

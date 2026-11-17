@@ -1,0 +1,29 @@
+{
+ "experiment": "P2_role_swap_thinking",
+ "script_sha256": "f2362716c97bfc859a53e75fff2d0c69715c2f2d8bb4a30896635edcd06ef670",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/openai/gpt-oss-120b",
+ "on_kwargs": "{}",
+ "n_layers": 36,
+ "band": [
+  24,
+  31
+ ],
+ "fit_from": "thinking_ablate4/gpt_oss_120b_fit/fit.pt",
+ "question": "attr",
+ "region": "all",
+ "lang": "en",
+ "n_eval": 75,
+ "exclude_first": 0,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "swU8_A",
+  "rswU8_A",
+  "swA8_U"
+ ],
+ "batch": 8,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.19.0"
+}

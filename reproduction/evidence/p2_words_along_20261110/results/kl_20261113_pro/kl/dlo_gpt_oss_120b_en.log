@@ -1,0 +1,300 @@
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]Fetching 37 files:   3%|▎         | 1/37 [00:08<05:13,  8.72s/it]Fetching 37 files:  19%|█▉        | 7/37 [00:08<00:37,  1.25s/it]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]Fetching 37 files:  19%|█▉        | 7/37 [00:00<00:01, 21.87it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]Fetching 37 files:  19%|█▉        | 7/37 [00:00<00:01, 20.61it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/.cache/huggingface/download/metal only has 20920.18 MB free disk space.
+  warnings.warn(
+/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/metal only has 20920.18 MB free disk space.
+  warnings.warn(
+Fetching 37 files:  19%|█▉        | 7/37 [00:00<00:01, 22.07it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/.cache/huggingface/download/metal only has 8570.79 MB free disk space.
+  warnings.warn(
+/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/metal only has 8570.79 MB free disk space.
+  warnings.warn(
+Fetching 37 files:  19%|█▉        | 7/37 [00:00<00:01, 27.27it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.
+Fetching 37 files:   0%|          | 0/37 [00:00<?, ?it/s]/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/.cache/huggingface/download/metal only has 8570.65 MB free disk space.
+  warnings.warn(
+/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 65238.25 MB. The target location /root/hf_models_words/openai/gpt-oss-120b/metal only has 8570.65 MB free disk space.
+  warnings.warn(
+Fetching 37 files:  19%|█▉        | 7/37 [00:00<00:01, 22.04it/s]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 455, in snapshot_download
+    thread_map(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 435, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+    _download_to_tmp_and_move(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1858, in _download_to_tmp_and_move
+    http_get(
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 366, in http_get
+    raise ValueError(
+ValueError: The file is too large to be downloaded using the regular download method.  Install `hf_xet` with `pip install hf_xet` for xet-powered downloads.

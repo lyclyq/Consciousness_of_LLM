@@ -1,0 +1,43 @@
+表~\ref{tab:self_config} 用仓库和修订版本标识每个检查点：一个检查点的全部文件都来自同一个修订版本，权重按发布格式使用（表~\ref{tab:self_models}）。表中还给出每种模式的模板参数，附录~\ref{app:templates} 的题目就按这些参数渲染（“默认”：不传参数）。
+
+\begin{table}[htbp]
+\centering
+\caption{检查点与模板参数。修订版本：提交号的前 12 位。$^{a}$~ModelScope 修订版本，文件与 Hugging Face 上的相同。DeepSeek-V4.1-Flash 没有对话模板，其参数是发布附带的提示编码器的参数。}
+\label{tab:self_config}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llp{3.2cm}p{3.5cm}}
+\toprule
+仓库 & 修订版本 & 不思考 & 思考 \\
+\midrule
+\texttt{Qwen/Qwen3.8-27B} & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{Qwen/Qwen3.8-27B}（格式消融） & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=\allowbreak False, preserve\_thinking=\allowbreak False} & \texttt{preserve\_thinking=False} \\
+\texttt{Qwen/Qwen3.8-Flash-Next-FP8} & \texttt{236dfdf28582} & \texttt{enable\_thinking=False} & 默认 \\
+\texttt{Qwen/Qwen3.6-27B} & \texttt{6a9e13bd6fc8} & \texttt{enable\_thinking=False} & 默认 \\
+\texttt{Qwen/Qwen3.6-35B-A3B} & \texttt{995ad96eacd9} & \texttt{enable\_thinking=False} & 默认 \\
+\texttt{Qwen/Qwen3.5-27B} & \texttt{fc05daec18b0} & \texttt{enable\_thinking=False} & 默认 \\
+\texttt{zai-org/GLM-4.6V-Flash} & \texttt{411bb4d77144} & \texttt{enable\_thinking=False} & 默认 \\
+\texttt{zai-org/GLM-4.7-Flash} & \texttt{7dd20894a642} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{zai-org/GLM-5.3-Flash} & \texttt{46a050bec130} & -- & 默认 \\
+\texttt{deepseek-ai/DeepSeek-R1-Distill-Llama-70B} & \texttt{b1c0b44b4369} & -- & 默认 \\
+\texttt{openai/gpt-oss-20b} & \texttt{6cee5e81ee83} & -- & 默认 \\
+\texttt{openai/gpt-oss-120b} & \texttt{b5c939de8f75} & -- & 默认 \\
+\texttt{google/gemma-4-31B-it} & \texttt{842da3794eaa} & 默认 & \texttt{enable\_thinking=True} \\
+\texttt{ByteDance-Seed/Seed-OSS-36B-Instruct} & \texttt{497f1dca95eb} & \texttt{thinking\_budget=0} & 默认 \\
+\texttt{LGAI-EXAONE/EXAONE-4.0.1-32B} & \texttt{a6b0bd4b0fb4} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.2-30b} & \texttt{9e668ce1c538} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.1-30b} & \texttt{4fae6278f713} & 默认 & -- \\
+\texttt{allenai/OLMo-2-1124-13B-Instruct} & \texttt{3a5c85baefbb} & 默认 & -- \\
+\texttt{allenai/OLMo-2-1124-7B-Instruct} & \texttt{470b1fba1ae0} & 默认 & -- \\
+\texttt{deepseek-ai/DeepSeek-V4.1-Flash-1017} & \texttt{9f9818127fdf}$^{a}$ & \texttt{thinking\_mode=chat} & \texttt{thinking\_mode=thinking, reasoning\_effort=high} \\
+\texttt{mistralai/Ministral-3-14B-Instruct-2512-BF16} & \texttt{3cea74c1ebaf} & 默认 & -- \\
+\texttt{mistralai/Ministral-3-14B-Reasoning-2512} & \texttt{51f9210f3cd2} & -- & 默认 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{软件。} 本地运行使用 PyTorch（2.5.1 至 2.11.0）与 Hugging Face Transformers（5.8.0 或 5.19.0），每次运行所用的版本记录在数据包中该运行的身份文件里。DeepSeek-V4.1-Flash 没有 Transformers 实现，运行于其发布附带的模型代码，其中的自定义内核换成按相同算术规则实现的 PyTorch 版本，权重保持发布格式（FP8，专家权重为 FP4）。两个 Ministral-3-14B 模型以 BF16 运行。
+
+\paragraph{解码与 API。} 本地运行在思考模式下贪心生成：第~\ref{sec:res_thinking} 节的 Qwen3.8-27B 最多 4,096 个 token，其余最多 3,072 个。两个模型的思考模式自指来自开发方 API，输入相同：GLM-5.3-Flash 用 Z.ai API（模型 \texttt{glm-5.3-flash}，temperature 0，最多 3,072 个 token）；DeepSeek-V4.1-Flash 用 DeepSeek API（模型 \texttt{deepseek-flash}，服务方文档写明由 DeepSeek-V4.1-Flash-1017 提供；推理强度 high，temperature 1.0、top-$p$ 1.0，即开发方推荐的设置，因为思考模式不提供贪心解码；最多 3,072 个 token）。每个请求中 API 报告的提示 token 数都与本地渲染相同。
+
+\paragraph{统计。} 所有区间都是固定随机种子的 95\% 区间：几何为按措辞族重抽样的百分位 bootstrap 区间（1,000 次），其余按正文或题目重抽样（4,000 至 10,000 次），附录~\ref{app:benchmarks} 的秩相关按模型重抽样（10,000 次）；图~\ref{fig:self_mechanism} 中已完成题目的比例用 Wilson 区间。替换所用的每个子空间都在发现组正文上拟合，并与其对照用的随机子空间（高斯矩阵各列正交化，每层用固定种子抽取）一起保存；用到它的每项检验都读取保存的坐标。

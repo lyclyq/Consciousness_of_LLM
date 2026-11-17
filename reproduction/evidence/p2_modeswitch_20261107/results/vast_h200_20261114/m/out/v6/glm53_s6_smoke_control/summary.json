@@ -1,0 +1,40 @@
+{
+ "secret": {
+  "base_A": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 61,
+   "accuracy": 1.0
+  },
+  "base_U": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 108,
+   "accuracy": 1.0
+  },
+  "rswA8_U": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 107,
+   "accuracy": 1.0
+  },
+  "rswU8_A": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 44,
+   "accuracy": 1.0
+  },
+  "swA8_U": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 45,
+   "accuracy": 1.0
+  },
+  "swU8_A": {
+   "n": 8,
+   "finished": 8,
+   "median_new_tokens": 43,
+   "accuracy": 1.0
+  }
+ }
+}

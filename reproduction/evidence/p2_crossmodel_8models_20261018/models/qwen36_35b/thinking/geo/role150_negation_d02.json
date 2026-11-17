@@ -1,0 +1,1 @@
+{"id": "role150_negation_d02", "split": "discovery", "category": "negation", "roles": {"assistant": {"n_body_tokens": 60, "n_tokens": 80}, "user": {"n_body_tokens": 60, "n_tokens": 80}, "system": {"n_body_tokens": 60, "n_tokens": 80}}}

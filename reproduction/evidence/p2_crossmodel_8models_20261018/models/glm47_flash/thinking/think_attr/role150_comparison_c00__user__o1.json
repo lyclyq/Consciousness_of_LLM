@@ -1,0 +1,1 @@
+{"id": "role150_comparison_c00", "role": "user", "order": ["system", "self", "user"], "off": {"system": 0.2320919930934906, "self": 0.3826550245285034, "user": 0.3826550245285034}, "on_answer": "user", "on_letter": "C", "n_new": 372, "finished": true, "tail": "C<|user|>", "gen": null, "batch": 16}

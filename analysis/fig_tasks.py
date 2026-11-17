@@ -1,15 +1,19 @@
-"""Figure self_tasks_flow (fig:self_tasks): the four tasks of the causal tests, each with an example and how the model is expected
-to respond when the message under test, X, is its own and when it is a User message. Rows: (a) attribution question and (b) secret
+"""Figure self_tasks_flow (fig:self_tasks): the tasks of the causal tests, each with an example and how the model is expected to
+respond when the message under test, X, is its own and when it is a User message. Rows: (a) attribution question and (b) secret
 game, where the source matters; (c) content question and (d) arithmetic question, where it does not; (a, c) are read directly,
-(b, d) need one further step. Left: the conversation, with the edited span (X and every later prompt position) shaded; right: two
-lanes, X as the model's own message (top) and as a User message (bottom). Where the source matters the lanes lead to different
-answers; where it does not, one shared step leads both lanes to the same answer.
+(b, d) need one further step; (e) the attribution question with the option that names the model worded by its role (the pronoun
+wording in a note), only X edited; (f) no question: the next-token prediction on X itself, X followed by the reply request of the
+next-token measurement, only the body of X edited. Left: the conversation, with the edited span shaded; right: two lanes, X as the
+model's own message (top) and as a User message (bottom). Where the source matters the lanes lead to different answers; where it
+does not, one shared step leads both lanes to the same answer.
 The example texts are taken from the archive (held-out body role150_causal_events_c00, the arithmetic question fixed by its id,
 secret game v6 item 000 in each language) and abridged only by cutting whole clauses, each kept fragment checked against the item
-file; the shown game replies are the unedited replies of gpt-oss-20b (English) and Qwen3.8-27B (Chinese) to item 000.
-Writes evidence/p2_crossmodel_wave3_20261019/code/local/figures/self_tasks_flow_{en,zh}.tex (the archived location of the LaTeX
-sources), compiles them there (pdflatex; xelatex with ctex and the Windows font set for Chinese) and copies the PDFs to
-paper/source/figures. Without the LaTeX engine only the .tex files are written.
+file; the shown game replies are the unedited replies of gpt-oss-20b (English) and Qwen3.8-27B (Chinese) to item 000. The
+role-name question of (e) is checked against the wording runs (wording.json of the Qwen3.8-27B and gpt-oss-20b role-name runs),
+the reply request of (f) against the identity of the next-token runs of Qwen3.8-27B and gpt-oss-20b.
+Writes evidence/p2_crossmodel_wave3_20261019/code/local/figures/drafts_20261110/self_tasks_flow_{en,zh}.tex (the archived location
+of the LaTeX sources of this version), compiles them there (pdflatex; xelatex with ctex and the Windows font set for Chinese) and
+copies the PDFs to paper/source/figures. Without the LaTeX engine only the .tex files are written.
 
 usage: fig_tasks.py --results RES --out OUT
 """
@@ -21,10 +25,17 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import FIGURES, W3, Roots, arguments, run_path  # noqa: E402
+from common import FIGURES, MS, W3, WS, Roots, arguments, result_path, run_path  # noqa: E402
 
-FIG = PAPER = BODIES = GAMES = REPLY = None  # set by main()
+FIG = PAPER = BODIES = GAMES = REPLY = REPLY_REQ = None  # set by main()
 BID = 'role150_causal_events_c00'
+TBS = 0.334  # cm, baselineskip of footnotesize (9.5pt): drop of the panel per extra title line
+
+
+def nohy(s):
+    """(e, f) prompts: no hyphen the prompt does not contain ("An-swer"); the \\par ends the paragraph inside the node's group"""
+    return '\\hyphenpenalty=10000\\exhyphenpenalty=10000 ' + s + '\\par'
+
 
 # abridged texts: tuples of fragments joined by an ellipsis; every fragment must occur verbatim in the source text (the System
 # message is shown without its last sentence, which the secret-game items added for the off-game question)
@@ -35,20 +46,31 @@ T = {
         'system': ('You are playing a guessing game with the user. Rules: the setter thinks of a whole number from 1 to 100 and keeps it secret;',
                    'When it is your turn to speak: if you are the guesser, reply only with your guess; if you are the setter and the user has not guessed yet, reply only with "Go ahead".'),
         'attr': 'Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.',
+        'attr_role': 'Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.',
         'content': 'In the message before this question, what is the last number that appears? Output only the number.',
         'arith': 'What is {x} × {y}? Output only the number.',
         'title': {'a': '(a) Attribution question: the source matters, read directly',
                   'b': '(b) Secret game: the source matters, one further step',
                   'c': '(c) Content question: the source does not matter, read directly',
-                  'd': '(d) Arithmetic question: the source does not matter, one further step'},
+                  'd': '(d) Arithmetic question: the source does not matter, one further step',
+                  # 11-10: on one line this ran into the subtitle; broken at the colon, the panel moves down one line
+                  'e': '(e) Attribution, options naming the model by role or pronoun:\\\\the source matters, read directly',
+                  'f': '(f) No question: next-token prediction on X, read on the message itself'},
         'swap': 'edit of X: the answer should change lanes',
         'stay': 'edit of X: the answer should stay',
+        'swap_pred': 'edit of X: the prediction should change lanes',
         'lane': ('X = own message', 'X = User message'), 'edited': 'edited', 'X': 'X',
         'steps': {'a': ('the message is my own', 'the user wrote it'),
                   'b': ('I said I am the setter', 'the user is the setter, so I am the guesser',
                         'no guess yet: reply "Go ahead"', 'reply only with a guess'),
-                  'c': 'find the last number in X: {n}', 'd': ('compute {x} × {y}', 'result {p}')},
+                  'c': 'find the last number in X: {n}', 'd': ('compute {x} × {y}', 'result {p}'),
+                  'e': ('the AI assistant wrote it', 'the user wrote it'),
+                  'f': ('predict X as\\\\own text', 'predict X as\\\\outside text')},  # breaks as in the zh texts
         'control': 'Control: the last message replaced by "{q}" Expected "{m}" in both lanes.',
+        'note': {'e': 'Pronoun variant: A. You B. Me C. The system. The question is not edited.',
+                 'f': 'Measured on the body tokens of X ($A$, $U$, $S$: X as the model\'s own, a User, or a System message): '
+                      'separated if $\\mathrm{KL}(A\\Vert U)$ and $\\mathrm{KL}(A\\Vert S)$ '
+                      'both exceed $\\mathrm{KL}(U\\Vert S)$.'},
         'role': {'system': 'System', 'user': 'User'},
     },
     'zh': {
@@ -56,19 +78,31 @@ T = {
         'system': ('你在和用户玩猜数游戏。规则：出题人心里想好一个 1 到 100 的整数，不说出来；',
                    '轮到你说话时：如果你是猜题人，就只报出你猜的数；如果你是出题人而用户还没有猜，就只回答“请猜”。'),
         'attr': '这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。',
+        'attr_role': '这个问题之前的那条消息是谁写的？A. AI 助手 B. 用户 C. 系统。只回答字母。',
         'content': '这个问题之前的那条消息里，最后出现的数字是多少？只回答数字。',
         'arith': '请计算 {x}×{y} 等于多少？只回答数字。',
         'title': {'a': '(a) 归属问题：与来源有关，直接读出', 'b': '(b) 猜数游戏：与来源有关，多一步推理',
-                  'c': '(c) 内容问题：与来源无关，直接读出', 'd': '(d) 算术问题：与来源无关，多一步推理'},
+                  'c': '(c) 内容问题：与来源无关，直接读出', 'd': '(d) 算术问题：与来源无关，多一步推理',
+                  'e': '(e) 归属问题，选项只用角色名或代词称呼模型：与来源有关，直接读出',
+                  'f': '(f) 不提问：X 自身上的下一个 token 预测'},
         'swap': '编辑 X：答案应换到另一条道', 'stay': '编辑 X：答案应不变',
+        'swap_pred': '编辑 X：预测应换到另一条道',
         # explicit line breaks (\\) where the automatic breaking of Chinese would split a word
         'lane': ('X = 自己的\\\\消息', 'X = User\\\\消息'), 'edited': '编辑', 'X': 'X',
         'steps': {'a': ('这条消息是我写的', '这条消息是\\\\用户写的'),
                   'b': ('是我说自己\\\\当出题人', '用户当出题人，\\\\我是猜题人', '用户还没猜：\\\\回答“请猜”', '只报一个猜的数'),
-                  'c': '找出 X 里\\\\最后一个数：{n}', 'd': ('计算 {x}×{y}', '结果 {p}')},
+                  'c': '找出 X 里\\\\最后一个数：{n}', 'd': ('计算 {x}×{y}', '结果 {p}'),
+                  'e': ('是 AI 助手\\\\写的', '这条消息是\\\\用户写的'),
+                  'f': ('把 X 当作\\\\自己的文字预测', '把 X 当作\\\\外来文字预测')},
         'control': '对照：最后一条消息换成“{q}”两条道都应答“{m}”。',
+        'note': {'e': '代词版：A. 你 B. 我 C. 系统。问题不编辑。',
+                 'f': '在 X 的正文 token 上测量（$A$、$U$、$S$：X 作为模型自己的、User 或 System 消息）：$\\mathrm{KL}(A\\Vert U)$ 与 $\\mathrm{KL}(A\\Vert S)$ 都大于 '
+                      '$\\mathrm{KL}(U\\Vert S)$ 即算单独分出。'},
         'role': {'system': 'System', 'user': 'User'},
     }}
+# the role-name wording differs from the main question only in the option that names the model
+assert T['en']['attr'].replace('You (the AI assistant)', 'The AI assistant') == T['en']['attr_role']
+assert T['zh']['attr'].replace('你（AI 助手）', 'AI 助手') == T['zh']['attr_role']
 
 
 def check(frags, src):
@@ -105,22 +139,28 @@ def build(lang):
     sysmsg, opener, X = g['msgs'][0]['content'], g['msgs'][1]['content'], g['msgs'][2]['content']
     rep = {c: json.load(open(REPLY[lang] / f'{c}__{g["id"]}.json', encoding='utf-8'))['answer']['given'] for c in ('base_A', 'base_U')}
     assert rep['base_A'].rstrip('.') in ('Go ahead', '请猜') and rep['base_U'].isdigit(), rep
+    qreply = REPLY_REQ[lang]
     n = '522'
     assert body.rstrip('。.').endswith(('records', '记录')) and n in body
     B = tex(q(check(t['body'], body), lang))
     S = tex(q(check(t['system'], sysmsg), lang))
     ar = t['arith'].format(x=x, y=y)
     st = t['steps']
+    # rows: key, messages, kind, steps, answers, options (only_x: shade and bracket X alone; sub: subtitle; note: muted note)
     rows = [
         ('a', [('X', B), ('user', tex(t['attr']))], 'swap',
-         [[st['a'][0]], [st['a'][1]]], ['A', 'B']),
+         [[st['a'][0]], [st['a'][1]]], ['A', 'B'], {}),
         ('b', [('system', S), ('user', tex(opener)), ('X', tex(X)), ('user', tex(q(g['q']['main'], lang)))], 'swap',
-         [[st['b'][0], st['b'][2]], [st['b'][1], st['b'][3]]], [rep['base_A'], rep['base_U']]),
-        ('c', [('X', B), ('user', tex(t['content']))], 'stay', [st['c'].format(n=n)], [n, n]),
+         [[st['b'][0], st['b'][2]], [st['b'][1], st['b'][3]]], [rep['base_A'], rep['base_U']], {}),
+        ('c', [('X', B), ('user', tex(t['content']))], 'stay', [st['c'].format(n=n)], [n, n], {}),
         ('d', [('X', B), ('user', tex(ar.replace('×', '$\\times$')))], 'stay',
-         [st['d'][0].format(x=x, y=y).replace('×', '$\\times$'), st['d'][1].format(p=x * y)], [str(x * y)] * 2),
+         [st['d'][0].format(x=x, y=y).replace('×', '$\\times$'), st['d'][1].format(p=x * y)], [str(x * y)] * 2, {}),
+        ('e', [('X', B), ('user', nohy(tex(t['attr_role'])))], 'swap',
+         [[st['e'][0]], [st['e'][1]]], ['A', 'B'], {'only_x': True, 'note': t['note']['e']}),
+        ('f', [('X', B), ('user', nohy(tex(qreply)))], 'swap', [[st['f'][0]], [st['f'][1]]],
+         ['{\\boldmath$p_A$}', '{\\boldmath$p_U$}'], {'only_x': True, 'sub': t['swap_pred'], 'note': t['note']['f']}),
     ]
-    W, TW, X0 = ('5.8cm', '1.15cm', 1.3)  # both languages; at 1.0cm "own / User" ran into the message box
+    W, TW, X0 = ('5.8cm', '1.15cm', 1.3)  # 11-01: English as Chinese; at 1.0cm "own / User" ran into the message box
     head = ('\\documentclass[varwidth=16.3cm,border=2pt]{standalone}\n'
             + ('\\usepackage[UTF8,fontset=windows]{ctex}\n' if lang == 'zh' else '\\usepackage[T1]{fontenc}\\usepackage{lmodern}\n')
             + '\\usepackage{tikz}\\usetikzlibrary{calc,arrows.meta}\n'
@@ -137,14 +177,17 @@ def build(lang):
             'text=white},arr/.style={-{Stealth[length=1.6mm]},line width=0.6pt,draw=#1}}\n'
             '\\begin{document}\\sffamily\n')
     out = [head]
-    for key, msgs, kind, steps, answers in rows:
-        L = ['\\begin{tikzpicture}', f'\\node[anchor=north west,inner sep=0,font=\\sffamily\\footnotesize\\bfseries,text=ink] (ti) at (0,0) {{{tex(t["title"][key])}}};',
-             f'\\node[anchor=north east,inner sep=0,font=\\sffamily\\scriptsize\\itshape,text=mute] at (16.1,-0.02) {{{tex(t[kind])}}};']
-        yv, prev, first_edit = -0.42, None, None
+    for key, msgs, kind, steps, answers, opt in rows:
+        nl = t['title'][key].count('\\\\')  # explicit title line breaks (none in a-d): align=left, panel one line lower each
+        L = ['\\begin{tikzpicture}', f'\\node[anchor=north west,inner sep=0,font=\\sffamily\\footnotesize\\bfseries,text=ink{",align=left" if nl else ""}] (ti) at (0,0) {{{tex(t["title"][key])}}};',
+             f'\\node[anchor=north east,inner sep=0,font=\\sffamily\\scriptsize\\itshape,text=mute] at (16.1,-0.02) {{{tex(opt.get("sub", t[kind]))}}};']
+        yv, prev, first_edit, last_edit = (round(-0.42 - TBS * nl, 3) if nl else -0.42), None, None, None
         for i, (role, txt) in enumerate(msgs):
-            edited = first_edit is not None or role == 'X'
+            edited = role == 'X' if opt.get('only_x') else (first_edit is not None or role == 'X')
             if role == 'X' and first_edit is None:
                 first_edit = i
+            if edited:
+                last_edit = i
             at = f'({X0},{yv})' if prev is None else f'($(m{prev}.south west)+(0,-0.08)$)'
             L.append(f'\\node[msg{",fill=edit" if edited else ""}] (m{i}) at {at} {{{txt}}};')
             lab = ('\\textcolor{own}{' + t['X'] + '}') if role == 'X' else t['role'][role]
@@ -153,13 +196,13 @@ def build(lang):
             L.append(f'\\node[tag,text=ink] at ($(m{i}.north west)+(-0.08,0)$) {{{lab}}};')
             prev = i
         last = len(msgs) - 1
-        L += [f'\\draw[line width=0.8pt,draw=mute] ($(m{first_edit}.north east)+(0.14,0)$) -- ++(0.06,0) |- ($(m{last}.south east)+(0.2,0)$) -- ++(-0.06,0);',
-              f'\\node[rotate=90,font=\\sffamily\\tiny,text=mute,anchor=south] at ($($(m{first_edit}.north east)!0.5!(m{last}.south east)$)+(0.3,0)$) {{{tex(t["edited"])}}};',
+        L += [f'\\draw[line width=0.8pt,draw=mute] ($(m{first_edit}.north east)+(0.14,0)$) -- ++(0.06,0) |- ($(m{last_edit}.south east)+(0.2,0)$) -- ++(-0.06,0);',
+              f'\\node[rotate=90,font=\\sffamily\\tiny,text=mute,anchor=south] at ($($(m{first_edit}.north east)!0.5!(m{last_edit}.south east)$)+(0.3,0)$) {{{tex(t["edited"])}}};',
               f'\\path let \\p1=($(m0.north)!0.5!(m{last}.south)$), \\p2=(m0.north) in coordinate (c) at (\\x1,{{min(\\y1,\\y2-27pt)}});', '\\coordinate (x0) at (8.75,0);']
         dy = 0.5
         for j, col in enumerate(('own', 'usr')):
             L.append(f'\\node[pill={col}] (p{j}) at ($(x0 |- c)+(0,{dy if j == 0 else -dy})$) {{{tex(t["lane"][j])}}};')
-            L.append(f'\\draw[arr=mute] ($(m{last}.south east)!0.5!(m{first_edit}.north east)+(0.5,0)$) -- (p{j}.west);')
+            L.append(f'\\draw[arr=mute] ($(m{last_edit}.south east)!0.5!(m{first_edit}.north east)+(0.5,0)$) -- (p{j}.west);')
         if kind == 'swap':
             for j, col in enumerate(('own', 'usr')):
                 prevn = f'p{j}'
@@ -167,7 +210,8 @@ def build(lang):
                     L.append(f'\\node[step={col},anchor=west] (s{j}{s}) at ($({prevn}.east)+(0.3,0)$) {{{tex(q(txt, lang))}}};')
                     L.append(f'\\draw[arr={col}] ({prevn}.east) -- (s{j}{s}.west);')
                     prevn = f's{j}{s}'
-                L.append(f'\\node[ans={col},anchor=west] (a{j}) at ($(p{j}.east)+(5.18,0)$) {{{tex(q(answers[j], lang))}}};')
+                a_txt = answers[j] if '$' in answers[j] else tex(q(answers[j], lang))
+                L.append(f'\\node[ans={col},anchor=west] (a{j}) at ($(p{j}.east)+(5.18,0)$) {{{a_txt}}};')
                 L.append(f'\\draw[arr={col}] ({prevn}.east) -- (a{j}.west);')
         else:
             prevn = None
@@ -184,9 +228,13 @@ def build(lang):
         if key == 'b':
             cq = q(t['control'].format(q=g['q']['control'], m=g['expect']['control']['assistant']), lang)
             L.append(f'\\node[anchor=north west,text width=6.55cm,inner sep=0,font=\\sffamily\\tiny,text=mute] at ($(p1.south west)+(0,-0.28)$) {{{tex(cq)}}};')
+        if opt.get('note'):  # same style and place as the game's control note
+            nt = opt['note'] if '$' in opt['note'] else tex(q(opt['note'], lang))
+            L.append(f'\\node[anchor=north west,text width=6.55cm,inner sep=0,font=\\sffamily\\tiny,text=mute] at ($(p1.south west)+(0,-0.28)$) {{{nt}}};')
         L.append('\\end{tikzpicture}\\par\\vspace{3.2mm}')
         out.append('\n'.join(L) + '\n')
     out.append('\\end{document}\n')
+    FIG.mkdir(parents=True, exist_ok=True)
     src = FIG / f'self_tasks_flow_{lang}.tex'
     src.write_text(''.join(out), encoding='utf-8')
     eng = 'xelatex' if lang == 'zh' else 'pdflatex'
@@ -198,21 +246,26 @@ def build(lang):
     assert r.returncode == 0, r.stdout[-3000:]
     PAPER.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(FIG / f'self_tasks_flow_{lang}.pdf', PAPER / f'self_tasks_flow_{lang}.pdf')
-    print(lang, 'ok', FIG / f'self_tasks_flow_{lang}.pdf', '| game replies', rep, '| arithmetic', x, y, x * y)
-
-
+    print(lang, 'ok', FIG / f'self_tasks_flow_{lang}.pdf', '| game replies', rep, '| arithmetic', x, y, x * y, '| reply request', qreply)
 
 
 def main(argv=None):
-    global FIG, PAPER, BODIES, GAMES, REPLY
+    global FIG, PAPER, BODIES, GAMES, REPLY, REPLY_REQ
     args = arguments(__doc__).parse_args(argv)
     r = Roots(args)
-    A = r.res(W3)
-    FIG = r.out(W3 + '/code/local/figures')
+    A, M, Wd = r.res(W3), r.res(MS), r.res(WS)
+    FIG = r.out(W3 + '/code/local/figures/drafts_20261110')
     PAPER = r.out(FIGURES)
     BODIES = {'en': A / 'items' / 'bodies_en_150_list.json', 'zh': A / 'items' / 'bodies_zh_150_list.json'}
     GAMES = {'en': A / 'items' / 'games_secret6' / 'games_en_secret6.json', 'zh': A / 'items' / 'games_secret6' / 'games_zh_secret6.json'}
     REPLY = {'en': run_path(A, 'games_swap/gpt_oss_20b_s6_main') / 'items', 'zh': run_path(A, 'games_swap/qwen38_27b_s6_main') / 'items'}
+    # the reply request after X in the next-token measurement, as the runs recorded it
+    REPLY_REQ = {lang: json.load(open(result_path(M, f'modeswitch/{s}') / 'identity.json', encoding='utf-8'))['reply_question']
+                 for lang, s in (('zh', 'qwen38_nt'), ('en', 'gpt_oss_20b_en'))}
+    # the role-name question of (e), as the wording runs built it (first option order)
+    for lang, run in (('zh', 'qth_role'), ('en', 'g20_role')):
+        w = json.load(open(result_path(Wd, f'thinking_swap/wording_20261109/{run}') / 'wording.json', encoding='utf-8'))
+        assert w['questions_orders_1_2'][0] == T[lang]['attr_role'], (lang, w['questions_orders_1_2'][0])
     for lang in ('en', 'zh'):
         build(lang)
 

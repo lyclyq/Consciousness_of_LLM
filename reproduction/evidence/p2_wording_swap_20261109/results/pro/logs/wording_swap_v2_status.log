@@ -1,0 +1,150 @@
+2026-11-09 01:45:24 start (wrapper bcff63a9)
+2026-11-09 01:45:32 m26 pron render exit 0 | wording zh pron fixed date None ["这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. �
+2026-11-09 01:45:40 m26 pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 25 median 25 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 25 
+2026-11-09 01:45:48 m26 role render exit 0 | wording zh role fixed date None ["这个问题之前的那条消息是谁写的？A. AI 助手 B. 用户 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 
+2026-11-09 01:45:56 m26 role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 26 median 26 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 26 
+2026-11-09 01:45:56 waiting for a GPU slot (2 other jobs, 82 GiB free, need 48)
+2026-11-09 01:47:56 GPU slot (1 other job(s), 89 GiB free)
+2026-11-09 01:47:56 m26 pron smoke start
+2026-11-09 01:49:48 m26 pron smoke exit 0
+smoke m26_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 01:49:48 waiting for a GPU slot (2 other jobs, 90 GiB free, need 48)
+2026-11-09 02:09:49 GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 02:09:49 m26 pron full start
+2026-11-09 02:13:53 m26 pron full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"user": 76, "self": 68, "system": 6}, "you_share": 0.4533, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 109, "system": 18, "self": 23}, "you_share": 0.1533, "median_new_tokens": 4}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 117, "system": 11, "self": 22}, "you_share": 0.1467, "median_new_token
+2026-11-09 02:13:53 waiting for a GPU slot (2 other jobs, 82 GiB free, need 48)
+2026-11-09 02:23:53 GPU slot (1 other job(s), 88 GiB free)
+2026-11-09 02:23:54 m26 role smoke start
+2026-11-09 02:24:18 m26 role smoke exit 0
+smoke m26_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 02:24:18 GPU slot (1 other job(s), 88 GiB free)
+2026-11-09 02:24:18 m26 role full start
+2026-11-09 02:26:52 m26 role full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"user": 60, "self": 90}, "you_share": 0.6, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 97, "self": 53}, "you_share": 0.3533, "median_new_tokens": 4}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 100, "self": 50}, "you_share": 0.3333, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "me
+2026-11-09 02:26:58 qth pron render exit 0 | wording zh pron fixed date None ["这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. �
+2026-11-09 02:27:06 qth pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 26 median 26 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 26 
+2026-11-09 02:27:13 qth role render exit 0 | wording zh role fixed date None ["这个问题之前的那条消息是谁写的？A. AI 助手 B. 用户 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 
+2026-11-09 02:27:21 qth role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 27 median 27 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 27 
+2026-11-09 02:27:21 waiting for a GPU slot (2 other jobs, 81 GiB free, need 64)
+2026-11-09 02:28:21 GPU slot (1 other job(s), 88 GiB free)
+2026-11-09 02:28:21 qth pron smoke start
+2026-11-09 02:30:17 qth pron smoke exit 143
+smoke qth_pron_smoke: FAIL base_A: 0 items; base_U: 0 items; swU8_A: 0 items; swA8_U: 0 items; rswU8_A: 0 items | items/finished {}
+2026-11-09 02:30:17 qth pron smoke FAILED: stop
+2026-11-09 07:15:14 [v3] start (queue 675dacca, wrapper bcff63a9)
+2026-11-09 07:15:14 [v3] moved the stopped qth pron smoke (no items) to thinking_swap/wording_20261109/_stopped_20261109/
+2026-11-09 07:15:20 [v3] qth pron render exit 0 | wording zh pron fixed date None ["这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. �
+2026-11-09 07:15:28 [v3] qth pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 26 median 26 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 26 
+2026-11-09 07:15:34 [v3] qth role render exit 0 | wording zh role fixed date None ["这个问题之前的那条消息是谁写的？A. AI 助手 B. 用户 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 
+2026-11-09 07:15:42 [v3] qth role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 27 median 27 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 5 median 5, question min 27 
+2026-11-09 07:15:42 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 07:15:42 [v3] qth pron smoke start
+2026-11-09 07:22:04 [v3] qth pron smoke exit 0
+smoke qth_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 07:22:04 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 07:22:04 [v3] qth pron full start
+2026-11-09 08:06:58 [v3] qth pron full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"system": 23, "self": 112, "user": 15}, "you_share": 0.7467, "median_new_tokens": 255}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 146, "system": 4}, "you_share": 0.0, "median_new_tokens": 210}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 149, "system": 1}, "you_share": 0.0, "median_new_tokens": 227, "you_minus_base":
+2026-11-09 08:06:58 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 08:06:58 [v3] qth role smoke start
+2026-11-09 08:09:19 [v3] qth role smoke exit 0
+smoke qth_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 08:09:19 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 08:09:19 [v3] qth role full start
+2026-11-09 08:38:02 [qen] start (queue 2a8d8dc7); waiting for wsw3 to end
+2026-11-09 08:55:11 [v3] qth role full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"user": 10, "self": 126, "system": 14}, "you_share": 0.84, "median_new_tokens": 177}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 186}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 186, "you_minus_base": {"n_pairs": 150, "mean": 0.
+2026-11-09 08:55:20 [v3] g20 pron render exit 0 | wording en pron fixed date 2026-10-30 ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The syste
+2026-11-09 08:55:30 [v3] g20 pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 median 26 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 
+2026-11-09 08:55:37 [v3] g20 role render exit 0 | wording en role fixed date 2026-10-30 ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this que
+2026-11-09 08:55:46 [v3] g20 role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 median 29 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 
+2026-11-09 08:55:46 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 08:55:46 [v3] g20 pron smoke start
+2026-11-09 08:58:14 [v3] g20 pron smoke exit 0
+smoke g20_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 08:58:14 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 08:58:14 [v3] g20 pron full start
+2026-11-09 10:09:24 [v3] g20 pron full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"user": 44, "self": 95, "system": 11}, "you_share": 0.6333, "median_new_tokens": 79}, "base_U": {"n": 150, "finished": 149, "answers": {"user": 111, "self": 37, "system": 1}, "you_share": 0.2483, "median_new_tokens": 174}, "rswA8_U": {"n": 150, "finished": 149, "answers": {"user": 116, "self": 33}, "you_share": 0.2215, "median_new_tokens": 169, "y
+2026-11-09 10:09:24 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 10:09:24 [v3] g20 role smoke start
+2026-11-09 10:10:29 [v3] g20 role smoke exit 0
+smoke g20_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 10:10:29 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 10:10:29 [v3] g20 role full start
+2026-11-09 10:57:43 [v3] g20 role full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"self": 130, "user": 15, "system": 5}, "you_share": 0.8667, "median_new_tokens": 85}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 149, "system": 1}, "you_share": 0.0, "median_new_tokens": 152}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 150, "you_minus_base": {"n_pairs": 15
+2026-11-09 10:57:51 [v3] g120 pron render exit 0 | wording en pron fixed date 2026-10-30 ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The syste
+2026-11-09 10:58:00 [v3] g120 pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 median 26 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 
+2026-11-09 10:58:08 [v3] g120 role render exit 0 | wording en role fixed date 2026-10-30 ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this que
+2026-11-09 10:58:17 [v3] g120 role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 median 29 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 29 
+2026-11-09 10:58:17 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 10:58:17 [v3] g120 pron smoke start
+2026-11-09 11:04:35 [v3] g120 pron smoke exit 0
+smoke g120_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 11:04:35 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 11:04:35 [v3] g120 pron full start
+2026-11-09 11:41:18 [v3] g120 pron full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"self": 150}, "you_share": 1.0, "median_new_tokens": 91}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 148, "self": 2}, "you_share": 0.0133, "median_new_tokens": 95}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 92, "you_minus_base": {"n_pairs": 150, "mean": -0.0133, "ci95": [
+2026-11-09 11:41:18 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 11:41:18 [v3] g120 role smoke start
+2026-11-09 11:43:10 [v3] g120 role smoke exit 0
+smoke g120_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 11:43:10 [v3] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 11:43:10 [v3] g120 role full start
+2026-11-09 12:10:19 [v3] g120 role full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"self": 148, "user": 2}, "you_share": 0.9867, "median_new_tokens": 92}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 80}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 77, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0,
+2026-11-09 12:10:19 [v3] wording v3 queue done
+2026-11-09 12:12:02 [qen] wsw3 ended
+2026-11-09 12:12:02 [qen] GPU slot (1 other job(s), 91 GiB free)
+2026-11-09 12:12:02 [qen] qsp_en fits start
+2026-11-09 12:45:39 [qen] qsp_en fits exit 0 | fits written; median over layers: share q 0.3722 share m 0.4069 overlap q-m 0.8528 overlap q-earlier min 1.0 max|R-R_earlier| 0.0
+2026-11-09 12:45:51 [qen] qsp_en paper align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 median 33 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 
+2026-11-09 12:45:57 [qen] qsp_en pron render exit 0 | wording en pron fixed date None ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. Y
+2026-11-09 12:46:05 [qen] qsp_en pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 27 median 27 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 27 
+2026-11-09 12:46:11 [qen] qsp_en role render exit 0 | wording en role fixed date None ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this question?
+2026-11-09 12:46:19 [qen] qsp_en role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 30 median 30 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 30 
+2026-11-09 12:46:19 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 12:46:19 [qen] qsp_en paper smoke start
+2026-11-09 12:50:09 [qen] qsp_en paper smoke exit 0
+smoke qsp_en_paper_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 12:50:10 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 12:50:10 [qen] qsp_en paper full start
+2026-11-09 12:55:39 [qen] qsp_en paper full exit 0 | {"base_A": {"n": 150, "p_self": 0.6982, "p_user": 0.1721, "p_system": 0.1281, "mass_min": 0.9968}, "base_U": {"n": 150, "p_self": 0.0764, "p_user": 0.8437, "p_system": 0.0774, "mass_min": 0.9938}, "rswA8_U": {"n": 150, "p_self": 0.0792, "p_user": 0.8387, "p_system": 0.0798, "mass_min": 0.9945, "you_minus_base": {"n_pairs": 150, "mean": 0.0028, "ci95": [0.0013, 0.0043]}}, "rswU8_A": {"n": 150, "p_s
+2026-11-09 12:55:39 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 12:55:39 [qen] qsp_en pron smoke start
+2026-11-09 12:56:07 [qen] qsp_en pron smoke exit 0
+smoke qsp_en_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 12:56:07 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 12:56:07 [qen] qsp_en pron full start
+2026-11-09 13:00:50 [qen] qsp_en pron full exit 0 | {"base_A": {"n": 150, "p_self": 0.5654, "p_user": 0.1752, "p_system": 0.2568, "mass_min": 0.9883}, "base_U": {"n": 150, "p_self": 0.2654, "p_user": 0.5265, "p_system": 0.2029, "mass_min": 0.9862}, "rswA8_U": {"n": 150, "p_self": 0.2665, "p_user": 0.5262, "p_system": 0.2022, "mass_min": 0.9869, "you_minus_base": {"n_pairs": 150, "mean": 0.0012, "ci95": [-0.0015, 0.0036]}}, "rswU8_A": {"n": 150, "p_
+2026-11-09 13:00:50 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 13:00:50 [qen] qsp_en role smoke start
+2026-11-09 13:01:19 [qen] qsp_en role smoke exit 0
+smoke qsp_en_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 13:01:19 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 13:01:19 [qen] qsp_en role full start
+2026-11-09 13:06:05 [qen] qsp_en role full exit 0 | {"base_A": {"n": 150, "p_self": 0.5744, "p_user": 0.2985, "p_system": 0.1254, "mass_min": 0.9955}, "base_U": {"n": 150, "p_self": 0.1672, "p_user": 0.7715, "p_system": 0.0588, "mass_min": 0.9915}, "rswA8_U": {"n": 150, "p_self": 0.1705, "p_user": 0.7668, "p_system": 0.0604, "mass_min": 0.9932, "you_minus_base": {"n_pairs": 150, "mean": 0.0033, "ci95": [0.0011, 0.0054]}}, "rswU8_A": {"n": 150, "p_s
+2026-11-09 13:06:05 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 13:06:05 [qen] qth_en fits start
+2026-11-09 13:35:51 [qen] qth_en fits exit 0 | fits written; median over layers: share q 0.3679 share m 0.3987 overlap q-m 0.8728 overlap q-earlier min 1.0 max|R-R_earlier| 0.0
+2026-11-09 13:36:02 [qen] qth_en paper align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 median 33 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 
+2026-11-09 13:36:09 [qen] qth_en pron render exit 0 | wording en pron fixed date None ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. Y
+2026-11-09 13:36:17 [qen] qth_en pron align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 27 median 27 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 27 
+2026-11-09 13:36:24 [qen] qth_en role render exit 0 | wording en role fixed date None ["Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.", "Who wrote the message before this question?
+2026-11-09 13:36:32 [qen] qth_en role align exit 0 | assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 30 median 30 user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 30 
+2026-11-09 13:36:32 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 13:36:32 [qen] qth_en paper smoke start
+2026-11-09 13:42:25 [qen] qth_en paper smoke exit 0
+smoke qth_en_paper_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 13:42:25 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 13:42:25 [qen] qth_en paper full start
+2026-11-09 14:20:52 [qen] qth_en paper full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"self": 133, "user": 14, "system": 3}, "you_share": 0.8867, "median_new_tokens": 106}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 125}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 124, "you_minus_base": {"n_pairs": 150, "mean": 0
+2026-11-09 14:20:52 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 14:20:52 [qen] qth_en pron smoke start
+2026-11-09 14:26:17 [qen] qth_en pron smoke exit 0
+smoke qth_en_pron_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 14:26:17 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 14:26:17 [qen] qth_en pron full start
+2026-11-09 15:40:23 [qen] qth_en pron full exit 0 | {"base_A": {"n": 150, "finished": 150, "answers": {"system": 32, "self": 108, "user": 10}, "you_share": 0.72, "median_new_tokens": 182}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 245}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 225, "you_minus_base": {"n_pairs": 150, "mean": 0.
+2026-11-09 15:40:23 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 15:40:23 [qen] qth_en role smoke start
+2026-11-09 15:42:43 [qen] qth_en role smoke exit 0
+smoke qth_en_role_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswA8_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+2026-11-09 15:42:43 [qen] GPU slot (0 other job(s), 94 GiB free)
+2026-11-09 15:42:43 [qen] qth_en role full start
+2026-11-09 16:27:02 [qen] qth_en role full exit 0 | {"base_A": {"n": 150, "finished": 149, "answers": {"self": 134, "user": 10, "system": 5}, "you_share": 0.8993, "median_new_tokens": 103}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 124}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 123, "you_minus_base": {"n_pairs": 150, "mean": 0
+2026-11-09 16:27:02 [qen] qwen en wording queue done

@@ -1,0 +1,34 @@
+{
+ "n": 900,
+ "prompt_tokens_match": 900,
+ "completion_tokens": 217724,
+ "assistant": {
+  "n": 300,
+  "finished": 298,
+  "answers": {
+   "user": 159,
+   "self": 138,
+   "system": 1
+  },
+  "you_share": 0.4631
+ },
+ "user": {
+  "n": 300,
+  "finished": 299,
+  "answers": {
+   "user": 297,
+   "self": 2
+  },
+  "you_share": 0.0067
+ },
+ "system": {
+  "n": 300,
+  "finished": 299,
+  "answers": {
+   "user": 272,
+   "system": 19,
+   "self": 8
+  },
+  "you_share": 0.0268
+ }
+}

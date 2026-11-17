@@ -1,0 +1,13 @@
+[proenv] 2026-11-14 01:22:21 venv FAILED
+[proenv] 2026-11-14 01:47:43 cancelled by the user (11-14: only GLM-5.3 on this machine; MiMo/EXAONE v6 go to PRO); venv_pro install and the MiMo/EXAONE downloads stopped, nothing ran
+[v6] 2026-11-14 02:01:07 weights and environment ready: [setup] 2026-11-14 02:00:48 venv OK: 2.6.0+cu124 12.4 5.19.0 4
+[v6] 2026-11-14 02:01:08 hc_edit tests: ALL PASS
+[v6] 2026-11-14 02:01:09 protocol inputs checked: items v6 4d27d8a5, runner 13463899, fit_q 07b80490
+[v6] 2026-11-14 02:01:09 smoke main start
+[v6] 2026-11-14 02:29:00 smoke main exit 0
+[v6] 2026-11-14 02:29:00 smoke control start
+[v6] 2026-11-14 02:39:38 smoke control exit 0
+[v6] 2026-11-14 02:39:38 smoke check (release rule of 10-26): PASS own 1.0 {'assistant': 8} | user 0.0 {'user': 8} | control 1.0 1.0 | finished 8 8
+[v6] 2026-11-14 02:39:38 main game start: first 50 items, 6 conditions
+[v6] 2026-11-14 04:53:41 main exit 0 | rs": 50, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU8_A": {"n": 50, "finished": 50, "median_new_tokens": 39, "reads_as": {"assistant": 50}, "own_share": 1.0, "own_minus_base": {"n_pairs": 50, "mean": 0.0, "ci95": [0.0, 0.0]}}, "swA8_U": {"n": 50, "finished": 50, "median_new_tokens": 128, "reads_as": {"assistant": 33, "user": 17}, "own_share": 0.66, "own_minus_base": {"n_pairs": 50, "mean": 0.66, "ci95": [0.52, 0.78]}}, "swU8_A": {"n": 50, "finished": 50, "median_new_tokens": 79, "reads_as": {"assis
+[v6] 2026-11-14 04:53:41 v6 done

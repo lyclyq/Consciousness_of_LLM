@@ -1,0 +1,8 @@
+smoke start 2026-11-10 05:08:30
+1 rc=0 finished: 2/2 bodies on disk
+2 rc=0 finished: 1/1 bodies on disk
+3 rc=0 finished: 1/1 bodies on disk
+extract b150_main_mimo26 rc=0
+extract p3_main_mimo26 rc=0
+extract b150_main_mimo26_roles rc=0
+smoke end 2026-11-10 05:10:52

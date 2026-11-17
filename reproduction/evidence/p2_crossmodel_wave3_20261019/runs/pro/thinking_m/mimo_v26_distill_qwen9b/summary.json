@@ -1,0 +1,35 @@
+{
+ "n": 480,
+ "unfinished": 0,
+ "correct_assistant": {
+  "n_finished": 120,
+  "correct": 81,
+  "other": 36,
+  "adopted": 3,
+  "adopted_share": 0.025,
+  "correct_share": 0.675
+ },
+ "correct_user": {
+  "n_finished": 120,
+  "other": 90,
+  "correct": 30,
+  "adopted_share": 0.0,
+  "correct_share": 0.25
+ },
+ "wrong_assistant": {
+  "n_finished": 120,
+  "adopted": 75,
+  "other": 44,
+  "correct": 1,
+  "adopted_share": 0.625,
+  "correct_share": 0.0083
+ },
+ "wrong_user": {
+  "n_finished": 120,
+  "adopted": 24,
+  "other": 95,
+  "correct": 1,
+  "adopted_share": 0.2,
+  "correct_share": 0.0083
+ }
+}

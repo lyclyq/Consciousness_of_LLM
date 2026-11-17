@@ -1,0 +1,24 @@
+{
+ "experiment": "P2_singlepass_ablate",
+ "script_sha256": "e848ae5c1df00f5c635901f85af007dec25dcbc97d260b3b17be75e895692248",
+ "model": "/root/hf_models/Qwen/Qwen3.8-27B",
+ "on_kwargs": "{\"enable_thinking\": false}",
+ "band": [
+  0,
+  63
+ ],
+ "question": "attr",
+ "fit_from": "",
+ "conditions": [
+  "base_A",
+  "rm64_A",
+  "rnd64_A",
+  "base_U",
+  "rm64_U",
+  "rnd64_U",
+  "rm8_A",
+  "rm1_A"
+ ],
+ "n_eval": 75,
+ "fit_s": 1155.4614424705505
+}

@@ -1,0 +1,22 @@
+{
+ "base_A": {
+  "n": 75,
+  "finished": 75,
+  "content_accuracy": 0.96
+ },
+ "base_U": {
+  "n": 75,
+  "finished": 75,
+  "content_accuracy": 0.9333
+ },
+ "swA8_U": {
+  "n": 75,
+  "finished": 75,
+  "content_accuracy": 0.9867
+ },
+ "swU8_A": {
+  "n": 75,
+  "finished": 75,
+  "content_accuracy": 0.96
+ }
+}

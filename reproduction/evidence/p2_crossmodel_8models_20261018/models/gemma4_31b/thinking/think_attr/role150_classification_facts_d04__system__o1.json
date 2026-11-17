@@ -1,0 +1,1 @@
+{"id": "role150_classification_facts_d04", "role": "system", "order": ["system", "self", "user"], "off": {"system": 2.5360168365295976e-07, "self": 4.1811850337580836e-07, "user": 0.9999985694885254}, "on_answer": "user", "on_letter": "C", "n_new": 209, "finished": true, "tail": "C<turn|>", "gen": null}

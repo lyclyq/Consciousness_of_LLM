@@ -1,0 +1,1 @@
+{"id": "role150_negation_c02", "role": "system", "order": ["self", "user", "system"], "off": {"self": 1.668667209742125e-05, "user": 8.474190690321848e-05, "system": 3.4632080314622726e-07}, "on_answer": "self", "on_letter": "A", "n_new": 356, "finished": true, "tail": "\n\nA. 你（AI 助手）\n\n答案：A<｜end▁of▁sentence｜>", "gen": null, "batch": 16}

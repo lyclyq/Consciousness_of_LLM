@@ -1,0 +1,7 @@
+model,orders,n_bodies,p_you_own,p_you_user,p_you_system,own_minus_max_other,bodies_positive,sign_p,p_system_as_user
+qwen35_27b,3_orders,150,0.0635,0.043,0.1572,-0.0937,1,2.12e-43,0.5135
+qwen35_27b,2_orders_as_paper,150,0.0426,0.0316,0.1428,-0.1002,0,1.4e-45,0.6647
+granite41_30b,3_orders,150,0.0304,0.0353,0.0304,-0.0066,100,5.45e-05,0.9142
+granite41_30b,2_orders_as_paper,150,0.0455,0.0529,0.0456,-0.0099,99,0.00011,0.9542
+granite42_30b,3_orders,150,0.0574,0.0126,0.056,0.0014,58,0.00685,0.6672
+granite42_30b,2_orders_as_paper,150,0.0814,0.0177,0.078,0.0034,62,0.0409,0.9047

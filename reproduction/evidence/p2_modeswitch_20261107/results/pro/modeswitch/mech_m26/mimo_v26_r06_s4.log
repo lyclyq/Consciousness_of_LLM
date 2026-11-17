@@ -1,0 +1,29 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:   0%|          | 1/760 [00:00<03:11,  3.96it/s]Loading weights:   0%|          | 2/760 [00:00<03:44,  3.38it/s]Loading weights:   2%|▏         | 14/760 [00:00<00:25, 29.07it/s]Loading weights:   5%|▍         | 35/760 [00:00<00:10, 70.36it/s]Loading weights:   6%|▌         | 47/760 [00:00<00:08, 82.64it/s]Loading weights:   9%|▉         | 67/760 [00:00<00:06, 112.87it/s]Loading weights:  11%|█         | 82/760 [00:01<00:05, 120.86it/s]Loading weights:  13%|█▎        | 99/760 [00:01<00:04, 133.72it/s]Loading weights:  16%|█▌        | 119/760 [00:01<00:04, 150.87it/s]Loading weights:  18%|█▊        | 136/760 [00:01<00:04, 140.33it/s]Loading weights:  20%|██        | 153/760 [00:01<00:04, 143.62it/s]Loading weights:  23%|██▎       | 173/760 [00:01<00:03, 154.16it/s]Loading weights:  25%|██▍       | 189/760 [00:01<00:03, 150.81it/s]Loading weights:  27%|██▋       | 205/760 [00:01<00:03, 144.02it/s]Loading weights:  30%|██▉       | 225/760 [00:02<00:03, 158.46it/s]Loading weights:  32%|███▏      | 242/760 [00:02<00:03, 155.01it/s]Loading weights:  34%|███▍      | 259/760 [00:02<00:03, 157.12it/s]Loading weights:  37%|███▋      | 279/760 [00:02<00:02, 167.78it/s]Loading weights:  40%|███▉      | 302/760 [00:02<00:02, 183.02it/s]Loading weights:  42%|████▏     | 321/760 [00:02<00:02, 172.87it/s]Loading weights:  45%|████▍     | 340/760 [00:02<00:02, 169.54it/s]Loading weights:  47%|████▋     | 360/760 [00:02<00:02, 172.55it/s]Loading weights:  50%|█████     | 382/760 [00:02<00:02, 183.05it/s]Loading weights:  53%|█████▎    | 401/760 [00:03<00:02, 155.33it/s]Loading weights:  55%|█████▌    | 418/760 [00:03<00:02, 157.91it/s]Loading weights:  69%|██████▉   | 523/760 [00:03<00:00, 391.44it/s]Loading weights:  90%|█████████ | 684/760 [00:03<00:00, 723.30it/s]Loading weights: 100%|██████████| 760/760 [00:03<00:00, 222.25it/s]
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae", "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31", "model": "/root/hf_models/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B", "on_kwargs": "{}", "n_layers": 32, "band": [0, 31], "fit_from": "r05r06_fits/m26/fit_seed4.pt", "question": "attr", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "rswU8_A", "rswA8_U"], "batch": 16, "max_new": 3072, "torch": "2.11.0+cu130", "transformers": "5.8.0"}
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 89, "self": 61}, "you_share": 0.4067, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4}}
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 89, "self": 61}, "you_share": 0.4067, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4}}
+rswU8_A 16/150 3s
+rswU8_A 32/150 5s
+rswU8_A 48/150 7s
+rswU8_A 64/150 9s
+rswU8_A 80/150 11s
+rswU8_A 96/150 13s
+rswU8_A 112/150 14s
+rswU8_A 128/150 16s
+rswU8_A 144/150 18s
+rswU8_A 150/150 19s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 89, "self": 61}, "you_share": 0.4067, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 101, "self": 49}, "you_share": 0.3267, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "mean": -0.08, "ci95": [-0.1267, -0.04]}}}
+rswA8_U 16/150 21s
+rswA8_U 32/150 23s
+rswA8_U 48/150 25s
+rswA8_U 64/150 27s
+rswA8_U 80/150 28s
+rswA8_U 96/150 30s
+rswA8_U 112/150 32s
+rswA8_U 128/150 34s
+rswA8_U 144/150 36s
+rswA8_U 150/150 37s
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 89, "self": 61}, "you_share": 0.4067, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [-0.02, 0.02]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 101, "self": 49}, "you_share": 0.3267, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "mean": -0.08, "ci95": [-0.1267, -0.04]}}}
+{"base_A": {"n": 150, "finished": 150, "answers": {"user": 89, "self": 61}, "you_share": 0.4067, "median_new_tokens": 4}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4}, "rswA8_U": {"n": 150, "finished": 150, "answers": {"user": 136, "self": 14}, "you_share": 0.0933, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [-0.02, 0.02]}}, "rswU8_A": {"n": 150, "finished": 150, "answers": {"user": 101, "self": 49}, "you_share": 0.3267, "median_new_tokens": 4, "you_minus_base": {"n_pairs": 150, "mean": -0.08, "ci95": [-0.1267, -0.04]}}}

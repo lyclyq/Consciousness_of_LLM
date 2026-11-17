@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  59,
+  91
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "31a362f47737",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  },
+  "main_U": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "59ac34a5aa10",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  },
+  "main_S": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "d606a5694188",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  },
+  "natural_A": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "b5a7d230aa77",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  },
+  "natural_U": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "b8ad6825938c",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  },
+  "natural_S": {
+   "close": "<turn|>",
+   "prefix_to_close_sha": "f54681b9bc07",
+   "tail": "<turn|>\n<|turn>user\nPlease respond based on the above.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>"
+  }
+ }
+}
+DRY RUN OK

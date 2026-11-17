@@ -16,6 +16,19 @@ def ids_of(x):
     return list(x[0]) if x and isinstance(x[0], list) else list(x)
 
 
+def template_kwargs(kw, fixed_date=None):
+    """The chat-template keyword arguments (a JSON string or a dict). With fixed_date (YYYY-MM-DD), templates that write the
+    current date (strftime_now, e.g. gpt-oss and Apertus) render that date instead of today: a strftime_now in the keyword arguments
+    shadows the template global."""
+    import json
+    kw = dict(json.loads(kw) if isinstance(kw, str) else kw)
+    if fixed_date:
+        import datetime as dt
+        day = dt.date.fromisoformat(fixed_date)
+        kw['strftime_now'] = lambda fmt: dt.datetime(day.year, day.month, day.day).strftime(fmt)
+    return kw
+
+
 class Renderer:
     def __init__(self, tok, kw):
         self.tok, self.kw = tok, kw

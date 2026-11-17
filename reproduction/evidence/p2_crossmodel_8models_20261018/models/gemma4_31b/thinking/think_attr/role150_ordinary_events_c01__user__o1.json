@@ -1,0 +1,1 @@
+{"id": "role150_ordinary_events_c01", "role": "user", "order": ["system", "self", "user"], "off": {"system": 7.163946519339603e-11, "self": 1.2626097500856304e-08, "user": 0.9999996423721313}, "on_answer": "user", "on_letter": "C", "n_new": 258, "finished": true, "tail": "C<turn|>", "gen": null}

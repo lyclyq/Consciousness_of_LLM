@@ -1,0 +1,32 @@
+{
+ "experiment": "P2_games_thinking",
+ "script_sha256": "5b29640df6a80a83526c7a4a1de55688c1ae37c3b2b077fa04d27f859ef820a1",
+ "role_swap_sha256": "f2362716c97bfc859a53e75fff2d0c69715c2f2d8bb4a30896635edcd06ef670",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/openai/gpt-oss-20b",
+ "on_kwargs": "{}",
+ "items": "games/games_en_secret5.json",
+ "items_sha256": "d24c0a2f2b6fc167558dde4bd842ce4b64a01938baf2cbf5005c9814b9f52f5d",
+ "games": "secret",
+ "qkind": "control",
+ "n_layers": 24,
+ "band": [
+  0,
+  23
+ ],
+ "fit_from": "thinking_ablate4/gpt_oss_20b_smoke/fit.pt",
+ "lang": "en",
+ "n_items": 100,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "swU8_A",
+  "swA8_U",
+  "rswU8_A",
+  "rswA8_U"
+ ],
+ "batch": 4,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.19.0"
+}

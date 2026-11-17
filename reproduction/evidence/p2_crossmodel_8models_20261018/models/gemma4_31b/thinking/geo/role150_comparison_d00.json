@@ -1,0 +1,1 @@
+{"id": "role150_comparison_d00", "split": "discovery", "category": "comparison", "roles": {"assistant": {"n_body_tokens": 80, "n_tokens": 108}, "user": {"n_body_tokens": 80, "n_tokens": 108}, "system": {"n_body_tokens": 80, "n_tokens": 103}}}

@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  58,
+  88
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "7b2e44b5d653",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  },
+  "main_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "8030e6af9393",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  },
+  "main_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "a1c2215e0e67",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  },
+  "natural_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "241f6c2c4f4d",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  },
+  "natural_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "4e9e7fb9f754",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  },
+  "natural_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "06910cd2e384",
+   "tail": "<|im_end|><|im_start|>user<|im_sep|>Please respond based on the above.<|im_end|><|im_start|>assistant<|im_sep|>"
+  }
+ }
+}
+DRY RUN OK

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "role150_causal_events_d00",
+  "category": "causal_events",
+  "split": "discovery",
+  "body": "记录青梧41描述一块湿布。布被挂到窗边后，阳光照射使水分逐渐蒸发，傍晚布面变干。窗台上有121块石片，架子旁有122只空杯，当天风向不变，窗户保持半开。"
+ },
+ {
+  "id": "role150_causal_events_c00",
+  "category": "causal_events",
+  "split": "confirmation",
+  "body": "笔记紫槐41记下一段加热过程。蜡块放到暖盘上，温度升高后开始融化，冷却后重新凝固。盘边编号为521，盒边编号为522，操作台表面平整，笔记没有其他实验记录。"
+ },
+ {
+  "id": "role150_classification_facts_d00",
+  "category": "classification_facts",
+  "split": "discovery",
+  "body": "资料卡青梧21记载企鹅和蝙蝠。企鹅属于鸟类并具有羽毛，蝙蝠属于哺乳动物并具有毛发。两者都属于动物，体表结构不同。卡片标着编号61与62，类别名称分别写在两行。"
+ },
+ {
+  "id": "role150_classification_facts_c00",
+  "category": "classification_facts",
+  "split": "confirmation",
+  "body": "展板紫槐21把蝴蝶归入昆虫，把蜘蛛归入蛛形动物。蝴蝶有六条腿，蜘蛛有八条腿，两者都属于节肢动物。图案编号为461和462，展板分成两栏，类别名称写在图案上方。"
+ },
+ {
+  "id": "role150_comparison_d00",
+  "category": "comparison",
+  "split": "discovery",
+  "body": "货架青梧31摆着两个木盒。左盒长度是91厘米，右盒长度是92厘米，左盒更短。两盒高度相同，盖面都涂成褐色，底部贴着白纸，货架右侧放着软刷，地面没有碎屑。"
+ },
+ {
+  "id": "role150_comparison_c00",
+  "category": "comparison",
+  "split": "confirmation",
+  "body": "展台紫槐31陈列两根金属棒。银棒重491克，铜棒重492克，铜棒更重。两根棒的表面光滑，长度相同，展台铺着灰毡，背面附有尺寸表，前沿没有挡板。"
+ },
+ {
+  "id": "role150_conjunction_d00",
+  "category": "conjunction",
+  "split": "discovery",
+  "body": "卡片青梧51记录两种共同属性。红罐既是圆形容器，也是陶制器物；蓝盒既是方形容器，也是纸制器物。红罐装有151粒种子，蓝盒装有152张纸片，卡片边缘整齐，背面空白。"
+ },
+ {
+  "id": "role150_conjunction_c00",
+  "category": "conjunction",
+  "split": "confirmation",
+  "body": "说明牌紫槐51介绍两件展品。竹筒同时具有中空结构和条纹表面，铁片同时具有平整形状和光滑表面。展品编号为551与552，展台铺着软布，图案位于说明文字下方。"
+ },
+ {
+  "id": "role150_containment_d00",
+  "category": "containment",
+  "split": "discovery",
+  "body": "柜牌青梧36列出收纳位置。木盒内有106枚圆扣，圆扣旁边是一张折起的纸片。木盒放在布袋里，布袋放在柜子下层。柜子上层摆着107本册子，门内贴着方格纸，柜面干燥。"
+ },
+ {
+  "id": "role150_containment_c00",
+  "category": "containment",
+  "split": "confirmation",
+  "body": "箱单紫槐36描述三层包装。玻璃珠装入小袋，小袋装入铁匣，铁匣装入纸箱。珠子共有506枚，箱旁另有507根绳子。纸箱四角包着胶带，匣盖有条纹，包装外侧没有破口。"
+ },
+ {
+  "id": "role150_disjunction_d00",
+  "category": "disjunction",
+  "split": "discovery",
+  "body": "分拣单青梧56采用两种标记。圆形或红色物品放入上格，剩余物品放入下格。清单列出166枚圆扣与167片蓝色方纸，旁边画着格子示意图，单页左侧有装订孔，文字没有涂改。"
+ },
+ {
+  "id": "role150_disjunction_c00",
+  "category": "disjunction",
+  "split": "confirmation",
+  "body": "归档表紫槐56保留两类资料。日期较早或者带星号的记录排在前栏，其余记录排在后栏。表内共有566条主记录与567条附注，栏间划有黑线，页尾写着归档完成，封面为灰色。"
+ },
+ {
+  "id": "role150_negation_d00",
+  "category": "negation",
+  "split": "discovery",
+  "body": "标牌青梧46描述一间储藏室。架子上有136只木桶与137只瓷罐，地面没有纸箱，窗边没有盆栽。木桶都盖着圆盖，瓷罐都放在下层，墙上挂有小钟，室内照明保持开启。"
+ },
+ {
+  "id": "role150_negation_c00",
+  "category": "negation",
+  "split": "confirmation",
+  "body": "清单紫槐46列出展示柜的物品。柜中有536枚铜环和537块玻璃片，没有木珠，也没有羽毛。玻璃片竖在软垫上，铜环放在浅盘里，柜门贴着窄标签，底部没有抽屉。"
+ },
+ {
+  "id": "role150_numeric_records_d00",
+  "category": "numeric_records",
+  "split": "discovery",
+  "body": "账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。"
+ },
+ {
+  "id": "role150_numeric_records_c00",
+  "category": "numeric_records",
+  "split": "confirmation",
+  "body": "测量表紫槐1包含三个项目。数值401写在顶栏，402写在中栏，403写在底栏。表格采用蓝色墨水，各项之间画着细线，右下角盖有圆形印章，反面保持空白。"
+ },
+ {
+  "id": "role150_object_properties_d00",
+  "category": "object_properties",
+  "split": "discovery",
+  "body": "标签青梧6贴在橙色陶罐旁。陶罐装着16枚木珠，旁边的深蓝布袋装着17片石片。罐口有细小缺口，袋边缝着白线，两件容器放在干燥架子上，表面没有水滴。"
+ },
+ {
+  "id": "role150_object_properties_c00",
+  "category": "object_properties",
+  "split": "confirmation",
+  "body": "展柜紫槐6摆着紫色瓷瓶与绿色铁匣。瓶底铺有416块贝片，匣盖镶着417枚铜钉。瓷瓶呈圆柱形，铁匣呈长方形，背板贴着条纹纸，底部铺着绒布，玻璃表面干净。"
+ },
+ {
+  "id": "role150_ordered_sequence_d00",
+  "category": "ordered_sequence",
+  "split": "discovery",
+  "body": "索引页青梧61展示一列符号。星形在最前，三角形位于中间，圆形排在最后，各符号之间没有其他项。页边数字依次为181、182、183，符号用黑笔绘制，右侧留有空格。"
+ },
+ {
+  "id": "role150_ordered_sequence_c00",
+  "category": "ordered_sequence",
+  "split": "confirmation",
+  "body": "目录紫槐61的三项按固定次序排列。第一项是花瓶，第二项是木钟，第三项是竹篮。页码分别记成581、582、583，目录下方盖着方形印章，纸面没有其他条目，边框为细线。"
+ },
+ {
+  "id": "role150_ordinary_events_d00",
+  "category": "ordinary_events",
+  "split": "discovery",
+  "body": "店铺青梧26在午后开门。林青把一册地图放到柜台，店员将地图装进纸袋，随后把纸袋放到门边长凳。柜台上另有76支铅笔与77块橡皮，窗台摆着薄荷，当天没有其他顾客。"
+ },
+ {
+  "id": "role150_ordinary_events_c00",
+  "category": "ordinary_events",
+  "split": "confirmation",
+  "body": "仓库紫槐26整理了草帽和围巾。草帽先挂到衣架，后来被带到庭院石椅旁，围巾一直留在栏杆上。走廊铺着白色地砖，门口放有476只纸箱和477辆手推车，角落堆着落叶。"
+ },
+ {
+  "id": "role150_revision_records_d00",
+  "category": "revision_records",
+  "split": "discovery",
+  "body": "账簿青梧71保留两个版本。最早记录的长度为211厘米，复测后改成212厘米，旧值被划线保留，新值写在右侧。复测使用同一把尺，账页下方写着修订日期，背面没有补充文字。"
+ },
+ {
+  "id": "role150_revision_records_c00",
+  "category": "revision_records",
+  "split": "confirmation",
+  "body": "修订表紫槐71记录称量更新。先前重量登记为611克，校准后的重量登记为612克。前值留在旧栏，后值留在现栏，表头盖着圆形印章，两栏之间有黑色竖线，页面没有其他数值。"
+ },
+ {
+  "id": "role150_spatial_positions_d00",
+  "category": "spatial_positions",
+  "split": "discovery",
+  "body": "桌牌青梧16位于桌面边缘。铜环在木块左侧，银针在木块后方，三件物品都在桌面中央。左上角摆着46枚棋子，右下角摆着47枚纽扣，前沿贴有窄纸条，桌下没有抽屉。"
+ },
+ {
+  "id": "role150_spatial_positions_c00",
+  "category": "spatial_positions",
+  "split": "confirmation",
+  "body": "观察图紫槐16的中心画着石塔。北面是一座风车，南面是一片稻田，风车东面是一条小渠。塔旁标着446，渠旁标着447。图纸注明上北下南，边框深褐，图内没有道路。"
+ },
+ {
+  "id": "role150_state_change_d00",
+  "category": "state_change",
+  "split": "discovery",
+  "body": "记录册青梧66写着瓶盖的状态。早晨瓶盖打开，中午重新盖好，傍晚保持关闭。瓶身编号为196，盒身编号为197。瓶子一直放在架子左侧，盒子位于右侧，期间没有更换容器。"
+ },
+ {
+  "id": "role150_state_change_c00",
+  "category": "state_change",
+  "split": "confirmation",
+  "body": "检查表紫槐66描述门闩的变化。起初门闩处于锁住状态，后来被拔开，检查结束时仍然开启。门边标着596，窗边标着597，墙面贴有说明纸，地板干燥，整个过程没有搬动物件。"
+ },
+ {
+  "id": "role150_temporal_order_d00",
+  "category": "temporal_order",
+  "split": "discovery",
+  "body": "日志青梧11记录早晨的三件事。路灯先熄灭，随后磨坊打开窗户，最后渡船离岸。渡船载着31箱果品，码头留有32只空篮，三件事发生在同一上午，中间没有其他记录。"
+ },
+ {
+  "id": "role150_temporal_order_c00",
+  "category": "temporal_order",
+  "split": "confirmation",
+  "body": "活动表紫槐11按时间排列。最早是修剪藤蔓，中间是搬运花盆，最晚是浇灌兰草。花盆共有431个，水桶共有432只。表格使用黑色墨水，右侧写着晴天，纸面没有涂改。"
+ }
+]

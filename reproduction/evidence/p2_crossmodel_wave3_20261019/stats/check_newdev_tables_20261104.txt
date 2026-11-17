@@ -1,0 +1,27 @@
+Table 5 [en] MiMo-V2.6-Distill-9B$^{a}$: OK
+Table 5 [en] phi-4: OK
+Table 5 [en] Apertus-8B: OK
+Table 5 [en] Moonlight-16B-A3B: OK
+Table 5 [en] MiMo-7B-RL: OK
+Table 5 [en] MiMo-VL-7B: OK
+Table 5 [en] ERNIE-4.5-21B-A3B: OK
+Table 5 [zh] MiMo-V2.6-Distill-9B$^{a}$: OK
+Table 5 [zh] phi-4: OK
+Table 5 [zh] Apertus-8B: OK
+Table 5 [zh] Moonlight-16B-A3B: OK
+Table 5 [zh] MiMo-7B-RL: OK
+Table 5 [zh] MiMo-VL-7B: OK
+Table 5 [zh] ERNIE-4.5-21B-A3B: OK
+Natural [en] MiMo-7B-RL: OK
+Natural [en] Moonlight-16B-A3B: OK
+Natural [en] phi-4: OK
+Natural [en] ERNIE-4.5-21B-A3B$^{a}$: OK
+Natural [zh] MiMo-7B-RL: OK
+Natural [zh] Moonlight-16B-A3B: OK
+Natural [zh] phi-4: OK
+Natural [zh] ERNIE-4.5-21B-A3B$^{a}$: OK
+Natural two roles [en] Apertus-8B: OK
+Natural two roles [zh] Apertus-8B: OK
+Own steps [en] MiMo-V2.6-Distill-9B: OK
+Own steps [zh] MiMo-V2.6-Distill-9B: OK
+26 checks, 0 mismatches

@@ -1,0 +1,5 @@
+model,mode,position,n_layers,layers_A_apart_all_heldout,layers_A_apart_80pct,last_third_80pct,last_third_size,layers_80pct,median_R_A
+olmo2_7b,non_thinking,content,32,5,5,0,10,0 1 2 3 4,0.98
+olmo2_7b,non_thinking,onset,32,6,6,0,10,0 1 2 3 4 5,1.3601
+olmo2_13b,non_thinking,content,40,4,4,0,13,0 1 2 3,0.8986
+olmo2_13b,non_thinking,onset,40,13,13,0,13,0 1 2 3 4 5 6 7 8 9 10 11 12,1.0713

@@ -1,0 +1,141 @@
+{
+ "tag": "gpt_oss_20b_en",
+ "order": "natural",
+ "n_layers": 24,
+ "keep_layers": [
+  9,
+  12,
+  14,
+  17,
+  20,
+  23
+ ],
+ "n_held_out": 75,
+ "families": 15,
+ "n_bodies_on_disk": 150,
+ "group": "index",
+ "script_identity": {
+  "script_sha256": "43db1f0275b29296e693af7ee3324273394fbcd4a1c456966a381eac0273138a",
+  "model": "/root/hf_models/openai/gpt-oss-20b",
+  "tmpl_kwargs": {},
+  "lang": "en",
+  "fixed_date": "2026-10-19",
+  "natural_system_ok": false
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "2": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "3": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "4": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "5": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "full": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "empty": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "6": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "7": {
+   "n_bodies": 60,
+   "defined": false
+  },
+  "8": {
+   "n_bodies": 30,
+   "defined": false
+  },
+  "9": {
+   "n_bodies": 10,
+   "defined": false
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 0.9343919839769873,
+   "M2_ci95": [
+    0.9211303685584818,
+    0.9469048098041681
+   ],
+   "M3_direction_cos": 0.942626388135387,
+   "M3_ci95": [
+    0.9359285692332824,
+    0.9513434345759557
+   ],
+   "C1_median": 3561122.816315431,
+   "C1_ci95": [
+    3489905.1704095625,
+    3634736.1652296754
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.9341029650819289,
+   "per_layer": {
+    "9": {
+     "size": 0.9970502004887156,
+     "cos": 0.9168118338012509
+    },
+    "12": {
+     "size": 0.9010863370116808,
+     "cos": 0.9366690851557681
+    },
+    "14": {
+     "size": 0.9370661681771266,
+     "cos": 0.94699964881084
+    },
+    "17": {
+     "size": 0.9781008172994131,
+     "cos": 0.9620390260979698
+    },
+    "20": {
+     "size": 0.931717799776848,
+     "cos": 0.938253127459934
+    },
+    "23": {
+     "size": 0.9075930624145249,
+     "cos": 0.9582966876239722
+    }
+   }
+  },
+  "A-S": {
+   "defined": false
+  },
+  "U-S": {
+   "defined": false
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 0.8527876138687134,
+   "common_ratio": 0.8095508148653654,
+   "cos_first_last": 0.9067953320627463,
+   "share_first": 0.3350137264933455,
+   "share_last": 0.3103432877964325
+  }
+ },
+ "verdict": {
+  "prediction": "P1",
+  "M1_index_at_every_length": null,
+  "M2_at_least_0.8_and_reliable": true,
+  "holds": true,
+  "M1_evaluable": false
+ }
+}

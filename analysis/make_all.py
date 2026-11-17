@@ -6,7 +6,7 @@ usage: make_all.py --results RES --out OUT [--features FEAT] [--item-cache DIR] 
                    [--reasoning-dir DIR] [--only NAME[,NAME...]] [--skip NAME[,NAME...]]
   --features       the feature package (two_level_geometry and eq1_tests need it; skipped without it)
   --item-cache     cache of per-item records (speeds up the causal-test scripts on Windows)
-  --paper-source   the paper's LaTeX source folder, for the phrase and table checks of hand_checks
+  --paper-source   the paper's LaTeX source folder, for the phrase and table checks of hand_checks and fig_kl_scatter
   --defgeo         the per-layer features of the Qwen3.8-27B message-content run (not in the packages): message_geometry and
                    the Qwen part of eq1_tests
   --reasoning-dir  the per-problem records of the two-level reasoning run (not in the packages): ownstep's reasoning summary
@@ -22,8 +22,10 @@ HERE = Path(__file__).resolve().parent
 # (script, extra arguments it accepts: 'features', 'cache', 'paper', 'defgeo', 'reasoning')
 STEPS = [('crossmodel_classification', ()), ('thresholds_orders', ()), ('model_templates', ()), ('ownstep', ('reasoning',)),
          ('causal_tests', ('cache',)), ('causal_controls', ('cache',)), ('hand_checks', ('paper',)), ('two_level_thinking', ()),
-         ('fig_crossmodel', ()), ('natural_order', ()), ('benchmarks', ()), ('causal_tables', ()), ('english_ablation', ()), ('fig_depth', ()),
-         ('fig_inducer', ()), ('fig_fd_layers', ()), ('two_level_geometry', ('features',)), ('fig_geometry', ()),
+         ('fig_crossmodel', ()), ('natural_order', ()), ('benchmarks', ()), ('question_wording', ()), ('next_token', ()),
+         ('causal_tables', ()), ('english_ablation', ()), ('fig_depth', ()),
+         ('fig_inducer', ()), ('fig_fd_layers', ()), ('fig_kl_scatter', ('paper',)), ('fig_wording', ()),
+         ('two_level_geometry', ('features',)), ('fig_geometry', ()),
          ('fig_selfref', ()), ('fig_thinking', ()), ('fig_embedding', ()), ('eq1_tests', ('features', 'defgeo')),
          ('message_geometry', ('defgeo_only',)), ('appendix_tex', ()), ('fig_overview', ()), ('fig_readout', ()),
          ('fig_design', ()), ('fig_tasks', ())]

@@ -1,0 +1,13 @@
+model,role,n_items,n_finished,answered_you,answered_user,answered_system,unparsed,correct_share,you_share
+ernie45_21b,assistant,300,299,23,256,20,0,0.0769,0.0769
+ernie45_21b,user,300,300,5,289,6,0,0.9633,0.0167
+ernie45_21b,system,300,298,24,259,15,0,0.0503,0.0805
+mimo7b_rl,assistant,300,186,8,178,0,0,0.043,0.043
+mimo7b_rl,user,300,243,8,235,0,0,0.9671,0.0329
+mimo7b_rl,system,300,174,5,169,0,0,0.0,0.0287
+mimo_vl7b,assistant,300,298,3,295,0,0,0.0101,0.0101
+mimo_vl7b,user,300,299,0,299,0,0,1.0,0.0
+mimo_vl7b,system,300,300,1,299,0,0,0.0,0.0033
+mimo_distill9b,assistant,300,300,104,196,0,0,0.3467,0.3467
+mimo_distill9b,user,300,300,14,286,0,0,0.9533,0.0467
+mimo_distill9b,system,300,300,35,265,0,0,0.0,0.1167

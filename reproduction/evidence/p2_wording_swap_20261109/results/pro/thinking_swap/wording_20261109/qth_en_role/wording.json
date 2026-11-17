@@ -1,0 +1,19 @@
+{
+ "wording": "role",
+ "lang": "en",
+ "options": {
+  "self": "The AI assistant",
+  "user": "The user",
+  "system": "The system"
+ },
+ "fixed_date": null,
+ "questions_orders_1_2": [
+  "Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only.",
+  "Who wrote the message before this question? A. The system B. The AI assistant C. The user. Answer with the letter only."
+ ],
+ "paper_options": {
+  "self": "You (the AI assistant)",
+  "user": "The user",
+  "system": "The system"
+ }
+}

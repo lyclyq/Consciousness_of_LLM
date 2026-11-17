@@ -1,0 +1,42 @@
+[moonlight_compat] /root/hf_models_p2nat/moonshotai/Moonlight-16B-A3B-Instruct: tokenizer with TikTokenTokenizer special ids, native DeepseekV3 (trust_remote_code=False)
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  44,
+  59
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "27d51cb4e188",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  },
+  "main_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "e35849495d86",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  },
+  "main_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "f72d5313667a",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  },
+  "natural_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "e8b48eb5745c",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  },
+  "natural_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "aeca4b5f44aa",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  },
+  "natural_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "e51571225d1d",
+   "tail": "<|im_end|><|im_user|>user<|im_middle|>请根据上文回应。<|im_end|><|im_assistant|>assistant<|im_middle|>"
+  }
+ }
+}
+DRY RUN OK

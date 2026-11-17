@@ -1,0 +1,68 @@
+{
+ "encoding_py": "/root/data/tpl_probe/deepseek-ai/DeepSeek-V4.1-Flash-1017/encoding/encoding.py",
+ "encoding_py_sha256": "13231c592e958fb39e2af6001dae69d90e7a36b265702b9b390236fb387599e2",
+ "same_as_runs": true,
+ "lang": "zh",
+ "main": {
+  "non-thinking": {
+   "kwargs": {
+    "thinking_mode": "chat"
+   },
+   "assistant": {
+    "text": "<｜begin▁of▁sentence｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   },
+   "user": {
+    "text": "<｜begin▁of▁sentence｜><｜User｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。\n\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   },
+   "system": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   }
+  },
+  "thinking": {
+   "kwargs": {
+    "thinking_mode": "thinking",
+    "reasoning_effort": "high"
+   },
+   "assistant": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   },
+   "user": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n<｜User｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。\n\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   },
+   "system": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   }
+  }
+ },
+ "natural": {
+  "non-thinking": {
+   "kwargs": {
+    "thinking_mode": "chat"
+   },
+   "assistant": {
+    "text": "<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜Assistant｜></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   },
+   "user": {
+    "text": "<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。\n\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   },
+   "system": {
+    "text": "<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜System｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜></think>"
+   }
+  },
+  "thinking": {
+   "kwargs": {
+    "thinking_mode": "thinking",
+    "reasoning_effort": "high"
+   },
+   "assistant": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n<｜User｜>请写一段简短的描述。<｜Assistant｜></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   },
+   "user": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n<｜User｜>请写一段简短的描述。\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。\n\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   },
+   "system": {
+    "text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\n\n<｜User｜>请写一段简短的描述。<｜System｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>"
+   }
+  }
+ }
+}

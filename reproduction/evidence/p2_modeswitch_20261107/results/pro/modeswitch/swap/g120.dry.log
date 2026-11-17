@@ -1,0 +1,10 @@
+{
+ "held_out": 75,
+ "aligned_body_share_min": {
+  "A<-U": 1.0,
+  "A<-S": 0.984,
+  "U<-A": 1.0,
+  "S<-A": 0.984
+ }
+}
+DRY RUN OK

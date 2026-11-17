@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  61,
+  91
+ ],
+ "body0": {
+  "main_A": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "02d9b8bec79e",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  },
+  "main_U": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "66c74f5732d9",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  },
+  "main_S": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "e54dfdb88841",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  },
+  "natural_A": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "f44fbbb4cefd",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  },
+  "natural_U": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "bd60af6fbef1",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  },
+  "natural_S": {
+   "close": "[|endofturn|]",
+   "prefix_to_close_sha": "fe772dc53ce5",
+   "tail": "[|endofturn|]\n[|user|]\nPlease respond based on the above.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n"
+  }
+ }
+}
+DRY RUN OK

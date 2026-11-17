@@ -1,0 +1,21 @@
+[transformers] You are using a model of type `deepseek_v41` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+19 bodies, 18 to run
+1/18 bodies, 680s, experts 548s; last role150_numeric_records_c04 (680s), check max rel 0.00e+00
+2/18 bodies, 1295s, experts 1046s; last role150_object_properties_c03 (615s), check max rel 0.00e+00
+3/18 bodies, 1952s, experts 1587s; last role150_temporal_order_c02 (657s), check max rel 0.00e+00
+4/18 bodies, 2592s, experts 2111s; last role150_spatial_positions_c01 (640s), check max rel 0.00e+00
+5/18 bodies, 3257s, experts 2662s; last role150_classification_facts_c00 (665s), check max rel 0.00e+00
+6/18 bodies, 3920s, experts 3212s; last role150_classification_facts_c04 (663s), check max rel 0.00e+00
+7/18 bodies, 4534s, experts 3713s; last role150_ordinary_events_c03 (614s), check max rel 0.00e+00
+8/18 bodies, 5174s, experts 4238s; last role150_comparison_c02 (640s), check max rel 0.00e+00
+9/18 bodies, 5803s, experts 4752s; last role150_containment_c01 (629s), check max rel 0.00e+00
+10/18 bodies, 6431s, experts 5267s; last role150_causal_events_c00 (627s), check max rel 0.00e+00
+11/18 bodies, 7060s, experts 5784s; last role150_causal_events_c04 (629s), check max rel 0.00e+00
+12/18 bodies, 7679s, experts 6289s; last role150_negation_c03 (619s), check max rel 0.00e+00
+13/18 bodies, 8320s, experts 6816s; last role150_conjunction_c02 (641s), check max rel 0.00e+00
+14/18 bodies, 9003s, experts 7385s; last role150_disjunction_c01 (683s), check max rel 0.00e+00
+15/18 bodies, 9660s, experts 7929s; last role150_ordered_sequence_c00 (657s), check max rel 0.00e+00
+16/18 bodies, 10319s, experts 8472s; last role150_ordered_sequence_c04 (659s), check max rel 0.00e+00
+17/18 bodies, 10993s, experts 9030s; last role150_state_change_c03 (674s), check max rel 0.00e+00
+18/18 bodies, 11680s, experts 9605s; last role150_revision_records_c02 (687s), check max rel 0.00e+00
+shard 0: 19/19 bodies on disk

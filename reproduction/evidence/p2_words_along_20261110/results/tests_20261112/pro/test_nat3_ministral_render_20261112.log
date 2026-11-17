@@ -1,0 +1,53 @@
+[transformers] The tokenizer you are loading from '/root/tok_words/mistralai/Ministral-3-14B-Instruct-2512-BF16' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+{
+ "/root/tok_words/mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+  "natural_system_ok": true,
+  "roles": [
+   "A",
+   "S",
+   "U"
+  ],
+  "tok_default": "TokenizersBackend",
+  "tok_fixed": "TokenizersBackend",
+  "role_mismatch_bodies": [],
+  "words_along_role_mismatch_bodies": [],
+  "word_mismatch": [],
+  "n_word_mismatch": 0,
+  "n_control_default": 1000,
+  "n_control_fixed": 1000,
+  "control_sets_equal": true,
+  "len_tok_default": 131072,
+  "len_tok_fixed": 131072,
+  "common_body_min_max": [
+   70,
+   88
+  ]
+ }
+}
+[transformers] The tokenizer you are loading from '/root/tok_words/mistralai/Ministral-3-14B-Reasoning-2512' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+{
+ "/root/tok_words/mistralai/Ministral-3-14B-Reasoning-2512": {
+  "natural_system_ok": true,
+  "roles": [
+   "A",
+   "S",
+   "U"
+  ],
+  "tok_default": "TokenizersBackend",
+  "tok_fixed": "TokenizersBackend",
+  "role_mismatch_bodies": [],
+  "words_along_role_mismatch_bodies": [],
+  "word_mismatch": [],
+  "n_word_mismatch": 0,
+  "n_control_default": 1000,
+  "n_control_fixed": 1000,
+  "control_sets_equal": true,
+  "len_tok_default": 131072,
+  "len_tok_fixed": 131072,
+  "common_body_min_max": [
+   70,
+   88
+  ]
+ }
+}
+RENDER CHECK OK

@@ -1,0 +1,30 @@
+n = 14 models with a published GPQA score
+group    Spearman rho = +0.04  permutation p = 0.88  95% bootstrap [-0.65, +0.57]
+selfref  Spearman rho = +0.31  permutation p = 0.30  95% bootstrap [-0.28, +0.73]
+index    Spearman rho = -0.03  permutation p = 0.94  95% bootstrap [-0.58, +0.51]
+claim    Spearman rho = +0.42  permutation p = 0.13  95% bootstrap [-0.28, +0.83]
+GPQA with self-reference: median 80.1 (n=5); without: median 75.2 (n=9); Mann-Whitney p = 0.30
+  Qwen3.8-Flash-Next               GPQA  91.7  group 2  index 1.00  claim +0.66
+  Qwen3.8-27B                      GPQA  89.2  group 3  index 1.00  claim +0.96
+  Qwen3.6-27B                      GPQA  87.8  group 0  index 0.09  claim +0.00
+  Qwen3.6-35B-A3B                  GPQA  86.0  group 0  index 0.03  claim +0.00
+  Qwen3.5-27B                      GPQA  85.5  group 0  index 0.20  claim +0.02
+  Gemma-4-31B                      GPQA  84.3  group 0  index 0.00  claim +0.03
+  gpt-oss-120b                     GPQA  80.1  group 2  index 0.94  claim +0.97
+  GLM-4.7-Flash                    GPQA  75.2  group 1  index 1.00  claim +0.06
+  EXAONE-4.0.1-32B                 GPQA  74.3  group 2  index 1.00  claim +0.12
+  gpt-oss-20b                      GPQA  71.5  group 2  index 1.00  claim +0.78
+  Seed-OSS-36B                     GPQA  71.4  group 0  index 0.00  claim +0.00
+  Granite-4.2-30B                  GPQA  66.4  group 1  index 0.92  claim +0.00
+  DeepSeek-R1-Distill-Llama-70B    GPQA  65.2  group 1  index 1.00  claim -0.07
+  Granite-4.1-30B                  GPQA  45.8  group 1  index 0.58  claim -0.01
+claim, without the two Qwen3.8 models: n=12 rho=+0.34 p=0.28
+group, without the two Qwen3.8 models: n=12 rho=-0.47 p=0.13
+claim, without all five Qwen models: n=9 rho=+0.74 p=0.03
+group, without all five Qwen models: n=9 rho=+0.09 p=0.82
+main probe (paper, n=14)                       group rho=+0.04 p=0.88 | index rho=-0.03 p=0.93 | claim rho=+0.42 p=0.13
+Gemma at its natural-order levels (n=14)       group rho=+0.15 p=0.61 | index rho=-0.00 p=0.99 | claim rho=+0.44 p=0.12
+without Gemma (n=13)                           group rho=+0.14 p=0.65 | index rho=+0.04 p=0.89 | claim rho=+0.47 p=0.11
+Gemma natural-order point: [0.667, 0.94, True]
+natural order, self-index: n=5 rho=+0.05 exact p=1.00
+natural order, self-reference: n=7 rho=+0.61 exact p=0.17

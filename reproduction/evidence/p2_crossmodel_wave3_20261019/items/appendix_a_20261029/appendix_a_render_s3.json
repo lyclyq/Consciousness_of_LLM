@@ -1,0 +1,967 @@
+{
+ "script": "render_appendix_a_20261029.py",
+ "transformers": "5.19.0",
+ "hf_root": "/root/data/hf_models",
+ "body_id": "role150_numeric_records_d00",
+ "models": {
+  "Qwen/Qwen3.8-27B": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+     "commit": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    },
+    "tokenizer_config.json": {
+     "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+     "commit": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    },
+    "tokenizer.json": {
+     "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+     "commit": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    },
+    "generation_config.json": {
+     "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+     "commit": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    },
+    "config.json": {
+     "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+     "commit": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    }
+   },
+   "tokenizer_class": "Qwen3_5Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>assistant\n<think>\n\n</think>\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {
+      "enable_thinking": true
+     },
+     "assistant": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\n<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>user\n请写一段简短的描述。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n请写一段简短的描述。<|im_end|>\n<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "error": "TemplateError: System message must be at the beginning."
+     }
+    }
+   }
+  },
+  "Qwen/Qwen3.8-Flash-Next-FP8": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+     "commit": "236dfdf285828023ca3bcd3f37366c58a3469b13"
+    },
+    "tokenizer_config.json": {
+     "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+     "commit": "236dfdf285828023ca3bcd3f37366c58a3469b13"
+    },
+    "tokenizer.json": {
+     "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+     "commit": "236dfdf285828023ca3bcd3f37366c58a3469b13"
+    },
+    "generation_config.json": {
+     "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+     "commit": "236dfdf285828023ca3bcd3f37366c58a3469b13"
+    },
+    "config.json": {
+     "sha256": "c22eb0a053eed62e18f0184d3ca62d3798f208c3e00b9feee939fc3dbacdc8ca",
+     "commit": "236dfdf285828023ca3bcd3f37366c58a3469b13"
+    }
+   },
+   "tokenizer_class": "Qwen3_5Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>assistant\n<think>\n\n</think>\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\n<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.\n\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "Qwen/Qwen3.6-35B-A3B": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+     "commit": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+    },
+    "tokenizer_config.json": {
+     "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b",
+     "commit": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+    },
+    "tokenizer.json": {
+     "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+     "commit": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+    },
+    "generation_config.json": {
+     "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+     "commit": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+    },
+    "config.json": {
+     "sha256": "93a4693fa9d8392fbfccd4b3c9873f4bfdcb14fdede978b123d07d19675efe99",
+     "commit": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+    }
+   },
+   "tokenizer_class": "Qwen3_5Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|im_start|>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "Qwen/Qwen3.5-27B": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+     "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+    },
+    "tokenizer_config.json": {
+     "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+     "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+    },
+    "tokenizer.json": {
+     "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+     "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+    },
+    "generation_config.json": {
+     "sha256": "303aba891d66ab63908a7b3cc9163bcb835fdf8b9f6301c73216f3f1eb3992dd",
+     "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+    },
+    "config.json": {
+     "sha256": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+     "commit": "fc05daec18b0a78c049392ed2e771dde82bdf654"
+    }
+   },
+   "tokenizer_class": "Qwen3_5Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|im_start|>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|>\n<|im_start|>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "zai-org/GLM-4.6V-Flash": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "bf6cfe131f9af1cdbe0e1e4bda8cd56154e63d95d50df697155654bde7b387fd",
+     "commit": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e"
+    },
+    "tokenizer_config.json": {
+     "sha256": "13809913afa65678aff5d54d888720c30cb000d0e9a85799ef22d1ca9dfdf228",
+     "commit": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e"
+    },
+    "tokenizer.json": {
+     "sha256": "9340665016419c825c4bdabbcc9acc43b7ca2c68ce142724afa829abb1be5efd",
+     "commit": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e"
+    },
+    "generation_config.json": {
+     "sha256": "e9527bdf03e7d4971f9cacdbcf81a5fe04b10b64fc478bba6bf389cc0e597b72",
+     "commit": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e"
+    },
+    "config.json": {
+     "sha256": "ef88f66ef623085cd86f5fd14bd6647a0b7175b9a25773049b82611d4ac82181",
+     "commit": "411bb4d77144a3f03accbf4b780f5acb8b7cde4e"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "[gMASK]<sop><|assistant|>\n<think></think>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|user|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。/nothink<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|system|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "[gMASK]<sop><|assistant|>\n<think></think>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|user|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|system|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "[gMASK]<sop><|user|>\n请写一段简短的描述。/nothink<|assistant|>\n<think></think>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|user|>\n请写一段简短的描述。/nothink<|user|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。/nothink<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|user|>\n请写一段简短的描述。/nothink<|system|>\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。/nothink<|assistant|>\n<think></think>\n",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "zai-org/GLM-4.7-Flash": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "d63ad536c3c81880043e22ec7fd08db42b4d8fb7c89c7138bc562bfa25281375",
+     "commit": "7dd20894a642a0aa287e9827cb1a1f7f91386b67"
+    },
+    "tokenizer_config.json": {
+     "sha256": "31a173e2797ddc8b72ac996803513e627fc28d7aad02cfcce321a431d865c86d",
+     "commit": "7dd20894a642a0aa287e9827cb1a1f7f91386b67"
+    },
+    "tokenizer.json": {
+     "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+     "commit": "7dd20894a642a0aa287e9827cb1a1f7f91386b67"
+    },
+    "generation_config.json": {
+     "sha256": "e19f4eb8be12cdb62a3737b52a332c7c142cbf5ee24a5de7d806f6132b782425",
+     "commit": "7dd20894a642a0aa287e9827cb1a1f7f91386b67"
+    },
+    "config.json": {
+     "sha256": "dc9b97c7c9bed726a2e6939da4234d5c43abb3edec8812068c9a1af1dbc13acb",
+     "commit": "7dd20894a642a0aa287e9827cb1a1f7f91386b67"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "[gMASK]<sop><|assistant|></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|></think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|user|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|></think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|system|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|></think>",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {
+      "enable_thinking": true
+     },
+     "assistant": {
+      "text": "[gMASK]<sop><|assistant|></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|user|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|system|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "zai-org/GLM-5.3-Flash": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "2614a3c896d53e265f564c23701173c0049f985dacfbae79fc4bcd9f5ba083f4",
+     "commit": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c"
+    },
+    "tokenizer_config.json": {
+     "sha256": "98b1271574f41abf89427ae2dda030d94dc9478f0edc5a8bd240db213c6fd5fc",
+     "commit": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c"
+    },
+    "tokenizer.json": {
+     "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+     "commit": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c"
+    },
+    "generation_config.json": {
+     "sha256": "230c30609ecbbb9e6583bedde8e7bdda0c6eb8fe5fad0eaeb3d1b293d751cb4f",
+     "commit": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c"
+    },
+    "config.json": {
+     "sha256": "bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f",
+     "commit": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "[gMASK]<sop><|system|>Reasoning Effort: Max<|assistant|><think></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[gMASK]<sop><|system|>Reasoning Effort: Max<|user|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[gMASK]<sop><|system|>Reasoning Effort: Max<|system|>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<|assistant|><think>",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  },
+  "deepseek-ai/DeepSeek-R1-Distill-Llama-70B": {
+   "lang": "zh",
+   "files": {
+    "tokenizer_config.json": {
+     "sha256": "8ac8c85fb242563c2260baec0909debd69d718af6a0b3d90e6cab62b4d341cd5",
+     "commit": "b1c0b44b4369b597ad119a196caf79a9c40e141e"
+    },
+    "tokenizer.json": {
+     "sha256": "b9c9eb63a8e03059914880f918cd28a880dec8b6e15e4461e1ff677e3743dbb8",
+     "commit": "b1c0b44b4369b597ad119a196caf79a9c40e141e"
+    },
+    "generation_config.json": {
+     "sha256": "cd5194726d1e8f7361a8c8425fc11d33ade5e69de1fd7615eb23fae5601af68b",
+     "commit": "b1c0b44b4369b597ad119a196caf79a9c40e141e"
+    },
+    "config.json": {
+     "sha256": "95ef9768e4741543dbfaf0c274f101855883ff338b235c99eca2b6a4f4abee12",
+     "commit": "b1c0b44b4369b597ad119a196caf79a9c40e141e"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": "LlamaTokenizer",
+   "main": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<｜begin▁of▁sentence｜><｜Assistant｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<｜begin▁of▁sentence｜><｜User｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<｜begin▁of▁sentence｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜Assistant｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜User｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<｜begin▁of▁sentence｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>请写一段简短的描述。<｜User｜>这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<｜Assistant｜><think>\n",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "google/gemma-4-31B-it": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+     "commit": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "tokenizer_config.json": {
+     "sha256": "9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633",
+     "commit": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "tokenizer.json": {
+     "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+     "commit": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "generation_config.json": {
+     "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de",
+     "commit": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    },
+    "config.json": {
+     "sha256": "e967dd38bc5cfd38bd09a995a7bf4a754075df2b46aba68f7fbb5a791e6d8dd1",
+     "commit": "842da3794eaa0b77d5f08bae87a17459d91ff475"
+    }
+   },
+   "tokenizer_class": "GemmaTokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<bos><|turn>model\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<bos><|turn>user\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<bos><|turn>system\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {
+      "enable_thinking": true
+     },
+     "assistant": {
+      "text": "<bos><|turn>system\n<|think|>\n<turn|>\n<|turn>model\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<bos><|turn>system\n<|think|>\n<turn|>\n<|turn>user\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<bos><|turn>system\n<|think|>\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<bos><|turn>user\nPlease write a short description.<turn|>\n<|turn>model\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<bos><|turn>user\nPlease write a short description.<turn|>\n<|turn>user\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<bos><|turn>user\nPlease write a short description.<turn|>\n<|turn>system\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>\n<|turn>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "ByteDance-Seed/Seed-OSS-36B-Instruct": {
+   "lang": "zh",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "3f9e0dc4adeb8032287d0129dc75b6298fee8698a52ab41e863dbc89929330d3",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    },
+    "tokenizer_config.json": {
+     "sha256": "97d6fdf939d37045baeaa69fbaeacb2b88733e35869840f913a372c8aa92ee87",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    },
+    "tokenizer.json": {
+     "sha256": "f6bd848f52451824a3033a9f1e67eea5b399a13c90f845a332d3a29537e05827",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    },
+    "special_tokens_map.json": {
+     "sha256": "2566e3f4a6db47cc6051b180e9f00314805857e16f2c6ac1d08fdbbb353d5f36",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    },
+    "generation_config.json": {
+     "sha256": "99c964d4affb46130f92a457c72deacf1b3152df9eb7aa0b05494ec5b1e7915b",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    },
+    "config.json": {
+     "sha256": "09f91799169531b687cbd15e6338aee6105fcbb058193c04faa7ae0344506132",
+     "commit": "497f1dca95ebdec98e41d517b9f060ee753c902f"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "thinking_budget": 0
+     },
+     "assistant": {
+      "text": "<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<seed:bos>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<seed:bos>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<seed:bos>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<seed:bos>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {
+      "thinking_budget": 0
+     },
+     "assistant": {
+      "text": "<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n请写一段简短的描述。<seed:eos><seed:bos>assistant\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n请写一段简短的描述。<seed:eos><seed:bos>user\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n请写一段简短的描述。<seed:eos><seed:bos>system\n账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<seed:eos><seed:bos>user\n这个问题之前的那条消息是谁写的？A. 你（AI 助手） B. 用户 C. 系统。只回答字母。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "LGAI-EXAONE/EXAONE-4.0.1-32B": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "de64119ec8394ec3619221283a05fc8019c9a319cbdf2a471fe1ee8c36119616",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    },
+    "tokenizer_config.json": {
+     "sha256": "541bbf1dcafbe5e26b015eacdb785a2758e99f9a15e3b7fd548866311e62eda7",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    },
+    "tokenizer.json": {
+     "sha256": "523b110391fc95d5c90ee3eaa05d65d21da1ef25b5766254307aceda9eb24a5b",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    },
+    "special_tokens_map.json": {
+     "sha256": "b91ce1519418fce1756efb80de1459069887df7b73a6b6bf08da6cd62ce62f37",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    },
+    "generation_config.json": {
+     "sha256": "c961dbcd4a37b07f53f1a95756f46bbd7c82ada49eac130b031edcbe0e769d04",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    },
+    "config.json": {
+     "sha256": "8fcfd6fe7e687098d208507575c66b7d51248153bea1c4b74011189ad5a184ba",
+     "commit": "a6b0bd4b0fb47cd3c644d60d12dba8ecdb9dc810"
+    }
+   },
+   "tokenizer_class": "GPT2Tokenizer",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "[|assistant|]\n<think>\n\n</think>\n\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[|user|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[|system|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {
+      "enable_thinking": true
+     },
+     "assistant": {
+      "text": "[|assistant|]\n<think>\n\n</think>\n\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[|user|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[|system|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "[|user|]\nPlease write a short description.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "[|user|]\nPlease write a short description.[|endofturn|]\n[|user|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "[|user|]\nPlease write a short description.[|endofturn|]\n[|system|]\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.[|endofturn|]\n[|user|]\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "openai/gpt-oss-20b": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    },
+    "tokenizer_config.json": {
+     "sha256": "9279e942392b742d633c7adbb89ebe002c98399db8926a7af5125c726f404070",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    },
+    "tokenizer.json": {
+     "sha256": "0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    },
+    "special_tokens_map.json": {
+     "sha256": "dd5e191d20c12d2fee1da5bae14ca1db0f5f4215300af691f23cdee97120a293",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    },
+    "generation_config.json": {
+     "sha256": "f9970ada892d2d1f72e3ed0a6535ccebadd11897318794ca671d8c7014c957da",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    },
+    "config.json": {
+     "sha256": "3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce",
+     "commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>assistant<|channel|>final<|message|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.\n\n<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Please write a short description.<|end|><|start|>assistant<|channel|>final<|message|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Please write a short description.<|end|><|start|>user<|message|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-29\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Please write a short description.<|end|><|start|>user<|message|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end|><|start|>assistant",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "ibm-granite/granite-4.1-30b": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "fed2756d2d24e127b951dcf139d0b03ab7db8ef23a456128ebc9c2db4901d476",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    },
+    "tokenizer_config.json": {
+     "sha256": "a5ec5daab12ba090a90f3dd169c8f9c275557013a87b9c1258dc7cb497a35c86",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    },
+    "tokenizer.json": {
+     "sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    },
+    "special_tokens_map.json": {
+     "sha256": "c08676c49fd7969a3130f72be6d4bf34da66aa484a6e21dffe359893a1bd5f2e",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    },
+    "generation_config.json": {
+     "sha256": "9117fb03fed79dbb459373edeef9a3eec966bce52a1842e03a6716e83117f0d1",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    },
+    "config.json": {
+     "sha256": "384f1935366f0b0f9c3b4296ef7cd64a08288e15cfe16c40d13101a98ab713f4",
+     "commit": "4fae6278f7132abf5e971f9de49ebbad09c54cce"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|start_of_role|>assistant<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|start_of_role|>user<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|start_of_role|>system<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {
+    "non-thinking": {
+     "kwargs": {},
+     "assistant": {
+      "text": "<|start_of_role|>user<|end_of_role|>Please write a short description.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|start_of_role|>user<|end_of_role|>Please write a short description.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|start_of_role|>user<|end_of_role|>Please write a short description.<|end_of_text|>\n<|start_of_role|>system<|end_of_role|>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+      "tokenized_equal": true
+     }
+    }
+   }
+  },
+  "ibm-granite/granite-4.2-30b": {
+   "lang": "en",
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "f0ba43f79b3cabca5e5a7584c77aec92f49feae45cdf7779c87d9fc54cd90258",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    },
+    "tokenizer_config.json": {
+     "sha256": "2007f26df166ed10a2d6fa881c1c8f3cdd151e451469f59b274897f14449835f",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    },
+    "tokenizer.json": {
+     "sha256": "883975314d58743726347caaf2c32ac89afd5ad57222cffbc4f052f2ab27b2d7",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    },
+    "special_tokens_map.json": {
+     "sha256": "e9435fefd6d838fd9fcbbc44b97a8e3ff322be7f6dfb7e4fd2468586574bb52b",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    },
+    "generation_config.json": {
+     "sha256": "1b9baf0a7959d31d7fb58ff6b506c27d09a73d395cadccc7e6dd1d4b7e43fd9d",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    },
+    "config.json": {
+     "sha256": "82c834ac6bf6a2ecbf9801b49c3fb927008df24ea415c35e931b6091cab21277",
+     "commit": "9e668ce1c538387ef24d3644e9b0606647762636"
+    }
+   },
+   "tokenizer_class": "TokenizersBackend",
+   "rebuilt_from": null,
+   "main": {
+    "non-thinking": {
+     "kwargs": {
+      "enable_thinking": false
+     },
+     "assistant": {
+      "text": "<|im_start|>system\n<|im_end|>\n<|im_start|>assistant\n<think></think>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "tokenized_equal": true
+     }
+    },
+    "thinking": {
+     "kwargs": {
+      "enable_thinking": true
+     },
+     "assistant": {
+      "text": "<|im_start|>system\n<|im_end|>\n<|im_start|>assistant\n<think></think>Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "user": {
+      "text": "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     },
+     "system": {
+      "text": "<|im_start|>system\nLedger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<|im_end|>\n<|im_start|>user\nWho wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only.<|im_end|>\n<|im_start|>assistant\n<think>\n",
+      "tokenized_equal": true
+     }
+    }
+   },
+   "natural": {}
+  }
+ }
+}

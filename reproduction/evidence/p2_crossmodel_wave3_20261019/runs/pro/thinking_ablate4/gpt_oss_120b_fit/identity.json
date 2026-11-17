@@ -1,0 +1,30 @@
+{
+ "experiment": "P2_thinking_ablate2_smoke",
+ "script_sha256": "c9ef2cbe49080f3c5360f1a07a059b2b0f8b02200b79280555613d4cfe068046",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/openai/gpt-oss-120b",
+ "n_layers": 36,
+ "band": [
+  0,
+  35
+ ],
+ "main_layer": 23,
+ "fit_from": "",
+ "suite": "smoke",
+ "edit_generated_tokens": false,
+ "edit_end": "before_gen",
+ "layers_used": "both",
+ "lang": "en",
+ "k_max": 64,
+ "fit_rows": 16250,
+ "n_fit": 75,
+ "n_eval": 1,
+ "conditions": [
+  "base_A"
+ ],
+ "batch": 8,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.19.0",
+ "fit_s": 199.4802405834198
+}

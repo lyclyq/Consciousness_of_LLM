@@ -1,0 +1,29 @@
+{
+ "experiment": "P2_role_swap_thinking",
+ "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f",
+ "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98",
+ "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash",
+ "on_kwargs": "{}",
+ "n_layers": 45,
+ "band": [
+  0,
+  44
+ ],
+ "fit_from": "/root/glm53/out/mech/fits/fit_m.pt",
+ "question": "attr",
+ "region": "message",
+ "lang": "zh",
+ "n_eval": 2,
+ "exclude_first": 0,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "swU8_A",
+  "swA8_U",
+  "rswU8_A"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.6.0+cu124",
+ "transformers": "5.19.0"
+}

@@ -1,0 +1,109 @@
+{
+ "n_models": 14,
+ "levels_present": [
+  "neither",
+  "index-one",
+  "self-index only",
+  "self-reference"
+ ],
+ "models": [
+  {
+   "tag": "exaone4_32b_en",
+   "level": "self-reference"
+  },
+  {
+   "tag": "qwen38_27b",
+   "level": "self-reference"
+  },
+  {
+   "tag": "gpt_oss_20b_en",
+   "level": "self-reference"
+  },
+  {
+   "tag": "glm46v_flash",
+   "level": "self-index only"
+  },
+  {
+   "tag": "phi4_en",
+   "level": "self-index only"
+  },
+  {
+   "tag": "granite41_30b_en",
+   "level": "self-index only"
+  },
+  {
+   "tag": "r1_distill_llama70b",
+   "level": "self-index only"
+  },
+  {
+   "tag": "moonlight16b_a3b_instruct",
+   "level": "index-one"
+  },
+  {
+   "tag": "mimo7b_rl_0530",
+   "level": "index-one"
+  },
+  {
+   "tag": "ernie45_21b_a3b_thinking",
+   "level": "index-one"
+  },
+  {
+   "tag": "olmo2_7b_en",
+   "level": "index-one"
+  },
+  {
+   "tag": "gemma4_31b_en",
+   "level": "index-one"
+  },
+  {
+   "tag": "seed_oss_36b",
+   "level": "neither"
+  },
+  {
+   "tag": "apertus8b_en",
+   "level": "neither"
+  }
+ ],
+ "columns": {
+  "b": {
+   "spearman": 0.732014417394684,
+   "p_one_sided": 0.00205,
+   "median_by_level": {
+    "neither": 0.305283661505676,
+    "index-one": 0.8487842308166589,
+    "self-index only": 1.901572882150537,
+    "self-reference": 8.659827928793574
+   }
+  },
+  "c": {
+   "spearman": 0.4963972767957701,
+   "p_one_sided": 0.03555,
+   "median_by_level": {
+    "neither": 1.357241062043524,
+    "index-one": 1.5597298441702439,
+    "self-index only": 2.921552526903347,
+    "self-reference": 22.91965731319535
+   }
+  },
+  "d": {
+   "spearman": 0.7045638767423834,
+   "p_one_sided": 0.00375,
+   "median_by_level": {
+    "neither": -0.07163188523415488,
+    "index-one": -0.005157280931398167,
+    "self-index only": 0.109587806372926,
+    "self-reference": 0.39727904366183525
+   }
+  },
+  "e": {
+   "spearman": 0.6519503404921405,
+   "p_one_sided": 0.0057,
+   "median_by_level": {
+    "neither": 0.16656292267569564,
+    "index-one": 0.1993352524071508,
+    "self-index only": 0.3058143489747543,
+    "self-reference": 0.35087206308925
+   }
+  }
+ }
+}

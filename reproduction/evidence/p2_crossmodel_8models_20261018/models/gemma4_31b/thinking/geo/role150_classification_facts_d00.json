@@ -1,0 +1,1 @@
+{"id": "role150_classification_facts_d00", "split": "discovery", "category": "classification_facts", "roles": {"assistant": {"n_body_tokens": 59, "n_tokens": 87}, "user": {"n_body_tokens": 59, "n_tokens": 87}, "system": {"n_body_tokens": 59, "n_tokens": 82}}}

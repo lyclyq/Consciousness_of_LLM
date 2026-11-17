@@ -1,0 +1,43 @@
+[transformers] The tokenizer you are loading from '/root/hf_models_p2nat/baidu/ERNIE-4.5-21B-A3B-Thinking' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[tokenizer] LlamaTokenizer disagreed with tokenizer.json; rebuilt from tokenizer.json
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  54,
+  71
+ ],
+ "body0": {
+  "main_A": {
+   "close": "\n",
+   "prefix_to_close_sha": "4efe2bb684ff",
+   "tail": "\n</response> \n<|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  },
+  "main_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "478aeee96fd6",
+   "tail": "<|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  },
+  "main_S": {
+   "close": "\n",
+   "prefix_to_close_sha": "17d21a4551c7",
+   "tail": "\n</system_setting> \n\n<global_setting> \nthink_mode=True\n</global_setting><|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  },
+  "natural_A": {
+   "close": "\n",
+   "prefix_to_close_sha": "62ed358eaa8b",
+   "tail": "\n</response> \n<|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  },
+  "natural_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "6db4272e0284",
+   "tail": "<|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  },
+  "natural_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "4f29a928e9f1",
+   "tail": "<|im_end|> \n\n<|im_start|> user\n请根据上文回应。<|im_end|> \n\n<|im_start|> assistant\n<think> \n"
+  }
+ }
+}
+DRY RUN OK

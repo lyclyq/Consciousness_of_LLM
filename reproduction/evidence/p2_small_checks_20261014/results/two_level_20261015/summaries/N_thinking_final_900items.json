@@ -1,0 +1,80 @@
+{
+ "n_items": 900,
+ "assistant": {
+  "n": 300,
+  "n_with_answer": 300,
+  "unfinished_share": 0.0,
+  "thinking_tokens_median": 247.0,
+  "off_p_self": 0.7699512835219587,
+  "on_p_self": 0.959999817471133,
+  "off_p_user": 0.17861276042573365,
+  "on_p_user": 0.023333436947667905,
+  "off_p_system": 0.050077466506083905,
+  "on_p_system": 0.016666710654419027,
+  "accuracy_off": 0.7699512835219587,
+  "accuracy_on": 0.959999817471133,
+  "accuracy_gain": 0.19004853394917395,
+  "accuracy_gain_ci": [
+   0.16211210389373412,
+   0.2160918725400888
+  ],
+  "answer_share_on": {
+   "A": 0.49,
+   "B": 0.48333333333333334,
+   "C": 0.02666666666666667
+  },
+  "rho_off_vs_gain": -0.9523843598262202,
+  "share_claimed_off": 0.9733333333333334,
+  "share_claimed_on": 0.96,
+  "gain_lower_half_off": 0.2727098935278291,
+  "gain_upper_half_off": 0.1073871743705188
+ },
+ "user": {
+  "n": 300,
+  "n_with_answer": 300,
+  "unfinished_share": 0.0,
+  "thinking_tokens_median": 186.0,
+  "off_p_self": 0.0359343181499241,
+  "on_p_self": 5.614846059941261e-08,
+  "off_p_user": 0.9176222319283105,
+  "on_p_user": 0.9999997826419087,
+  "off_p_system": 0.03892936523052551,
+  "on_p_system": 1.1871952041939243e-07,
+  "accuracy_off": 0.9176222319283105,
+  "accuracy_on": 0.9999997826419087,
+  "accuracy_gain": 0.0823775507135983,
+  "accuracy_gain_ci": [
+   0.07716414427854919,
+   0.08774074475291135
+  ],
+  "answer_share_on": {
+   "A": 0.0,
+   "B": 0.5,
+   "C": 0.5
+  }
+ },
+ "system": {
+  "n": 300,
+  "n_with_answer": 300,
+  "unfinished_share": 0.0,
+  "thinking_tokens_median": 141.0,
+  "off_p_self": 0.06952979859199929,
+  "on_p_self": 5.1284321934173034e-08,
+  "off_p_user": 0.7165626132825397,
+  "on_p_user": 0.38666683732340035,
+  "off_p_system": 0.21236326082216564,
+  "on_p_system": 0.6133330719518022,
+  "accuracy_off": 0.21236326082216564,
+  "accuracy_on": 0.6133330719518022,
+  "accuracy_gain": 0.40096981112963664,
+  "accuracy_gain_ci": [
+   0.3228847257782464,
+   0.47854175385203296
+  ],
+  "answer_share_on": {
+   "A": 0.30333333333333334,
+   "B": 0.19,
+   "C": 0.5066666666666667
+  }
+ }
+}

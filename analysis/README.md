@@ -32,18 +32,22 @@ what it computes.
 | `thresholds_orders.py` | the self-index criterion at 70/80/90% and over the last third and quarter; single-pass self-reference over two and three option orders | `W3/stats/r04_threshold_20261101.{json,md}`, `r14_orders_20261101.{json,md}`, `r14_tex_{en,zh}.tex` |
 | `model_templates.py` | how each template marks the model's own message, next to its geometry and self-reference | `W3/stats/template_markers.{csv,md}` |
 | `ownstep.py` | trust in the model's own steps (reasoning task), every model and mode; with `--reasoning-dir`, the Qwen3.8-27B reasoning summary | `W3/stats/v4_ownstep.csv` (`TL/summaries/M_reasoning_summary.json`) |
-| `causal_tests.py` | the replacement in three models and four readouts: every layer, groups of positions, layer windows, 64 dimensions, content and arithmetic controls, the secret game, Gemma-4-31B in natural order | `W3/stats/v4_mechanism.{json}`, `v4_mechanism_tables.md`, `v4_mech_ext.json`, `v4_mech_ext_tables.md`; figures `self_mechanism`, `self_mechanism_where` |
-| `causal_controls.py` | controls of the causal tests: fit and edit without the question, five random seeds, scaled random edits, exchange of the User and System coordinates (and the gpt-oss traces), the inverted replacement and the first-order sensitivity, wording-family intervals, the stricter tasks | `W3/stats/r05r06_20261031`, `r06f_20261031`, `r08_20261031`, `r08_traces_20261101`, `r03_20261101`, `r03b_layers_20261101`, `r09_cluster_20261101`, `p56full_20261101` (`.json` and `.md` each) |
+| `causal_tests.py` | the replacement in four models and five readouts: every layer, groups of positions, layer windows, 64 dimensions, content and arithmetic controls, the secret game, Gemma-4-31B in natural order; the fifth readout (MiMo-V2.6-Distill-Qwen-9B) from the next-token archive | `W3/stats/v4_mechanism.{json}`, `v4_mechanism_tables.md`, `v5_mechanism.json`, `v5_mechanism_tables.md`, `v4_mech_ext.json`, `v4_mech_ext_tables.md`; figures `self_mechanism` (five readouts), `self_mechanism_where` |
+| `causal_controls.py` | controls of the causal tests: fit and edit without the question, five random seeds, scaled random edits, exchange of the User and System coordinates (and the gpt-oss traces), the inverted replacement and the first-order sensitivity, wording-family intervals (also for the fifth readout), the stricter tasks | `W3/stats/r05r06_20261031`, `r06f_20261031`, `r08_20261031`, `r08_traces_20261101`, `r03_20261101`, `r03b_layers_20261101`, `r09_cluster_20261101`, `r09_cluster_mimo_20261110`, `p56full_20261101` (`.json` and `.md` each) |
 | `hand_checks.py` | recomputes the numbers that the text states without a generated table (gap fractions, 64 dimensions, model facts, cross-model counts, reasoning-trace counts) and prints paper / recomputed / OK | `W3/stats/check_mechanism_hand_numbers_20261026.txt`, `check_crossmodel_hand_numbers_20261026.txt`, `trace_counts.txt` |
 | `two_level_thinking.py` | Qwen3.8-27B self-reference with and without thinking (900 items) | `TL/summaries/N_thinking_final_900items.json` |
 | `fig_crossmodel.py` | Figure 8 and its points | figure `self_crossmodel`; `W3/stats/self_crossmodel_points_v6.json` |
 | `natural_order.py` | Figure 14 and its points | figure `self_natural`; `W3/stats/self_natural_points_v1.json` |
 | `benchmarks.py` | rank correlations of the published GPQA scores with the two levels, main probe and pooled with natural order; the tables of Appendix D | `W3/stats/gpqa_vs_levels_20261029.json`, `gpqa_vs_levels_pooled_20261029.json`, `appendix_c_20261029/benchmarks_{en,zh}.tex` |
-| `causal_tables.py` | LaTeX table bodies of the causal tests (and of the threshold table) | `W3/stats/v4_mech_tex_{en,zh}.tex`, `r05r06_tex_*`, `r03b_tex_*`, `r09_r04_tex_*`, `tran2_tex_*`, `v5_appendix_tex_en.tex` |
+| `question_wording.py` | the edit of the causal tests under three wordings of the option that names the model, seven readouts | `WS/results/wording_summary_all.{json,md}` |
+| `next_token.py` | the index of the next-token runs; the content ratios against the share of content layers carrying the index (distribution, Spearman, permutation test, mixture fits) | `MS/KL_INDEX_zh.md`, `MS/results/kl_ratio_distribution_20261110.md`, `kl_boundary_stats_20261110.md` |
+| `causal_tables.py` | LaTeX table bodies of the causal tests (and of the threshold table); the cells and rows of the next-token and wording tables | `W3/stats/v4_mech_tex_{en,zh}.tex`, `v5_mech_tex_{en,zh}.tex`, `r05r06_tex_*`, `r03b_tex_*`, `r09_r04_tex_*`, `tran2_tex_*`, `v5_appendix_tex_en.tex`, `v5_appendix_tex.json` |
 | `english_ablation.py` | the English ablation of Qwen3.8-27B (Appendix B): the causal tests with the English items next to the Chinese ones, the transfer of the fitted subspaces between the two languages, their overlap (recomputed when torch is installed), and the reasoning-trace counts | `W3/stats/q38_english_appendix_20261102.json`, `q38_english_tex_20261102_{en,zh}.tex`, `trace_counts_q38en_20261102.txt` |
 | `fig_depth.py` | Figure 9 | figure `self_crossmodel_depth` |
 | `fig_inducer.py` | Figure 12 | figure `self_inducer` |
 | `fig_fd_layers.py` | Figure 15 | figure `self_fd_layers` |
+| `fig_kl_scatter.py` | Figure `fig:self_kl` and its points; with `--paper-source` it checks the content counts against the paper tables | figure `self_kl_scatter`; `W3/code/local/figures/drafts_20261110/self_kl_scatter_points.json` |
+| `fig_wording.py` | Figure `fig:self_wording` | figure `self_wording` |
 | `two_level_geometry.py` (features) | Qwen3.8-27B native renderings: role geometry by position and layer, self-reference baselines, response-onset geometry | `C150/summaries/native_geometry150_summary.json`, `j150_numbers.txt`; `TL/summaries/J_native_geometry_default.json`, `J_onset_geometry.json` |
 | `fig_geometry.py` | Figure 5 | figure `self_index_geometry` |
 | `fig_selfref.py` | Figure 6 | figure `self_reference` |
@@ -53,16 +57,19 @@ what it computes.
 | `message_geometry.py` (needs `--defgeo`) | Qwen3.8-27B message-content geometry and the numbers quoted from it | `TL/summaries/L_message_content_geometry.json`, `L_paper_numbers.json` |
 | `appendix_tex.py` | the rendered items of Appendix A and the configuration table of Appendix B | `W3/stats/appendix_a_20261029/appendix_a_{en,zh}.tex`, `appendix_a_renderings.txt`; `appendix_b_20261029/appendix_b_{en,zh}.tex` |
 | `fig_overview.py`, `fig_readout.py`, `fig_design.py` | Figures 1, 2, 3 (schematics, no data) | figures `self_overview`, `self_readout`, `self_design` |
-| `fig_tasks.py` | Figure 4 (LaTeX/TikZ, from the items and two game replies) | `W3/code/local/figures/self_tasks_flow_{en,zh}.tex`; figures `self_tasks_flow_{en,zh}.pdf` |
+| `fig_tasks.py` | Figure 4 (LaTeX/TikZ, from the items, two game replies, the wording runs and the next-token runs; six panels) | `W3/code/local/figures/drafts_20261110/self_tasks_flow_{en,zh}.tex`; figures `self_tasks_flow_{en,zh}.pdf` |
 
 `M8`, `W3`, `SC`, `TL` and `C150` stand for `evidence/p2_crossmodel_8models_20261018`, `evidence/p2_crossmodel_wave3_20261019`,
-`evidence/p2_small_checks_20261014`, `SC/results/two_level_20261015` and `SC/results/compliant_150_20261015`. Figures are written
-to `OUT/paper/source/figures/` as PDF (and PNG).
+`evidence/p2_small_checks_20261014`, `SC/results/two_level_20261015` and `SC/results/compliant_150_20261015`; `MS` and `WS` for
+`evidence/p2_modeswitch_20261107` (the next-token runs, and the causal-test runs of MiMo-V2.6-Distill-Qwen-9B) and
+`evidence/p2_wording_swap_20261109` (the wording runs). `MS` and `WS` keep their runs in `results/<group>/<family>/<run>` instead of
+`runs/<group>/...`. Figures are written to `OUT/paper/source/figures/` as PDF (and PNG).
 
 ## Paper elements
 
-Numbers follow the current version of the paper. A table body marked "block" is generated text that the paper source holds
-between the comment lines `%<<label` and `%>>label`.
+Figure and table numbers follow the current version of the paper (the rows of "Numbers in the text" added in 1.1.0 name the
+sections by their labels). A table body marked "block" is generated text that the paper source holds between the comment lines
+`%<<label` and `%>>label`.
 
 ### Figures
 
@@ -77,12 +84,14 @@ between the comment lines `%<<label` and `%>>label`.
 | 7 | fig:self_thinking | `two_level_thinking.py`, `fig_thinking.py` | `self_thinking.pdf` |
 | 8 | fig:self_crossmodel | `crossmodel_classification.py`, `two_level_thinking.py`, `fig_crossmodel.py` | `self_crossmodel.pdf`, `self_crossmodel_points_v6.json` |
 | 9 | fig:self_depth | `fig_depth.py` | `self_crossmodel_depth.pdf` |
-| 10 | fig:self_mechanism | `causal_tests.py` | `self_mechanism.pdf` |
-| 11 | fig:self_mechanism_where | `causal_tests.py` | `self_mechanism_where.pdf` |
-| 12 | fig:self_inducer | `causal_tests.py`, `fig_inducer.py` | `self_inducer.pdf` |
-| 13 | fig:self_embedding | `fig_embedding.py` (archived message-content summaries and role-word embeddings) | `self_embedding.pdf` |
-| 14 | fig:self_natural | `natural_order.py` | `self_natural.pdf`, `self_natural_points_v1.json` |
-| 15 | fig:self_fd | `fig_fd_layers.py` | `self_fd_layers.pdf` |
+| 10 | fig:self_kl | `fig_kl_scatter.py` | `self_kl_scatter.pdf`, `self_kl_scatter_points.json` |
+| 11 | fig:self_mechanism | `causal_tests.py` (part 1b, five readouts) | `self_mechanism.pdf` |
+| 12 | fig:self_mechanism_where | `causal_tests.py` | `self_mechanism_where.pdf` |
+| 13 | fig:self_wording | `question_wording.py`, `fig_wording.py` | `self_wording.pdf` |
+| 14 | fig:self_inducer | `causal_tests.py`, `fig_inducer.py` | `self_inducer.pdf` |
+| 15 | fig:self_embedding | `fig_embedding.py` (archived message-content summaries and role-word embeddings) | `self_embedding.pdf` |
+| 16 | fig:self_natural | `natural_order.py` | `self_natural.pdf`, `self_natural_points_v1.json` |
+| 17 | fig:self_fd | `fig_fd_layers.py` | `self_fd_layers.pdf` |
 
 ### Tables
 
@@ -94,32 +103,39 @@ between the comment lines `%<<label` and `%>>label`.
 | 4 | tab:self_early | `message_geometry.py` (needs `--defgeo`; archived `L_paper_numbers.json`, entry `table`) | `L_paper_numbers.json` |
 | 5 | tab:self_crossmodel | `crossmodel_classification.py`; cells checked by `hand_checks.py` | the stats CSVs, `check_crossmodel_hand_numbers_20261026.txt` |
 | 6 | tab:self_alternatives | `causal_tests.py`, `causal_controls.py`, `thresholds_orders.py` | `v4_mechanism.json`, `v4_mech_ext.json`, `r05r06_*`, `r06f_*`, `r09_cluster_*`, `p56full_*`, `r04_threshold_*` |
-| 7 | tab:self_mech_questions | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
-| 8 | tab:self_mechanism | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
-| 9 | tab:self_exchange | `causal_controls.py` (exchange), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
-| 10 | tab:self_game | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
-| 11 | tab:self_items | the item texts (`items/` of this repository), no analysis | – |
-| 12 | tab:self_config | `appendix_tex.py` | `appendix_b_{en,zh}.tex` |
-| 13 | tab:self_threshold | `thresholds_orders.py`, `causal_tables.py` | block in `r09_r04_tex_{en,zh}.tex` |
-| 14 | tab:self_orders | `thresholds_orders.py` | block in `r14_tex_{en,zh}.tex` |
-| 15 | tab:self_benchmarks | `benchmarks.py` | `benchmarks_{en,zh}.tex` |
-| 16 | tab:self_benchmark_corr | `benchmarks.py` | `benchmarks_{en,zh}.tex` |
-| 17 | tab:self_natural | read from the natural-order run summaries (`suite_nat3/*/summary.json`: `layers_A_lowest_80`, `attr`); no script | – |
-| 18 | tab:self_natural2 | `crossmodel_classification.py` and the per-item records of the two-role natural-order runs | stats CSVs |
-| 19 | tab:self_natural3 | read from the run summaries of DeepSeek-V4.1-Flash and Ministral-3-14B; no script | – |
-| 20 | tab:self_mechanism_where | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
-| 21 | tab:self_mechanism_windows | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
-| 22 | tab:self_fd | `causal_controls.py` (fd_layers), `causal_tables.py` | block in `r03b_tex_{en,zh}.tex` |
-| 23 | tab:self_seeds | `causal_controls.py` (without_question), `causal_tables.py` | block in `r05r06_tex_{en,zh}.tex` |
-| 24 | tab:self_seeds_scaled | `causal_controls.py` (random_floor), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
-| 25 | tab:self_exchange_full | `causal_controls.py` (exchange), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
-| 26 | tab:self_rest | `causal_controls.py` (rest), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
-| 27 | tab:self_cluster | `causal_controls.py` (families), `causal_tables.py` | block in `r09_r04_tex_{en,zh}.tex` |
-| 28 | tab:self_question | `causal_controls.py` (without_question), `causal_tables.py` | block in `r05r06_tex_{en,zh}.tex` |
-| 29 | tab:self_strict | `causal_controls.py` (strict), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
-| 30 | tab:self_ablation_2x2 | `causal_tables.py` (ablation) | block in `v5_appendix_tex_en.tex` |
-| 31 | tab:self_positions | `causal_tables.py` (ablation) | block in `v5_appendix_tex_en.tex` |
-| 32 | tab:self_ownstep | `ownstep.py` | `v4_ownstep.csv` |
+| 7 | tab:self_mech_questions | `causal_tables.py` (v5_mech_tex, five readouts) | block in `v5_mech_tex_{en,zh}.tex` |
+| 8 | tab:self_convergent | a summary of the numbers of Tables 7, 9, 10, 11, 15, 25 and 36; no script | – |
+| 9 | tab:self_mechanism | `causal_tables.py` (v5_mech_tex, five readouts) | block in `v5_mech_tex_{en,zh}.tex` |
+| 10 | tab:self_exchange | `causal_controls.py` (exchange), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
+| 11 | tab:self_game | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
+| 12 | tab:self_items | the item texts (`items/` of this repository), no analysis | – |
+| 13 | tab:self_config | `appendix_tex.py` | `appendix_b_{en,zh}.tex` |
+| 14 | tab:self_english | `english_ablation.py` | block in `q38_english_tex_20261102_{en,zh}.tex` |
+| 15 | tab:self_english_transfer | `english_ablation.py` | block in `q38_english_tex_20261102_{en,zh}.tex` |
+| 16 | tab:self_threshold | `thresholds_orders.py`, `causal_tables.py` | block in `r09_r04_tex_{en,zh}.tex` |
+| 17 | tab:self_orders | `thresholds_orders.py` | block in `r14_tex_{en,zh}.tex` |
+| 18 | tab:self_benchmarks | `benchmarks.py` | `benchmarks_{en,zh}.tex` |
+| 19 | tab:self_benchmark_corr | `benchmarks.py` | `benchmarks_{en,zh}.tex` |
+| 20 | tab:self_natural | read from the natural-order run summaries (`suite_nat3/*/summary.json`: `layers_A_lowest_80`, `attr`); no script | – |
+| 21 | tab:self_natural2 | `crossmodel_classification.py` and the per-item records of the two-role natural-order runs | stats CSVs |
+| 22 | tab:self_natural3 | read from the run summaries of DeepSeek-V4.1-Flash and Ministral-3-14B; no script | – |
+| 23 | tab:self_kl | `causal_tables.py` (v5_appendix_tex: rows `kl_main_{en,zh}`); the relation to the content index `next_token.py` | `v5_appendix_tex.json`; `kl_ratio_distribution_20261110.md`, `kl_boundary_stats_20261110.md` |
+| 24 | tab:self_kl_natural | `causal_tables.py` (v5_appendix_tex: rows `kl_nat_{en,zh}`) | `v5_appendix_tex.json` |
+| 25 | tab:self_kl_swap | `causal_tables.py` (v5_appendix_tex: rows `kl_swap_{en,zh}`) | `v5_appendix_tex.json` |
+| 26 | tab:self_mechanism_where | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
+| 27 | tab:self_mechanism_windows | `causal_tables.py` | block in `v4_mech_tex_{en,zh}.tex` |
+| 28 | tab:self_fd | `causal_controls.py` (fd_layers), `causal_tables.py` | block in `r03b_tex_{en,zh}.tex` |
+| 29 | tab:self_seeds | `causal_controls.py` (without_question), `causal_tables.py`; the MiMo-V2.6 cells `causal_tables.py` (v5_appendix_tex: `mimo_seeds`) | block in `r05r06_tex_{en,zh}.tex`; `v5_appendix_tex.json` |
+| 30 | tab:self_seeds_scaled | `causal_controls.py` (random_floor), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
+| 31 | tab:self_exchange_full | `causal_controls.py` (exchange), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
+| 32 | tab:self_rest | `causal_controls.py` (rest), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
+| 33 | tab:self_cluster | `causal_controls.py` (families; families_mimo for the MiMo-V2.6 cells), `causal_tables.py` (the MiMo-V2.6 cells: v5_appendix_tex, `mimo_cluster`) | block in `r09_r04_tex_{en,zh}.tex`; `v5_appendix_tex.json` |
+| 34 | tab:self_question | `causal_controls.py` (without_question), `causal_tables.py` (the MiMo-V2.6 cells: v5_appendix_tex, `mimo_question`) | block in `r05r06_tex_{en,zh}.tex`; `v5_appendix_tex.json` |
+| 35 | tab:self_strict | `causal_controls.py` (strict), `causal_tables.py` | block in `tran2_tex_{en,zh}.tex` |
+| 36 | tab:self_wording | `question_wording.py`, `causal_tables.py` (v5_appendix_tex: rows `wording_{en,zh}`) | `wording_summary_all.json`, `v5_appendix_tex.json` |
+| 37 | tab:self_ablation_2x2 | `causal_tables.py` (ablation) | block in `v5_appendix_tex_en.tex` |
+| 38 | tab:self_positions | `causal_tables.py` (ablation) | block in `v5_appendix_tex_en.tex` |
+| 39 | tab:self_ownstep | `ownstep.py` | `v4_ownstep.csv` |
 
 ### Numbers in the text
 
@@ -149,6 +165,9 @@ between the comment lines `%<<label` and `%>>label`.
 | Appendix E (natural order) | `natural_order.py`, `crossmodel_classification.py` | natural-order run summaries and per-item records |
 | Appendix F (further causal tests) | `causal_tests.py`, `causal_controls.py`, `causal_tables.py`, `fig_fd_layers.py` | the files of Tables 20–31 |
 | Appendix G (trust in own records) | `ownstep.py` | `v4_ownstep.csv`; the Qwen3.8-27B reasoning summary `M_reasoning_summary.json` needs the per-problem records (`--reasoning-dir`) |
+| Sec. sec:setup_nexttoken, sec:res_nexttoken (next-token prediction) and Appendix app:nexttoken | `causal_tables.py` (v5_appendix_tex), `next_token.py`, `fig_kl_scatter.py` | `v5_appendix_tex.json`, `kl_ratio_distribution_20261110.md`, `kl_boundary_stats_20261110.md`, `self_kl_scatter_points.json`, `KL_INDEX_zh.md` |
+| Sec. sec:abl_question and Appendix app:mech_wording (how the question names the model) | `question_wording.py` | `wording_summary_all.json` |
+| The fifth readout of the causal tests (MiMo-V2.6-Distill-Qwen-9B), wherever the text gives its numbers | `causal_tests.py` (part 1b), `causal_controls.py` (families_mimo), `causal_tables.py` (v5_appendix_tex) | `v5_mechanism.json`, `r09_cluster_mimo_20261110.json`, `v5_appendix_tex.json` |
 
 ## Inputs not in the packages
 

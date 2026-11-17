@@ -1,4 +1,4 @@
-"""Causal tests: the replacement of the self-index coordinates in three models and four readouts, from the per-item results of
+"""Causal tests: the replacement of the self-index coordinates in four models and five readouts, from the per-item results of
 the replacement runs (selfindex role-swap runs).
 
 Part 1, the main runs. Readouts: Qwen3.8-27B without thinking (mean P("you") at the response onset); Qwen3.8-27B, gpt-oss-20b and
@@ -7,8 +7,17 @@ gpt-oss-120b with thinking (share of finished items answered "you"). For every c
 the same recipient with a 95% bootstrap interval (pairs: body x option order). Runs: every layer (attribution, content,
 arithmetic, 64 dimensions), groups of positions (body, end of the message, question) and layer windows of 8 layers moving by 4
 (gpt-oss-20b: its runs on the thirds of the depth are the windows L0-L7, L8-L15, L16-L23).
-Outputs: stats/v4_mechanism.json, stats/v4_mechanism_tables.md; figures self_mechanism.pdf/.png (all-layer replacement) and
-self_mechanism_where.pdf/.png (groups of positions; layer windows; missing runs are left out and listed).
+Outputs: stats/v4_mechanism.json, stats/v4_mechanism_tables.md; figure self_mechanism_where.pdf/.png (groups of positions; layer
+windows; missing runs are left out and listed).
+
+Part 1b, the fifth readout: MiMo-V2.6-Distill-Qwen-9B in the default call of its template (share of finished items answered
+"you"), with the statistics of part 1. Its runs are in the next-token archive (evidence/p2_modeswitch_20261107,
+results/<group>/thinking_swap/mimo_v26_<run>): the paper's procedure r05q_all (the fit with the question, every position; base_A,
+base_U, swU8_A, swA8_U, rswU8_A, rswA8_U; no System conditions) for the attribution question, all_k64 for 64 dimensions,
+content_all and arith_all (base_A, base_U, swU8_A, swA8_U) for the content and arithmetic questions. Groups of positions and layer
+windows were not run for it. The first four readouts are those of part 1.
+Outputs: stats/v5_mechanism.json, stats/v5_mechanism_tables.md; figure self_mechanism.pdf/.png (all-layer replacement, the five
+readouts).
 
 Part 2, the extensions:
   - Gemma-4-31B without thinking, in natural order (its claim to its own message appears only when the message answers a user
@@ -39,15 +48,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import (W3, FIGURES, BASE, Roots, arguments, boot, items, run_glob, run_path, summarize,  # noqa: E402
-                    wilson)
+from common import (MS, W3, FIGURES, BASE, Roots, arguments, boot, items, result_path, run_glob, run_path,  # noqa: E402
+                    summarize, wilson)
 
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 8.5, 'pdf.fonttype': 42, 'axes.titlesize': 9, 'axes.titleweight': 'bold',
                      'xtick.labelsize': 7.5, 'ytick.labelsize': 7.5, 'axes.spines.top': False, 'axes.spines.right': False})
 C_SWAP, C_INST, C_RAND, C_INK, C_GRID, C_SHADE = '#2a78d6', '#e07b39', '#8b929b', '#2b2f36', '#e3e6ea', '#f3f4f6'
 # readout colours: model hue as in the cross-model figures (Qwen3.8-27B blue, gpt-oss-20b wine, gpt-oss-120b pink); Qwen without
-# thinking a lighter blue
-C_RO = {'qwen_sp': '#8dbbef', 'qwen_th': '#2a78d6', 'oss_th': '#a61e4d', 'oss120_th': '#e64980'}
+# thinking a lighter blue; MiMo-V2.6-Distill-Qwen-9B orange
+C_RO = {'qwen_sp': '#8dbbef', 'qwen_th': '#2a78d6', 'oss_th': '#a61e4d', 'oss120_th': '#e64980', 'mimo_th': '#f08c00'}
 READOUTS = [('qwen_sp', 'Qwen3.8-27B, no thinking', 'P("you")'), ('qwen_th', 'Qwen3.8-27B, thinking', 'share answering "you"'),
             ('oss_th', 'gpt-oss-20b, thinking', 'share answering "you"'), ('oss120_th', 'gpt-oss-120b, thinking', 'share answering "you"')]
 ROOT = {'qwen_sp': 'singlepass_swap/qwen38_27b_{}', 'qwen_th': 'thinking_swap/qwen38_27b_{}',
@@ -63,13 +72,102 @@ CONDS = [('own', 'base_A', 'unedited'), ('own', 'swU8_A', '← User'), ('own', '
          ('user', 'base_U', 'unedited'), ('user', 'swA8_U', '← own'), ('user', 'rswA8_U', '← random'),
          ('system', 'base_S', 'unedited'), ('system', 'swA8_S', '← own')]
 GROUP = {'own': "model's own message", 'user': 'User message', 'system': 'System message'}
+# part 1b: the fifth readout, and the names of its runs for the run keys of the others
+READOUTS5 = READOUTS + [('mimo_th', 'MiMo-V2.6-Distill-9B, default call', 'share answering "you"')]
+MIMO_ROOT = 'thinking_swap/mimo_v26_{}'  # below results/<group>/ of the next-token archive
+MIMO_RUN = {'all': 'r05q_all', 'all_content': 'content_all', 'all_arith': 'arith_all', 'all_k64': 'all_k64'}
+RUNS = {'all': 'all', 'all_content': 'all_content', 'all_arith': 'all_arith', 'all_k64': 'all_k64',
+        **{f'region_{x}': f'region_{x}' for x in ('body', 'end', 'question')}}
+
+
+def tables_md(R, W, missing, readouts, title):
+    """The markdown tables of v4_mechanism_tables.md / v5_mechanism_tables.md (for the text)."""
+    L = [title, '', f'missing runs: {", ".join(missing) or "none"}', '']
+    for k in RUNS:
+        L.append(f'## {k}')
+        L.append('| condition | ' + ' | '.join(t for _, t, _ in readouts) + ' |')
+        L.append('|---|' + '---|' * len(readouts))
+        conds = sorted({c for ro, _, _ in readouts for c in R[ro].get(k, {})})
+        for c in conds:
+            cells = []
+            for ro, _, _ in readouts:
+                s = R[ro].get(k, {}).get(c)
+                if not s:
+                    cells.append('')
+                elif 'accuracy' in s:
+                    cells.append(f"{s['accuracy']:.3f} ({s['finished']}/{s['n']})")
+                else:
+                    t = f"{s['stat']:.3f} [{s['ci'][0]:.3f}, {s['ci'][1]:.3f}]"
+                    if 'diff' in s:
+                        t += f"; diff {s['diff']:+.3f} [{s['diff_ci'][0]:+.3f}, {s['diff_ci'][1]:+.3f}]"
+                    cells.append(t)
+            L.append(f'| {c} | ' + ' | '.join(cells) + ' |')
+        L.append('')
+    L += ['## layer windows (8 layers, every position; change from unedited)', '| readout | window | run | own <- User | User <- own | own <- User, random |',
+          '|---|---|---|---|---|---|']
+    for ro, WW in W.items():
+        for w_, S_ in WW.items():
+            f = lambda c: (f"{S_[c]['stat']:.3f}; {S_[c]['diff']:+.3f} [{S_[c]['diff_ci'][0]:+.3f}, {S_[c]['diff_ci'][1]:+.3f}]"  # noqa: E731
+                           + (f" ({S_[c]['finished']}/{S_[c]['n']} fin.)" if S_[c].get('finished', S_[c]['n']) != S_[c]['n'] else '')
+                           if c in S_ and 'diff' in S_[c] else '')
+            L.append(f"| {ro} | {w_} | {S_['run']} | {f('swU8_A')} | {f('swA8_U')} | {f('rswU8_A')} |")
+    return '\n'.join(L)
+
+
+def mechanism_v5(R, W, missing, M, S, F):
+    """Part 1b: R, W, missing of part 1; M = next-token archive in the results package; S = output stats folder, F = output
+    figure folder. Adds the MiMo readout, writes v5_mechanism.json and v5_mechanism_tables.md, and draws Figure self_mechanism
+    with the five readouts."""
+    R, missing = {**R, 'mimo_th': {}}, list(missing)
+    for k in RUNS:
+        if k not in MIMO_RUN:  # groups of positions were not run for this readout
+            continue
+        d = result_path(M, MIMO_ROOT.format(MIMO_RUN[k]))
+        recs = items(d) if d.exists() else []
+        if not recs:
+            missing.append(f'mimo_th/{k}')
+            continue
+        R['mimo_th'][k] = summarize(recs, k)
+    json.dump({'results': R, 'windows': W, 'missing': missing}, open(S / 'v5_mechanism.json', 'w', encoding='utf-8'), indent=1)
+    (S / 'v5_mechanism_tables.md').write_text(
+        tables_md(R, W, missing, READOUTS5, '# v5 mechanism numbers (generated by make_v5_mechanism_20261110.py)'), encoding='utf-8')
+
+    # figure: all-layer replacement; one panel per edited message, the five readouts side by side under each condition
+    F.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(1, 3, figsize=(7.3, 2.7), sharey=True, gridspec_kw={'wspace': 0.08, 'width_ratios': [4, 3, 2]})
+    w = 0.165
+    for ax, g in zip(axes, ('own', 'user', 'system')):
+        conds = [(c, lab) for gg, c, lab in CONDS if gg == g]
+        for j, (c, lab) in enumerate(conds):
+            for i, (ro, _, _) in enumerate(READOUTS5):
+                s = R[ro].get('all', {}).get(c)
+                if s is None:
+                    continue
+                x = j + (i - (len(READOUTS5) - 1) / 2) * w
+                ax.bar(x, s['stat'], width=w * 0.92, color=C_RO[ro], edgecolor='white', lw=0.4, zorder=3)
+                ax.errorbar(x, s['stat'], yerr=[[s['stat'] - s['ci'][0]], [s['ci'][1] - s['stat']]], fmt='none', ecolor=C_INK, lw=0.7,
+                            capsize=1.2, zorder=4)
+        ax.set_xticks(range(len(conds)))
+        ax.set_xticklabels([lab for _, lab in conds], fontsize=7.2)
+        ax.set_xlim(-0.55, len(conds) - 0.45)
+        ax.set_ylim(0, 1.0)
+        ax.set_title(GROUP[g])
+        ax.grid(axis='y', color=C_GRID, lw=0.6, zorder=0)
+        ax.tick_params(axis='x', length=0)
+    axes[0].set_ylabel('claimed as own\n(P("you") / share answering "you")')
+    handles = [plt.Rectangle((0, 0), 1, 1, color=C_RO[ro]) for ro, _, _ in READOUTS5]
+    fig.legend(handles, [t for _, t, _ in READOUTS5], loc='lower center', ncol=3, frameon=False, fontsize=7.0, bbox_to_anchor=(0.5, -0.13))
+    fig.savefig(F / 'self_mechanism.pdf', bbox_inches='tight')
+    fig.savefig(F / 'self_mechanism.png', dpi=200, bbox_inches='tight')
+    plt.close(fig)
+    print('missing runs (five readouts):', ', '.join(missing) or 'none')
 
 
 def mechanism(A, S, F):
-    """Part 1: A = wave-3 archive in the results package, S = output stats folder, F = output figure folder."""
+    """Part 1: A = wave-3 archive in the results package, S = output stats folder, F = output figure folder. Returns R, W and the
+    missing runs for part 1b."""
     R, missing = {}, []
-    runs = {'all': 'all', 'all_content': 'all_content', 'all_arith': 'all_arith', 'all_k64': 'all_k64'}
-    runs.update({f'region_{x}': f'region_{x}' for x in ('body', 'end', 'question')})
+    runs = RUNS
     W = {}
     for ro, _, _ in READOUTS:
         R[ro] = {}
@@ -95,65 +193,9 @@ def mechanism(A, S, F):
     json.dump({'results': R, 'windows': W, 'missing': missing}, open(S / 'v4_mechanism.json', 'w', encoding='utf-8'), indent=1)
 
     # markdown tables (for the text)
-    L = ['# v4 mechanism numbers (generated by make_v4_mechanism.py)', '', f'missing runs: {", ".join(missing) or "none"}', '']
-    for k in runs:
-        L.append(f'## {k}')
-        L.append('| condition | ' + ' | '.join(t for _, t, _ in READOUTS) + ' |')
-        L.append('|---|' + '---|' * len(READOUTS))
-        conds = sorted({c for ro, _, _ in READOUTS for c in R[ro].get(k, {})})
-        for c in conds:
-            cells = []
-            for ro, _, _ in READOUTS:
-                s = R[ro].get(k, {}).get(c)
-                if not s:
-                    cells.append('')
-                elif 'accuracy' in s:
-                    cells.append(f"{s['accuracy']:.3f} ({s['finished']}/{s['n']})")
-                else:
-                    t = f"{s['stat']:.3f} [{s['ci'][0]:.3f}, {s['ci'][1]:.3f}]"
-                    if 'diff' in s:
-                        t += f"; diff {s['diff']:+.3f} [{s['diff_ci'][0]:+.3f}, {s['diff_ci'][1]:+.3f}]"
-                    cells.append(t)
-            L.append(f'| {c} | ' + ' | '.join(cells) + ' |')
-        L.append('')
-    L += ['## layer windows (8 layers, every position; change from unedited)', '| readout | window | run | own <- User | User <- own | own <- User, random |',
-          '|---|---|---|---|---|---|']
-    for ro, WW in W.items():
-        for w_, S_ in WW.items():
-            f = lambda c: (f"{S_[c]['stat']:.3f}; {S_[c]['diff']:+.3f} [{S_[c]['diff_ci'][0]:+.3f}, {S_[c]['diff_ci'][1]:+.3f}]"  # noqa: E731
-                           + (f" ({S_[c]['finished']}/{S_[c]['n']} fin.)" if S_[c].get('finished', S_[c]['n']) != S_[c]['n'] else '')
-                           if c in S_ and 'diff' in S_[c] else '')
-            L.append(f"| {ro} | {w_} | {S_['run']} | {f('swU8_A')} | {f('swA8_U')} | {f('rswU8_A')} |")
-    (S / 'v4_mechanism_tables.md').write_text('\n'.join(L), encoding='utf-8')
-
-    # figure 1: all-layer replacement; one panel per edited message, the four readouts side by side under each condition
-    F.mkdir(parents=True, exist_ok=True)
-    fig, axes = plt.subplots(1, 3, figsize=(7.3, 2.7), sharey=True, gridspec_kw={'wspace': 0.08, 'width_ratios': [4, 3, 2]})
-    w = 0.2
-    for ax, g in zip(axes, ('own', 'user', 'system')):
-        conds = [(c, lab) for gg, c, lab in CONDS if gg == g]
-        for j, (c, lab) in enumerate(conds):
-            for i, (ro, _, _) in enumerate(READOUTS):
-                s = R[ro].get('all', {}).get(c)
-                if s is None:
-                    continue
-                x = j + (i - 1.5) * w
-                ax.bar(x, s['stat'], width=w * 0.92, color=C_RO[ro], edgecolor='white', lw=0.4, zorder=3)
-                ax.errorbar(x, s['stat'], yerr=[[s['stat'] - s['ci'][0]], [s['ci'][1] - s['stat']]], fmt='none', ecolor=C_INK, lw=0.7,
-                            capsize=1.2, zorder=4)
-        ax.set_xticks(range(len(conds)))
-        ax.set_xticklabels([lab for _, lab in conds], fontsize=7.2)
-        ax.set_xlim(-0.55, len(conds) - 0.45)
-        ax.set_ylim(0, 1.0)
-        ax.set_title(GROUP[g])
-        ax.grid(axis='y', color=C_GRID, lw=0.6, zorder=0)
-        ax.tick_params(axis='x', length=0)
-    axes[0].set_ylabel('claimed as own\n(P("you") / share answering "you")')
-    handles = [plt.Rectangle((0, 0), 1, 1, color=C_RO[ro]) for ro, _, _ in READOUTS]
-    fig.legend(handles, [t for _, t, _ in READOUTS], loc='lower center', ncol=4, frameon=False, fontsize=7.0, bbox_to_anchor=(0.5, -0.07))
-    fig.savefig(F / 'self_mechanism.pdf', bbox_inches='tight')
-    fig.savefig(F / 'self_mechanism.png', dpi=200, bbox_inches='tight')
-    plt.close(fig)
+    (S / 'v4_mechanism_tables.md').write_text(
+        tables_md(R, W, missing, READOUTS, '# v4 mechanism numbers (generated by make_v4_mechanism.py)'), encoding='utf-8')
+    # the all-layer figure (self_mechanism.pdf) shows the five readouts and is drawn in part 1b (mechanism_v5)
 
     # figure 2: where. Top: one group of positions, every layer (bars; 'all' = every position and layer, the reference). Bottom:
     # every position, one window of 8 layers (lines at the window centre, 95% bands; dashed: every layer). Item-paired change,
@@ -210,6 +252,7 @@ def mechanism(A, S, F):
     fig.savefig(F / 'self_mechanism_where.png', dpi=200, bbox_inches='tight')
     plt.close(fig)
     print('missing:', missing)
+    return R, W, missing
 
 
 # ---------------------------------------------------------------------------------------------------------------------------
@@ -340,7 +383,9 @@ def main(argv=None):
     r = Roots(args)
     A = r.res(W3)
     S = r.out(W3 + '/stats')
-    mechanism(A, S, r.out(FIGURES))
+    F = r.out(FIGURES)
+    R, W, missing = mechanism(A, S, F)
+    mechanism_v5(R, W, missing, r.res(MS), S, F)
     mechanism_ext(A, S)
 
 

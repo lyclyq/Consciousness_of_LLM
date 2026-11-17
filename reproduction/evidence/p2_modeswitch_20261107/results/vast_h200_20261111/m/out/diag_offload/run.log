@@ -1,0 +1,3 @@
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter

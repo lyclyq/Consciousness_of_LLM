@@ -1,0 +1,21 @@
+{
+ "order": "natural3",
+ "bodies": 150,
+ "natural_system_ok": null,
+ "roles": [
+  "A",
+  "U",
+  "S"
+ ],
+ "tokenizer": "TokenizersBackend",
+ "common_body_tokens_min_max": [
+  60,
+  90
+ ],
+ "close": {
+  "A": "</s>",
+  "U": "Please",
+  "S": "[/SYSTEM_PROMPT]"
+ }
+}
+DRY RUN OK

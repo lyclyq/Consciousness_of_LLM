@@ -1,0 +1,55 @@
+{"model": "/root/hf_models_p2nat/google/gemma-4-31B-it", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{}", "natural_system_ok": true}
+===== main A: 87 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>model
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+===== main U: 87 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>user
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+===== main S: 87 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>system
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+===== natural A: 98 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>user
+Please write a short description.<turn|>
+<|turn>model
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+===== natural U: 98 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>user
+Please write a short description.<turn|>
+<|turn>user
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>
+===== natural S: 98 tokens, body tokens 62, close '<turn|>'
+<bos><|turn>user
+Please write a short description.<turn|>
+<|turn>system
+Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text.<turn|>
+<|turn>user
+Please respond based on the above.<turn|>
+<|turn>model
+<|channel>thought
+<channel|>

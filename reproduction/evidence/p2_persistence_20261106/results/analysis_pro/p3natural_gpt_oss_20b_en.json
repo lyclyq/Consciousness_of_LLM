@@ -1,0 +1,145 @@
+{
+ "tag": "gpt_oss_20b_en",
+ "order": "natural",
+ "n_layers": 24,
+ "keep_layers": [
+  9,
+  12,
+  14,
+  17,
+  20,
+  23
+ ],
+ "n_held_out": 200,
+ "families": 200,
+ "n_bodies_on_disk": 400,
+ "group": "index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/hf_models/openai/gpt-oss-20b",
+  "tmpl_kwargs": {},
+  "lang": "en",
+  "fixed_date": "2026-10-19",
+  "natural_system_ok": false
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "2": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "3": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "4": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "5": {
+   "n_bodies": 199,
+   "defined": false
+  },
+  "full": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "empty": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "6": {
+   "n_bodies": 177,
+   "defined": false
+  },
+  "7": {
+   "n_bodies": 121,
+   "defined": false
+  },
+  "8": {
+   "n_bodies": 57,
+   "defined": false
+  },
+  "9": {
+   "n_bodies": 20,
+   "defined": false
+  },
+  "10": {
+   "n_bodies": 3,
+   "defined": false
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 0.9487852115006967,
+   "M2_ci95": [
+    0.9425421074340753,
+    0.9554494717953209
+   ],
+   "M3_direction_cos": 0.9270846131583548,
+   "M3_ci95": [
+    0.9217665522375696,
+    0.9320895020341093
+   ],
+   "C1_median": 3645970.731206999,
+   "C1_ci95": [
+    3614502.985220189,
+    3674165.922421566
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.9446972940166138,
+   "per_layer": {
+    "9": {
+     "size": 0.9647927109100414,
+     "cos": 0.898293731934646
+    },
+    "12": {
+     "size": 0.8863180221464024,
+     "cos": 0.9163098743761969
+    },
+    "14": {
+     "size": 0.9091744472468393,
+     "cos": 0.9247757065253515
+    },
+    "17": {
+     "size": 0.9512037737571473,
+     "cos": 0.9378505175583538
+    },
+    "20": {
+     "size": 0.9463666492442462,
+     "cos": 0.9293935197913582
+    },
+    "23": {
+     "size": 0.9643896859970212,
+     "cos": 0.9394816132141773
+    }
+   }
+  },
+  "A-S": {
+   "defined": false
+  },
+  "U-S": {
+   "defined": false
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 0.8622173070907593,
+   "common_ratio": 0.784631091846355,
+   "cos_first_last": 0.941312897089581,
+   "share_first": 0.28597224286012657,
+   "share_last": 0.25574609959186584
+  }
+ },
+ "verdict": {
+  "prediction": "P1",
+  "M1_index_at_every_length": null,
+  "M2_at_least_0.8_and_reliable": true,
+  "holds": true,
+  "M1_evaluable": false
+ }
+}

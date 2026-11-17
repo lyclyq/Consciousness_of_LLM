@@ -1,0 +1,1 @@
+{"id": "role150_comparison_d01", "role": "assistant", "order": ["self", "user", "system"], "off": {"self": 3.375142841832712e-05, "user": 2.978553129651118e-05, "system": 6.580480658158194e-07}, "on_answer": "self", "on_letter": "A", "n_new": 294, "finished": true, "tail": "\n\nA<｜end▁of▁sentence｜>", "gen": null, "batch": 16}

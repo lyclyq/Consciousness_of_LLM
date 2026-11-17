@@ -1,0 +1,3 @@
+wording zh pron fixed date None ["这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. 我。只回答字母。", "这个问题之前的那条消息是谁写的？A. 我 B. 系统 C. 你。只回答字母。"]
+assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 25 median 25
+user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 53 median 60, end min 4 median 4, question min 25 median 25

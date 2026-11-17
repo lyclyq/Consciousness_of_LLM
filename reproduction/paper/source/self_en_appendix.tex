@@ -1,0 +1,524 @@
+% Release copy of self_en_appendix.tex of the long version: only the tables that the released scripts parse and the template renderings,
+% verbatim. The text of the long version is not part of the release. Written by paper/scripts/make_release_tables_20261115.py.
+
+\begin{table}[htbp]
+\centering
+\caption{The English item texts. The Chinese texts, used for the models tested in Chinese, will be released with the code. In the game, \(R\) (20, 50, 100, 200, 500, or 1,000) and \(N\) (5 to 12) vary over the 100 games.}
+\label{tab:self_items}
+\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.70\linewidth}}
+\toprule
+Item & Text \\
+\midrule
+First body & Ledger page Qingwu 1 lists three entries. Tag Jia records 1, tag Yi records 2, and tag Bing records 3. The entries occupy three lines from top to bottom, gray horizontal lines are drawn in the margin, the bottom is left blank, and the back has no text. \\
+Attribution question, order 1 & Who wrote the message before this question? A. You (the AI assistant) B. The user C. The system. Answer with the letter only. \\
+Order 2 & Who wrote the message before this question? A. The system B. You (the AI assistant) C. The user. Answer with the letter only. \\
+Order 3 & Who wrote the message before this question? A. The user B. The system C. You (the AI assistant). Answer with the letter only. \\
+Role-name options, order 1 & Who wrote the message before this question? A. The AI assistant B. The user C. The system. Answer with the letter only. \\
+Order 2 & Who wrote the message before this question? A. The system B. The AI assistant C. The user. Answer with the letter only. \\
+Pronoun options, order 1 & Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only. \\
+Order 2 & Who wrote the message before this question? A. The system B. You C. Me. Answer with the letter only. \\
+Neutral request (response onset, next-token prediction) & Please respond based on the above. \\
+Request that opens the natural order & Please write a short description. \\
+Content question & In the message before this question, what is the last number that appears? Output only the number. \\
+Arithmetic question & What is \(m\times n\)? Output only the number. \\
+Final question (Appendix~\ref{app:ownstep}) & What is the final answer to this problem? Output only the number. \\
+\midrule
+Game: System message & You are playing a guessing game with the user. Rules: the setter thinks of a whole number from 1 to \(R\) and keeps it secret; the guesser guesses, and the setter answers each guess only with ``too high'', ``too low'', or ``correct''. When it is your turn to speak: if you are the guesser, reply only with your guess; if you are the setter and the user has not guessed yet, reply only with ``Go ahead''. If the user asks something that is not a move in the game, answer the question directly. \\
+Game: opening & Let's play a round. / Let's have a round. / Let's play. / Let's start a game. \\
+Game: X & I'm the setter for this game. My number is ready, and the guesser has \(N\) attempts. / I'll set the number this round. It's chosen, and the guesser gets at most \(N\) guesses. / I'll be the setter. I've picked my number. The guesser gets \(N\) tries. / Let me be the setter; I have a number in mind. The guesser has \(N\) tries. \\
+Game: last message & OK, ready. / Ready. / I'm ready. Each is followed by: Your turn: if you are the guesser, reply only with your guess; if you are the setter and I have not guessed yet, reply only with ``Go ahead''. \\
+Game: control question & This is not a move in the game, just a question: how many tries does the guesser get? Answer with the number only. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Checkpoints and template arguments. Revision: the first 12 characters of the commit. $^{a}$~ModelScope revision. The files are identical to those on Hugging Face. DeepSeek-V4.1-Flash has no chat template, and its arguments are those of the prompt encoder of the release.}
+\label{tab:self_config}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llp{3.2cm}p{3.5cm}}
+\toprule
+Repository & Revision & Without thinking & With thinking \\
+\midrule
+\texttt{Qwen/Qwen3.8-27B} & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{Qwen/Qwen3.8-27B} (format ablation) & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=\allowbreak False, preserve\_thinking=\allowbreak False} & \texttt{preserve\_thinking=False} \\
+\texttt{Qwen/Qwen3.8-Flash-Next-FP8} & \texttt{236dfdf28582} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.6-27B} & \texttt{6a9e13bd6fc8} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.6-35B-A3B} & \texttt{995ad96eacd9} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.5-27B} & \texttt{fc05daec18b0} & \texttt{enable\_thinking=False} & default \\
+\texttt{zai-org/GLM-4.6V-Flash} & \texttt{411bb4d77144} & \texttt{enable\_thinking=False} & default \\
+\texttt{zai-org/GLM-4.7-Flash} & \texttt{7dd20894a642} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{zai-org/GLM-5.3-Flash} & \texttt{46a050bec130} & -- & default \\
+\texttt{deepseek-ai/DeepSeek-R1-Distill-Llama-70B} & \texttt{b1c0b44b4369} & -- & default \\
+\texttt{openai/gpt-oss-20b} & \texttt{6cee5e81ee83} & -- & default \\
+\texttt{openai/gpt-oss-120b} & \texttt{b5c939de8f75} & -- & default \\
+\texttt{google/gemma-4-31B-it} & \texttt{842da3794eaa} & default & \texttt{enable\_thinking=True} \\
+\texttt{ByteDance-Seed/Seed-OSS-36B-Instruct} & \texttt{497f1dca95eb} & \texttt{thinking\_budget=0} & default \\
+\texttt{LGAI-EXAONE/EXAONE-4.0.1-32B} & \texttt{a6b0bd4b0fb4} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.2-30b} & \texttt{9e668ce1c538} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.1-30b} & \texttt{4fae6278f713} & default & -- \\
+\texttt{allenai/OLMo-2-1124-13B-Instruct} & \texttt{3a5c85baefbb} & default & -- \\
+\texttt{allenai/OLMo-2-1124-7B-Instruct} & \texttt{470b1fba1ae0} & default & -- \\
+\texttt{deepseek-ai/DeepSeek-V4.1-Flash-1017} & \texttt{9f9818127fdf}$^{a}$ & \texttt{thinking\_mode=chat} & \texttt{thinking\_mode=thinking, reasoning\_effort=high} \\
+\texttt{baidu/ERNIE-4.5-21B-A3B-Thinking} & \texttt{4341bb42644d} & -- & default \\
+\texttt{XiaomiMiMo/MiMo-7B-RL-0530} & \texttt{ee8dd14ecd59} & \texttt{enable\_thinking=False} & default \\
+\texttt{XiaomiMiMo/MiMo-VL-7B-RL-2508} & \texttt{ec4ebdc29b83} & -- & default \\
+\texttt{XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B} & \texttt{1f09ddcc1a0e} & \texttt{enable\_thinking=False} & default \\
+\texttt{moonshotai/Moonlight-16B-A3B-Instruct} & \texttt{4e735b07a89f} & default & -- \\
+\texttt{swiss-ai/Apertus-8B-Instruct-2509} & \texttt{b946d40447b2} & default & -- \\
+\texttt{microsoft/phi-4} & \texttt{2db69c1c3e91} & default & -- \\
+\texttt{mistralai/Ministral-3-14B-Instruct-2512-BF16} & \texttt{3cea74c1ebaf} & default & -- \\
+\texttt{mistralai/Ministral-3-14B-Reasoning-2512} & \texttt{51f9210f3cd2} & -- & default \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Natural conversation order: the message under test follows a user request. Self-index: layers at which the own message is singled out in at least 80\% of the held-out bodies, on message content and at the response onset. Probability of ``you'': mean over 150 bodies and three option orders. $^{a}$Thinking rendering, self-index only.}
+\label{tab:self_natural}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+& \multicolumn{2}{c}{Self-index} & \multicolumn{3}{c}{Probability of ``you''} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+Model & content & onset & own & User & System \\
+\midrule
+EXAONE-4.0.1-32B & 64/64 & 64/64 & 0.34 & 0.14 & 0.19 \\
+Gemma-4-31B & 0/60 & 40/60 & 1.00 & 0.00 & 0.06 \\
+GLM-4.6V-Flash & 36/40 & 16/40 & 0.36 & 0.36 & 0.35 \\
+Granite-4.1-30B & 61/64 & 54/64 & 0.01 & 0.00 & 0.00 \\
+Seed-OSS-36B & 3/64 & 22/64 & 0.00 & 0.00 & 0.00 \\
+OLMo-2-7B & 5/32 & 15/32 & 0.24 & 0.21 & 0.27 \\
+ERNIE-4.5-21B-A3B$^{a}$ & 16/28 & 28/28 & -- & -- & -- \\
+MiMo-7B-RL & 34/36 & 27/36 & 0.13 & 0.12 & 0.15 \\
+Moonlight-16B-A3B & 27/27 & 27/27 & 0.70 & 0.66 & 0.65 \\
+phi-4 & 25/40 & 37/40 & 0.27 & 0.24 & 0.24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Natural conversation order with Assistant and User only, for the developers whose templates reject, leave out, or move a System message after a user turn. Single pass: mean probability of ``you'' over 150 bodies and the two option orders of Table~\ref{tab:self_crossmodel}. Thinking: share of finished items answered ``you'' (150 bodies, two option orders, 300 items per source). Main probe: the same quantities under the main probe, with User messages alone.}
+\label{tab:self_natural2}
+\footnotesize
+\begin{tabular}{llcccc}
+\toprule
+& & \multicolumn{2}{c}{Natural order} & \multicolumn{2}{c}{Main probe} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Model & Mode & own & User & own & User \\
+\midrule
+Qwen3.8-27B & single pass & 0.76 & 0.02 & 0.77 & 0.04 \\
+gpt-oss-20b & thinking & 0.93 & 0.03 & 0.78 & 0.00 \\
+R1-Distill-Llama-70B & thinking & 0.34 & 0.16 & 0.09 & 0.14 \\
+Apertus-8B & single pass & 0.22 & 0.24 & 0.18 & 0.23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Wrong steps adopted when they appear in Assistant history (own) and when the same steps come from the user, in every model and mode with self-reference (120 problems). Without thinking: mean adoption index (this appendix), measured with the cross-model implementation (the implementation of Sections~\ref{sec:res_index}--\ref{sec:res_thinking} gives \(+0.110\), see the text), with thinking: share of finished items whose answer propagates the error. Own minus user: item-paired difference with a 95\% bootstrap interval over problems.}
+\label{tab:self_ownstep}
+\small
+\begin{tabular}{llccc}
+\toprule
+Model & Mode & own & user & own minus user \\
+\midrule
+Qwen3.8-27B & no thinking & 0.96 & 0.82 & \(+0.14\) [0.08, 0.20] \\
+Qwen3.8-27B & thinking & 0.01 & 0.04 & \(-0.03\) [\(-0.07\), \(-0.01\)] \\
+gpt-oss-20b & thinking & 0.20 & 0.06 & \(+0.14\) [0.05, 0.23] \\
+gpt-oss-120b & thinking & 0.11 & 0.02 & \(+0.09\) [0.03, 0.15] \\
+EXAONE-4.0.1-32B & thinking & 0.03 & 0.08 & \(-0.05\) [\(-0.09\), \(-0.02\)] \\
+GLM-5.3-Flash & thinking & 0.03 & 0.43 & \(-0.40\) [\(-0.49\), \(-0.32\)] \\
+Qwen3.8-Flash-Next & thinking & 0.01 & 0.44 & \(-0.43\) [\(-0.53\), \(-0.35\)] \\
+MiMo-V2.6-Distill-9B & default call & 0.62 & 0.20 & \(+0.42\) [0.33, 0.53] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%<<app_templates
+This appendix gives the input that each model receives for one item: the first of the 150 bodies, with the attribution question in its first option order, rendered by the model's own chat template in each template setting of the runs. Every rendering was produced from the model's tokenizer and template files at the revision used in its runs (Appendix~\ref{app:config}) and agrees with the template's tokenized output, as checked in the runs. \PH{body}, \PH{question}, and \PH{request} stand for the body, the question, and the request that opens the natural order (``Please write a short description.''), in the language in which the model is tested (Table~\ref{tab:self_items} gives the English texts, and the Chinese ones will be released with the code). The symbol \NL{} marks a line feed, and every other character is the template's output. The gpt-oss template inserts the day of rendering (\PH{date}). The token names of the DeepSeek models contain the characters U+FF5C and U+2581, printed here as | and \_. Models whose templates render identically in every setting share one block. Where the three renderings of a block begin with the same long text, it is printed once, on the line Start, and stands as \PH{start} in each rendering. A line break without \NL{} only wraps the line.
+
+\subsection{Main Probe}
+\label{app:templates_main}
+
+The conversation is [\textit{role}: body] [user: question], followed by the generation prompt.
+
+\paragraph{Qwen3.8-27B, Qwen3.8-Flash-Next} (Chinese items, in the ablation of Appendix~\ref{app:config}, Qwen3.8-27B also with the English items, rendered the same way.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.\NL{}\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Qwen3.6-27B, Qwen3.6-35B-A3B, Qwen3.5-27B} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{GLM-4.6V-Flash} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|>\NL{}<think></think>\NL{}\PH{body}<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{body}/nothink<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+System     [gMASK]<sop><|system|>\NL{}\PH{body}<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|>\NL{}<think></think>\NL{}\PH{body}<|user|>\NL{}\PH{question}<|assistant|>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{body}<|user|>\NL{}\PH{question}<|assistant|>\NL{}
+System     [gMASK]<sop><|system|>\NL{}\PH{body}<|user|>\NL{}\PH{question}<|assistant|>\NL{}
+\end{Rendering}
+\paragraph{GLM-4.7-Flash} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|></think>\PH{body}<|user|>\PH{question}<|assistant|></think>
+User       [gMASK]<sop><|user|>\PH{body}<|user|>\PH{question}<|assistant|></think>
+System     [gMASK]<sop><|system|>\PH{body}<|user|>\PH{question}<|assistant|></think>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|assistant|></think>\PH{body}<|user|>\PH{question}<|assistant|><think>
+User       [gMASK]<sop><|user|>\PH{body}<|user|>\PH{question}<|assistant|><think>
+System     [gMASK]<sop><|system|>\PH{body}<|user|>\PH{question}<|assistant|><think>
+\end{Rendering}
+\paragraph{GLM-5.3-Flash} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|system|>Reasoning Effort: Max<|assistant|><think></think>\PH{body}<|user|>\PH{question}<|assistant|><think>
+User       [gMASK]<sop><|system|>Reasoning Effort: Max<|user|>\PH{body}<|user|>\PH{question}<|assistant|><think>
+System     [gMASK]<sop><|system|>Reasoning Effort: Max<|system|>\PH{body}<|user|>\PH{question}<|assistant|><think>
+\end{Rendering}
+\paragraph{DeepSeek-R1-Distill-Llama-70B} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|Assistant|>\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|><think>\NL{}
+User       <|begin_of_sentence|><|User|>\PH{body}<|User|>\PH{question}<|Assistant|><think>\NL{}
+System     <|begin_of_sentence|>\PH{body}<|User|>\PH{question}<|Assistant|><think>\NL{}
+\end{Rendering}
+\paragraph{gpt-oss-20b, gpt-oss-120b} (English items.)
+\noindent With thinking:
+\begin{Rendering}
+Start      <|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\NL{}Knowledge cutoff: 2024-06\NL{}Current date: \PH{date}\NL{}\NL{}Reasoning: medium\NL{}\NL{}# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|>
+Assistant  \PH{start}<|start|>assistant<|channel|>final<|message|>\PH{body}<|end|><|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+User       \PH{start}<|start|>user<|message|>\PH{body}<|end|><|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+System     \PH{start}<|start|>developer<|message|># Instructions\NL{}\NL{}\PH{body}\NL{}\NL{}<|end|><|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+\end{Rendering}
+\paragraph{Gemma-4-31B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <bos><|turn>model\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+User       <bos><|turn>user\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+System     <bos><|turn>system\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <bos><|turn>system\NL{}<|think|>\NL{}<turn|>\NL{}<|turn>model\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}
+User       <bos><|turn>system\NL{}<|think|>\NL{}<turn|>\NL{}<|turn>user\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}
+System     <bos><|turn>system\NL{}<|think|>\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}
+\end{Rendering}
+\paragraph{Seed-OSS-36B} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>assistant\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+User       <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+System     <seed:bos>system\NL{}\PH{body}<seed:eos><seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <seed:bos>assistant\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}
+User       <seed:bos>user\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}
+System     <seed:bos>system\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}
+\end{Rendering}
+\paragraph{EXAONE-4.0.1-32B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  [|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       [|user|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     [|system|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  [|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+User       [|user|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+System     [|system|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.2-30B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+User       <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think></think>\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.1-30B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|start_of_role|>assistant<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+User       <|start_of_role|>user<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+System     <|start_of_role|>system<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+\end{Rendering}
+\paragraph{OLMo-2-13B, OLMo-2-7B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|endoftext|><|assistant|>\NL{}\PH{body}<|endoftext|>\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+User       <|endoftext|><|user|>\NL{}\PH{body}\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+System     <|endoftext|><|system|>\NL{}\PH{body}\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+\end{Rendering}
+\paragraph{ERNIE-4.5-21B-A3B-Thinking} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<response>\NL{}\PH{body}\NL{}</response>\NL{}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}<system_setting>\NL{}\PH{body}\NL{}</system_setting>\NL{}\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{MiMo-7B-RL-0530} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+User       <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+User       <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+\end{Rendering}
+\paragraph{MiMo-VL-7B-RL-2508} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+User       <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}
+\end{Rendering}
+\paragraph{MiMo-V2.6-Distill-Qwen-9B} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}<think></think>\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}<think></think>
+User       <|im_start|>user\NL{}\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}<think></think>
+System     <|im_start|>system\NL{}\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}<think></think>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant\NL{}<think></think>\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}
+User       <|im_start|>user\NL{}\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}
+System     <|im_start|>system\NL{}\PH{body}<|im_end|><|im_start|>user\NL{}\PH{question}<|im_end|><|im_start|>assistant\NL{}
+\end{Rendering}
+\paragraph{Moonlight-16B-A3B-Instruct} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_assistant|>assistant<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+User       <|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+System     <|im_system|>system<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+\end{Rendering}
+\paragraph{Apertus-8B-Instruct-2509} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\NL{}Knowledge cutoff: 2024-04\NL{}Current date: \PH{date}<|system_end|><|developer_start|>Deliberation: disabled\NL{}Tool Capabilities: disabled<|developer_end|><|assistant_start|>\PH{body}<|assistant_end|><|user_start|>\PH{question}<|user_end|><|assistant_start|>
+User       <s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\NL{}Knowledge cutoff: 2024-04\NL{}Current date: \PH{date}<|system_end|><|developer_start|>Deliberation: disabled\NL{}Tool Capabilities: disabled<|developer_end|><|user_start|>\PH{body}<|user_end|><|user_start|>\PH{question}<|user_end|><|assistant_start|>
+System     <s><|system_start|>\PH{body}<|system_end|><|developer_start|>Deliberation: disabled\NL{}Tool Capabilities: disabled<|developer_end|><|user_start|>\PH{question}<|user_end|><|assistant_start|>
+\end{Rendering}
+\paragraph{phi-4} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>assistant<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+User       <|im_start|>user<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+System     <|im_start|>system<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+\end{Rendering}
+
+\subsection{Natural Conversation Order}
+\label{app:templates_natural}
+
+The conversation is [user: request] [\textit{role}: body] [user: question], followed by the generation prompt, for the models of Appendix~\ref{app:natural}. In the first ten models, the template keeps a System message in place after a user turn.
+
+\paragraph{Seed-OSS-36B} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Start      <seed:bos>system\NL{}You are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\NL{}<seed:eos><seed:bos>user\NL{}\PH{request}<seed:eos>
+Assistant  \PH{start}<seed:bos>assistant\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+User       \PH{start}<seed:bos>user\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+System     \PH{start}<seed:bos>system\NL{}\PH{body}<seed:eos><seed:bos>user\NL{}\PH{question}<seed:eos><seed:bos>assistant\NL{}<seed:think>\NL{}<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\NL{}</seed:think>
+\end{Rendering}
+\paragraph{Gemma-4-31B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <bos><|turn>user\NL{}\PH{request}<turn|>\NL{}<|turn>model\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+User       <bos><|turn>user\NL{}\PH{request}<turn|>\NL{}<|turn>user\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+System     <bos><|turn>user\NL{}\PH{request}<turn|>\NL{}<|turn>system\NL{}\PH{body}<turn|>\NL{}<|turn>user\NL{}\PH{question}<turn|>\NL{}<|turn>model\NL{}<|channel>thought\NL{}<channel|>
+\end{Rendering}
+\paragraph{EXAONE-4.0.1-32B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  [|user|]\NL{}\PH{request}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       [|user|]\NL{}\PH{request}[|endofturn|]\NL{}[|user|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     [|user|]\NL{}\PH{request}[|endofturn|]\NL{}[|system|]\NL{}\PH{body}[|endofturn|]\NL{}[|user|]\NL{}\PH{question}[|endofturn|]\NL{}[|assistant|]\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+\end{Rendering}
+\paragraph{GLM-4.6V-Flash} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  [gMASK]<sop><|user|>\NL{}\PH{request}/nothink<|assistant|>\NL{}<think></think>\NL{}\PH{body}<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+User       [gMASK]<sop><|user|>\NL{}\PH{request}/nothink<|user|>\NL{}\PH{body}/nothink<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+System     [gMASK]<sop><|user|>\NL{}\PH{request}/nothink<|system|>\NL{}\PH{body}<|user|>\NL{}\PH{question}/nothink<|assistant|>\NL{}<think></think>\NL{}
+\end{Rendering}
+\paragraph{Granite-4.1-30B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|start_of_role|>user<|end_of_role|>\PH{request}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+User       <|start_of_role|>user<|end_of_role|>\PH{request}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+System     <|start_of_role|>user<|end_of_role|>\PH{request}<|end_of_text|>\NL{}<|start_of_role|>system<|end_of_role|>\PH{body}<|end_of_text|>\NL{}<|start_of_role|>user<|end_of_role|>\PH{question}<|end_of_text|>\NL{}<|start_of_role|>assistant<|end_of_role|>
+\end{Rendering}
+\paragraph{OLMo-2-7B} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|endoftext|><|user|>\NL{}\PH{request}\NL{}<|assistant|>\NL{}\PH{body}<|endoftext|>\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+User       <|endoftext|><|user|>\NL{}\PH{request}\NL{}<|user|>\NL{}\PH{body}\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+System     <|endoftext|><|user|>\NL{}\PH{request}\NL{}<|system|>\NL{}\PH{body}\NL{}<|user|>\NL{}\PH{question}\NL{}<|assistant|>\NL{}
+\end{Rendering}
+\paragraph{ERNIE-4.5-21B-A3B-Thinking} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<response>\NL{}\PH{body}\NL{}</response>\NL{}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+User       <|im_start|>system\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+System     <|im_start|>system\NL{}<global_setting>\NL{}think_mode=True\NL{}</global_setting><|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}\NL{}<|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}\NL{}<|im_start|>assistant\NL{}<think>\NL{}
+\end{Rendering}
+\paragraph{MiMo-7B-RL-0530} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}<|im_start|>assistant\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+User       <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+System     <|im_start|>system\NL{}You are MiMo, an AI assistant developed by Xiaomi.<|im_end|>\NL{}<|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}<|im_start|>system\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}
+\end{Rendering}
+\paragraph{Moonlight-16B-A3B-Instruct} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>\PH{request}<|im_end|><|im_assistant|>assistant<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+User       <|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>\PH{request}<|im_end|><|im_user|>user<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+System     <|im_system|>system<|im_middle|>You are a helpful assistant<|im_end|><|im_user|>user<|im_middle|>\PH{request}<|im_end|><|im_system|>system<|im_middle|>\PH{body}<|im_end|><|im_user|>user<|im_middle|>\PH{question}<|im_end|><|im_assistant|>assistant<|im_middle|>
+\end{Rendering}
+\paragraph{phi-4} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>user<|im_sep|>\PH{request}<|im_end|><|im_start|>assistant<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+User       <|im_start|>user<|im_sep|>\PH{request}<|im_end|><|im_start|>user<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+System     <|im_start|>user<|im_sep|>\PH{request}<|im_end|><|im_start|>system<|im_sep|>\PH{body}<|im_end|><|im_start|>user<|im_sep|>\PH{question}<|im_end|><|im_start|>assistant<|im_sep|>
+\end{Rendering}
+
+In the next four, the template does not keep it in place, so these models are compared on two roles: the Qwen3.8 and Apertus templates raise an error, the gpt-oss template leaves the message out, and the DeepSeek-R1-Distill-Llama-70B template moves its text to the start of the input.
+
+\paragraph{Qwen3.8-27B} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+User       <|im_start|>user\NL{}\PH{request}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{body}<|im_end|>\NL{}<|im_start|>user\NL{}\PH{question}<|im_end|>\NL{}<|im_start|>assistant\NL{}<think>\NL{}\NL{}</think>\NL{}\NL{}
+System     \Note{template error: System message must be at the beginning.}
+\end{Rendering}
+\paragraph{gpt-oss-20b} (English items.)
+\noindent With thinking:
+\begin{Rendering}
+Start      <|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\NL{}Knowledge cutoff: 2024-06\NL{}Current date: \PH{date}\NL{}\NL{}Reasoning: medium\NL{}\NL{}# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>\PH{request}<|end|>
+Assistant  \PH{start}<|start|>assistant<|channel|>final<|message|>\PH{body}<|end|><|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+User       \PH{start}<|start|>user<|message|>\PH{body}<|end|><|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+System     \Note{the template leaves the message out:} \PH{start}<|start|>user<|message|>\PH{question}<|end|><|start|>assistant
+\end{Rendering}
+\paragraph{DeepSeek-R1-Distill-Llama-70B} (Chinese items.)
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|User|>\PH{request}<|Assistant|>\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|><think>\NL{}
+User       <|begin_of_sentence|><|User|>\PH{request}<|User|>\PH{body}<|User|>\PH{question}<|Assistant|><think>\NL{}
+System     \Note{the template moves the message to the start:} <|begin_of_sentence|>\PH{body}<|User|>\PH{request}<|User|>\PH{question}<|Assistant|><think>\NL{}
+\end{Rendering}
+\paragraph{Apertus-8B-Instruct-2509} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\NL{}Knowledge cutoff: 2024-04\NL{}Current date: \PH{date}<|system_end|><|developer_start|>Deliberation: disabled\NL{}Tool Capabilities: disabled<|developer_end|><|user_start|>\PH{request}<|user_end|><|assistant_start|>\PH{body}<|assistant_end|><|user_start|>\PH{question}<|user_end|><|assistant_start|>
+User       <s><|system_start|>You are Apertus, a helpful assistant created by the SwissAI initiative.\NL{}Knowledge cutoff: 2024-04\NL{}Current date: \PH{date}<|system_end|><|developer_start|>Deliberation: disabled\NL{}Tool Capabilities: disabled<|developer_end|><|user_start|>\PH{request}<|user_end|><|user_start|>\PH{body}<|user_end|><|user_start|>\PH{question}<|user_end|><|assistant_start|>
+System     \Note{template error: Invalid message role}
+\end{Rendering}
+
+The last three templates do not accept the main probe and merge the User message under test with the request and the question into one user turn. DeepSeek-V4.1-Flash has no chat template. Its inputs are produced by the prompt encoder of the release (\texttt{encoding/encoding.py}), in chat mode and in thinking mode with reasoning effort ``high''.
+
+\paragraph{DeepSeek-V4.1-Flash} (Chinese items.)
+\noindent Without thinking:
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|User|>\PH{request}<|Assistant|></think>\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|></think>
+User       <|begin_of_sentence|><|User|>\PH{request}\NL{}\NL{}\PH{body}\NL{}\NL{}\PH{question}<|Assistant|></think>
+System     <|begin_of_sentence|><|User|>\PH{request}<|System|>\PH{body}<|User|>\PH{question}<|Assistant|></think>
+\end{Rendering}
+\noindent With thinking:
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{request}<|Assistant|></think>\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|><think>
+User       <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{request}\NL{}\NL{}\PH{body}\NL{}\NL{}\PH{question}<|Assistant|><think>
+System     <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{request}<|System|>\PH{body}<|User|>\PH{question}<|Assistant|><think>
+\end{Rendering}
+\paragraph{Ministral-3-14B-Instruct} (English items.)
+\noindent Without thinking:
+\begin{Rendering}
+Start      <s>[SYSTEM_PROMPT]You are Ministral-3-14B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\NL{}You power an AI assistant called Le Chat.\NL{}Your knowledge base was last updated on 2023-10-01.\NL{}The current date is \LB{}today\RB{}.\NL{}\NL{}When you're not sure about some information or when the user's request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don't have the information and avoid making up anything.\NL{}If the user's question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. "What are some good restaurants around me?" => "Where are you?" or "When is the next flight to Tokyo" => "Where do you travel from?").\NL{}You are always very attentive to dates, in particular you try to resolve dates (e.g. "yesterday" is \LB{}yesterday\RB{}) and when asked about information at specific dates, you discard information that is at another date.\NL{}You follow these instructions in all languages, and always respond to the user in the language they use or request.\NL{}Next sections describe the capabilities that you have.\NL{}\NL{}# WEB BROWSING INSTRUCTIONS\NL{}\NL{}You cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\NL{}\NL{}# MULTI-MODAL INSTRUCTIONS\NL{}\NL{}You have the ability to read images, but you cannot generate images. You also cannot read nor transcribe audio files or videos.\NL{}\NL{}# TOOL CALLING INSTRUCTIONS\NL{}\NL{}You may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\NL{}\NL{}1. When the request requires up-to-date information.\NL{}2. When the request requires specific data that you do not have in your knowledge base.\NL{}3. When the request involves actions that you cannot perform without tools.\NL{}\NL{}Always prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT]
+Assistant  \PH{start}[INST]\PH{request}[/INST]\PH{body}</s>[INST]\PH{question}[/INST]
+User       \PH{start}[INST]\PH{request}\NL{}\NL{}\PH{body}\NL{}\NL{}\PH{question}[/INST]
+System     \PH{start}[INST]\PH{request}[/INST][SYSTEM_PROMPT]\PH{body}[/SYSTEM_PROMPT][INST]\PH{question}[/INST]
+\end{Rendering}
+\paragraph{Ministral-3-14B-Reasoning} (English items.)
+\noindent With thinking:
+\begin{Rendering}
+Start      <s>[SYSTEM_PROMPT]# HOW YOU SHOULD THINK AND ANSWER\NL{}\NL{}First draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\NL{}\NL{}Your thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.[/SYSTEM_PROMPT]
+Assistant  \PH{start}[INST]\PH{request}[/INST]\PH{body}</s>[INST]\PH{question}[/INST]
+User       \PH{start}[INST]\PH{request}\NL{}\NL{}\PH{body}\NL{}\NL{}\PH{question}[/INST]
+System     \PH{start}[INST]\PH{request}[/INST][SYSTEM_PROMPT]\PH{body}[/SYSTEM_PROMPT][INST]\PH{question}[/INST]
+\end{Rendering}
+
+Under the main probe, the DeepSeek-V4.1-Flash encoder gives an opening Assistant message no role token, the Ministral templates reject it, and all three merge an opening User message with the question. In the Ministral blocks, \PH{start} is the text on the line Start of the natural-order block above.
+
+\paragraph{DeepSeek-V4.1-Flash} (Chinese items.)
+\noindent Without thinking (not run, shown for comparison):
+\begin{Rendering}
+Assistant  <|begin_of_sentence|>\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|></think>
+User       <|begin_of_sentence|><|User|>\PH{body}\NL{}\NL{}\PH{question}<|Assistant|></think>
+System     <|begin_of_sentence|><|System|>\PH{body}<|User|>\PH{question}<|Assistant|></think>
+\end{Rendering}
+\noindent With thinking (not run, shown for comparison):
+\begin{Rendering}
+Assistant  <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}\PH{body}<|end_of_sentence|><|User|>\PH{question}<|Assistant|><think>
+User       <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}<|User|>\PH{body}\NL{}\NL{}\PH{question}<|Assistant|><think>
+System     <|begin_of_sentence|><|System|>Reasoning Effort: 75 (range 1-100, the higher the value, the more thorough the reasoning)\NL{}\NL{}\PH{body}<|User|>\PH{question}<|Assistant|><think>
+\end{Rendering}
+\paragraph{Ministral-3-14B-Instruct} (English items.)
+\noindent Without thinking (not run, shown for comparison):
+\begin{Rendering}
+Assistant  \Note{template error: Conversation must start with a user or system message, got assistant.}
+User       \PH{start}[INST]\PH{body}\NL{}\NL{}\PH{question}[/INST]
+System     <s>[SYSTEM_PROMPT]\PH{body}[/SYSTEM_PROMPT][INST]\PH{question}[/INST]
+\end{Rendering}
+\paragraph{Ministral-3-14B-Reasoning} (English items.)
+\noindent With thinking (not run, shown for comparison):
+\begin{Rendering}
+Assistant  \Note{template error: Conversation must start with a user or system message, got assistant.}
+User       \PH{start}[INST]\PH{body}\NL{}\NL{}\PH{question}[/INST]
+System     <s>[SYSTEM_PROMPT]\PH{body}[/SYSTEM_PROMPT][INST]\PH{question}[/INST]
+\end{Rendering}
+%>>app_templates

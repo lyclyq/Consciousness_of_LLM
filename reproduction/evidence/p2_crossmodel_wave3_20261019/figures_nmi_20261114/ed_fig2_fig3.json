@@ -1,0 +1,220 @@
+{
+ "ed_fig2_layers_meeting_criterion": {
+  "Qwen3.8-27B, main probe": {
+   "layers": 64,
+   "text_80": 64,
+   "onset_80": 64
+  },
+  "DeepSeek-R1-Distill-Llama-70B, main probe": {
+   "layers": 80,
+   "text_80": 0,
+   "onset_80": 80
+  },
+  "Gemma-4-31B, main probe": {
+   "layers": 60,
+   "text_80": 0,
+   "onset_80": 0
+  },
+  "Gemma-4-31B, natural order": {
+   "layers": 60,
+   "text_80": 0,
+   "onset_80": 40
+  }
+ },
+ "ed_fig3": {
+  "models": [
+   {
+    "name": "Qwen3.8-27B",
+    "level": 2,
+    "params_b": 27.0,
+    "active_b": 27.0,
+    "gpqa": 89.2
+   },
+   {
+    "name": "Qwen3.8-Flash-Next",
+    "level": 2,
+    "params_b": 125.0,
+    "active_b": 6.0,
+    "gpqa": 91.7
+   },
+   {
+    "name": "gpt-oss-20b",
+    "level": 2,
+    "params_b": 21.0,
+    "active_b": 3.6,
+    "gpqa": 71.5
+   },
+   {
+    "name": "gpt-oss-120b",
+    "level": 2,
+    "params_b": 117.0,
+    "active_b": 5.1,
+    "gpqa": 80.1
+   },
+   {
+    "name": "GLM-5.3-Flash",
+    "level": 2,
+    "params_b": 320.0,
+    "active_b": 18.0,
+    "gpqa": null
+   },
+   {
+    "name": "EXAONE-4.0.1-32B",
+    "level": 2,
+    "params_b": 32.0,
+    "active_b": 32.0,
+    "gpqa": 74.3
+   },
+   {
+    "name": "MiMo-V2.6-Distill-Qwen-9B",
+    "level": 2,
+    "params_b": 9.0,
+    "active_b": 9.0,
+    "gpqa": null
+   },
+   {
+    "name": "GLM-4.6V-Flash",
+    "level": 1,
+    "params_b": 9.0,
+    "active_b": 9.0,
+    "gpqa": null
+   },
+   {
+    "name": "GLM-4.7-Flash",
+    "level": 1,
+    "params_b": 30.0,
+    "active_b": 3.0,
+    "gpqa": 75.2
+   },
+   {
+    "name": "DeepSeek-R1-Distill-Llama-70B",
+    "level": 1,
+    "params_b": 70.0,
+    "active_b": 70.0,
+    "gpqa": 65.2
+   },
+   {
+    "name": "phi-4",
+    "level": 1,
+    "params_b": 14.0,
+    "active_b": 14.0,
+    "gpqa": 56.1
+   },
+   {
+    "name": "Granite-4.2-30B",
+    "level": 1,
+    "params_b": 30.0,
+    "active_b": 30.0,
+    "gpqa": 66.41
+   },
+   {
+    "name": "Granite-4.1-30B",
+    "level": 1,
+    "params_b": 30.0,
+    "active_b": 30.0,
+    "gpqa": 45.76
+   },
+   {
+    "name": "OLMo-2-13B",
+    "level": 0,
+    "params_b": 13.0,
+    "active_b": 13.0,
+    "gpqa": null
+   },
+   {
+    "name": "OLMo-2-7B",
+    "level": 0,
+    "params_b": 7.0,
+    "active_b": 7.0,
+    "gpqa": null
+   },
+   {
+    "name": "Apertus-8B",
+    "level": 0,
+    "params_b": 8.0,
+    "active_b": 8.0,
+    "gpqa": null
+   },
+   {
+    "name": "Moonlight-16B-A3B",
+    "level": 0,
+    "params_b": 16.0,
+    "active_b": 3.0,
+    "gpqa": null
+   },
+   {
+    "name": "MiMo-7B-RL",
+    "level": 0,
+    "params_b": 7.0,
+    "active_b": 7.0,
+    "gpqa": 60.6
+   },
+   {
+    "name": "MiMo-VL-7B-RL-2508",
+    "level": 0,
+    "params_b": 7.0,
+    "active_b": 7.0,
+    "gpqa": null
+   },
+   {
+    "name": "ERNIE-4.5-21B-A3B",
+    "level": 0,
+    "params_b": 21.0,
+    "active_b": 3.0,
+    "gpqa": null
+   },
+   {
+    "name": "Seed-OSS-36B",
+    "level": 0,
+    "params_b": 36.0,
+    "active_b": 36.0,
+    "gpqa": 71.4
+   },
+   {
+    "name": "Gemma-4-31B",
+    "level": 0,
+    "params_b": 31.0,
+    "active_b": 31.0,
+    "gpqa": 84.3
+   },
+   {
+    "name": "Qwen3.6-27B",
+    "level": 0,
+    "params_b": 27.0,
+    "active_b": 27.0,
+    "gpqa": 87.8
+   },
+   {
+    "name": "Qwen3.6-35B-A3B",
+    "level": 0,
+    "params_b": 35.0,
+    "active_b": 3.0,
+    "gpqa": 86.0
+   },
+   {
+    "name": "Qwen3.5-27B",
+    "level": 0,
+    "params_b": 27.0,
+    "active_b": 27.0,
+    "gpqa": 85.5
+   }
+  ],
+  "tests": {
+   "params_b": {
+    "n": 25,
+    "spearman": 0.4162426230127021,
+    "p_two_sided": 0.04105
+   },
+   "active_b": {
+    "n": 25,
+    "spearman": 0.08998449633852326,
+    "p_two_sided": 0.66345
+   },
+   "gpqa": {
+    "n": 16,
+    "spearman": 0.07327666819725377,
+    "p_two_sided": 0.78835
+   }
+  }
+ }
+}

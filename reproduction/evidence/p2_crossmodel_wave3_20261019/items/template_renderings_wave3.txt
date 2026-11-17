@@ -1,0 +1,55 @@
+wrote template_renderings_wave3.txt 25 blocks
+##### ByteDance-Seed/Seed-OSS-36B-Instruct
+chat_template sha256 3f9e0dc4adeb8032287d0129dc75b6298fee8698a52ab41e863dbc89929330d3
+files {"chat_template.jinja": "3f9e0dc4adeb8032", "config.json": "09f91799169531b6", "generation_config.json": "99c964d4affb4613", "tokenizer.json": "f6bd848f52451824", "tokenizer_config.json": "97d6fdf939d37045"}
+--- kwargs {"thinking_budget": 0} role assistant
+"<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>assistant\nBODY<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+--- kwargs {"thinking_budget": 0} role user
+"<seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\nBODY<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+--- kwargs {"thinking_budget": 0} role system
+"<seed:bos>system\nBODY<seed:eos><seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+--- kwargs {} role assistant
+'<seed:bos>assistant\nBODY<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n'
+--- kwargs {} role user
+'<seed:bos>user\nBODY<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n'
+--- kwargs {} role system
+'<seed:bos>system\nBODY<seed:eos><seed:bos>user\nQ<seed:eos><seed:bos>assistant\n'
+##### LGAI-EXAONE/EXAONE-4.0.1-32B
+chat_template sha256 de64119ec8394ec3619221283a05fc8019c9a319cbdf2a471fe1ee8c36119616
+files {"chat_template.jinja": "de64119ec8394ec3", "config.json": "8fcfd6fe7e687098", "generation_config.json": "c961dbcd4a37b07f", "tokenizer.json": "523b110391fc95d5", "tokenizer_config.json": "541bbf1dcafbe5e2"}
+--- kwargs {"enable_thinking": false} role assistant
+'[|assistant|]\n<think>\n\n</think>\n\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n'
+--- kwargs {"enable_thinking": false} role user
+'[|user|]\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n'
+--- kwargs {"enable_thinking": false} role system
+'[|system|]\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n\n</think>\n\n'
+--- kwargs {"enable_thinking": true} role assistant
+'[|assistant|]\n<think>\n\n</think>\n\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n'
+--- kwargs {"enable_thinking": true} role user
+'[|user|]\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n'
+--- kwargs {"enable_thinking": true} role system
+'[|system|]\nBODY[|endofturn|]\n[|user|]\nQ[|endofturn|]\n[|assistant|]\n<think>\n'
+##### openai/gpt-oss-20b
+chat_template sha256 a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146
+files {"chat_template.jinja": "a4c9919cbbd4acdd", "config.json": "3a2a26ded679375b", "generation_config.json": "f9970ada892d2d1f", "tokenizer.json": "0614fe83cadab421", "tokenizer_config.json": "9279e942392b742d"}
+--- kwargs {} role assistant
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-19\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>assistant<|channel|>final<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role user
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-19\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role system
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-19\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nBODY\n\n<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+##### zai-org/GLM-5.3-Flash
+chat_template sha256 2614a3c896d53e265f564c23701173c0049f985dacfbae79fc4bcd9f5ba083f4
+files {"chat_template.jinja": "2614a3c896d53e26", "config.json": "bb8f01c42cb92a52", "generation_config.json": "230c30609ecbbb9e", "tokenizer.json": "19e773648cb4e65d", "tokenizer_config.json": "98b1271574f41abf"}
+--- kwargs {"enable_thinking": false} role assistant
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|assistant|><think></think>BODY<|user|>Q<|assistant|><think>'
+--- kwargs {"enable_thinking": false} role user
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|user|>BODY<|user|>Q<|assistant|><think>'
+--- kwargs {"enable_thinking": false} role system
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|system|>BODY<|user|>Q<|assistant|><think>'
+--- kwargs {} role assistant
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|assistant|><think></think>BODY<|user|>Q<|assistant|><think>'
+--- kwargs {} role user
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|user|>BODY<|user|>Q<|assistant|><think>'
+--- kwargs {} role system
+'[gMASK]<sop><|system|>Reasoning Effort: Max<|system|>BODY<|user|>Q<|assistant|><think>'

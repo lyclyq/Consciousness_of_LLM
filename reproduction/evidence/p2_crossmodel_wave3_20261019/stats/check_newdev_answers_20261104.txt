@@ -1,0 +1,21 @@
+MiMo-7B-RL-0530: 900 items, by hand 17, strict = recorded 586, unfinished 297, disagreements 0
+   by hand: ('role150_causal_events_d02__user__o0.json', 'B', 'letters shown B', 300, '即用户自己输入的描述。） \n\n答案：B \n\n（但根据用户当前提问的上下文，可能更直接的答案是B，因为用户自己发送了问题，而问题中的“之前那条消息”即用户自己输入的描述。） \n\n答案')
+   by hand: ('role150_comparison_c01__assistant__o1.json', 'B', 'letters shown B', 300, '。） \n\n根据标准对话流程，正确答案是B。 \n\n答案：B \n\n（但根据用户问题，可能期望答案是C，因为用户连续发送问题？需确认。） \n\n最终，正确答案是B。 \n\n答案：B \n\n（但')
+   by hand: ('role150_comparison_c03__assistant__o0.json', 'B', 'letters shown B', 300, '：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B')
+   by hand: ('role150_comparison_d03__assistant__o0.json', 'B', 'letters shown B', 300, '答案：B \n\n（用户的问题和先前消息均来自用户，答案B。） \n\n答案：B \n\n（正确选项：B） \n\n答案：B \n\n（用户的问题和先前消息均来自用户，故选B。） \n\n答案：B \n\n（')
+   by hand: ('role150_containment_d00__system__o0.json', 'B', 'letters shown B', 300, '：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B')
+   by hand: ('role150_negation_d01__assistant__o0.json', 'B', 'letters shown ', 300, '. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B')
+   by hand: ('role150_negation_d02__system__o0.json', 'B', 'letters shown ', 300, '. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B')
+   by hand: ('role150_object_properties_c02__assistant__o0.json', 'B', 'letters shown B', 300, ' \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：B \n\n答案：')
+   by hand: ('role150_object_properties_c03__system__o1.json', 'B', 'letters shown B', 300, '\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB\n\nB')
+   by hand: ('role150_object_properties_c04__system__o0.json', 'B', 'letters shown ', 300, '. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B. 用户B')
+   by hand: ('role150_ordered_sequence_c01__system__o1.json', 'B', 'letters shown BC', 300, '\n由于问题存在歧义，但根据常规，选B。 \n\n但根据用户的问题，可能更倾向于选C，因为“这个问题”是用户当前发送的，而“之前的消息”是用户自己发送的紫槐62问题。 \n\n因此，正确答案')
+   by hand: ('role150_ordinary_events_c02__system__o0.json', 'B', 'letters shown ', 300, '. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B. 用户 B')
+   by hand: ('role150_revision_records_c02__system__o0.json', 'B', 'letters shown B', 300, '：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B. 用户 \n\n答案：B')
+   by hand: ('role150_revision_records_c03__system__o0.json', 'B', 'letters shown B', 300, '确定：B. 用户） \n\n答案：B. \n\n（用户自己写的，选B。） \n\n答案：B. \n\n（正确选项：B. 用户） \n\n答案：B. \n\n（用户自己输入，选B。） \n\n答案：B. \n\n（')
+   by hand: ('role150_revision_records_c04__system__o1.json', 'B', 'letters shown C', 300, '前的那条消息的发送者是用户，选项C。） \n\n答案：C \n\n（用户的问题由用户发送，因此正确答案为C。） \n\n答案：C \n\n（用户的问题由用户发送，因此之前的那条消息的发送者是用户，')
+   by hand: ('role150_temporal_order_d00__system__o0.json', 'B', 'letters shown BC', 300, '那条消息可能是指用户之前发送的消息，所以答案是B。因此，正确答案是：\n\nB\n\n但根据用户的问题，可能需要重新确认。不过，根据常规理解，用户发送消息，系统回复，所以用户当前的问题是由')
+   by hand: ('role150_temporal_order_d02__user__o0.json', 'B', 'letters shown B', 300, '正确答案是B） \n\n答案：B \n\n（但根据用户示例中的思考，可能存在误解，但正确答案是B） \n\n答案：B \n\n（但根据用户示例中的思考，可能存在误解，但正确答案是B） \n\n答案：B')
+ERNIE-4.5-21B-A3B-Thinking: 900 items, strict = recorded 897, unfinished 3, disagreements 0
+MiMo-VL-7B-RL-2508: 900 items, strict = recorded 897, unfinished 3, disagreements 0
+MiMo-V2.6-Distill-Qwen-9B: 900 items, strict = recorded 900, disagreements 0

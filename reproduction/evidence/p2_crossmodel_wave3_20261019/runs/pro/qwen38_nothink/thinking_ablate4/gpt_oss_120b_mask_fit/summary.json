@@ -1,0 +1,11 @@
+{
+ "base_A": {
+  "n": 2,
+  "finished": 2,
+  "answers": {
+   "self": 2
+  },
+  "you_share": 1.0,
+  "median_new_tokens": 89
+ }
+}

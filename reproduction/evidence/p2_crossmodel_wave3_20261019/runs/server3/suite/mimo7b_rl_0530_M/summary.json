@@ -1,0 +1,9 @@
+{
+ "n_layers": 36,
+ "reasoning": {
+  "correct_assistant": 0.10089728705663387,
+  "correct_user": 0.17244974177377587,
+  "wrong_assistant": 0.8012248728621854,
+  "wrong_user": 0.76974849389091
+ }
+}

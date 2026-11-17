@@ -1,0 +1,30 @@
+{
+ "experiment": "P2_thinking_ablate2_smoke",
+ "script_sha256": "1ccbf1df65ddad545d91275a1f996f6f554d4d912f34a05fc28182f7797bbab8",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/Qwen/Qwen3.8-27B",
+ "n_layers": 64,
+ "band": [
+  0,
+  63
+ ],
+ "main_layer": 39,
+ "fit_from": "",
+ "suite": "smoke",
+ "edit_generated_tokens": false,
+ "edit_end": "before_gen",
+ "layers_used": "both",
+ "lang": "zh",
+ "k_max": 64,
+ "fit_rows": 14842,
+ "n_fit": 75,
+ "n_eval": 1,
+ "conditions": [
+  "base_A"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0",
+ "fit_s": 940.8355295658112
+}

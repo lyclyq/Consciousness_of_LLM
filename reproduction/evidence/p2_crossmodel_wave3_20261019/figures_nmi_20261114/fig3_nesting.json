@@ -1,0 +1,311 @@
+{
+ "rows": [
+  {
+   "name": "Qwen3.8-27B",
+   "non": [
+    0.77,
+    0.07
+   ],
+   "think": [
+    0.96,
+    0.0
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "gpt-oss-120b",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.97,
+    0.0
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "gpt-oss-20b",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.78,
+    0.0
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "Qwen3.8-Flash-Next",
+   "non": [
+    0.15,
+    0.14
+   ],
+   "think": [
+    0.66,
+    0.0
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "GLM-5.3-Flash",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.46,
+    0.03
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "MiMo-V2.6-Distill-9B",
+   "non": [
+    0.39,
+    0.33
+   ],
+   "think": [
+    0.35,
+    0.12
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "EXAONE-4.0.1-32B",
+   "non": [
+    0.03,
+    0.03
+   ],
+   "think": [
+    0.17,
+    0.05
+   ],
+   "group": "self-reference"
+  },
+  {
+   "name": "GLM-4.6V-Flash",
+   "non": [
+    0.55,
+    0.54
+   ],
+   "think": [
+    0.09,
+    0.0
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "GLM-4.7-Flash",
+   "non": [
+    0.37,
+    0.3
+   ],
+   "think": [
+    0.08,
+    0.02
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "R1-Distill-Llama-70B",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.09,
+    0.16
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "phi-4",
+   "non": [
+    0.04,
+    0.03
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "Granite-4.2-30B",
+   "non": [
+    0.08,
+    0.08
+   ],
+   "think": [
+    0.0,
+    0.0
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "Granite-4.1-30B",
+   "non": [
+    0.05,
+    0.05
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "self-index only"
+  },
+  {
+   "name": "OLMo-2-13B",
+   "non": [
+    0.06,
+    0.12
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "OLMo-2-7B",
+   "non": [
+    0.19,
+    0.21
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Apertus-8B",
+   "non": [
+    0.18,
+    0.23
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Moonlight-16B-A3B",
+   "non": [
+    0.66,
+    0.59
+   ],
+   "think": [
+    null,
+    null
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "MiMo-7B-RL",
+   "non": [
+    0.15,
+    0.18
+   ],
+   "think": [
+    0.04,
+    0.03
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "MiMo-VL-7B",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.01,
+    0.0
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "ERNIE-4.5-21B-A3B",
+   "non": [
+    null,
+    null
+   ],
+   "think": [
+    0.08,
+    0.08
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Seed-OSS-36B",
+   "non": [
+    0.0,
+    0.0
+   ],
+   "think": [
+    0.0,
+    0.0
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Gemma-4-31B",
+   "non": [
+    0.0,
+    0.0
+   ],
+   "think": [
+    0.03,
+    0.0
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Qwen3.6-27B",
+   "non": [
+    0.06,
+    0.11
+   ],
+   "think": [
+    0.0,
+    0.0
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Qwen3.6-35B-A3B",
+   "non": [
+    0.05,
+    0.07
+   ],
+   "think": [
+    0.0,
+    0.0
+   ],
+   "group": "neither"
+  },
+  {
+   "name": "Qwen3.5-27B",
+   "non": [
+    0.04,
+    0.14
+   ],
+   "think": [
+    0.02,
+    0.0
+   ],
+   "group": "neither"
+  }
+ ],
+ "counts": {
+  "index=True,selfref=True": 7,
+  "index=True,selfref=False": 6,
+  "index=False,selfref=True": 0,
+  "index=False,selfref=False": 12
+ },
+ "p_one_sided": 0.0035697940503432494
+}

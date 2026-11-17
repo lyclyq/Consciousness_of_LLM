@@ -1,0 +1,72 @@
+{
+ "exaone4_32b/main": [
+  1.0,
+  -0.034,
+  true
+ ],
+ "seed_oss_36b/main": [
+  0.0,
+  0.003,
+  false
+ ],
+ "granite41_30b/main": [
+  0.578,
+  -0.005,
+  false
+ ],
+ "olmo2_7b/main": [
+  0.188,
+  -0.05,
+  false
+ ],
+ "gemma4_31b/main": [
+  0.0,
+  -0.0,
+  false
+ ],
+ "glm46v_flash/main": [
+  1.0,
+  0.007,
+  true
+ ],
+ "exaone4_32b/natural": [
+  1.0,
+  0.154,
+  true
+ ],
+ "seed_oss_36b/natural": [
+  0.344,
+  -0.0,
+  false
+ ],
+ "granite41_30b/natural": [
+  1.0,
+  0.011,
+  true
+ ],
+ "olmo2_7b/natural": [
+  0.469,
+  -0.028,
+  false
+ ],
+ "gemma4_31b/natural": [
+  0.667,
+  0.94,
+  true
+ ],
+ "glm46v_flash/natural": [
+  1.0,
+  0.001,
+  true
+ ],
+ "ministral3_14b/natural": [
+  0.0,
+  -0.083,
+  false
+ ],
+ "dsv41_flash/natural": [
+  1.0,
+  0.221,
+  true
+ ]
+}

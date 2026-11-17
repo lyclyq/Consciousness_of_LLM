@@ -1,0 +1,285 @@
+{
+ "results": {
+  "qwen38_27b": {
+   "index": true,
+   "two_orders": [
+    0.7712,
+    0.0359,
+    0.0696,
+    0.6997,
+    150
+   ],
+   "three_orders": [
+    0.7198,
+    0.0501,
+    0.1046,
+    0.6141,
+    150
+   ],
+   "selfref_two": true,
+   "selfref_three": true
+  },
+  "qwen38_flashnext": {
+   "index": true,
+   "two_orders": [
+    0.1548,
+    0.089,
+    0.1401,
+    0.0096,
+    72
+   ],
+   "three_orders": [
+    0.1865,
+    0.1028,
+    0.1675,
+    0.0174,
+    76
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "exaone4_32b": {
+   "index": true,
+   "two_orders": [
+    0.031,
+    0.0291,
+    0.0279,
+    0.0004,
+    78
+   ],
+   "three_orders": [
+    0.1259,
+    0.1599,
+    0.155,
+    -0.0395,
+    21
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "glm46v_flash": {
+   "index": true,
+   "two_orders": [
+    0.5459,
+    0.533,
+    0.5385,
+    0.0051,
+    72
+   ],
+   "three_orders": [
+    0.3674,
+    0.3563,
+    0.3602,
+    0.0058,
+    78
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "glm47_flash": {
+   "index": true,
+   "two_orders": [
+    0.3681,
+    0.3012,
+    0.297,
+    0.0538,
+    130
+   ],
+   "three_orders": [
+    0.2706,
+    0.2305,
+    0.2264,
+    0.0312,
+    118
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "granite42_30b": {
+   "index": true,
+   "two_orders": [
+    0.0814,
+    0.0177,
+    0.078,
+    0.0034,
+    62
+   ],
+   "three_orders": [
+    0.0574,
+    0.0126,
+    0.056,
+    0.0014,
+    58
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "granite41_30b": {
+   "index": true,
+   "two_orders": [
+    0.0455,
+    0.0529,
+    0.0456,
+    -0.0099,
+    99
+   ],
+   "three_orders": [
+    0.0304,
+    0.0353,
+    0.0304,
+    -0.0066,
+    100
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "olmo2_13b": {
+   "index": false,
+   "two_orders": [
+    0.063,
+    0.0237,
+    0.1235,
+    -0.0605,
+    3
+   ],
+   "three_orders": [
+    0.1641,
+    0.0687,
+    0.103,
+    0.0581,
+    144
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "olmo2_7b": {
+   "index": false,
+   "two_orders": [
+    0.1856,
+    0.2141,
+    0.1898,
+    -0.0389,
+    17
+   ],
+   "three_orders": [
+    0.2384,
+    0.288,
+    0.284,
+    -0.0654,
+    0
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "seed_oss_36b": {
+   "index": false,
+   "two_orders": [
+    0.0044,
+    0.0,
+    0.0001,
+    0.0043,
+    39
+   ],
+   "three_orders": [
+    0.003,
+    0.0,
+    0.0001,
+    0.0029,
+    52
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "gemma4_31b": {
+   "index": false,
+   "two_orders": [
+    0.0003,
+    0.0,
+    0.0,
+    0.0003,
+    103
+   ],
+   "three_orders": [
+    0.0004,
+    0.0,
+    0.0005,
+    -0.0002,
+    65
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "qwen36_27b": {
+   "index": false,
+   "two_orders": [
+    0.0552,
+    0.0289,
+    0.1144,
+    -0.0592,
+    9
+   ],
+   "three_orders": [
+    0.0481,
+    0.0252,
+    0.1159,
+    -0.0678,
+    1
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "qwen36_35b": {
+   "index": false,
+   "two_orders": [
+    0.0461,
+    0.0519,
+    0.0739,
+    -0.0302,
+    11
+   ],
+   "three_orders": [
+    0.0354,
+    0.0388,
+    0.0684,
+    -0.034,
+    3
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  },
+  "qwen35_27b": {
+   "index": false,
+   "two_orders": [
+    0.0426,
+    0.0316,
+    0.1428,
+    -0.1002,
+    0
+   ],
+   "three_orders": [
+    0.0635,
+    0.043,
+    0.1572,
+    -0.0937,
+    1
+   ],
+   "selfref_two": false,
+   "selfref_three": false
+  }
+ },
+ "nested": {
+  "two": true,
+  "three": true
+ },
+ "changed": [],
+ "noindex_max": {
+  "two": [
+   0.0043,
+   "Seed-OSS-36B"
+  ],
+  "three": [
+   0.0581,
+   "OLMo-2-13B"
+  ]
+ }
+}

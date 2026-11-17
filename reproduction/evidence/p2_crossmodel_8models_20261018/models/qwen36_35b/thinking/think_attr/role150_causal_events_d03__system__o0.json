@@ -1,0 +1,1 @@
+{"id": "role150_causal_events_d03", "role": "system", "order": ["self", "user", "system"], "off": {"self": 0.030178438872098923, "user": 0.8819432258605957, "system": 0.08203350007534027}, "on_answer": "user", "on_letter": "B", "n_new": 469, "finished": true, "tail": "\n\nB<|im_end|>", "gen": null}

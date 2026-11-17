@@ -1,0 +1,32 @@
+{
+ "base_A": {
+  "n": 75,
+  "finished": 68,
+  "content_accuracy": 0.9706
+ },
+ "base_U": {
+  "n": 75,
+  "finished": 75,
+  "content_accuracy": 1.0
+ },
+ "rswU8_A": {
+  "n": 75,
+  "finished": 74,
+  "content_accuracy": 0.9595
+ },
+ "swA8_U": {
+  "n": 75,
+  "finished": 73,
+  "content_accuracy": 0.9589
+ },
+ "swS8_A": {
+  "n": 75,
+  "finished": 68,
+  "content_accuracy": 0.9265
+ },
+ "swU8_A": {
+  "n": 75,
+  "finished": 74,
+  "content_accuracy": 0.973
+ }
+}

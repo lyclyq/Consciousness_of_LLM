@@ -1,0 +1,147 @@
+{
+ "tag": "qwen38_27b",
+ "order": "natural",
+ "n_layers": 64,
+ "keep_layers": [
+  24,
+  32,
+  39,
+  47,
+  55,
+  63
+ ],
+ "n_held_out": 75,
+ "families": 15,
+ "n_bodies_on_disk": 150,
+ "group": "index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/data/hf_models/Qwen/Qwen3.8-27B",
+  "tmpl_kwargs": {
+   "enable_thinking": false
+  },
+  "lang": "zh",
+  "fixed_date": null,
+  "natural_system_ok": false
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "2": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "3": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "4": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "5": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "full": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "empty": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "6": {
+   "n_bodies": 75,
+   "defined": false
+  },
+  "7": {
+   "n_bodies": 70,
+   "defined": false
+  },
+  "8": {
+   "n_bodies": 60,
+   "defined": false
+  },
+  "9": {
+   "n_bodies": 30,
+   "defined": false
+  },
+  "10": {
+   "n_bodies": 5,
+   "defined": false
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 1.3679274243573016,
+   "M2_ci95": [
+    1.2661924433387355,
+    1.4860833162462532
+   ],
+   "M3_direction_cos": 0.8525414363401926,
+   "M3_ci95": [
+    0.7919216568170638,
+    0.8896556861368855
+   ],
+   "C1_median": 1350.8681266646538,
+   "C1_ci95": [
+    1176.0576101893848,
+    1554.080813847844
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 1.2348423372942605,
+   "per_layer": {
+    "24": {
+     "size": 1.0634537703841982,
+     "cos": 0.8729190220546389
+    },
+    "32": {
+     "size": 1.1126782320541153,
+     "cos": 0.8696728582316374
+    },
+    "39": {
+     "size": 1.294301443846777,
+     "cos": 0.8579041586876478
+    },
+    "47": {
+     "size": 1.441553404867826,
+     "cos": 0.8471787139927375
+    },
+    "55": {
+     "size": 1.6088546325034188,
+     "cos": 0.8367844373729733
+    },
+    "63": {
+     "size": 1.6996733714641779,
+     "cos": 0.7909764064735014
+    }
+   }
+  },
+  "A-S": {
+   "defined": false
+  },
+  "U-S": {
+   "defined": false
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 0.9781465530395508,
+   "common_ratio": 0.9608699963954012,
+   "cos_first_last": 0.7986338732635576,
+   "share_first": 0.2492506383634362,
+   "share_last": 0.22896418759292586
+  }
+ },
+ "verdict": {
+  "prediction": "P1",
+  "M1_index_at_every_length": null,
+  "M2_at_least_0.8_and_reliable": true,
+  "holds": true,
+  "M1_evaluable": false
+ }
+}

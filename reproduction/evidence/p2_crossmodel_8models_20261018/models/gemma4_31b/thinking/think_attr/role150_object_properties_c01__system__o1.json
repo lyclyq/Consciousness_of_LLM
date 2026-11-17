@@ -1,0 +1,1 @@
+{"id": "role150_object_properties_c01", "role": "system", "order": ["system", "self", "user"], "off": {"system": 6.825577258950943e-08, "self": 2.9023092338320566e-06, "user": 0.999996542930603}, "on_answer": "user", "on_letter": "C", "n_new": 299, "finished": true, "tail": "C<turn|>", "gen": null}

@@ -1,0 +1,38 @@
+[transformers] You are using a model of type `deepseek_v41` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+{
+ "bodies": 150,
+ "common_body_tokens_min_max": [
+  47,
+  59
+ ],
+ "thinking_mode": {
+  "thinking_mode": "chat"
+ },
+ "close": {
+  "A": "<｜end▁of▁sentence｜>",
+  "U": "请",
+  "S": "<｜User｜>"
+ },
+ "n_tokens_body0": {
+  "A": 72,
+  "U": 68,
+  "S": 70
+ },
+ "n_control_ids": 1283,
+ "len_tokenizer": 129280,
+ "official_model_py_sha256": "e5decd76fe70fd56ef2f10124d245c6f64fb6a0003cc9068a1d3182a168b8d2d",
+ "official_engram_py_sha256": "11f35ecbead8150c35aa002b3d180ef290b05a25afe883a11884f94d476d3897",
+ "encoding_py_sha256": "13231c592e958fb39e2af6001dae69d90e7a36b265702b9b390236fb387599e2",
+ "tokenizer_json_sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b"
+}
+===== A: 72 tokens, body tokens 51, close '<｜end▁of▁sentence｜>'
+<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜Assistant｜></think>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜end▁of▁sentence｜><｜User｜>请根据上文回应。<｜Assistant｜></think>
+===== U: 68 tokens, body tokens 51, close '请'
+<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。
+
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。
+
+请根据上文回应。<｜Assistant｜></think>
+===== S: 70 tokens, body tokens 51, close '<｜User｜>'
+<｜begin▁of▁sentence｜><｜User｜>请写一段简短的描述。<｜System｜>账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<｜User｜>请根据上文回应。<｜Assistant｜></think>
+DRY RUN OK

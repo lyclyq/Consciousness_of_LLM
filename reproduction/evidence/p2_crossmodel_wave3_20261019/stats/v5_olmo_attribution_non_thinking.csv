@@ -1,0 +1,5 @@
+model,orders,n_bodies,p_you_own,p_you_user,p_you_system,own_minus_max_other,bodies_positive,sign_p,p_system_as_user
+olmo2_7b,3_orders,150,0.2384,0.288,0.284,-0.0654,0,1.4e-45,0.2241
+olmo2_7b,2_orders_as_paper,150,0.1856,0.2141,0.1898,-0.0389,17,1.73e-23,0.2969
+olmo2_13b,3_orders,150,0.1641,0.0687,0.103,0.0581,144,2.09e-35,0.2195
+olmo2_13b,2_orders_as_paper,150,0.063,0.0237,0.1235,-0.0605,3,7.88e-40,0.2947

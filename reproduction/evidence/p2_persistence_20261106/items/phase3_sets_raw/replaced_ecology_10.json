@@ -1,0 +1,11 @@
+{
+ "old": {
+  "id": "ecology_10",
+  "domain": "ecology",
+  "genre": "说明",
+  "body_zh": "在高山地区，植被会随着海拔升高而出现分带现象。山脚多为常绿阔叶林，往上逐渐过渡为针叶林。再往上，树木变得矮小稀疏，最终只剩下草甸和苔藓。海拔每升高1000米，气温大约下降6摄氏度。",
+  "body_en": "In high mountain areas, vegetation forms distinct bands as altitude rises. The foot of the mountain is mostly covered by evergreen broadleaf forest, which gradually gives way to conifer forest higher up. Further up, the trees become short and sparse, and in the end only meadows and mosses remain. For every 1000 meters of altitude gained, the air temperature drops by about 6 degrees Celsius."
+ },
+ "new_zh": "湿地中的芦苇根系发达，能够固定松软的泥土，减缓水流对岸边的冲刷。芦苇丛还为许多水鸟提供了筑巢和躲避的场所，每年春季，成群的野鸭会在其中产卵。枯萎的芦苇秆沉入水底后慢慢分解，为水中的小型生物提供养分。",
+ "new_en": "The reeds in a wetland have dense roots, which hold the soft mud in place and slow the erosion of the banks by flowing water. Reed beds also give many water birds places to nest and shelter, and every spring flocks of wild ducks lay their eggs among them. Dead reed stems sink to the bottom and slowly decompose, providing nutrients for small aquatic organisms."
+}

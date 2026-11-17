@@ -1,0 +1,281 @@
+{
+ "band": [
+  0,
+  31
+ ],
+ "n_fit": 75,
+ "rows_q": 13942,
+ "rows_m": 9142,
+ "seeds": [
+  20261022,
+  20261023,
+  20261024,
+  20261025,
+  20261026
+ ],
+ "layers": {
+  "0": {
+   "share_q_in_q": 0.9368,
+   "share_m_in_m": 0.942,
+   "share_m_in_q": 0.9367,
+   "share_q_in_m": 0.9419,
+   "overlap_q_m": 0.997,
+   "share_random_in_q": 0.00283
+  },
+  "1": {
+   "share_q_in_q": 0.8477,
+   "share_m_in_m": 0.8594,
+   "share_m_in_q": 0.8475,
+   "share_q_in_m": 0.8592,
+   "overlap_q_m": 0.9964,
+   "share_random_in_q": 0.00503
+  },
+  "2": {
+   "share_q_in_q": 0.7791,
+   "share_m_in_m": 0.7974,
+   "share_m_in_q": 0.7787,
+   "share_q_in_m": 0.7969,
+   "overlap_q_m": 0.9949,
+   "share_random_in_q": 0.00293
+  },
+  "3": {
+   "share_q_in_q": 0.6961,
+   "share_m_in_m": 0.7231,
+   "share_m_in_q": 0.6949,
+   "share_q_in_m": 0.7214,
+   "overlap_q_m": 0.9834,
+   "share_random_in_q": 0.00169
+  },
+  "4": {
+   "share_q_in_q": 0.5845,
+   "share_m_in_m": 0.616,
+   "share_m_in_q": 0.5837,
+   "share_q_in_m": 0.6149,
+   "overlap_q_m": 0.9922,
+   "share_random_in_q": 0.00213
+  },
+  "5": {
+   "share_q_in_q": 0.4848,
+   "share_m_in_m": 0.52,
+   "share_m_in_q": 0.4835,
+   "share_q_in_m": 0.517,
+   "overlap_q_m": 0.9751,
+   "share_random_in_q": 0.00207
+  },
+  "6": {
+   "share_q_in_q": 0.4075,
+   "share_m_in_m": 0.4381,
+   "share_m_in_q": 0.4044,
+   "share_q_in_m": 0.4271,
+   "overlap_q_m": 0.9047,
+   "share_random_in_q": 0.0018
+  },
+  "7": {
+   "share_q_in_q": 0.348,
+   "share_m_in_m": 0.3833,
+   "share_m_in_q": 0.3421,
+   "share_q_in_m": 0.3696,
+   "overlap_q_m": 0.8762,
+   "share_random_in_q": 0.002
+  },
+  "8": {
+   "share_q_in_q": 0.3038,
+   "share_m_in_m": 0.3393,
+   "share_m_in_q": 0.2979,
+   "share_q_in_m": 0.325,
+   "overlap_q_m": 0.8658,
+   "share_random_in_q": 0.00207
+  },
+  "9": {
+   "share_q_in_q": 0.2791,
+   "share_m_in_m": 0.3162,
+   "share_m_in_q": 0.2703,
+   "share_q_in_m": 0.2966,
+   "overlap_q_m": 0.818,
+   "share_random_in_q": 0.00188
+  },
+  "10": {
+   "share_q_in_q": 0.3068,
+   "share_m_in_m": 0.3475,
+   "share_m_in_q": 0.2973,
+   "share_q_in_m": 0.3241,
+   "overlap_q_m": 0.7602,
+   "share_random_in_q": 0.00185
+  },
+  "11": {
+   "share_q_in_q": 0.2794,
+   "share_m_in_m": 0.3261,
+   "share_m_in_q": 0.2691,
+   "share_q_in_m": 0.2996,
+   "overlap_q_m": 0.7586,
+   "share_random_in_q": 0.00173
+  },
+  "12": {
+   "share_q_in_q": 0.2668,
+   "share_m_in_m": 0.3147,
+   "share_m_in_q": 0.2574,
+   "share_q_in_m": 0.2904,
+   "overlap_q_m": 0.7696,
+   "share_random_in_q": 0.00194
+  },
+  "13": {
+   "share_q_in_q": 0.2508,
+   "share_m_in_m": 0.3012,
+   "share_m_in_q": 0.2437,
+   "share_q_in_m": 0.2758,
+   "overlap_q_m": 0.7606,
+   "share_random_in_q": 0.00179
+  },
+  "14": {
+   "share_q_in_q": 0.2828,
+   "share_m_in_m": 0.3345,
+   "share_m_in_q": 0.2744,
+   "share_q_in_m": 0.318,
+   "overlap_q_m": 0.8452,
+   "share_random_in_q": 0.00198
+  },
+  "15": {
+   "share_q_in_q": 0.2606,
+   "share_m_in_m": 0.3138,
+   "share_m_in_q": 0.2501,
+   "share_q_in_m": 0.2962,
+   "overlap_q_m": 0.8486,
+   "share_random_in_q": 0.00195
+  },
+  "16": {
+   "share_q_in_q": 0.2928,
+   "share_m_in_m": 0.3486,
+   "share_m_in_q": 0.2804,
+   "share_q_in_m": 0.3296,
+   "overlap_q_m": 0.8406,
+   "share_random_in_q": 0.0021
+  },
+  "17": {
+   "share_q_in_q": 0.3164,
+   "share_m_in_m": 0.3731,
+   "share_m_in_q": 0.3067,
+   "share_q_in_m": 0.3579,
+   "overlap_q_m": 0.856,
+   "share_random_in_q": 0.00176
+  },
+  "18": {
+   "share_q_in_q": 0.3646,
+   "share_m_in_m": 0.4181,
+   "share_m_in_q": 0.3587,
+   "share_q_in_m": 0.4043,
+   "overlap_q_m": 0.8523,
+   "share_random_in_q": 0.00174
+  },
+  "19": {
+   "share_q_in_q": 0.3626,
+   "share_m_in_m": 0.4164,
+   "share_m_in_q": 0.3576,
+   "share_q_in_m": 0.4047,
+   "overlap_q_m": 0.8694,
+   "share_random_in_q": 0.00181
+  },
+  "20": {
+   "share_q_in_q": 0.3702,
+   "share_m_in_m": 0.4214,
+   "share_m_in_q": 0.3663,
+   "share_q_in_m": 0.4116,
+   "overlap_q_m": 0.8852,
+   "share_random_in_q": 0.00208
+  },
+  "21": {
+   "share_q_in_q": 0.3681,
+   "share_m_in_m": 0.4187,
+   "share_m_in_q": 0.365,
+   "share_q_in_m": 0.4135,
+   "overlap_q_m": 0.9477,
+   "share_random_in_q": 0.00251
+  },
+  "22": {
+   "share_q_in_q": 0.3869,
+   "share_m_in_m": 0.4393,
+   "share_m_in_q": 0.3845,
+   "share_q_in_m": 0.4344,
+   "overlap_q_m": 0.9355,
+   "share_random_in_q": 0.00289
+  },
+  "23": {
+   "share_q_in_q": 0.3455,
+   "share_m_in_m": 0.393,
+   "share_m_in_q": 0.3427,
+   "share_q_in_m": 0.3836,
+   "overlap_q_m": 0.8594,
+   "share_random_in_q": 0.00213
+  },
+  "24": {
+   "share_q_in_q": 0.3625,
+   "share_m_in_m": 0.4107,
+   "share_m_in_q": 0.3599,
+   "share_q_in_m": 0.4001,
+   "overlap_q_m": 0.8575,
+   "share_random_in_q": 0.00199
+  },
+  "25": {
+   "share_q_in_q": 0.3641,
+   "share_m_in_m": 0.4108,
+   "share_m_in_q": 0.3608,
+   "share_q_in_m": 0.3998,
+   "overlap_q_m": 0.8587,
+   "share_random_in_q": 0.00209
+  },
+  "26": {
+   "share_q_in_q": 0.4379,
+   "share_m_in_m": 0.4894,
+   "share_m_in_q": 0.4352,
+   "share_q_in_m": 0.4827,
+   "overlap_q_m": 0.8964,
+   "share_random_in_q": 0.00165
+  },
+  "27": {
+   "share_q_in_q": 0.3212,
+   "share_m_in_m": 0.3684,
+   "share_m_in_q": 0.3168,
+   "share_q_in_m": 0.3559,
+   "overlap_q_m": 0.8466,
+   "share_random_in_q": 0.00224
+  },
+  "28": {
+   "share_q_in_q": 0.3344,
+   "share_m_in_m": 0.3837,
+   "share_m_in_q": 0.3309,
+   "share_q_in_m": 0.3716,
+   "overlap_q_m": 0.8485,
+   "share_random_in_q": 0.00185
+  },
+  "29": {
+   "share_q_in_q": 0.3295,
+   "share_m_in_m": 0.3799,
+   "share_m_in_q": 0.3265,
+   "share_q_in_m": 0.3696,
+   "overlap_q_m": 0.8578,
+   "share_random_in_q": 0.00243
+  },
+  "30": {
+   "share_q_in_q": 0.3555,
+   "share_m_in_m": 0.4022,
+   "share_m_in_q": 0.3462,
+   "share_q_in_m": 0.3908,
+   "overlap_q_m": 0.8316,
+   "share_random_in_q": 0.0017
+  },
+  "31": {
+   "share_q_in_q": 0.478,
+   "share_m_in_m": 0.5064,
+   "share_m_in_q": 0.463,
+   "share_q_in_m": 0.4997,
+   "overlap_q_m": 0.9001,
+   "share_random_in_q": 0.00178
+  }
+ },
+ "script_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae",
+ "model": "/root/hf_models/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+ "on_kwargs": "{}",
+ "lang": "zh",
+ "bodies": "bodies_zh_150_list.json",
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0"
+}

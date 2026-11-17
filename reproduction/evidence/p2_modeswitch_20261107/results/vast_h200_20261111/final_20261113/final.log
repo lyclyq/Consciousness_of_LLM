@@ -1,0 +1,7 @@
+2026-11-13 07:14:35 remote listing
+2026-11-13 07:14:50 remote files: 3549
+2026-11-13 07:14:50 local index
+2026-11-13 07:16:33 matched 3503, missing or different 46
+2026-11-13 07:16:33 pulling 46 files into final_20261113/files
+2026-11-13 07:17:13 after pull: matched 3549, still missing or different 0
+2026-11-13 07:17:13 ALL 3549 REMOTE FILES HAVE A VERIFIED LOCAL COPY

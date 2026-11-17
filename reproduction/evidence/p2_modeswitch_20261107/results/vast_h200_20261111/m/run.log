@@ -1,0 +1,49 @@
+[mech] 2026-11-11 09:56:42 stop flag
+[mech] 2026-11-11 10:00:14 stop flag
+[combcheck] 2026-11-11 10:01:17 start (MEM 100, OFF 0)
+[run1] 2026-11-11 10:01:17 weights and environment ready: [setup] 2026-11-11 09:58:53 venv OK: 2.6.0+cu124 12.4 5.19.0 3
+[run1] 2026-11-11 10:01:20 hc_edit tests: ALL PASS
+[combcheck] 2026-11-11 10:05:36 FAILED: Traceback (most recent call last):     raise ValueError( ValueError: The current `device_map` had weights offloaded to the disk, which needed to be re-saved. This is either because the weights are not in `safetensors` format, or because the model uses an internal weight format different than the one saved (i.e. most MoE models). Please provide an `offload_folder` for them in `from_pretrained`. 
+[mech] 2026-11-11 10:06:17 stop flag
+[combcheck] 2026-11-11 10:06:21 start (MEM 125, OFF 20)
+[run1] 2026-11-11 10:06:21 weights and environment ready: [setup] 2026-11-11 09:58:53 venv OK: 2.6.0+cu124 12.4 5.19.0 3
+[run1] 2026-11-11 10:06:24 hc_edit tests: ALL PASS
+[combcheck] 2026-11-11 10:15:25 FAILED: ValueError: The current `device_map` had weights offloaded to the disk, which needed to be re-saved. This is either because the weights are not in `safetensors` format, or because the model uses an internal weight format different than the one saved (i.e. most MoE models). Please provide an `offload_folder` for them in `from_pretrained`. gate: {"criterion": {"cos_min": 0.999, "rel_max": 0.03, "kl_rel_max": 0.02}, "bodies": [{"id": "role150_numeric_records_c00", "kl": {"max_rel": 0.16227019545000976, "ok": false}, "checks": {"state_A": [0.9734178781509399, 0.2332574427127838], "state_U": [0.9466091394424438, 0.3235478401184082], "state_S": [0.9489567875862122, 0.3191913366317749], "dec_A-U": 
+[mech] 2026-11-11 10:56:57 start (runner be6b3c83, games 13463899, swap ae35b120, hc_edit 761000a5, BT 16)
+[mech] 2026-11-11 10:56:57 fits start
+[plan] 2026-11-11 11:06:23 user 11-11: paper GLM-5.3 numbers stay from server3 (this environment reproduces the KL ratios: A-U/U-S 1.82 vs 1.83, A-S/U-S 1.13 vs 1.13); this machine runs the mechanism battery only; geometry and KL words + retention are not run here (KL words + retention run on server3 in the paper environment)
+[plan] 2026-11-11 11:09:48 user 11-11: KL words + retention run on this machine after the mechanism (geometry not re-run)
+[mech] 2026-11-11 11:44:06 fits exit 0 | fits written; median over layers: share q 0.2248 share m 0.2589 overlap q-m 0.8098
+[mech] 2026-11-11 11:51:48 identity check: PASS [(227, 227, True), (156, 156, True)]
+[mech] 2026-11-11 11:51:48 smoke start
+smoke glm53_r05_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswU8_A': (4, 3), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+[mech] 2026-11-11 12:39:10 smoke PASS
+[mech] 2026-11-11 12:39:10 baseline start
+[mech] 2026-11-11 18:19:28 baseline gate: PASS own 0.3793 145/150 | user 0.0 150/150 | difference 0.3793
+[mech] 2026-11-11 18:19:28 r05q_all edits start
+[mech] 2026-11-12 04:34:15 r05q_all exit 0 | 900 items | , 0.0]}}, "rswU8_A": {"n": 150, "finished": 149, "answers": {"user": 93, "self": 56}, "you_share": 0.3758, "median_new_tokens": 151, "you_minus_base": {"n_pairs": 144, "mean": 0.0069, "ci95": [-0.0972, 0.1111]}}, "swA8_U": {"n": 150, "finished": 147, "answers": {"self": 5, "user": 142}, "you_share": 0.034, "median_new_tokens": 170, "you_minus_base": {"n_pairs": 147, "mean": 0.034, "ci95": [0.0068,
+[mech] 2026-11-12 04:34:15 content control start
+[mech] 2026-11-12 09:56:44 content control exit 0 | 300 items
+[mech] 2026-11-12 09:56:44 arith control start
+[mech] 2026-11-12 11:06:11 arith control exit 0 | 300 items
+[mech] 2026-11-12 11:06:16 KL swap start
+[mech] 2026-11-12 11:40:18 KL swap DONE: summary: {"left_moved": {"full": {"A_U": 0.164, "A_S": 0.477, "A_Ur": 0.921, "U_A": 0.749, "S_A": 0.477, "U_Ar": 0.095}, "content": {"A_U": 0.164, "A_S": 0.477, "A_Ur": 0.923, "U_A": 0.749, "S_A": 0.477, "U_Ar": 0.094}}, "dose": {"A_U": 0.028, "A_S": 0.0427, "U_A": 0.0362, "S_A": 0.0477, "A_Ur": 0.0224, "U_Ar": 0.023}}
+[mech] 2026-11-12 11:40:18 secret game not run (user decision 11-11, cost)
+[mech] 2026-11-12 11:40:18 mech done
+[part1] 2026-11-12 11:40:53 mechanism battery done: part 1 starts (MEM 125, OFF 20)
+[part1] 2026-11-12 11:40:53 geometry not re-run (paper keeps server3 values)
+[part1] 2026-11-12 11:40:53 KL + retention (combined) start
+[part1] 2026-11-12 15:40:33 KL + retention: gate: {"criterion": {"cos_min": 0.999, "rel_max": 0.03, "kl_rel_max": 0.02}, "bodies": [{"id": "role150_numeric_records_c00", "kl": {"max_rel": 0.0, "ok": true}, "checks": {"state_A": [0.9734178781509399, 0.2332574427127838], "state_U": [0.9466091394424438, 0.3235478401184082], "state_S": [0.9489567875862122, 0.3191913366317749], "dec_A-U": [0.9085862636566162, 0.4236462712287903], "dec_A-S": [0.8473701477050781, 0.5552029609680176], "dec_U-S": [0.8456545472145081, 0.5416896939277649], "dec_place1": [0.6743906736373901, 0.8186715841293335], "dec_time1": [0.5199884176254272, 1.06519615650177], 
+[part1] 2026-11-12 15:40:33 part 1 done
+[extra] 2026-11-12 15:41:16 start after part 1 (runner be6b3c83, games 13463899, items a712030b, BT 16)
+[extra] 2026-11-12 15:41:16 game smoke main start
+[extra] 2026-11-12 16:11:13 game smoke main exit 0
+[extra] 2026-11-12 16:11:13 game smoke control start
+[extra] 2026-11-12 16:24:38 game smoke control exit 0
+[extra] 2026-11-12 16:24:38 game smoke check (release rule of 10-26): PASS own 1.0 {'assistant': 8} | user 0.0 {'user': 8} | control 1.0 1.0 | finished 8 8; full game not run (user 11-12)
+[extra] 2026-11-12 16:24:38 all_k64 start (300 unedited items reused)
+[extra] 2026-11-12 17:23:44 glm53_all_k64.GO created by hand: extra_glm53_vast_20261112.sh did not create it (the runner waits for it outside --limit-bodies); the run waited 16:24:38-17:23:44 with the GPUs idle
+[extra] 2026-11-13 04:56:49 all_k64 exit 0 | 900 items | okens": 156, "you_minus_base": {"n_pairs": 139, "mean": -0.1511, "ci95": [-0.2446, -0.0576]}}, "swA64_U": {"n": 150, "finished": 149, "answers": {"self": 12, "user": 136, "system": 1}, "you_share": 0.0805, "median_new_tokens": 177, "you_minus_base": {"n_pairs": 149, "mean": 0.0805, "ci95": [0.0403, 
+[extra] 2026-11-13 04:56:49 extra done
+[game300] 2026-11-13 04:57:23 start: main game, first 50 items, 6 conditions (runner 13463899, items a712030b, BT 16)
+[game300] 2026-11-13 07:08:30 main50 exit 0 | tokens": 77, "reads_as": {"user": 50}, "own_share": 0.0, "own_minus_base": {"n_pairs": 50, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU8_A": {"n": 50, "finished": 50, "median_new_tokens": 42, "reads_as": {"assistant": 50}, "own_share": 1.0, "own_minus_base": {"n_pairs": 50, "mean": 0.0, "ci95": [0.0, 0.0]}}, "swA8_U": {"n": 50, "finished": 50, "median_new_tokens": 115, "reads_as": {"user": 24, "assistant": 26}, "own_share": 0.52, "own_minus_base": {"n_pairs": 50, "mean": 0.52, "ci95": [0.38, 0.66]}}

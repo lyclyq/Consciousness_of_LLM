@@ -1,0 +1,176 @@
+{
+ "results": {
+  "g20": {
+   "r08_us": {
+    "base_S": {
+     "n": 150,
+     "developer_message": 108,
+     "finished": 127,
+     "answers": {
+      "self": 0,
+      "user": 13,
+      "system": 114
+     }
+    },
+    "swU8_S": {
+     "n": 150,
+     "developer_message": 8,
+     "finished": 147,
+     "answers": {
+      "self": 1,
+      "user": 145,
+      "system": 1
+     }
+    },
+    "rswU8_S": {
+     "n": 150,
+     "developer_message": 121,
+     "finished": 118,
+     "answers": {
+      "self": 0,
+      "user": 11,
+      "system": 107
+     }
+    },
+    "base_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 149,
+     "answers": {
+      "self": 0,
+      "user": 149,
+      "system": 0
+     }
+    },
+    "swS8_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 150,
+     "answers": {
+      "self": 1,
+      "user": 148,
+      "system": 1
+     }
+    },
+    "rswS8_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 150,
+      "system": 0
+     }
+    }
+   },
+   "all": {
+    "base_S": {
+     "n": 150,
+     "developer_message": 119,
+     "finished": 116,
+     "answers": {
+      "self": 0,
+      "user": 13,
+      "system": 103
+     }
+    },
+    "swA8_S": {
+     "n": 150,
+     "developer_message": 147,
+     "finished": 125,
+     "answers": {
+      "self": 1,
+      "user": 6,
+      "system": 118
+     }
+    }
+   }
+  },
+  "g120": {
+   "r08_us": {
+    "base_S": {
+     "n": 150,
+     "developer_message": 150,
+     "finished": 150,
+     "answers": {
+      "self": 1,
+      "user": 16,
+      "system": 133
+     }
+    },
+    "swU8_S": {
+     "n": 150,
+     "developer_message": 7,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 149,
+      "system": 1
+     }
+    },
+    "rswU8_S": {
+     "n": 150,
+     "developer_message": 149,
+     "finished": 150,
+     "answers": {
+      "self": 1,
+      "user": 16,
+      "system": 133
+     }
+    },
+    "base_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 150,
+      "system": 0
+     }
+    },
+    "swS8_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 150,
+      "system": 0
+     }
+    },
+    "rswS8_U": {
+     "n": 150,
+     "developer_message": 0,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 150,
+      "system": 0
+     }
+    }
+   },
+   "all": {
+    "base_S": {
+     "n": 150,
+     "developer_message": 149,
+     "finished": 150,
+     "answers": {
+      "self": 0,
+      "user": 21,
+      "system": 129
+     }
+    },
+    "swA8_S": {
+     "n": 150,
+     "developer_message": 150,
+     "finished": 150,
+     "answers": {
+      "self": 1,
+      "user": 2,
+      "system": 147
+     }
+    }
+   }
+  }
+ }
+}

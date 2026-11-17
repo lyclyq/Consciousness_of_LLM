@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  51,
+  63
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "6d14de99de73",
+   "tail": "<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  },
+  "main_U": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "552e289d1f42",
+   "tail": "<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  },
+  "main_S": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "5d484c6b934e",
+   "tail": "<seed:eos><seed:bos>system\nYou are an intelligent assistant that can answer questions in one step without the need for reasoning and thinking, that is, your thinking budget is 0. Next, please skip the thinking process and directly start answering the user's questions.\n<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  },
+  "natural_A": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "747e063ecbec",
+   "tail": "<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  },
+  "natural_U": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "e48068b7f8e8",
+   "tail": "<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  },
+  "natural_S": {
+   "close": "<seed:eos>",
+   "prefix_to_close_sha": "f841897083b8",
+   "tail": "<seed:eos><seed:bos>user\n请根据上文回应。<seed:eos><seed:bos>assistant\n<seed:think>\n<seed:cot_budget_reflect>The current thinking budget is 0, so I will directly start answering the question.</seed:cot_budget_reflect>\n</seed:think>"
+  }
+ }
+}
+DRY RUN OK

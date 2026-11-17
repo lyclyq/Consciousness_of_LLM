@@ -1,0 +1,1 @@
+{"id": "role150_ordered_sequence_d01", "role": "system", "order": ["system", "self", "user"], "off": {"system": 0.04299164563417435, "self": 0.09101331233978271, "user": 0.8635103106498718}, "on_answer": "user", "on_letter": "C", "n_new": 445, "finished": true, "tail": "\n\nC<|im_end|>", "gen": null}

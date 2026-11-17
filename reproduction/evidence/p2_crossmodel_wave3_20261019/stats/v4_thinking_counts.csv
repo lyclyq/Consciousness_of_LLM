@@ -1,0 +1,16 @@
+model,role,n_items,n_finished,answered_you,answered_user,answered_system,unparsed,correct_share,you_share
+qwen38_flashnext,assistant,300,296,196,69,31,0,0.6622,0.6622
+qwen38_flashnext,user,300,300,1,297,2,0,0.99,0.0033
+qwen38_flashnext,system,300,300,0,123,177,0,0.59,0.0
+qwen36_27b,assistant,300,300,0,300,0,0,0.0,0.0
+qwen36_27b,user,300,299,0,299,0,0,1.0,0.0
+qwen36_27b,system,300,299,0,295,4,0,0.0134,0.0
+seed_oss_36b,assistant,300,300,1,299,0,0,0.0033,0.0033
+seed_oss_36b,user,300,300,0,300,0,0,1.0,0.0
+seed_oss_36b,system,300,299,0,287,12,0,0.0401,0.0
+qwen35_27b,assistant,300,224,5,219,0,0,0.0223,0.0223
+qwen35_27b,user,300,249,0,249,0,0,1.0,0.0
+qwen35_27b,system,300,207,0,205,2,0,0.0097,0.0
+granite42_30b,assistant,300,300,0,300,0,0,0.0,0.0
+granite42_30b,user,300,300,0,300,0,0,1.0,0.0
+granite42_30b,system,300,298,0,298,0,0,0.0,0.0

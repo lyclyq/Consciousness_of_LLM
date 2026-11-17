@@ -1,0 +1,1 @@
+summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.3465, "kl_content": 0.3538}, "A-S": {"kl_body": 0.3735, "kl_content": 0.3802}, "U-S": {"kl_body": 0.1481, "kl_content": 0.1499}}, "ratios": {"A-U/U-S_kl_body": [2.34, 2.07, 2.63], "A-S/U-S_kl_body": [2.52, 2.19, 2.89], "A-U/U-S_kl_content": [2.36, 2.07, 2.65], "A-S/U-S_kl_content": [2.54, 2.2, 2.91]}}

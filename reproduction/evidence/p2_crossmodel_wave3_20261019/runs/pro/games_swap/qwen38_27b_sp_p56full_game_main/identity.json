@@ -1,0 +1,32 @@
+{
+ "experiment": "P2_games_single",
+ "script_sha256": "149d74ece66c6d9209b6edf90790f153eacb4e8023980e43b0504c80389822de",
+ "role_swap_sha256": "f2362716c97bfc859a53e75fff2d0c69715c2f2d8bb4a30896635edcd06ef670",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/Qwen/Qwen3.8-27B",
+ "on_kwargs": "{\"enable_thinking\": false}",
+ "items": "games/games_zh_secret6.json",
+ "items_sha256": "4d27d8a56e0225042b7fb69df118e74b23d709f656306f9c0b06b52dd3d87e05",
+ "games": "secret",
+ "qkind": "main",
+ "n_layers": 64,
+ "band": [
+  0,
+  63
+ ],
+ "fit_from": "r05r06_fits/qsp/fit_m.pt",
+ "region": "x",
+ "lang": "zh",
+ "n_items": 100,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "swU8_A",
+  "swA8_U",
+  "rswU8_A"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0"
+}

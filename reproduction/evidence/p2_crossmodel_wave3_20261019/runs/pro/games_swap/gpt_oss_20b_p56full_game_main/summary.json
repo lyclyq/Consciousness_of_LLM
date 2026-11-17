@@ -1,0 +1,75 @@
+{
+ "secret": {
+  "base_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 52,
+   "reads_as": {
+    "assistant": 100
+   },
+   "own_share": 1.0
+  },
+  "base_U": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 108,
+   "reads_as": {
+    "user": 100
+   },
+   "own_share": 0.0
+  },
+  "rswU8_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 52,
+   "reads_as": {
+    "assistant": 100
+   },
+   "own_share": 1.0,
+   "own_minus_base": {
+    "n_pairs": 100,
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "swA8_U": {
+   "n": 100,
+   "finished": 99,
+   "median_new_tokens": 106,
+   "reads_as": {
+    "assistant": 58,
+    "user": 41
+   },
+   "own_share": 0.5859,
+   "own_minus_base": {
+    "n_pairs": 99,
+    "mean": 0.5859,
+    "ci95": [
+     0.4848,
+     0.6768
+    ]
+   }
+  },
+  "swU8_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 56,
+   "reads_as": {
+    "assistant": 73,
+    "user": 27
+   },
+   "own_share": 0.73,
+   "own_minus_base": {
+    "n_pairs": 100,
+    "mean": -0.27,
+    "ci95": [
+     -0.36,
+     -0.19
+    ]
+   }
+  }
+ }
+}

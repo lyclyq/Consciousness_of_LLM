@@ -1,0 +1,31 @@
+{
+ "experiment": "P2_thinking_ablate2_full",
+ "script_sha256": "ba2208a6a6e2661083e8ffcb00d4b6e01886a2ee909ad830f7ca84695f22e02b",
+ "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98",
+ "model": "/root/hf_models/Qwen/Qwen3.8-27B",
+ "n_layers": 64,
+ "band": [
+  0,
+  63
+ ],
+ "main_layer": 39,
+ "fit_from": "",
+ "suite": "full",
+ "edit_generated_tokens": false,
+ "edit_end": "before_gen",
+ "layers_used": "band",
+ "lang": "en",
+ "k_max": 64,
+ "fit_rows": 17752,
+ "n_fit": 75,
+ "n_eval": 75,
+ "conditions": [
+  "base_A",
+  "base_U"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0",
+ "fit_s": 1153.2258446216583
+}

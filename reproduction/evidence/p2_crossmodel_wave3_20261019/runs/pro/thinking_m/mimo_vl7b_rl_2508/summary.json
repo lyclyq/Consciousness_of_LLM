@@ -1,0 +1,30 @@
+{
+ "n": 480,
+ "unfinished": 14,
+ "correct_assistant": {
+  "n_finished": 120,
+  "correct": 120,
+  "adopted_share": 0.0,
+  "correct_share": 1.0
+ },
+ "correct_user": {
+  "n_finished": 120,
+  "correct": 120,
+  "adopted_share": 0.0,
+  "correct_share": 1.0
+ },
+ "wrong_assistant": {
+  "n_finished": 118,
+  "correct": 118,
+  "adopted_share": 0.0,
+  "correct_share": 1.0
+ },
+ "wrong_user": {
+  "n_finished": 108,
+  "correct": 91,
+  "other": 1,
+  "adopted": 16,
+  "adopted_share": 0.1481,
+  "correct_share": 0.8426
+ }
+}

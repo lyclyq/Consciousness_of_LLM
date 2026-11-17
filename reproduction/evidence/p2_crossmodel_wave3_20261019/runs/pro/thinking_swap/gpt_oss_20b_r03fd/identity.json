@@ -1,0 +1,31 @@
+{
+ "experiment": "P2_R03_readout_fd",
+ "script_sha256": "8643dc66cce6fced17b483025da1940ae317767f3fbbe617477ecf306d59f279",
+ "swap_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/openai/gpt-oss-20b",
+ "mode": "thinking",
+ "on_kwargs": "{}",
+ "n_layers": 24,
+ "band": [
+  0,
+  23
+ ],
+ "layer_step": 1,
+ "fit_from": "r05r06_fits/g20/fit_q.pt",
+ "eps": 0.25,
+ "directions": [
+  "total",
+  "V",
+  "perp",
+  "R",
+  "zero"
+ ],
+ "lang": "en",
+ "n_eval": 75,
+ "batch": 4,
+ "max_new": 3072,
+ "placement": {},
+ "torch": "2.11.0+cu130",
+ "transformers": "5.19.0"
+}

@@ -1,0 +1,4 @@
+[transformers] You are using a model of type `deepseek_v41` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+summary (content, summ): A-U/U-S 0.94, A-S/U-S 1.06; words/U-S median 0.093 [0.085, 0.103] (max 0.105); words/A-U median 0.0981 [0.0896, 0.1099] (max 0.1117); check max rel 0.00e+00
+{"words_equal_words_along": true, "n_seqs": 9, "max_tokens": 68, "last_logprob_max_abs_diff": 1.9073486328125e-06, "same_argmax": true, "alone_vs_group": 0.0, "roles_equal_kl_port": true, "check": {"max_rel": 0.0, "ok": true, "kinds": ["kl_body", "kl_content"]}, "word_kl_max_rel_vs_float64": 2.701878369453609e-06, "summary_ok": true, "ok": true}
+exit 0

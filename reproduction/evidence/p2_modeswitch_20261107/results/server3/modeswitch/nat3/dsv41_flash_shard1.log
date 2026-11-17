@@ -1,0 +1,7 @@
+[transformers] You are using a model of type `deepseek_v41` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+{"n_bodies": 38, "n_control_ids": 1283, "len_tokenizer": 129280, "vocab": 129280, "load_s": 13.514366626739502}
+38 bodies in this shard, 38 to run
+check {'body': 'role150_numeric_records_d01', 'role': 'A', 'n_tokens': 72, 'max_abs_last_logprob_diff': 1.52587890625e-05, 'same_argmax': True}
+21/38 bodies, 720s, experts 506s; last role150_causal_events_d01: {"A-U": {"kl_body": 0.23016196489334106, "kl_content": 0.23014555871486664}, "A-S": {"kl_body": 0.34252655506134033, "kl_content": 0.3412719666957855}, "U-S": {"kl_body": 0.090362049639225, "kl_content": 0.09035883098840714}}
+38/38 bodies, 1249s, experts 928s; last role150_revision_records_c04: {"A-U": {"kl_body": 0.4679752588272095, "kl_content": 0.49952980875968933}, "A-S": {"kl_body": 0.4375768005847931, "kl_content": 0.43757519125938416}, "U-S": {"kl_body": 0.14274726808071136, "kl_content": 0.16209493577480316}}
+shard 1: 38/38 bodies on disk

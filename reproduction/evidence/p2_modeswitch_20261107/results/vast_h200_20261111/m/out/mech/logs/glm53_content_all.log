@@ -1,0 +1,37 @@
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter
+Loading weights:   0%|          | 0/1872 [00:00<?, ?it/s]Loading weights:   5%|▍         | 91/1872 [00:00<00:15, 115.08it/s]Loading weights:   6%|▌         | 103/1872 [00:01<00:25, 69.52it/s]Loading weights:   7%|▋         | 129/1872 [00:02<00:42, 41.29it/s]Loading weights:   7%|▋         | 134/1872 [00:05<02:10, 13.28it/s]Loading weights:   9%|▊         | 162/1872 [00:05<01:23, 20.46it/s]Loading weights:   9%|▉         | 168/1872 [00:06<01:40, 16.88it/s]Loading weights:  10%|█         | 195/1872 [00:07<01:05, 25.76it/s]Loading weights:  11%|█         | 202/1872 [00:07<01:18, 21.24it/s]Loading weights:  12%|█▏        | 228/1872 [00:08<00:55, 29.73it/s]Loading weights:  12%|█▎        | 234/1872 [00:09<01:16, 21.37it/s]Loading weights:  14%|█▍        | 266/1872 [00:09<00:44, 36.13it/s]Loading weights:  15%|█▍        | 274/1872 [00:10<01:20, 19.96it/s]Loading weights:  16%|█▌        | 299/1872 [00:11<01:17, 20.33it/s]Loading weights:  16%|█▌        | 304/1872 [00:16<03:42,  7.05it/s]Loading weights:  20%|█▉        | 367/1872 [00:16<01:17, 19.44it/s]Loading weights:  25%|██▌       | 472/1872 [00:16<00:29, 47.94it/s]Loading weights:  29%|██▉       | 540/1872 [00:18<00:27, 48.49it/s]Loading weights:  31%|███       | 573/1872 [00:21<00:43, 29.77it/s]Loading weights:  32%|███▏      | 597/1872 [00:24<01:03, 19.94it/s]Loading weights:  33%|███▎      | 614/1872 [00:29<01:55, 10.85it/s]Loading weights:  34%|███▍      | 639/1872 [00:31<01:42, 12.07it/s]Loading weights:  35%|███▍      | 648/1872 [00:34<02:23,  8.53it/s]Loading weights:  36%|███▌      | 677/1872 [00:35<01:36, 12.42it/s]Loading weights:  40%|███▉      | 745/1872 [00:35<00:43, 25.63it/s]Loading weights:  47%|████▋     | 883/1872 [00:35<00:15, 63.05it/s]Loading weights:  51%|█████     | 953/1872 [00:35<00:10, 84.10it/s]Loading weights:  56%|█████▌    | 1050/1872 [00:37<00:11, 69.89it/s]Loading weights:  58%|█████▊    | 1087/1872 [00:39<00:17, 45.25it/s]Loading weights:  60%|█████▉    | 1114/1872 [00:43<00:29, 25.34it/s]Loading weights:  61%|██████    | 1133/1872 [00:50<01:02, 11.86it/s]Loading weights:  62%|██████▏   | 1154/1872 [00:51<00:56, 12.63it/s]Loading weights:  62%|██████▏   | 1164/1872 [00:53<01:01, 11.57it/s]Loading weights:  67%|██████▋   | 1260/1872 [00:53<00:22, 27.68it/s]Loading weights:  75%|███████▍  | 1397/1872 [00:53<00:07, 59.47it/s]Loading weights: 100%|██████████| 1872/1872 [00:53<00:00, 35.11it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] This FP8 model spans multiple CUDA devices in one process; routing its FP8 linear and experts layers through Triton/grouped_mm instead of DeepGEMM (DeepGEMM's cached kernels are bound to a single CUDA context and corrupt across devices). Run tensor/expert parallel (one device per process) to use the faster DeepGEMM path.
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f", "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98", "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash", "on_kwargs": "{}", "n_layers": 45, "band": [0, 44], "fit_from": "/root/glm53/out/mech/fits/fit_q.pt", "question": "content", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU8_A", "swA8_U"], "batch": 16, "max_new": 3072, "torch": "2.6.0+cu124", "transformers": "5.19.0"}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+base_A 16/75 394s
+base_A 32/75 1897s
+base_A 48/75 2797s
+base_A 64/75 4893s
+base_A 75/75 5184s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}}
+base_U 16/75 5632s
+base_U 32/75 7335s
+base_U 48/75 9279s
+base_U 64/75 9752s
+base_U 75/75 10173s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}}
+swU8_A 16/75 10507s
+swU8_A 32/75 11300s
+swU8_A 48/75 12860s
+swU8_A 64/75 13281s
+swU8_A 75/75 13738s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}}
+swA8_U 16/75 14480s
+swA8_U 32/75 17806s
+swA8_U 48/75 18303s
+swA8_U 64/75 18739s
+swA8_U 75/75 19198s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swA8_U": {"n": 75, "finished": 74, "content_accuracy": 0.973}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}}
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swA8_U": {"n": 75, "finished": 74, "content_accuracy": 0.973}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 0.9867}}

@@ -1,0 +1,30 @@
+{
+ "base_A": {
+  "n": 2,
+  "finished": 2,
+  "answers": {
+   "self": 1,
+   "user": 1
+  },
+  "you_share": 0.5,
+  "median_new_tokens": 227
+ },
+ "idA8_A": {
+  "n": 2,
+  "finished": 2,
+  "answers": {
+   "self": 1,
+   "user": 1
+  },
+  "you_share": 0.5,
+  "median_new_tokens": 227,
+  "you_minus_base": {
+   "n_pairs": 2,
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ }
+}

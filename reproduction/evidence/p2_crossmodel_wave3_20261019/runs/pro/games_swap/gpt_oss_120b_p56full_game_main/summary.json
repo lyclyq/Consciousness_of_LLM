@@ -1,0 +1,74 @@
+{
+ "secret": {
+  "base_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 125,
+   "reads_as": {
+    "assistant": 100
+   },
+   "own_share": 1.0
+  },
+  "base_U": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 158,
+   "reads_as": {
+    "user": 100
+   },
+   "own_share": 0.0
+  },
+  "rswU8_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 128,
+   "reads_as": {
+    "assistant": 100
+   },
+   "own_share": 1.0,
+   "own_minus_base": {
+    "n_pairs": 100,
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "swA8_U": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 192,
+   "reads_as": {
+    "user": 97,
+    "assistant": 3
+   },
+   "own_share": 0.03,
+   "own_minus_base": {
+    "n_pairs": 100,
+    "mean": 0.03,
+    "ci95": [
+     0.0,
+     0.07
+    ]
+   }
+  },
+  "swU8_A": {
+   "n": 100,
+   "finished": 100,
+   "median_new_tokens": 161,
+   "reads_as": {
+    "user": 100
+   },
+   "own_share": 0.0,
+   "own_minus_base": {
+    "n_pairs": 100,
+    "mean": -1.0,
+    "ci95": [
+     -1.0,
+     -1.0
+    ]
+   }
+  }
+ }
+}

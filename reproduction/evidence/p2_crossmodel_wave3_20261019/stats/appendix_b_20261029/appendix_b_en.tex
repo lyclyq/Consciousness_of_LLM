@@ -1,0 +1,43 @@
+Table~\ref{tab:self_config} identifies every checkpoint by its repository and the revision of its files; all files of a checkpoint come from that one revision, and the weights are used in the format of the release (Table~\ref{tab:self_models}). The table also gives the template arguments of each mode, with which the items of Appendix~\ref{app:templates} are rendered (``default'': no argument).
+
+\begin{table}[htbp]
+\centering
+\caption{Checkpoints and template arguments. Revision: the first 12 characters of the commit. $^{a}$~ModelScope revision; the files are identical to those on Hugging Face. DeepSeek-V4.1-Flash has no chat template, and its arguments are those of the prompt encoder of the release.}
+\label{tab:self_config}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llp{3.2cm}p{3.5cm}}
+\toprule
+Repository & Revision & Without thinking & With thinking \\
+\midrule
+\texttt{Qwen/Qwen3.8-27B} & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{Qwen/Qwen3.8-27B} (format ablation) & \texttt{1d4bf0f2ff60} & \texttt{enable\_thinking=\allowbreak False, preserve\_thinking=\allowbreak False} & \texttt{preserve\_thinking=False} \\
+\texttt{Qwen/Qwen3.8-Flash-Next-FP8} & \texttt{236dfdf28582} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.6-27B} & \texttt{6a9e13bd6fc8} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.6-35B-A3B} & \texttt{995ad96eacd9} & \texttt{enable\_thinking=False} & default \\
+\texttt{Qwen/Qwen3.5-27B} & \texttt{fc05daec18b0} & \texttt{enable\_thinking=False} & default \\
+\texttt{zai-org/GLM-4.6V-Flash} & \texttt{411bb4d77144} & \texttt{enable\_thinking=False} & default \\
+\texttt{zai-org/GLM-4.7-Flash} & \texttt{7dd20894a642} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{zai-org/GLM-5.3-Flash} & \texttt{46a050bec130} & -- & default \\
+\texttt{deepseek-ai/DeepSeek-R1-Distill-Llama-70B} & \texttt{b1c0b44b4369} & -- & default \\
+\texttt{openai/gpt-oss-20b} & \texttt{6cee5e81ee83} & -- & default \\
+\texttt{openai/gpt-oss-120b} & \texttt{b5c939de8f75} & -- & default \\
+\texttt{google/gemma-4-31B-it} & \texttt{842da3794eaa} & default & \texttt{enable\_thinking=True} \\
+\texttt{ByteDance-Seed/Seed-OSS-36B-Instruct} & \texttt{497f1dca95eb} & \texttt{thinking\_budget=0} & default \\
+\texttt{LGAI-EXAONE/EXAONE-4.0.1-32B} & \texttt{a6b0bd4b0fb4} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.2-30b} & \texttt{9e668ce1c538} & \texttt{enable\_thinking=False} & \texttt{enable\_thinking=True} \\
+\texttt{ibm-granite/granite-4.1-30b} & \texttt{4fae6278f713} & default & -- \\
+\texttt{allenai/OLMo-2-1124-13B-Instruct} & \texttt{3a5c85baefbb} & default & -- \\
+\texttt{allenai/OLMo-2-1124-7B-Instruct} & \texttt{470b1fba1ae0} & default & -- \\
+\texttt{deepseek-ai/DeepSeek-V4.1-Flash-1017} & \texttt{9f9818127fdf}$^{a}$ & \texttt{thinking\_mode=chat} & \texttt{thinking\_mode=thinking, reasoning\_effort=high} \\
+\texttt{mistralai/Ministral-3-14B-Instruct-2512-BF16} & \texttt{3cea74c1ebaf} & default & -- \\
+\texttt{mistralai/Ministral-3-14B-Reasoning-2512} & \texttt{51f9210f3cd2} & -- & default \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Software.} Local runs use PyTorch (2.5.1 to 2.11.0) and Hugging Face Transformers (5.8.0 or 5.19.0); the identity file of each run in the data package records the versions it used. DeepSeek-V4.1-Flash has no Transformers implementation and runs on the model code of its release, with the custom kernels of the release replaced by PyTorch implementations of the same arithmetic and the weights kept in the release format (FP8, with FP4 expert weights). Both Ministral-3-14B models run in BF16.
+
+\paragraph{Decoding and APIs.} In thinking mode, local runs generate greedily, up to 4,096 tokens for Qwen3.8-27B in Section~\ref{sec:res_thinking} and up to 3,072 tokens elsewhere. The thinking-mode self-reference of two models comes from the developer's API with the same inputs: GLM-5.3-Flash through the Z.ai API (model \texttt{glm-5.3-flash}, temperature 0, at most 3,072 tokens), and DeepSeek-V4.1-Flash through the DeepSeek API (model \texttt{deepseek-flash}, which the provider documents as served by DeepSeek-V4.1-Flash-1017; reasoning effort high, temperature 1.0 and top-$p$ 1.0, the settings the developer recommends, since the thinking mode offers no greedy decoding; at most 3,072 tokens). For every request, the number of prompt tokens reported by the API equals that of the local rendering.
+
+\paragraph{Statistics.} All intervals are 95\% intervals with a fixed seed: percentile bootstrap intervals over wording families for the geometry (1,000 resamples), over bodies or items elsewhere (4,000 to 10,000 resamples), and over models for the rank correlations of Appendix~\ref{app:benchmarks} (10,000 resamples); the shares of finished items in Figure~\ref{fig:self_mechanism} carry Wilson intervals. Each subspace of the replacement is fitted on the discovery bodies and stored with the random subspace of its control (the orthonormalized columns of a Gaussian matrix, drawn per layer with a fixed seed); every test that uses it reads the stored coordinates.

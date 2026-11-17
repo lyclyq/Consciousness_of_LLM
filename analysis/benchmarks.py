@@ -147,10 +147,10 @@ def tables_tex(S, IN):
     ROWS = [(3, 'Qwen3.8-27B', 'GPQA Diamond', ''),
             (2, 'Qwen3.8-Flash-Next', 'GPQA Diamond', ''), (2, 'gpt-oss-120b', 'GPQA Diamond', 'no tools, reasoning high'),
             (2, 'EXAONE-4.0.1-32B', 'GPQA-Diamond', 'reasoning mode (61.6 without)'), (2, 'gpt-oss-20b', 'GPQA Diamond', 'no tools, reasoning high'),
-            (1, 'GLM-4.7-Flash', 'GPQA', ''), (1, 'Granite-4.2-30B', 'GPQA', ''), (1, 'DeepSeek-R1-Distill-Llama-70B', 'GPQA Diamond', 'pass@1'),
+            (1, 'GLM-4.7-Flash', 'GPQA', 'temperature 1.0, top-p 0.95'), (1, 'Granite-4.2-30B', 'GPQA', ''), (1, 'DeepSeek-R1-Distill-Llama-70B', 'GPQA Diamond', 'pass@1'),
             (1, 'Granite-4.1-30B', 'GPQA', '0-shot, CoT'), (1, 'phi-4', 'GPQA', ''),
             (0, 'Qwen3.6-27B', 'GPQA Diamond', ''), (0, 'Qwen3.6-35B-A3B', 'GPQA', ''), (0, 'Qwen3.5-27B', 'GPQA Diamond', ''),
-            (0, 'Gemma-4-31B', 'GPQA Diamond', ''), (0, 'Seed-OSS-36B', 'GPQA-D', ''), (0, 'MiMo-7B-RL-0530', 'GPQA-Diamond', 'Pass@1')]
+            (0, 'Gemma-4-31B', 'GPQA Diamond', ''), (0, 'Seed-OSS-36B', 'GPQA-D', 'temperature 1.1, top-p 0.95'), (0, 'MiMo-7B-RL-0530', 'GPQA-Diamond', 'Pass@1')]
     SHOWN = {'DeepSeek-R1-Distill-Llama-70B': 'R1-Distill-Llama-70B', 'MiMo-7B-RL-0530': 'MiMo-7B-RL'}
     GNAME = {'en': {3: ('Both levels', ''), 2: ('Self-reference', 'after reasoning'), 1: ('Self-index without', 'self-reference'), 0: ('Neither level', '')},
              'zh': {3: ('两层都有', ''), 2: ('推理后自指', ''), 1: ('有索引无自指', ''), 0: ('两层都没有', '')}}

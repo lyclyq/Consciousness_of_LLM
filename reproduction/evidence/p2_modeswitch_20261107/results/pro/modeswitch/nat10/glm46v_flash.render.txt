@@ -1,0 +1,42 @@
+{"model": "/root/hf_models_p2nat/zai-org/GLM-4.6V-Flash", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{\"enable_thinking\": false}", "natural_system_ok": true}
+===== main A: 74 tokens, body tokens 54, close '<|user|>'
+[gMASK]<sop><|assistant|>
+<think></think>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+
+===== main U: 72 tokens, body tokens 54, close '/nothink'
+[gMASK]<sop><|user|>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。/nothink<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+
+===== main S: 71 tokens, body tokens 54, close '<|user|>'
+[gMASK]<sop><|system|>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+
+===== natural A: 84 tokens, body tokens 54, close '<|user|>'
+[gMASK]<sop><|user|>
+请写一段简短的描述。/nothink<|assistant|>
+<think></think>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+
+===== natural U: 82 tokens, body tokens 54, close '/nothink'
+[gMASK]<sop><|user|>
+请写一段简短的描述。/nothink<|user|>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。/nothink<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+
+===== natural S: 81 tokens, body tokens 54, close '<|user|>'
+[gMASK]<sop><|user|>
+请写一段简短的描述。/nothink<|system|>
+账页青梧1列出三笔记录。甲签记着1，乙签记着2，丙签记着3。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|user|>
+请根据上文回应。/nothink<|assistant|>
+<think></think>
+

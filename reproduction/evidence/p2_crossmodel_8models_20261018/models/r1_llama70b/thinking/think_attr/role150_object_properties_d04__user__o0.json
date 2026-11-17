@@ -1,0 +1,1 @@
+{"id": "role150_object_properties_d04", "role": "user", "order": ["self", "user", "system"], "off": {"self": 2.8273567295400426e-05, "user": 5.28219788975548e-05, "system": 4.569996576719859e-07}, "on_answer": "user", "on_letter": "B", "n_new": 439, "finished": true, "tail": "\n\nB<｜end▁of▁sentence｜>", "gen": null, "batch": 16}

@@ -1,0 +1,2 @@
+assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 median 33
+user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 69 median 76, end min 5 median 5, question min 33 median 33

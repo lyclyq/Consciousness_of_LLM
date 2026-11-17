@@ -1,0 +1,1 @@
+{"id": "role150_disjunction_c00", "role": "user", "order": ["self", "user", "system"], "off": {"self": 0.00011590470239752904, "user": 1.0674453960746177e-06, "system": 5.657253510094051e-08}, "on_answer": "user", "on_letter": "B", "n_new": 1016, "finished": true, "tail": "\n<|begin_of_box|>B<|end_of_box|><|user|>"}

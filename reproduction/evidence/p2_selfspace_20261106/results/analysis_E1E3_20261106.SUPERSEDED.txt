@@ -1,0 +1,1 @@
+11-06: superseded by analysis_E1E3_famboot_20261106.json (bodies resampled as independent; the paper resamples the 15 held-out wording families). Point estimates unchanged, CIs too narrow.

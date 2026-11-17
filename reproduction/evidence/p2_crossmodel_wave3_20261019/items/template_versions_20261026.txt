@@ -1,0 +1,41 @@
+# Chat-template versions behind Table 2, 10-26 (code/server3/template_versions_20261026.sh, read-only); server3 times CST, PRO times UTC
+## server3
+== Qwen/Qwen3.5-27B
+  chat_template.jinja sha256 a4aee8afcf2e0711 commit fc05daec18b0 downloaded 2026-10-23 08:48:57 modified 2026-10-23 08:48:57
+  tokenizer_config.json sha256 316230d6a809701f commit fc05daec18b0 downloaded 2026-10-23 10:14:27 modified 2026-10-23 10:14:27
+  commits over all downloaded files: fc05daec18b0 
+  first run: 2026-10-23 11:07:59 START q35_27b_smoke#0
+== ibm-granite/granite-4.1-30b
+  chat_template.jinja sha256 fed2756d2d24e127 commit 4fae6278f713 downloaded 2026-10-22 10:54:38 modified 2026-10-22 10:54:38
+  tokenizer_config.json sha256 a5ec5daab12ba090 commit 4fae6278f713 downloaded 2026-10-22 12:51:24 modified 2026-10-22 12:51:24
+  commits over all downloaded files: 4fae6278f713 
+  first run: 2026-10-22 13:21:56 START granite41_smoke#0
+== ibm-granite/granite-4.2-30b
+  chat_template.jinja sha256 f0ba43f79b3cabca commit 9e668ce1c538 downloaded 2026-10-22 13:19:50 modified 2026-10-22 13:19:50
+  tokenizer_config.json sha256 2007f26df166ed10 commit 9e668ce1c538 downloaded 2026-10-22 14:47:39 modified 2026-10-22 14:47:39
+  commits over all downloaded files: 9e668ce1c538 
+  first run: 2026-10-23 03:30:19 START granite42_smoke#0
+== openai/gpt-oss-20b
+  chat_template.jinja sha256 a4c9919cbbd4acdd commit 6cee5e81ee83 downloaded 2026-10-19 11:08:11 modified 2026-10-19 11:08:11
+  tokenizer_config.json sha256 9279e942392b742d commit 6cee5e81ee83 downloaded 2026-10-19 11:08:12 modified 2026-10-19 11:08:12
+  commits over all downloaded files: 6cee5e81ee83 
+  first run: 2026-10-19 13:04:54 START gptoss_G#0
+## PRO
+== gpt-oss-20b
+  chat_template.jinja sha256 a4c9919cbbd4acdd commit 6cee5e81ee83 downloaded 2026-10-19 05:58:30 modified 2026-10-19 05:58:30
+  tokenizer_config.json sha256 9279e942392b742d commit 6cee5e81ee83 downloaded 2026-10-19 05:58:32 modified 2026-10-19 05:58:32
+  commits over all downloaded files: 6cee5e81ee83 
+== gpt-oss-120b
+  chat_template.jinja sha256 a4c9919cbbd4acdd commit b5c939de8f75 downloaded 2026-10-24 04:21:11 modified 2026-10-24 04:21:11
+  tokenizer_config.json sha256 9279e942392b742d commit b5c939de8f75 downloaded 2026-10-24 04:27:56 modified 2026-10-24 04:27:55
+  commits over all downloaded files: b5c939de8f75 
+  run folder suite_think/gpt_oss_120b_en/identity.json written 2026-10-19 12:28:49
+## reading
+- Qwen3.5-27B, Granite-4.1-30B, Granite-4.2-30B, gpt-oss-20b: one commit per model, every file written once at download, before the
+  model's first run, and never modified: the 10-26 renderings use the template of every run.
+- gpt-oss-120b: its geometry run (10-19) used a download that was later deleted; the model was downloaded again on 10-24 for the
+  thinking M runs. Both are commit b5c939de8f75 (README_zh.md, section 3, recorded on 10-19), so the files are the same; its
+  chat_template.jinja is also byte-identical to gpt-oss-20b's (a4c9919c).
+- gpt-oss renderings differ between days only in the line "Current date: <day of rendering>", which the template fills in; the
+  runs carry their own run day, the same for the three roles of a run. Apart from that line, the 10-19 rendering of gpt-oss-20b
+  (items/template_renderings_wave3.txt) and the 10-26 one (items/template_renderings_gptoss_20261026.txt) are identical.

@@ -1,0 +1,72 @@
+{
+ "model": "deepseek-flash",
+ "n": 900,
+ "prompt_tokens_match": 900,
+ "models_returned": {
+  "deepseek-flash": 900
+ },
+ "completion_tokens": 193529,
+ "prompt_tokens": 111540,
+ "assistant": {
+  "n": 300,
+  "finished": 300,
+  "answers": {
+   "self": 296,
+   "user": 4
+  },
+  "you_share": 0.9867,
+  "by_order": {
+   "o0": {
+    "self": 149,
+    "user": 1
+   },
+   "o1": {
+    "self": 147,
+    "user": 3
+   }
+  }
+ },
+ "user": {
+  "n": 300,
+  "finished": 299,
+  "answers": {
+   "user": 285,
+   "self": 9,
+   "system": 5
+  },
+  "you_share": 0.0301,
+  "by_order": {
+   "o0": {
+    "user": 140,
+    "self": 6,
+    "system": 3
+   },
+   "o1": {
+    "self": 3,
+    "user": 145,
+    "system": 2
+   }
+  }
+ },
+ "system": {
+  "n": 300,
+  "finished": 300,
+  "answers": {
+   "user": 293,
+   "system": 1,
+   "self": 6
+  },
+  "you_share": 0.02,
+  "by_order": {
+   "o0": {
+    "user": 147,
+    "self": 3
+   },
+   "o1": {
+    "user": 146,
+    "system": 1,
+    "self": 3
+   }
+  }
+ }
+}

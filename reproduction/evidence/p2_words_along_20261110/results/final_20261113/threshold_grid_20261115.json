@@ -1,0 +1,352 @@
+{
+ "method": "Threshold robustness grid of the NMI version (11-15, Supplementary Table \"Classification and statistics at three thresholds\").\nFor each threshold of the self-index criterion (70%, 80% = the paper's, 90%) the groups of both orders are recomputed by rule\n(classify_groups_by_rule_20261115.py), the final tables are regrouped (values unchanged, rows in the order build_final_tables\nwould give them), and the paper's statistics are rerun with the project code itself: group_decomposition_20261113.analyse (main\nand natural order, Spearman with the group, one-sided permutation tests) and pooled_rank_test_20261114.run on the pooled rows of\nfig_evidence_combined_20261114 (14 models measured in both orders). The 80% row must equal the files of the paper (assert).\nWrites results/final_20261113/threshold_grid_20261115.json and .md. Read-only on all inputs.",
+ "rows": {
+  "70": {
+   "threshold": 0.7,
+   "main_counts": {
+    "self-reference": 7,
+    "self-index only": 9,
+    "neither": 9
+   },
+   "main_n_index": 16,
+   "main_nesting_P": 0.02379862700228833,
+   "main_nesting_P_formula": "C(16,7)/C(25,7)",
+   "natural_counts": {
+    "self-reference": 5,
+    "self-index only": 9,
+    "neither": 3
+   },
+   "natural_n_index": 14,
+   "selfref_without_index": {
+    "main": [],
+    "natural": []
+   },
+   "main_kl_self_ext": {
+    "rho": 0.739521259583569,
+    "P": 0.0,
+    "medians_ratio": {
+     "neither": 0.32689695277116887,
+     "self-index only": 1.049716696336138,
+     "self-reference": 5.145132477911407
+    }
+   },
+   "main_share_self_ext": {
+    "rho": 0.5458565761346122,
+    "P": 0.00355,
+    "medians": {
+     "neither": -0.03902620859480099,
+     "self-index only": 0.03370513787955187,
+     "self-reference": 0.13838852813733982
+    }
+   },
+   "main_role_general": {
+    "kl_rho": -0.2271678565350632,
+    "kl_P": 0.8629,
+    "share_rho": -0.09969236869524355,
+    "share_P": 0.6824
+   },
+   "natural_kl_self_ext": {
+    "rho": 0.5910504710603481,
+    "P": 0.0175,
+    "medians_ratio": {
+     "neither": 0.20052863660792258,
+     "self-index only": 2.0438682647556248,
+     "self-reference": 2.360396395988512
+    }
+   },
+   "natural_share_self_ext": {
+    "rho": 0.7301211701333712,
+    "P": 0.0023,
+    "medians": {
+     "neither": -0.36065022464932917,
+     "self-index only": 0.08915127990157368,
+     "self-reference": 0.2275214487620525
+    }
+   },
+   "pooled_kl_b": {
+    "rho": 0.7014417784143806,
+    "P": 0.00265
+   },
+   "pooled_share_d": {
+    "rho": 0.5437887402691289,
+    "P": 0.02375
+   },
+   "pooled_level_counts": {
+    "neither": 1,
+    "index-one": 4,
+    "self-index only": 5,
+    "selfref-one": 1,
+    "self-reference": 3
+   },
+   "pooled_levels": {
+    "exaone4_32b_en": "self-reference",
+    "qwen38_27b": "self-reference",
+    "gpt_oss_20b_en": "self-reference",
+    "gemma4_31b_en": "selfref-one",
+    "glm46v_flash": "self-index only",
+    "phi4_en": "self-index only",
+    "granite41_30b_en": "self-index only",
+    "moonlight16b_a3b_instruct": "self-index only",
+    "r1_distill_llama70b": "self-index only",
+    "mimo7b_rl_0530": "index-one",
+    "ernie45_21b_a3b_thinking": "index-one",
+    "olmo2_7b_en": "index-one",
+    "seed_oss_36b": "index-one",
+    "apertus8b_en": "neither"
+   }
+  },
+  "80": {
+   "threshold": 0.8,
+   "main_counts": {
+    "self-reference": 7,
+    "self-index only": 6,
+    "neither": 12
+   },
+   "main_n_index": 13,
+   "main_nesting_P": 0.0035697940503432494,
+   "main_nesting_P_formula": "C(13,7)/C(25,7)",
+   "natural_counts": {
+    "self-reference": 5,
+    "self-index only": 8,
+    "neither": 4
+   },
+   "natural_n_index": 13,
+   "selfref_without_index": {
+    "main": [],
+    "natural": []
+   },
+   "main_kl_self_ext": {
+    "rho": 0.6767544927685913,
+    "P": 0.00015,
+    "medians_ratio": {
+     "neither": 0.4614006349905698,
+     "self-index only": 1.2671107174541478,
+     "self-reference": 5.145132477911407
+    }
+   },
+   "main_share_self_ext": {
+    "rho": 0.6143616384875289,
+    "P": 0.00095,
+    "medians": {
+     "neither": -0.03965283950487125,
+     "self-index only": 0.09305174818859341,
+     "self-reference": 0.13838852813733982
+    }
+   },
+   "main_role_general": {
+    "kl_rho": -0.22253451360245627,
+    "kl_P": 0.85885,
+    "share_rho": -0.2724487970273063,
+    "share_P": 0.9059
+   },
+   "natural_kl_self_ext": {
+    "rho": 0.6657502859356826,
+    "P": 0.00805,
+    "medians_ratio": {
+     "neither": 0.29399843739631726,
+     "self-index only": 2.057862189890711,
+     "self-reference": 2.360396395988512
+    }
+   },
+   "natural_share_self_ext": {
+    "rho": 0.7867957924694431,
+    "P": 0.00095,
+    "medians": {
+     "neither": -0.23353397368922635,
+     "self-index only": 0.10635397725795281,
+     "self-reference": 0.2275214487620525
+    }
+   },
+   "pooled_kl_b": {
+    "rho": 0.732014417394684,
+    "P": 0.00205
+   },
+   "pooled_share_d": {
+    "rho": 0.7045638767423834,
+    "P": 0.00375
+   },
+   "pooled_level_counts": {
+    "neither": 2,
+    "index-one": 5,
+    "self-index only": 4,
+    "selfref-one": 0,
+    "self-reference": 3
+   },
+   "pooled_levels": {
+    "exaone4_32b_en": "self-reference",
+    "qwen38_27b": "self-reference",
+    "gpt_oss_20b_en": "self-reference",
+    "glm46v_flash": "self-index only",
+    "phi4_en": "self-index only",
+    "granite41_30b_en": "self-index only",
+    "r1_distill_llama70b": "self-index only",
+    "moonlight16b_a3b_instruct": "index-one",
+    "mimo7b_rl_0530": "index-one",
+    "ernie45_21b_a3b_thinking": "index-one",
+    "olmo2_7b_en": "index-one",
+    "gemma4_31b_en": "index-one",
+    "seed_oss_36b": "neither",
+    "apertus8b_en": "neither"
+   }
+  },
+  "90": {
+   "threshold": 0.9,
+   "main_counts": {
+    "self-reference": 7,
+    "self-index only": 6,
+    "neither": 12
+   },
+   "main_n_index": 13,
+   "main_nesting_P": 0.0035697940503432494,
+   "main_nesting_P_formula": "C(13,7)/C(25,7)",
+   "natural_counts": {
+    "self-reference": 5,
+    "self-index only": 8,
+    "neither": 4
+   },
+   "natural_n_index": 13,
+   "selfref_without_index": {
+    "main": [],
+    "natural": []
+   },
+   "main_kl_self_ext": {
+    "rho": 0.6767544927685913,
+    "P": 0.00015,
+    "medians_ratio": {
+     "neither": 0.4614006349905698,
+     "self-index only": 1.2671107174541478,
+     "self-reference": 5.145132477911407
+    }
+   },
+   "main_share_self_ext": {
+    "rho": 0.6143616384875289,
+    "P": 0.00095,
+    "medians": {
+     "neither": -0.03965283950487125,
+     "self-index only": 0.09305174818859341,
+     "self-reference": 0.13838852813733982
+    }
+   },
+   "main_role_general": {
+    "kl_rho": -0.22253451360245627,
+    "kl_P": 0.85885,
+    "share_rho": -0.2724487970273063,
+    "share_P": 0.9059
+   },
+   "natural_kl_self_ext": {
+    "rho": 0.6657502859356826,
+    "P": 0.00805,
+    "medians_ratio": {
+     "neither": 0.29399843739631726,
+     "self-index only": 2.057862189890711,
+     "self-reference": 2.360396395988512
+    }
+   },
+   "natural_share_self_ext": {
+    "rho": 0.7867957924694431,
+    "P": 0.00095,
+    "medians": {
+     "neither": -0.23353397368922635,
+     "self-index only": 0.10635397725795281,
+     "self-reference": 0.2275214487620525
+    }
+   },
+   "pooled_kl_b": {
+    "rho": 0.732014417394684,
+    "P": 0.00205
+   },
+   "pooled_share_d": {
+    "rho": 0.7045638767423834,
+    "P": 0.00375
+   },
+   "pooled_level_counts": {
+    "neither": 2,
+    "index-one": 5,
+    "self-index only": 4,
+    "selfref-one": 0,
+    "self-reference": 3
+   },
+   "pooled_levels": {
+    "exaone4_32b_en": "self-reference",
+    "qwen38_27b": "self-reference",
+    "gpt_oss_20b_en": "self-reference",
+    "glm46v_flash": "self-index only",
+    "phi4_en": "self-index only",
+    "granite41_30b_en": "self-index only",
+    "r1_distill_llama70b": "self-index only",
+    "moonlight16b_a3b_instruct": "index-one",
+    "mimo7b_rl_0530": "index-one",
+    "ernie45_21b_a3b_thinking": "index-one",
+    "olmo2_7b_en": "index-one",
+    "gemma4_31b_en": "index-one",
+    "seed_oss_36b": "neither",
+    "apertus8b_en": "neither"
+   }
+  }
+ },
+ "changes": [
+  {
+   "threshold": "70",
+   "order": "main",
+   "model": "Gemma-4-31B",
+   "at_80": "neither",
+   "here": "self-index only",
+   "deciding": {
+    "content": {
+     "57": 0.707,
+     "58": 0.773
+    },
+    "onset": {}
+   }
+  },
+  {
+   "threshold": "70",
+   "order": "main",
+   "model": "OLMo-2-13B",
+   "at_80": "neither",
+   "here": "self-index only",
+   "deciding": {
+    "content": {
+     "21": 0.76,
+     "22": 0.733,
+     "25": 0.707,
+     "26": 0.707,
+     "28": 0.733,
+     "29": 0.733,
+     "30": 0.72,
+     "31": 0.72,
+     "32": 0.707,
+     "33": 0.707,
+     "34": 0.707
+    },
+    "onset": {}
+   }
+  },
+  {
+   "threshold": "70",
+   "order": "main",
+   "model": "Moonlight-16B-A3B",
+   "at_80": "neither",
+   "here": "self-index only",
+   "deciding": {
+    "content": {
+     "20": 0.707
+    },
+    "onset": {}
+   }
+  },
+  {
+   "threshold": "70",
+   "order": "natural",
+   "model": "Seed-OSS-36B",
+   "at_80": "neither",
+   "here": "self-index only",
+   "deciding": {
+    "content": {},
+    "onset": {
+     "22": 0.707
+    }
+   }
+  }
+ ]
+}

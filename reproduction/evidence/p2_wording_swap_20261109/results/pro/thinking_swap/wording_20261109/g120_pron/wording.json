@@ -1,0 +1,19 @@
+{
+ "wording": "pron",
+ "lang": "en",
+ "options": {
+  "self": "You",
+  "user": "Me",
+  "system": "The system"
+ },
+ "fixed_date": "2026-10-30",
+ "questions_orders_1_2": [
+  "Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.",
+  "Who wrote the message before this question? A. The system B. You C. Me. Answer with the letter only."
+ ],
+ "paper_options": {
+  "self": "You (the AI assistant)",
+  "user": "The user",
+  "system": "The system"
+ }
+}

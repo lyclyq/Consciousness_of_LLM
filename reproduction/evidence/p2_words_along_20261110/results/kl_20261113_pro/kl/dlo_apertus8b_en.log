@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://hf-mirror.com/api/models/swiss-ai/Apertus-8B-Instruct-2509/revision/b946d40447b2b597999b9c86d44bee0b452c919f'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 244, in snapshot_download
+    repo_info = api.repo_info(repo_id=repo_id, repo_type=repo_type, revision=revision)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3525, in repo_info
+    return method(
+           ^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3217, in model_info
+    hf_raise_for_status(r)
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 868, in hf_raise_for_status
+    raise _format(HfHubHTTPError, message, response) from e
+huggingface_hub.errors.HfHubHTTPError: (Request ID: Root=1-6af41e9e-0b98a8134039c0b100b1919e;0d79c370-9866-48f8-bb39-2d886c255adc)
+
+429 Too Many Requests: you have reached your 'api' rate limit.
+Retry after 17 seconds (0/10000 requests remaining in current 300s window).
+Url: https://hf-mirror.com/api/models/swiss-ai/Apertus-8B-Instruct-2509/revision/b946d40447b2b597999b9c86d44bee0b452c919f.
+We had to rate limit you, you hit the quota of 10000 api requests per 5 minutes period. Enable "Higher Hub rate limits" in your organization's Network Security settings (https://huggingface.co/organizations/ci-org/settings/network-security) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/consciousness_a6000pro/.venv/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 328, in snapshot_download
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Got: HfHubHTTPError: (Request ID: Root=1-6af41e9e-0b98a8134039c0b100b1919e;0d79c370-9866-48f8-bb39-2d886c255adc)
+
+429 Too Many Requests: you have reached your 'api' rate limit.
+Retry after 17 seconds (0/10000 requests remaining in current 300s window).
+Url: https://hf-mirror.com/api/models/swiss-ai/Apertus-8B-Instruct-2509/revision/b946d40447b2b597999b9c86d44bee0b452c919f.
+We had to rate limit you, you hit the quota of 10000 api requests per 5 minutes period. Enable "Higher Hub rate limits" in your organization's Network Security settings (https://huggingface.co/organizations/ci-org/settings/network-security) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+An error happened while trying to locate the files on the Hub and we cannot find the appropriate snapshot folder for the specified revision on the local disk. Please check your internet connection and try again.
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Fetching 16 files:   6%|▋         | 1/16 [00:01<00:20,  1.38s/it]Fetching 16 files:  12%|█▎        | 2/16 [00:02<00:16,  1.20s/it]Fetching 16 files:  25%|██▌       | 4/16 [00:03<00:07,  1.59it/s]Fetching 16 files:  56%|█████▋    | 9/16 [10:52<10:29, 89.94s/it]Fetching 16 files:  69%|██████▉   | 11/16 [10:59<05:27, 65.46s/it]Fetching 16 files: 100%|██████████| 16/16 [10:59<00:00, 41.20s/it]
+snapshot /root/hf_models_words/swiss-ai/Apertus-8B-Instruct-2509

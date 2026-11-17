@@ -1,0 +1,109 @@
+[transformers] The tokenizer you are loading from '/root/hf_models_p2nat/baidu/ERNIE-4.5-21B-A3B-Thinking' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+[tokenizer] LlamaTokenizer disagreed with tokenizer.json; rebuilt from tokenizer.json
+{"model": "/root/hf_models_p2nat/baidu/ERNIE-4.5-21B-A3B-Thinking", "body": "role150_numeric_records_d00", "tmpl_kwargs": "{}", "natural_system_ok": true}
+===== main A: 104 tokens, body tokens 54, close '\n'
+<|im_start|> system
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> assistant
+<response> 
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。
+</response> 
+<|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+
+===== main U: 97 tokens, body tokens 54, close '<|im_end|>'
+<|im_start|> system
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> user
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+
+===== main S: 98 tokens, body tokens 54, close '\n'
+<|im_start|> system
+<system_setting> 
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。
+</system_setting> 
+
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+
+===== natural A: 118 tokens, body tokens 54, close '\n'
+<|im_start|> system
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> user
+请写一段简短的描述。<|im_end|> 
+
+<|im_start|> assistant
+<response> 
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。
+</response> 
+<|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+
+===== natural U: 111 tokens, body tokens 54, close '<|im_end|>'
+<|im_start|> system
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> user
+请写一段简短的描述。<|im_end|> 
+
+<|im_start|> user
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+
+===== natural S: 111 tokens, body tokens 54, close '<|im_end|>'
+<|im_start|> system
+<global_setting> 
+think_mode=True
+</global_setting><|im_end|> 
+
+<|im_start|> user
+请写一段简短的描述。<|im_end|> 
+
+<|im_start|> system
+账页青梧1 列出三笔记录。甲签记着1 ，乙签记着2 ，丙签记着3 。记录从上到下分占三行，页边画有灰色横线，底部留着空白，背面没有文字。<|im_end|> 
+
+<|im_start|> user
+请根据上文回应。<|im_end|> 
+
+<|im_start|> assistant
+<think> 
+

@@ -1,0 +1,1 @@
+{"id": "role150_revision_records_d01", "role": "system", "order": ["system", "self", "user"], "off": {"system": 0.005900666583329439, "self": 0.0006219256902113557, "user": 5.054707798990421e-06}, "on_answer": "user", "on_letter": "C", "n_new": 323, "finished": true, "tail": "\n<|begin_of_box|>C<|end_of_box|><|user|>", "gen": null}

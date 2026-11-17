@@ -1,0 +1,37 @@
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter
+Loading weights:   0%|          | 0/1872 [00:00<?, ?it/s]Loading weights:   5%|▍         | 91/1872 [00:01<00:34, 51.98it/s]Loading weights:   5%|▌         | 97/1872 [00:04<01:29, 19.77it/s]Loading weights:   7%|▋         | 131/1872 [00:04<01:01, 28.22it/s]Loading weights:   8%|▊         | 149/1872 [00:05<00:58, 29.27it/s]Loading weights:   9%|▊         | 162/1872 [00:07<01:55, 14.85it/s]Loading weights:   9%|▉         | 165/1872 [00:13<04:53,  5.82it/s]Loading weights:  10%|█         | 195/1872 [00:14<03:14,  8.64it/s]Loading weights:  12%|█▏        | 230/1872 [00:14<01:49, 14.96it/s]Loading weights:  22%|██▏       | 403/1872 [00:14<00:24, 59.48it/s]Loading weights:  29%|██▉       | 540/1872 [00:19<00:31, 42.18it/s]Loading weights:  31%|███       | 583/1872 [00:20<00:32, 39.72it/s]Loading weights:  33%|███▎      | 614/1872 [00:24<00:52, 23.80it/s]Loading weights:  34%|███▍      | 639/1872 [00:25<00:46, 26.60it/s]Loading weights:  35%|███▌      | 657/1872 [00:25<00:41, 29.08it/s]Loading weights:  36%|███▋      | 679/1872 [00:25<00:35, 33.56it/s]Loading weights:  38%|███▊      | 712/1872 [00:25<00:26, 44.05it/s]Loading weights:  40%|███▉      | 743/1872 [00:26<00:22, 50.03it/s]Loading weights:  40%|████      | 757/1872 [00:27<00:35, 31.81it/s]Loading weights:  41%|████▏     | 776/1872 [00:27<00:31, 34.83it/s]Loading weights:  42%|████▏     | 785/1872 [00:28<00:44, 24.29it/s]Loading weights:  44%|████▎     | 817/1872 [00:29<00:30, 34.41it/s]Loading weights:  45%|████▌     | 847/1872 [00:31<00:41, 24.51it/s]Loading weights:  46%|████▌     | 853/1872 [00:32<00:58, 17.52it/s]Loading weights:  49%|████▉     | 916/1872 [00:32<00:23, 39.88it/s]Loading weights:  54%|█████▍    | 1019/1872 [00:32<00:09, 88.75it/s]Loading weights:  57%|█████▋    | 1063/1872 [00:37<00:29, 27.09it/s]Loading weights:  58%|█████▊    | 1094/1872 [00:39<00:34, 22.49it/s]Loading weights:  60%|█████▉    | 1121/1872 [00:40<00:30, 24.35it/s]Loading weights:  61%|██████    | 1138/1872 [00:41<00:29, 25.00it/s]Loading weights:  62%|██████▏   | 1154/1872 [00:41<00:24, 29.14it/s]Loading weights:  62%|██████▏   | 1167/1872 [00:41<00:25, 28.11it/s]Loading weights:  64%|██████▎   | 1189/1872 [00:42<00:21, 31.76it/s]Loading weights:  66%|██████▌   | 1227/1872 [00:42<00:15, 41.62it/s]Loading weights:  67%|██████▋   | 1258/1872 [00:43<00:11, 53.75it/s]Loading weights:  68%|██████▊   | 1268/1872 [00:43<00:12, 48.93it/s]Loading weights:  69%|██████▉   | 1291/1872 [00:43<00:09, 59.10it/s]Loading weights:  69%|██████▉   | 1300/1872 [00:44<00:13, 43.98it/s]Loading weights:  71%|███████   | 1324/1872 [00:45<00:21, 25.03it/s]Loading weights:  71%|███████   | 1330/1872 [00:50<01:05,  8.24it/s]Loading weights:  73%|███████▎  | 1364/1872 [00:50<00:33, 15.36it/s]Loading weights:  76%|███████▋  | 1431/1872 [00:50<00:12, 34.86it/s]Loading weights: 100%|██████████| 1872/1872 [00:50<00:00, 36.93it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] This FP8 model spans multiple CUDA devices in one process; routing its FP8 linear and experts layers through Triton/grouped_mm instead of DeepGEMM (DeepGEMM's cached kernels are bound to a single CUDA context and corrupt across devices). Run tensor/expert parallel (one device per process) to use the faster DeepGEMM path.
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f", "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98", "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash", "on_kwargs": "{}", "n_layers": 45, "band": [0, 44], "fit_from": "/root/glm53/out/mech/fits/fit_q.pt", "question": "arith", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU8_A", "swA8_U"], "batch": 16, "max_new": 3072, "torch": "2.6.0+cu124", "transformers": "5.19.0"}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+base_A 16/75 135s
+base_A 32/75 269s
+base_A 48/75 406s
+base_A 64/75 538s
+base_A 75/75 621s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}}
+base_U 16/75 874s
+base_U 32/75 1102s
+base_U 48/75 1347s
+base_U 64/75 1612s
+base_U 75/75 1811s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}}
+swU8_A 16/75 2035s
+swU8_A 32/75 2251s
+swU8_A 48/75 2435s
+swU8_A 64/75 2649s
+swU8_A 75/75 2831s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}}
+swA8_U 16/75 3075s
+swA8_U 32/75 3349s
+swA8_U 48/75 3548s
+swA8_U 64/75 3839s
+swA8_U 75/75 4025s
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swA8_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}}
+{"base_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "base_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swA8_U": {"n": 75, "finished": 75, "content_accuracy": 1.0}, "swU8_A": {"n": 75, "finished": 75, "content_accuracy": 1.0}}

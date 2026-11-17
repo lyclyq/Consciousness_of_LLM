@@ -1,0 +1,44 @@
+{
+ "assistant": {
+  "n": 300,
+  "off_p_true": null,
+  "off_top_correct": null,
+  "on_correct": 0.08,
+  "on_answers": {
+   "self": 0.08,
+   "user": 0.8533333333333334,
+   "system": 0.06666666666666667,
+   "null": 0.0
+  },
+  "median_new_tokens": 306.0,
+  "unfinished": 0.0033333333333333335
+ },
+ "user": {
+  "n": 300,
+  "off_p_true": null,
+  "off_top_correct": null,
+  "on_correct": 0.9633333333333334,
+  "on_answers": {
+   "self": 0.016666666666666666,
+   "user": 0.9633333333333334,
+   "system": 0.02,
+   "null": 0.0
+  },
+  "median_new_tokens": 237.0,
+  "unfinished": 0.0
+ },
+ "system": {
+  "n": 300,
+  "off_p_true": null,
+  "off_top_correct": null,
+  "on_correct": 0.056666666666666664,
+  "on_answers": {
+   "self": 0.08,
+   "user": 0.8633333333333333,
+   "system": 0.056666666666666664,
+   "null": 0.0
+  },
+  "median_new_tokens": 323.5,
+  "unfinished": 0.006666666666666667
+ }
+}

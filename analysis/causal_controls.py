@@ -1,6 +1,6 @@
 """Controls and variants of the causal tests, from the per-item results of the replacement runs. Statistics as in the paper
 (common.items, common.summarize): the share answering "you" (thinking) or mean P("you") (no thinking), and the item-paired
-difference from the unedited condition of the same recipient with a 95% bootstrap interval. Eight analyses, run in this order:
+difference from the unedited condition of the same recipient with a 95% bootstrap interval. Nine analyses, run in this order:
 
 without_question (stats/r05r06_20261031.json, .md): the edited conditions of the paper, removal swU8_A and installation swA8_U,
   k = 8, per readout:
@@ -67,6 +67,10 @@ families (stats/r09_cluster_20261101.json, .md): uncertainty unit, completion an
     - with thinking, bounds over all items that treat an unfinished output as unknown (worst case for the edited minus unedited
       share);
     - control tasks (content, arithmetic; 75 items per condition): paired change in accuracy, item and family-cluster intervals.
+families_mimo (stats/r09_cluster_mimo_20261110.json, .md): the same for the fifth readout, MiMo-V2.6-Distill-Qwen-9B in its default
+  call (thinking statistics), from its runs in the next-token archive (evidence/p2_modeswitch_20261107, thinking_swap/mimo_v26_*):
+  attribution r05q_all (the paper's procedure: the fit with the question, every position; no System conditions), 64 dimensions
+  all_k64, content content_all and arithmetic arith_all, with the accuracy of every condition of the two control tasks.
 strict (stats/p56full_20261101.json, .md): the stricter versions of the two self-related tasks, in all four readouts, with fit_m
   (fitted on message positions only) and the paper's k = 8. Of five eight-item pilots with rules fixed before any pilot ran (T1
   attribution in a held-out wording: signal; T2 numbered options: none; T3 game: signal; T4 polarity: none; T5 content
@@ -93,7 +97,7 @@ import sys
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import W3, BASE, Roots, arguments, boot, items, run_path, summarize  # noqa: E402
+from common import MS, W3, BASE, Roots, arguments, boot, items, result_path, run_path, summarize  # noqa: E402
 
 # ---------------------------------------------------------------------------------------------------------------------------
 # without_question: fit and edit without the question; five random seeds
@@ -753,6 +757,45 @@ def families(A, S):
     print('\n'.join(L))
 
 
+ATTR64 = [('own <- User, 64', 'swU64_A', 'base_A'), ('own <- User, 64, random', 'rswU64_A', 'base_A'),
+          ('User <- own, 64', 'swA64_U', 'base_U'), ('User <- own, 64, random', 'rswA64_U', 'base_U')]
+
+
+def families_mimo(A, S, M):
+    """families for the fifth readout, MiMo-V2.6-Distill-Qwen-9B in its default call (thinking statistics); M = the next-token
+    archive in the results package, which holds its runs (results/<group>/thinking_swap/mimo_v26_<run>)."""
+    T = lambda run: str(result_path(M, f'thinking_swap/{run}'))  # noqa: E731
+    val = lambda r: fam_value(r, True)  # noqa: E731
+    recs = items(T('mimo_v26_r05q_all'))
+    res = {'attribution': {lab: compare(recs, c, b, val) for lab, c, b in ATTR if c in {r['cond'] for r in recs}}}
+    recs64 = items(T('mimo_v26_all_k64'))
+    res['attribution_k64'] = {lab: compare(recs64, c, b, val) for lab, c, b in ATTR64}
+    for task, run in (('content', 'mimo_v26_content_all'), ('arith', 'mimo_v26_arith_all')):
+        trecs = items(T(run))
+        conds = sorted({r['cond'] for r in trecs})
+        res[task] = {c: compare(trecs, c, 'base_U' if c.endswith('_U') else 'base_A', correct) for c in conds if not c.startswith('base_')}
+        res[task]['_accuracy'] = {c: sum(correct(r) or 0 for r in trecs if r['cond'] == c) / sum(1 for r in trecs if r['cond'] == c) for c in conds}
+    f3 = lambda x: f'{x:+.2f}'  # noqa: E731
+    L = ['# R09 numbers for MiMo-V2.6-Distill-Qwen-9B, default call (11-10)', '', 'As r09_cluster_20261101.md.', '',
+         '| condition | finished | pairs | change | item CI | cluster CI | bounds (unknown unfinished) |', '|---|---|---|---|---|---|---|']
+    for part in ('attribution', 'attribution_k64'):
+        for lab, s in res[part].items():
+            if 'change' in s:
+                L.append(f"| {lab} | {s['finished'][0]}/{s['finished'][1]} of {s['n']} | {s['pairs']} | {f3(s['change'])} | "
+                         f"[{f3(s['item_ci'][0])}, {f3(s['item_ci'][1])}] | [{f3(s['cluster_ci'][0])}, {f3(s['cluster_ci'][1])}] | "
+                         f"[{f3(s['bounds'][0])}, {f3(s['bounds'][1])}] |")
+    for task in ('content', 'arith'):
+        L += ['', f"{task}: accuracy {json.dumps({k: round(v, 3) for k, v in res[task]['_accuracy'].items()})}", '',
+              '| condition | finished | pairs | change | item CI | cluster CI |', '|---|---|---|---|---|---|']
+        for c, s in res[task].items():
+            if c != '_accuracy' and 'change' in s:
+                L.append(f"| {c} | {s['finished'][0]}/{s['finished'][1]} of {s['n']} | {s['pairs']} | {f3(s['change'])} | "
+                         f"[{f3(s['item_ci'][0])}, {f3(s['item_ci'][1])}] | [{f3(s['cluster_ci'][0])}, {f3(s['cluster_ci'][1])}] |")
+    (S / 'r09_cluster_mimo_20261110.json').write_text(json.dumps({'results': res}, indent=1), encoding='utf-8')
+    (S / 'r09_cluster_mimo_20261110.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
+    print('\n'.join(L))
+
+
 # ---------------------------------------------------------------------------------------------------------------------------
 # strict: held-out wording of the attribution question, and the secret game with X alone edited
 
@@ -830,7 +873,8 @@ def strict(A, S):
 
 
 STEPS = [('without_question', without_question), ('random_floor', random_floor), ('exchange', exchange),
-         ('exchange_traces', exchange_traces), ('rest', rest), ('fd_layers', fd_layers), ('families', families), ('strict', strict)]
+         ('exchange_traces', exchange_traces), ('rest', rest), ('fd_layers', fd_layers), ('families', families),
+         ('families_mimo', families_mimo), ('strict', strict)]
 
 
 def main(argv=None):
@@ -843,7 +887,7 @@ def main(argv=None):
     for name, fn in STEPS:
         if only is None or name in only:
             print(f'== {name}', flush=True)
-            fn(A, S)
+            fn(A, S, r.res(MS)) if fn is families_mimo else fn(A, S)
 
 
 if __name__ == '__main__':

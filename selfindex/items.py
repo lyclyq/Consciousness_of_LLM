@@ -28,12 +28,27 @@ def orders():
     return [tuple(o) for o in templates()['attribution']['orders']]
 
 
-def attr_question(order, lang='zh', kind='attribution'):
+WORDINGS = ('main', 'pron', 'role')
+
+
+def attr_options(lang='zh', wording='main'):
+    """The three answer options {self, user, system} of the attribution question. wording: 'main' (the paper's options), 'pron'
+    (the model and the user named only by pronouns) or 'role' (only by their roles); items/templates.json, attribution_wordings."""
+    t = templates()
+    if wording == 'main':
+        return t['attribution'][lang]['options']
+    if wording not in WORDINGS:
+        raise ValueError(wording)
+    return t['attribution_wordings'][wording][lang]
+
+
+def attr_question(order, lang='zh', kind='attribution', wording='main'):
     """The attribution question in one option order. kind: 'attribution' (the main wording), 'attribution_other_wording' (the held-out
-    wording of the stricter tasks: other head, same options, letters and tail) or 'attribution_numbered' (options numbered 1-3)."""
+    wording of the stricter tasks: other head, same options, letters and tail) or 'attribution_numbered' (options numbered 1-3).
+    wording: the answer options (attr_options); the head and the tail stay those of the paper."""
     t = templates()
     a = t['attribution']
-    head, opt, tail = a[lang]['head'], a[lang]['options'], a[lang]['tail']
+    head, opt, tail = a[lang]['head'], attr_options(lang, wording), a[lang]['tail']
     marks = a['letters']
     if kind == 'attribution_other_wording':
         head = t['attribution_other_wording'][lang]

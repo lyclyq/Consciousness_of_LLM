@@ -1,0 +1,6 @@
+[transformers] You are using a model of type `deepseek_v41` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+2 bodies, 2 to run
+1/2 bodies, 1021s, experts 544s; last role150_numeric_records_c00 (1021s), check max rel 0.00e+00
+2/2 bodies, 1681s, experts 1086s; last role150_numeric_records_c01 (660s), check max rel 0.00e+00
+check (natural3): [{"id": "role150_numeric_records_c00", "max_rel": 0.0, "ok": true}, {"id": "role150_numeric_records_c01", "max_rel": 0.0, "ok": true}]
+smoke: 2/2 bodies on disk

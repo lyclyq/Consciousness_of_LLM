@@ -1,10 +1,13 @@
 """Figure self_readout (fig:self_readout): how a self-index yields self-reference. Concept only, no data.
-(a) One displacement, two readouts: the model's own message carries a self-index offset u (Equation eq:self_decomposition) over
-    its whole representation; a readout orthogonal to u gives the same value for every role (output unchanged by the source; the
-    example is the content question of the causal tests), a readout aligned with u separates the model's own message (output
-    follows the source).
+(a) One displacement, three readouts: the model's own message carries a self-index offset u (Equation eq:self_decomposition) over
+    its whole representation. Two readouts answer a question: one orthogonal to u gives the same value for every role (output
+    unchanged by the source; the example is the content question of the causal tests), one aligned with u separates the model's own
+    message (output follows the source). The third needs no question: the projection toward the next token on the tokens of the
+    message itself; aligned with u, it sets the own message apart with no task, so it shows the self-index (first level), not
+    self-reference (drawn in the Assistant/self-index blue, not the amber of self-reference).
 (b) Three cases across models: no displacement; a displacement without a single-pass readout; a displacement and a readout.
-Colors follow the overview figure (Assistant blue, User orange, System green, self-reference amber).
+Colors follow the overview figure (Assistant blue, User orange, System green, self-reference amber). The Chinese paper uses the same
+figure.
 Outputs: paper/source/figures/self_readout.pdf/.png.
 
 usage: fig_readout.py --out OUT
@@ -49,14 +52,17 @@ def panel(fig, rect, w, h):
 
 
 def main_(out_dir):
-    W, HA, HB = 7.2, 3.35, 2.55
+    W, HA, HB = 7.2, 4.41, 2.55  # the third lane adds about one inch to panel (a)
     fig = plt.figure(figsize=(W, HA + HB))
     a = panel(fig, [0, HB / (HA + HB), 1, HA / (HA + HB)], W, HA)
     b = panel(fig, [0, 0, 1, HB / (HA + HB)], W, HB)
 
-    # (a) one displacement, two readouts
-    a.text(0.05, 3.22, '(a) One displacement, read or not read', fontsize=10, fontweight='bold', va='center')
-    y1, y2 = 2.17, 0.78  # the two readout lanes
+    # (a) one displacement, three readouts: two answer a question, one needs none
+    a.text(0.05, HA - 0.13, '(a) One displacement, read or not read', fontsize=10, fontweight='bold', va='center')
+    y3 = 0.66                         # task-free lane
+    y2 = y3 + 1.18                    # question that depends on the source
+    y1 = y2 + 1.39                    # question that does not
+    dy = y2 - 0.78                    # the geometry keeps its place relative to lanes 1-2
     box(a, 0.05, y1 - 0.42, 1.80, y1 + 0.42)
     a.text(0.925, y1 + 0.12, 'Input that does not\ndepend on the source', ha='center', va='center', fontsize=8.2, color=INK,
            linespacing=1.15)
@@ -65,20 +71,25 @@ def main_(out_dir):
     a.text(0.925, y2 + 0.22, 'Input that depends\non the source', ha='center', va='center', fontsize=8.2, color=INK, linespacing=1.15)
     a.text(0.925, y2 - 0.25, '"Who wrote the previous\nmessage?"', ha='center', va='center', fontsize=7,
            color=INK2, linespacing=1.1)
+    box(a, 0.05, y3 - 0.42, 1.80, y3 + 0.42)
+    a.text(0.925, y3 + 0.17, 'No question', ha='center', va='center', fontsize=8.2, color=INK)
+    a.text(0.925, y3 - 0.17, 'next token on the\nmessage itself', ha='center', va='center', fontsize=7, color=INK2,
+           linespacing=1.1)
 
-    box(a, 2.15, 0.12, 5.10, 3.02, fc=IDX_FILL, ec=C['A'], lw=1.2)
-    a.text(3.625, 2.83, 'Model', ha='center', va='center', fontsize=9, fontweight='bold', color=C['A'])
+    box(a, 2.15, 0.12, 5.10, HA - 0.33, fc=IDX_FILL, ec=C['A'], lw=1.2)
+    a.text(3.625, HA - 0.52, 'Model', ha='center', va='center', fontsize=9, fontweight='bold', color=C['A'])
     # geometry: the same content in three roles; the model's own message is displaced by u
-    U, S = (2.62, 1.36), (2.82, 1.20)
+    U, S = (2.62, 1.36 + dy), (2.82, 1.20 + dy)
     cx, cy = (U[0] + S[0]) / 2, (U[1] + S[1]) / 2
     A = (cx + 0.52, cy + 0.52)
     arrow(a, (cx + 0.10, cy + 0.10), (A[0] - 0.09, A[1] - 0.09), col=C['A'], lw=1.4)
     a.text(cx + 0.14, cy + 0.42, r'$u$', fontsize=10, color=C['A'], ha='center', va='center')
     dots(a, {'U': U, 'S': S, 'A': A})
-    a.text(2.95, 1.02, 'own message shifted by ' + r'$u$', ha='center', va='center', fontsize=6.8, color=INK2)
+    a.text(2.95, 1.02 + dy, 'own message shifted by ' + r'$u$', ha='center', va='center', fontsize=6.8, color=INK2)
     # readouts as number lines
     for y, lab, xs in ((y1, r'readout $w_1$:  $w_1\cdot u \approx 0$', {'U': 4.17, 'A': 4.33, 'S': 4.49}),
-                       (y2, r'readout $w_2$:  $w_2\cdot u$ large', {'U': 3.88, 'S': 4.04, 'A': 4.76})):
+                       (y2, r'readout $w_2$:  $w_2\cdot u$ large', {'U': 3.88, 'S': 4.04, 'A': 4.76}),
+                       (y3, r'readout $w_3$:  $w_3\cdot u$ large', {'U': 3.88, 'S': 4.04, 'A': 4.66})):
         a.plot([3.68, 4.98], [y, y], color=INK2, lw=0.9, zorder=2)
         for t in (3.68, 4.98):
             a.plot([t, t], [y - 0.05, y + 0.05], color=INK2, lw=0.9, zorder=2)
@@ -86,8 +97,10 @@ def main_(out_dir):
         dots(a, {r: (x, y) for r, x in xs.items()}, s=105)
     a.text(4.33, y1 - 0.30, 'all roles read alike', ha='center', va='center', fontsize=6.8, color=INK2)
     a.text(4.33, y2 - 0.30, 'own message read apart', ha='center', va='center', fontsize=6.8, color=REF_TXT)
+    a.text(4.33, y3 - 0.30, 'own message read apart', ha='center', va='center', fontsize=6.8, color=C['A'])
     arrow(a, (1.80, y1), (3.60, y1), col=INK2)
     arrow(a, (1.80, y2), (3.60, y2), col=REF, lw=1.3)
+    arrow(a, (1.80, y3), (3.60, y3), col=C['A'], lw=1.3)
 
     box(a, 5.45, y1 - 0.42, 7.15, y1 + 0.42)
     a.text(6.30, y1 + 0.12, 'Output unchanged\nby the source', ha='center', va='center', fontsize=8.2, color=INK, linespacing=1.15)
@@ -97,8 +110,14 @@ def main_(out_dir):
            linespacing=1.15)
     a.text(6.30, y2 - 0.26, '"I wrote this" for its\nown messages only', ha='center', va='center', fontsize=7, color=INK2,
            linespacing=1.1)
+    box(a, 5.45, y3 - 0.42, 7.15, y3 + 0.42, fc=IDX_FILL, ec=C['A'], lw=1.2)
+    a.text(6.30, y3 + 0.12, 'Next-token prediction\nfollows the source', ha='center', va='center', fontsize=8.2, color=C['A'], fontweight='bold',
+           linespacing=1.15)
+    a.text(6.30, y3 - 0.26, 'shows the self-index,\nnot self-reference', ha='center', va='center', fontsize=7, color=INK2,
+           linespacing=1.1)
     arrow(a, (5.06, y1), (5.43, y1), col=INK2)
     arrow(a, (5.06, y2), (5.43, y2), col=REF, lw=1.3)
+    arrow(a, (5.06, y3), (5.43, y3), col=C['A'], lw=1.3)
 
     # (b) three cases across models
     b.text(0.05, 2.42, '(b) Three cases across models', fontsize=10, fontweight='bold', va='center')

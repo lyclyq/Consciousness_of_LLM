@@ -1,0 +1,1 @@
+{"id": "role150_temporal_order_c00", "role": "assistant", "order": ["system", "self", "user"], "off": {"system": 7.873248250689358e-06, "self": 1.6503224742336897e-06, "user": 1.8886939869844355e-05}, "on_answer": "user", "on_letter": "C", "n_new": 337, "finished": true, "tail": "\n\nC<｜end▁of▁sentence｜>", "gen": null, "batch": 16}

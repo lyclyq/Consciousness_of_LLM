@@ -1,0 +1,83 @@
+Table 5 Qwen3.8-27B: content                                                             | paper 64/64 | recomputed 64/64 | OK
+Table 5 Qwen3.8-27B: onset                                                               | paper 64/64 | recomputed 64/64 | OK
+Table 5 Qwen3.8-27B: last third                                                          | paper 21/21 | recomputed 21/21 | OK
+Table 5 gpt-oss-120b: content                                                            | paper 25/36 | recomputed 25/36 | OK
+Table 5 gpt-oss-120b: onset                                                              | paper 33/36 | recomputed 33/36 | OK
+Table 5 gpt-oss-120b: last third                                                         | paper 12/12 | recomputed 12/12 | OK
+Table 5 gpt-oss-20b: content                                                             | paper 20/24 | recomputed 20/24 | OK
+Table 5 gpt-oss-20b: onset                                                               | paper 24/24 | recomputed 24/24 | OK
+Table 5 gpt-oss-20b: last third                                                          | paper 8/8 | recomputed 8/8 | OK
+Table 5 Qwen3.8-Flash-Next: content                                                      | paper 38 (44)/48 | recomputed 38 (44)/48 | OK
+Table 5 Qwen3.8-Flash-Next: onset                                                        | paper 48/48 | recomputed 48/48 | OK
+Table 5 Qwen3.8-Flash-Next: last third                                                   | paper 16/16 | recomputed 16/16 | OK
+Table 5 GLM-5.3-Flash: content                                                           | paper 18 (28)/45 | recomputed 18 (28)/45 | OK
+Table 5 GLM-5.3-Flash: onset                                                             | paper 19 (26)/45 | recomputed 19 (26)/45 | OK
+Table 5 GLM-5.3-Flash: last third                                                        | paper 15/15 | recomputed 15/15 | OK
+Table 5 EXAONE-4.0.1-32B: content                                                        | paper 64/64 | recomputed 64/64 | OK
+Table 5 EXAONE-4.0.1-32B: onset                                                          | paper 64/64 | recomputed 64/64 | OK
+Table 5 EXAONE-4.0.1-32B: last third                                                     | paper 21/21 | recomputed 21/21 | OK
+Table 5 GLM-4.6V-Flash: content                                                          | paper 40/40 | recomputed 40/40 | OK
+Table 5 GLM-4.6V-Flash: onset                                                            | paper 40/40 | recomputed 40/40 | OK
+Table 5 GLM-4.6V-Flash: last third                                                       | paper 13/13 | recomputed 13/13 | OK
+Table 5 GLM-4.7-Flash: content                                                           | paper 34/47 | recomputed 34/47 | OK
+Table 5 GLM-4.7-Flash: onset                                                             | paper 45/47 | recomputed 45/47 | OK
+Table 5 GLM-4.7-Flash: last third                                                        | paper 15/15 | recomputed 15/15 | OK
+Table 5 R1-Distill-Llama-70B: content                                                    | paper 0/80 | recomputed 0/80 | OK
+Table 5 R1-Distill-Llama-70B: onset                                                      | paper 80/80 | recomputed 80/80 | OK
+Table 5 R1-Distill-Llama-70B: last third                                                 | paper 26/26 | recomputed 26/26 | OK
+Table 5 Granite-4.2-30B: content                                                         | paper 30/64 | recomputed 30/64 | OK
+Table 5 Granite-4.2-30B: onset                                                           | paper 59/64 | recomputed 59/64 | OK
+Table 5 Granite-4.2-30B: last third                                                      | paper 16/21 | recomputed 16/21 | OK
+Table 5 Granite-4.1-30B: content                                                         | paper 17/64 | recomputed 17/64 | OK
+Table 5 Granite-4.1-30B: onset                                                           | paper 32/64 | recomputed 32/64 | OK
+Table 5 Granite-4.1-30B: last third                                                      | paper 0/21 | recomputed 0/21 | OK
+Table 5 Seed-OSS-36B: content                                                            | paper 0/64 | recomputed 0/64 | OK
+Table 5 Seed-OSS-36B: onset                                                              | paper 0/64 | recomputed 0/64 | OK
+Table 5 Seed-OSS-36B: last third                                                         | paper 0/21 | recomputed 0/21 | OK
+Table 5 Gemma-4-31B: content                                                             | paper 0/60 | recomputed 0/60 | OK
+Table 5 Gemma-4-31B: onset                                                               | paper 0/60 | recomputed 0/60 | OK
+Table 5 Gemma-4-31B: last third                                                          | paper 0/20 | recomputed 0/20 | OK
+Table 5 Qwen3.6-27B: content                                                             | paper 6/64 | recomputed 6/64 | OK
+Table 5 Qwen3.6-27B: onset                                                               | paper 1/64 | recomputed 1/64 | OK
+Table 5 Qwen3.6-27B: last third                                                          | paper 0/21 | recomputed 0/21 | OK
+Table 5 Qwen3.6-35B-A3B: content                                                         | paper 1/40 | recomputed 1/40 | OK
+Table 5 Qwen3.6-35B-A3B: onset                                                           | paper 0/40 | recomputed 0/40 | OK
+Table 5 Qwen3.6-35B-A3B: last third                                                      | paper 0/13 | recomputed 0/13 | OK
+Table 5 Qwen3.5-27B: content                                                             | paper 13/64 | recomputed 13/64 | OK
+Table 5 Qwen3.5-27B: onset                                                               | paper 0/64 | recomputed 0/64 | OK
+Table 5 Qwen3.5-27B: last third                                                          | paper 0/21 | recomputed 0/21 | OK
+Table 5 Qwen3.5-27B: last third vs v4_geometry_summary.csv (max over positions)          | paper 0 | recomputed 0 | OK
+Table 5 Granite-4.1-30B: last third vs v4_geometry_summary.csv (max over positions)      | paper 0 | recomputed 0 | OK
+Table 5 Granite-4.2-30B: last third vs v4_geometry_summary.csv (max over positions)      | paper 16 | recomputed 16 | OK
+last third, self-reference Qwen3.8-27B non_thinking: every layer covered                 | paper 21/21 | recomputed 21/21 | OK
+last third, self-reference Qwen3.8-27B thinking: every layer covered                     | paper 21/21 | recomputed 21/21 | OK
+last third, self-reference gpt-oss-120b thinking: every layer covered                    | paper 12/12 | recomputed 12/12 | OK
+last third, self-reference gpt-oss-20b thinking: every layer covered                     | paper 8/8 | recomputed 8/8 | OK
+last third, self-reference Qwen3.8-Flash-Next thinking: every layer covered              | paper 16/16 | recomputed 16/16 | OK
+last third, self-reference GLM-5.3-Flash thinking: every layer covered                   | paper 15/15 | recomputed 15/15 | OK
+last third, self-reference EXAONE-4.0.1-32B thinking: every layer covered                | paper 21/21 | recomputed 21/21 | OK
+last third, models without a self-index: at most 3 layers, Gemma-4-31B thinking          | paper 3 (gemma4_31b thinking) | recomputed 3 (gemma4_31b thinking) | OK
+last quarter, self-reference Qwen3.8-27B non_thinking: every layer covered               | paper 16/16 | recomputed 16/16 | OK
+last quarter, self-reference Qwen3.8-27B thinking: every layer covered                   | paper 16/16 | recomputed 16/16 | OK
+last quarter, self-reference gpt-oss-120b thinking: every layer covered                  | paper 9/9 | recomputed 9/9 | OK
+last quarter, self-reference gpt-oss-20b thinking: every layer covered                   | paper 6/6 | recomputed 6/6 | OK
+last quarter, self-reference Qwen3.8-Flash-Next thinking: every layer covered            | paper 12/12 | recomputed 12/12 | OK
+last quarter, self-reference GLM-5.3-Flash thinking: every layer covered                 | paper 11/11 | recomputed 11/11 | OK
+last quarter, self-reference EXAONE-4.0.1-32B thinking: every layer covered              | paper 16/16 | recomputed 16/16 | OK
+last quarter, models without a self-index: most layers covered (not stated in the paper) | paper - | recomputed 2 (gemma4_31b thinking) | info
+Gemma-4-31B thinking: content layers, of which in the last third                         | paper 11, 3 | recomputed 11, 3 | OK
+Seed-OSS-36B thinking: onset layers = its first 17 and no later                          | paper L0-L16 | recomputed L0-L16 | OK
+GLM-4.6V-Flash: first option in one order (o0), min over roles                           | paper 0.99 | recomputed 0.99 | OK
+  GLM-4.6V-Flash first-option probability by order (A/U/S)                               | paper - | recomputed o0 0.99/1.00/1.00; o1 0.90/0.93/0.92; o2 0.97/0.84/0.89 | info
+GLM-4.6V-Flash: excess of P(you|own) over external (o0+o1)                               | paper 0.01 | recomputed 0.01 | OK
+GLM-4.7-Flash: excess (o0+o1), bodies positive                                           | paper 0.05 (130 of 150) | recomputed 0.05 (130 of 150) | OK
+GLM-4.7-Flash: excess when "you" is the last option (o2)                                 | paper -0.02 | recomputed -0.02 | OK
+  GLM-4.7-Flash excess by order o0/o1/o2 (README: +0.039/+0.058/-0.021)                  | paper - | recomputed +0.039/+0.058/-0.021 | info
+Qwen3.8-27B simulated FP8: own vs at most other, bodies positive                         | paper 0.765 vs 0.065, 150 of 150 | recomputed 0.765 vs 0.065, 150 of 150 | OK
+Qwen3.8-27B simulated FP8: self-index layers (content, onset)                            | paper 64/64, 64/64 | recomputed 64/64, 64/64 | OK
+Qwen3.8-Flash-Next natural order (o0+o1): P(you) own vs User                             | paper 0.07 vs 0.07 | recomputed 0.07 vs 0.07 | OK
+  Flash-Next natural order, all three orders (the old text)                              | paper - | recomputed 0.13 vs 0.09 | info
+Qwen3.8-27B English: own vs at most other (o0+o1)                                        | paper 0.68 vs 0.08 | recomputed 0.68 vs 0.08 | OK
+Qwen3.8-27B English: content layers                                                      | paper 64/64 | recomputed 64/64 | OK
+
+77 OK, 0 MISMATCH, 4 info

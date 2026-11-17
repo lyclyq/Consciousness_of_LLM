@@ -1,0 +1,11 @@
+model,orders,n_bodies,p_you_own,p_you_user,p_you_system,own_minus_max_other,bodies_positive,sign_p,p_system_as_user
+mimo7b_rl,3_orders,150,0.1434,0.1251,0.1494,-0.0066,51,0.00011,0.5613
+mimo7b_rl,2_orders_as_paper,150,0.1478,0.1283,0.1838,-0.036,15,2.55e-25,0.6231
+mimo_distill9b,3_orders,150,0.3479,0.2674,0.3382,0.0063,82,0.288,0.4639
+mimo_distill9b,2_orders_as_paper,150,0.3872,0.2588,0.3317,0.049,123,7.71e-16,0.4968
+moonlight16b,3_orders,150,0.682,0.6609,0.6401,0.0049,87,0.06,0.2832
+moonlight16b,2_orders_as_paper,150,0.6591,0.5857,0.5591,0.0561,136,2.79e-26,0.3971
+apertus8b,3_orders,150,0.2593,0.2423,0.22,0.0138,104,2.47e-06,0.5069
+apertus8b,2_orders_as_paper,150,0.1834,0.2314,0.1184,-0.0481,6,2.09e-35,0.6679
+phi4,3_orders,150,0.0833,0.0976,0.0422,-0.0144,63,0.06,0.7154
+phi4,2_orders_as_paper,150,0.0378,0.0174,0.0293,0.0081,104,2.47e-06,0.7705

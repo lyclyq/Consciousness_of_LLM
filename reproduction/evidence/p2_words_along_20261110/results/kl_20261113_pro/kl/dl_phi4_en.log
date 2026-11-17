@@ -1,0 +1,6 @@
+Fetching 21 files:   0%|          | 0/21 [00:00<?, ?it/s]Fetching 21 files:   5%|▍         | 1/21 [00:00<00:17,  1.17it/s]Fetching 21 files:  10%|▉         | 2/21 [00:01<00:14,  1.36it/s]Fetching 21 files:  14%|█▍        | 3/21 [00:02<00:15,  1.19it/s]Fetching 21 files:  38%|███▊      | 8/21 [00:03<00:05,  2.56it/s]Fetching 21 files:  48%|████▊     | 10/21 [00:04<00:04,  2.72it/s]Error while downloading from https://hf-mirror.com/microsoft/phi-4/resolve/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/model-00001-of-00006.safetensors: The read operation timed out
+Trying to resume download...
+Error while downloading from https://hf-mirror.com/microsoft/phi-4/resolve/2db69c1c3e91a05d2c64a3185acfbaf36f744e25/model-00006-of-00006.safetensors: The read operation timed out
+Trying to resume download...
+Fetching 21 files:  52%|█████▏    | 11/21 [1:18:31<2:20:06, 840.62s/it]Fetching 21 files: 100%|██████████| 21/21 [1:18:31<00:00, 224.34s/it]  
+snapshot /root/hf_models_p2nat/microsoft/phi-4

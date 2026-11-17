@@ -1,0 +1,37 @@
+[tokenizer] LlamaTokenizer disagreed with tokenizer.json; rebuilt from tokenizer.json
+{
+ "bodies": 150,
+ "natural_system_ok": false,
+ "common_body_tokens_min_max": [
+  62,
+  81
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<｜end▁of▁sentence｜>",
+   "prefix_to_close_sha": "e6577239219b",
+   "tail": "<｜end▁of▁sentence｜><｜User｜>请根据上文回应。<｜Assistant｜><think>\n"
+  },
+  "main_U": {
+   "close": "<｜User｜>",
+   "prefix_to_close_sha": "46091716977a",
+   "tail": "<｜User｜>请根据上文回应。<｜Assistant｜><think>\n"
+  },
+  "main_S": {
+   "close": "<｜User｜>",
+   "prefix_to_close_sha": "20c5cfce92df",
+   "tail": "<｜User｜>请根据上文回应。<｜Assistant｜><think>\n"
+  },
+  "natural_A": {
+   "close": "<｜end▁of▁sentence｜>",
+   "prefix_to_close_sha": "ee28c36c69be",
+   "tail": "<｜end▁of▁sentence｜><｜User｜>请根据上文回应。<｜Assistant｜><think>\n"
+  },
+  "natural_U": {
+   "close": "<｜User｜>",
+   "prefix_to_close_sha": "d7d6d5494b1e",
+   "tail": "<｜User｜>请根据上文回应。<｜Assistant｜><think>\n"
+  }
+ }
+}
+DRY RUN OK

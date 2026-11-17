@@ -1,0 +1,1 @@
+{"id": "role150_negation_d00", "role": "system", "order": ["self", "user", "system"], "off": {"self": 0.038110896944999695, "user": 0.8673999309539795, "system": 0.09142328798770905}, "on_answer": "user", "on_letter": "B", "n_new": 492, "finished": true, "tail": "\n\nB<|im_end|>", "gen": null}

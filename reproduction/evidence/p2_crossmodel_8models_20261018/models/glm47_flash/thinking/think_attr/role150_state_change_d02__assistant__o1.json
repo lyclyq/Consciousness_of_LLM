@@ -1,0 +1,1 @@
+{"id": "role150_state_change_d02", "role": "assistant", "order": ["system", "self", "user"], "off": {"system": 0.18556274473667145, "self": 0.5044118762016296, "user": 0.30594125390052795}, "on_answer": "user", "on_letter": "C", "n_new": 699, "finished": true, "tail": "C<|user|>", "gen": null, "batch": 16}

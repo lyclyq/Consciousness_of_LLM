@@ -1,0 +1,65 @@
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+waiting for /root/glm53/out/mech/glm53_all_k64.GO
+[fp8] backend torch-fallback-v519, disk patch True
+[load] glm5_next: forget_gate kept in BF16 (modules_to_not_convert)
+[load] glm5_next: top-k indices cast to int64 before the attention mask scatter
+Loading weights:   0%|          | 0/1872 [00:00<?, ?it/s]Loading weights:   5%|▍         | 91/1872 [00:01<00:30, 58.08it/s]Loading weights:   5%|▌         | 97/1872 [00:02<01:02, 28.39it/s]Loading weights:   9%|▉         | 165/1872 [00:03<00:26, 64.08it/s]Loading weights:  11%|█         | 197/1872 [00:06<01:16, 21.95it/s]Loading weights:  12%|█▏        | 228/1872 [00:07<01:00, 27.12it/s]Loading weights:  13%|█▎        | 243/1872 [00:08<01:10, 23.00it/s]Loading weights:  14%|█▍        | 267/1872 [00:08<00:52, 30.40it/s]Loading weights:  15%|█▌        | 282/1872 [00:09<00:56, 28.35it/s]Loading weights:  16%|█▌        | 299/1872 [00:09<00:45, 34.25it/s]Loading weights:  17%|█▋        | 310/1872 [00:10<00:59, 26.46it/s]Loading weights:  18%|█▊        | 332/1872 [00:10<00:44, 34.89it/s]Loading weights:  18%|█▊        | 341/1872 [00:11<00:57, 26.78it/s]Loading weights:  19%|█▉        | 365/1872 [00:12<01:03, 23.91it/s]Loading weights:  20%|█▉        | 370/1872 [00:12<01:05, 22.96it/s]Loading weights:  22%|██▏       | 403/1872 [00:13<00:49, 29.62it/s]Loading weights:  22%|██▏       | 407/1872 [00:16<01:58, 12.38it/s]Loading weights:  23%|██▎       | 436/1872 [00:16<01:08, 21.00it/s]Loading weights:  24%|██▎       | 443/1872 [00:17<01:29, 16.01it/s]Loading weights:  29%|██▉       | 540/1872 [00:19<00:47, 27.78it/s]Loading weights:  29%|██▉       | 545/1872 [00:23<01:39, 13.37it/s]Loading weights:  31%|███       | 573/1872 [00:25<01:25, 15.16it/s]Loading weights:  31%|███       | 576/1872 [00:27<02:06, 10.22it/s]Loading weights:  32%|███▏      | 606/1872 [00:28<01:27, 14.41it/s]Loading weights:  33%|███▎      | 609/1872 [00:30<02:03, 10.26it/s]Loading weights:  34%|███▍      | 639/1872 [00:30<01:23, 14.82it/s]Loading weights:  34%|███▍      | 642/1872 [00:34<02:29,  8.21it/s]Loading weights:  36%|███▌      | 677/1872 [00:35<01:32, 12.86it/s]Loading weights:  36%|███▋      | 680/1872 [00:36<01:57, 10.15it/s]Loading weights:  40%|███▉      | 746/1872 [00:36<00:41, 27.34it/s]Loading weights:  45%|████▌     | 849/1872 [00:36<00:16, 63.37it/s]Loading weights:  50%|█████     | 941/1872 [00:36<00:08, 105.41it/s]Loading weights:  54%|█████▍    | 1019/1872 [00:36<00:06, 139.03it/s]Loading weights:  57%|█████▋    | 1069/1872 [00:44<00:31, 25.24it/s] Loading weights:  59%|█████▉    | 1104/1872 [00:47<00:40, 18.85it/s]Loading weights:  60%|██████    | 1129/1872 [00:51<00:52, 14.23it/s]Loading weights:  62%|██████▏   | 1154/1872 [00:53<00:47, 15.26it/s]Loading weights:  62%|██████▏   | 1167/1872 [00:54<00:50, 14.05it/s]Loading weights:  67%|██████▋   | 1260/1872 [00:54<00:19, 31.11it/s]Loading weights:  73%|███████▎  | 1364/1872 [00:54<00:08, 57.09it/s]Loading weights:  80%|████████  | 1501/1872 [00:54<00:03, 103.65it/s]Loading weights: 100%|██████████| 1872/1872 [00:54<00:00, 34.12it/s] 
+[transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] This FP8 model spans multiple CUDA devices in one process; routing its FP8 linear and experts layers through Triton/grouped_mm instead of DeepGEMM (DeepGEMM's cached kernels are bound to a single CUDA context and corrupt across devices). Run tensor/expert parallel (one device per process) to use the faster DeepGEMM path.
+[load] unexpected 0 missing 0 mismatched 0
+{"experiment": "P2_role_swap_thinking", "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f", "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98", "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash", "on_kwargs": "{}", "n_layers": 45, "band": [0, 44], "fit_from": "/root/glm53/out/mech/fits/fit_q.pt", "question": "attr", "region": "all", "lang": "zh", "n_eval": 75, "exclude_first": 0, "conditions": ["base_A", "base_U", "swU64_A", "swA64_U", "rswU64_A", "rswA64_U"], "batch": 16, "max_new": 3072, "torch": "2.6.0+cu124", "transformers": "5.19.0"}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_kda` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+swU64_A 16/150 265s
+swU64_A 32/150 767s
+swU64_A 48/150 1049s
+swU64_A 64/150 1436s
+swU64_A 80/150 1755s
+swU64_A 96/150 2233s
+swU64_A 112/150 2728s
+swU64_A 128/150 5768s
+swU64_A 144/150 6413s
+swU64_A 150/150 6614s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "swU64_A": {"n": 150, "finished": 149, "answers": {"user": 149}, "you_share": 0.0, "median_new_tokens": 90, "you_minus_base": {"n_pairs": 144, "mean": -0.375, "ci95": [-0.4514, -0.2986]}}}
+swA64_U 16/150 7299s
+swA64_U 32/150 8124s
+swA64_U 48/150 8677s
+swA64_U 64/150 9631s
+swA64_U 80/150 10105s
+swA64_U 96/150 13227s
+swA64_U 112/150 14403s
+swA64_U 128/150 14796s
+swA64_U 144/150 15466s
+swA64_U 150/150 15745s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "swA64_U": {"n": 150, "finished": 149, "answers": {"self": 12, "user": 136, "system": 1}, "you_share": 0.0805, "median_new_tokens": 177, "you_minus_base": {"n_pairs": 149, "mean": 0.0805, "ci95": [0.0403, 0.1275]}}, "swU64_A": {"n": 150, "finished": 149, "answers": {"user": 149}, "you_share": 0.0, "median_new_tokens": 90, "you_minus_base": {"n_pairs": 144, "mean": -0.375, "ci95": [-0.4514, -0.2986]}}}
+rswU64_A 16/150 17240s
+rswU64_A 32/150 20762s
+rswU64_A 48/150 21274s
+rswU64_A 64/150 24498s
+rswU64_A 80/150 25927s
+rswU64_A 96/150 29594s
+rswU64_A 112/150 30909s
+rswU64_A 128/150 34069s
+rswU64_A 144/150 37352s
+rswU64_A 150/150 37604s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswU64_A": {"n": 150, "finished": 144, "answers": {"user": 114, "self": 30}, "you_share": 0.2083, "median_new_tokens": 156, "you_minus_base": {"n_pairs": 139, "mean": -0.1511, "ci95": [-0.2446, -0.0576]}}, "swA64_U": {"n": 150, "finished": 149, "answers": {"self": 12, "user": 136, "system": 1}, "you_share": 0.0805, "median_new_tokens": 177, "you_minus_base": {"n_pairs": 149, "mean": 0.0805, "ci95": [0.0403, 0.1275]}}, "swU64_A": {"n": 150, "finished": 149, "answers": {"user": 149}, "you_share": 0.0, "median_new_tokens": 90, "you_minus_base": {"n_pairs": 144, "mean": -0.375, "ci95": [-0.4514, -0.2986]}}}
+rswA64_U 16/150 38036s
+rswA64_U 32/150 38343s
+rswA64_U 48/150 38637s
+rswA64_U 64/150 38923s
+rswA64_U 80/150 39297s
+rswA64_U 96/150 39644s
+rswA64_U 112/150 40124s
+rswA64_U 128/150 40647s
+rswA64_U 144/150 41157s
+rswA64_U 150/150 41376s
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswA64_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU64_A": {"n": 150, "finished": 144, "answers": {"user": 114, "self": 30}, "you_share": 0.2083, "median_new_tokens": 156, "you_minus_base": {"n_pairs": 139, "mean": -0.1511, "ci95": [-0.2446, -0.0576]}}, "swA64_U": {"n": 150, "finished": 149, "answers": {"self": 12, "user": 136, "system": 1}, "you_share": 0.0805, "median_new_tokens": 177, "you_minus_base": {"n_pairs": 149, "mean": 0.0805, "ci95": [0.0403, 0.1275]}}, "swU64_A": {"n": 150, "finished": 149, "answers": {"user": 149}, "you_share": 0.0, "median_new_tokens": 90, "you_minus_base": {"n_pairs": 144, "mean": -0.375, "ci95": [-0.4514, -0.2986]}}}
+{"base_A": {"n": 150, "finished": 145, "answers": {"self": 55, "user": 90}, "you_share": 0.3793, "median_new_tokens": 151}, "base_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 115}, "rswA64_U": {"n": 150, "finished": 150, "answers": {"user": 150}, "you_share": 0.0, "median_new_tokens": 110, "you_minus_base": {"n_pairs": 150, "mean": 0.0, "ci95": [0.0, 0.0]}}, "rswU64_A": {"n": 150, "finished": 144, "answers": {"user": 114, "self": 30}, "you_share": 0.2083, "median_new_tokens": 156, "you_minus_base": {"n_pairs": 139, "mean": -0.1511, "ci95": [-0.2446, -0.0576]}}, "swA64_U": {"n": 150, "finished": 149, "answers": {"self": 12, "user": 136, "system": 1}, "you_share": 0.0805, "median_new_tokens": 177, "you_minus_base": {"n_pairs": 149, "mean": 0.0805, "ci95": [0.0403, 0.1275]}}, "swU64_A": {"n": 150, "finished": 149, "answers": {"user": 149}, "you_share": 0.0, "median_new_tokens": 90, "you_minus_base": {"n_pairs": 144, "mean": -0.375, "ci95": [-0.4514, -0.2986]}}}

@@ -1,0 +1,1 @@
+{"id": "role150_containment_c01", "role": "user", "order": ["system", "self", "user"], "off": {"system": 1.5893911187170318e-10, "self": 7.734421814120651e-08, "user": 0.9999996423721313}, "on_answer": "user", "on_letter": "C", "n_new": 177, "finished": true, "tail": "C<turn|>", "gen": null}

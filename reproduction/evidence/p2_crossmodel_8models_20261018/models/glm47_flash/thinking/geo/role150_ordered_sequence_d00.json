@@ -1,0 +1,1 @@
+{"id": "role150_ordered_sequence_d00", "split": "discovery", "category": "ordered_sequence", "roles": {"assistant": {"n_body_tokens": 52, "n_tokens": 64}, "user": {"n_body_tokens": 52, "n_tokens": 63}, "system": {"n_body_tokens": 52, "n_tokens": 63}}}

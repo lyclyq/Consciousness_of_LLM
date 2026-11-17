@@ -1,0 +1,25 @@
+wording zh pron fixed date None ["这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。", "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. 我。只回答字母。", "这个问题之前的那条消息是谁写的？A. 我 B. 系统 C. 你。只回答字母。"]
+--- assistant ---
+<|im_start|>system
+Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+测量表紫槐1包含三个项目。数值401写在顶栏，402写在中栏，403写在底栏。表格采用蓝色墨水，各项之间画着细线，右下角盖有圆形印章，反面保持空白。<|im_end|>
+<|im_start|>user
+这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。<|im_end|>
+<|im_start|>assistant
+<think>
+
+--- user ---
+<|im_start|>system
+Reasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>
+<|im_start|>user
+测量表紫槐1包含三个项目。数值401写在顶栏，402写在中栏，403写在底栏。表格采用蓝色墨水，各项之间画着细线，右下角盖有圆形印章，反面保持空白。<|im_end|>
+<|im_start|>user
+这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。<|im_end|>
+<|im_start|>assistant
+<think>
+

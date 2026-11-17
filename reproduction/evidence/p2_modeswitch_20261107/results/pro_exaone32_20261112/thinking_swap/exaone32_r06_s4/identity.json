@@ -1,0 +1,28 @@
+{
+ "experiment": "P2_role_swap_thinking",
+ "script_sha256": "be6b3c830568271b0cd53b7f62bc7938b024df5096d3be02607fe100cde6862f",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models_p2nat/LGAI-EXAONE/EXAONE-4.0.1-32B",
+ "on_kwargs": "{\"enable_thinking\": true}",
+ "n_layers": 64,
+ "band": [
+  0,
+  63
+ ],
+ "fit_from": "r05r06_fits/e32/fit_seed4.pt",
+ "question": "attr",
+ "region": "all",
+ "lang": "en",
+ "n_eval": 75,
+ "exclude_first": 0,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "rswU8_A",
+  "rswA8_U"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0"
+}

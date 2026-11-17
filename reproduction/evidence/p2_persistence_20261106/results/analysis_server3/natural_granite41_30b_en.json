@@ -1,0 +1,285 @@
+{
+ "tag": "granite41_30b_en",
+ "order": "natural",
+ "n_layers": 64,
+ "keep_layers": [
+  24,
+  32,
+  39,
+  47,
+  55,
+  63
+ ],
+ "n_held_out": 75,
+ "families": 15,
+ "n_bodies_on_disk": 150,
+ "group": "index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/data/hf_models/ibm-granite/granite-4.1-30b",
+  "tmpl_kwargs": {},
+  "lang": "en",
+  "fixed_date": null,
+  "natural_system_ok": true
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 61,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "2": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 41,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 54,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "3": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 55,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "4": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 41,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 54,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "5": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 62,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "full": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 54,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "empty": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 38,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 56,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "6": {
+   "n_bodies": 75,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 53,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "7": {
+   "n_bodies": 60,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 55,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "8": {
+   "n_bodies": 30,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 55,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  },
+  "9": {
+   "n_bodies": 10,
+   "defined": true,
+   "index_layers_beyond_first_third": 42,
+   "layers_beyond_first_third": 42,
+   "index_layers_all": 54,
+   "share_A_lowest_median_beyond_first_third": 1.0
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 1.0666808705697948,
+   "M2_ci95": [
+    1.028512801849253,
+    1.1097303210102292
+   ],
+   "M3_direction_cos": 0.8682153843226339,
+   "M3_ci95": [
+    0.850810923157628,
+    0.8957803980597817
+   ],
+   "C1_median": 126.99678719645462,
+   "C1_ci95": [
+    119.16448849038636,
+    135.58285062062964
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 1.047954461782766,
+   "per_layer": {
+    "24": {
+     "size": 0.9456102867818296,
+     "cos": 0.9553219892698415
+    },
+    "32": {
+     "size": 0.9334784874297701,
+     "cos": 0.9131687241982774
+    },
+    "39": {
+     "size": 1.06323294547848,
+     "cos": 0.873875094422275
+    },
+    "47": {
+     "size": 1.0701287956611099,
+     "cos": 0.8489111907118557
+    },
+    "55": {
+     "size": 1.248090256178189,
+     "cos": 0.8187668814244138
+    },
+    "63": {
+     "size": 1.5391929308022563,
+     "cos": 0.8625556742229927
+    }
+   }
+  },
+  "A-S": {
+   "defined": true,
+   "M2_size_kept": 1.0745353933208466,
+   "M2_ci95": [
+    1.0347254679032336,
+    1.1191451229113385
+   ],
+   "M3_direction_cos": 0.8864345454228177,
+   "M3_ci95": [
+    0.8685963311725737,
+    0.905961955115927
+   ],
+   "C1_median": 109.87763690084087,
+   "C1_ci95": [
+    102.71712640860412,
+    117.5799971026164
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 1.0565002640028185,
+   "per_layer": {
+    "24": {
+     "size": 0.922887098689817,
+     "cos": 0.9560330757442895
+    },
+    "32": {
+     "size": 0.9397513947880912,
+     "cos": 0.9188663863822435
+    },
+    "39": {
+     "size": 1.045435594191511,
+     "cos": 0.8942977957150201
+    },
+    "47": {
+     "size": 1.1036351924501822,
+     "cos": 0.8623360377192034
+    },
+    "55": {
+     "size": 1.3657309194722824,
+     "cos": 0.7786955490715324
+    },
+    "63": {
+     "size": 1.5141817885609214,
+     "cos": 0.8785712951306155
+    }
+   }
+  },
+  "U-S": {
+   "defined": true,
+   "M2_size_kept": 0.912401802433005,
+   "M2_ci95": [
+    0.8690423301620869,
+    0.9578328184729488
+   ],
+   "M3_direction_cos": 0.84704706469322,
+   "M3_ci95": [
+    0.8171815874864247,
+    0.8640082425844586
+   ],
+   "C1_median": 14.136139561744264,
+   "C1_ci95": [
+    12.912057854353764,
+    15.648113638044967
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.9056962257347614,
+   "per_layer": {
+    "24": {
+     "size": 0.9526797868996617,
+     "cos": 0.9249057852258507
+    },
+    "32": {
+     "size": 0.8721238179663481,
+     "cos": 0.9139658843038497
+    },
+    "39": {
+     "size": 0.9532049032233397,
+     "cos": 0.7926906823859122
+    },
+    "47": {
+     "size": 0.8655404647845387,
+     "cos": 0.7576906890224119
+    },
+    "55": {
+     "size": 0.8092751878923694,
+     "cos": 0.7198938741695727
+    },
+    "63": {
+     "size": 1.0527457666063662,
+     "cos": 0.9014034470005278
+    }
+   }
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 0.8330034017562866,
+   "common_ratio": 0.899519903847873,
+   "cos_first_last": 0.8064223790489353,
+   "share_first": 0.2554545404861703,
+   "share_last": 0.30183558821875567
+  },
+  "A-S": {
+   "total_ratio": 0.853689432144165,
+   "common_ratio": 1.0369282383701226,
+   "cos_first_last": 0.79612476103996,
+   "share_first": 0.17822321271512861,
+   "share_last": 0.26400235688200246
+  },
+  "U-S": {
+   "total_ratio": 0.48900261521339417,
+   "common_ratio": 0.5841493278826353,
+   "cos_first_last": 0.8020695214336881,
+   "share_first": 0.19106914861684265,
+   "share_last": 0.21046232456897682
+  }
+ },
+ "verdict": {
+  "prediction": "P1",
+  "M1_index_at_every_length": true,
+  "M2_at_least_0.8_and_reliable": true,
+  "holds": true,
+  "M1_evaluable": true
+ }
+}

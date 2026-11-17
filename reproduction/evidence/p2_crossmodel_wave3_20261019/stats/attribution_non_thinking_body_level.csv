@@ -1,0 +1,5 @@
+model,orders,n_bodies,p_you_own,p_you_user,p_you_system,own_minus_max_other,bodies_positive,sign_p,p_system_as_user
+seed_oss_36b,3_orders,150,0.003,0.0,0.0001,0.0029,52,0.000215,0.2366
+seed_oss_36b,2_orders_as_paper,150,0.0044,0.0,0.0001,0.0043,39,3.38e-09,0.355
+exaone4_32b,3_orders,150,0.1259,0.1599,0.155,-0.0395,21,3.75e-20,0.4506
+exaone4_32b,2_orders_as_paper,150,0.031,0.0291,0.0279,0.0004,78,0.683,0.4058

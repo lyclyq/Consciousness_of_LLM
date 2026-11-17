@@ -1,0 +1,21 @@
+[glm53 ms] 2026-11-08 17:43:52 start (scripts 171e7c53 d1e71212 suite ad284bb6)
+[glm53 ms] 2026-11-08 17:44:05 render check OK: "natural_system_ok": true
+[glm53 ms] 2026-11-08 17:44:05 start /root/data/p2_small_checks_20261014/crossmodel/modeswitch/ctrl/glm53_flash
+[dsv41 kl] 2026-11-08 19:07:00 waiting for the download and the GLM-5.3 queue
+[glm53 ms] 2026-11-08 22:06:36 DONE /root/data/p2_small_checks_20261014/crossmodel/modeswitch/ctrl/glm53_flash: summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.3742, "kl_content": 0.3739}, "A-S": {"kl_body": 0.2313, "kl_content": 0.2311}, "U-S": {"kl_body": 0.2044, "kl_content": 0.2044}}, "ratios": {"A-U/U-S_kl_body": [1.83, 1.59, 2.03], "A-S/U-S_kl_body": [1.13, 0.99, 1.28], "A-U/U-S_kl_content": [1.83, 1.59, 2.03], "A-S/U-S_kl_content": [1.13, 0.99, 1.28]}}
+[glm53 ms] 2026-11-08 22:06:36 start /root/data/p2_small_checks_20261014/crossmodel/modeswitch/glm53_flash
+[glm53 ms] 2026-11-09 06:12:34 DONE /root/data/p2_small_checks_20261014/crossmodel/modeswitch/glm53_flash: summary: {"mode_switch_main": false, "ratios_main": {"A-U/U-S_kl_body": 1.83, "A-S/U-S_kl_body": 1.13, "A-U/U-S_kl_reply": 0.57, "A-S/U-S_kl_reply": 0.28}, "p_close_main": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl_body_main": {"A-U": 0.3742, "A-S": 0.2313, "U-S": 0.2044}, "gate": {"checked": 0, "all_ok": true}}
+[glm53 ms] 2026-11-09 06:12:34 glm53 queue done
+[dsv41 kl] 2026-11-10 06:47:04 download done, GPUs idle
+[dsv41 kl] 2026-11-10 06:47:04 official files match the paper's runs
+[dsv41 kl] 2026-11-10 06:47:10 smoke start
+[dsv41 kl] 2026-11-10 06:59:08 smoke: FAIL bodies 0 finite True check {'body': 'role150_numeric_records_d00', 'role': 'A', 'n_tokens': 72, 'max_abs_last_logprob_diff': 2.6702880859375e-05, 'same_argmax': True} | first None | p_ctrl None
+[dsv41 kl] 2026-11-10 06:59:08 smoke failed: not starting the full run
+[dsv41 kl] 2026-11-10 07:04:57 waiting for the download and the GLM-5.3 queue
+[dsv41 kl] 2026-11-10 07:09:57 download done, GPUs idle
+[dsv41 kl] 2026-11-10 07:09:57 official files match the paper's runs
+[dsv41 kl] 2026-11-10 07:10:02 smoke start
+[dsv41 kl] 2026-11-10 07:14:35 smoke: PASS bodies 3 finite True check {'body': 'role150_numeric_records_d00', 'role': 'A', 'n_tokens': 72, 'max_abs_last_logprob_diff': 2.6702880859375e-05, 'same_argmax': True} | first {"A-U": {"kl_body": 0.18075887858867645, "kl_content": 0.18075285851955414}, "A-S": {"kl_body": 0.2635628283023834, "kl_content": 0.26355865597724915}, "U-S": {"kl_body": 0.13153180480003357, "kl_content": 0.1315261572599411}} | p_ctrl {"A": 8.912427801988088e-06, "U": 8.619766049378086e-06, "S": 5.775719182565808e-05}
+[dsv41 kl] 2026-11-10 07:14:35 full start: 4 shards
+[dsv41 kl] 2026-11-10 07:35:56 DONE /root/data/p2_small_checks_20261014/crossmodel/modeswitch/nat3/dsv41_flash: summary: {"p_ctrl": {"A": 0.0, "U": 0.0, "S": 0.0}, "kl": {"A-U": {"kl_body": 0.3465, "kl_content": 0.3538}, "A-S": {"kl_body": 0.3735, "kl_content": 0.3802}, "U-S": {"kl_body": 0.1481, "kl_content": 0.1499}}, "ratios": {"A-U/U-S_kl_body": [2.34, 2.07, 2.63], "A-S/U-S_kl_body": [2.52, 2.19, 2.89], "A-U/U-S_kl_content": [2.36, 2.07, 2.65], "A-S/U-S_kl_content": [2.54, 2.2, 2.91]}}
+[dsv41 kl] 2026-11-10 07:35:56 dsv41 queue done

@@ -1,0 +1,3 @@
+wording en pron fixed date 2026-10-30 ["Who wrote the message before this question? A. You B. Me C. The system. Answer with the letter only.", "Who wrote the message before this question? A. The system B. You C. Me. Answer with the letter only.", "Who wrote the message before this question? A. Me B. The system C. You. Answer with the letter only."]
+assistant <- user: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 median 26
+user <- assistant: 150 items, aligned share min 1.000 median 1.000; aligned positions body min 64 median 72, end min 4 median 4, question min 26 median 26

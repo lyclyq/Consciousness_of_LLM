@@ -1,0 +1,147 @@
+{
+ "qwen38_27b/non_thinking": [
+  1.0,
+  0.7,
+  true
+ ],
+ "qwen38_flashnext/non_thinking": [
+  1.0,
+  0.01,
+  true
+ ],
+ "exaone4_32b/non_thinking": [
+  1.0,
+  0.0,
+  true
+ ],
+ "glm46v_flash/non_thinking": [
+  1.0,
+  0.005,
+  true
+ ],
+ "glm47_flash/non_thinking": [
+  1.0,
+  0.054,
+  true
+ ],
+ "seed_oss_36b/non_thinking": [
+  0.0,
+  0.004,
+  false
+ ],
+ "gemma4_31b/non_thinking": [
+  0.0,
+  0.0,
+  false
+ ],
+ "qwen36_27b/non_thinking": [
+  0.094,
+  -0.059,
+  false
+ ],
+ "qwen36_35b/non_thinking": [
+  0.025,
+  -0.03,
+  false
+ ],
+ "qwen35_27b/non_thinking": [
+  0.203,
+  -0.1,
+  false
+ ],
+ "granite41_30b/non_thinking": [
+  0.578,
+  -0.01,
+  false
+ ],
+ "granite42_30b/non_thinking": [
+  0.922,
+  0.003,
+  false
+ ],
+ "olmo2_7b/non_thinking": [
+  0.188,
+  -0.039,
+  false
+ ],
+ "olmo2_13b/non_thinking": [
+  0.325,
+  -0.06,
+  false
+ ],
+ "qwen38_27b/thinking": [
+  1.0,
+  0.96,
+  true
+ ],
+ "qwen38_flashnext/thinking": [
+  1.0,
+  0.659,
+  true
+ ],
+ "gpt_oss_120b/thinking": [
+  0.944,
+  0.973,
+  true
+ ],
+ "gpt_oss_20b/thinking": [
+  1.0,
+  0.777,
+  true
+ ],
+ "glm53_flash/thinking": [
+  0.756,
+  0.436,
+  true
+ ],
+ "exaone4_32b/thinking": [
+  1.0,
+  0.12,
+  true
+ ],
+ "glm46v_flash/thinking": [
+  1.0,
+  0.094,
+  true
+ ],
+ "glm47_flash/thinking": [
+  0.766,
+  0.056,
+  true
+ ],
+ "r1_llama70b/thinking": [
+  1.0,
+  -0.068,
+  true
+ ],
+ "seed_oss_36b/thinking": [
+  0.266,
+  0.003,
+  false
+ ],
+ "gemma4_31b/thinking": [
+  0.2,
+  0.027,
+  false
+ ],
+ "qwen36_27b/thinking": [
+  0.094,
+  0.0,
+  false
+ ],
+ "qwen36_35b/thinking": [
+  0.025,
+  0.0,
+  false
+ ],
+ "qwen35_27b/thinking": [
+  0.203,
+  0.022,
+  false
+ ],
+ "granite42_30b/thinking": [
+  0.922,
+  0.0,
+  false
+ ]
+}

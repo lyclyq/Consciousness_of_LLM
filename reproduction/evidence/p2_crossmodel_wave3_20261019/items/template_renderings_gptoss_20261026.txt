@@ -1,0 +1,33 @@
+##### openai/gpt-oss-20b
+chat_template sha256 a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146
+files {"chat_template.jinja": "a4c9919cbbd4acdd", "config.json": "3a2a26ded679375b", "generation_config.json": "f9970ada892d2d1f", "tokenizer.json": "0614fe83cadab421", "tokenizer_config.json": "9279e942392b742d"}
+config num_hidden_layers 24 num_local_experts 32 quantization "mxfp4"
+--- kwargs {} role assistant
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>assistant<|channel|>final<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role user
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role system
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nBODY\n\n<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+##### openai/gpt-oss-120b
+chat_template sha256 a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146
+files {"chat_template.jinja": "a4c9919cbbd4acdd", "config.json": "933aeb666a3fd851", "generation_config.json": "f9970ada892d2d1f", "tokenizer.json": "0614fe83cadab421", "tokenizer_config.json": "9279e942392b742d"}
+config num_hidden_layers 36 num_local_experts 128 quantization "mxfp4"
+--- kwargs {} role assistant
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>assistant<|channel|>final<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role user
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>BODY<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+--- kwargs {} role system
+'<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-10-26\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nBODY\n\n<|end|><|start|>user<|message|>Q<|end|><|start|>assistant'
+##### checks
+PASS  gpt-oss-20b: assistant: final-channel tag before the body
+PASS  gpt-oss-20b: user: no tag before the body
+PASS  gpt-oss-20b: system: rendered as a developer message
+PASS  gpt-oss-20b: roles differ only in the message turn
+PASS  gpt-oss-120b: assistant: final-channel tag before the body
+PASS  gpt-oss-120b: user: no tag before the body
+PASS  gpt-oss-120b: system: rendered as a developer message
+PASS  gpt-oss-120b: roles differ only in the message turn
+PASS  gpt-oss-120b: 36 decoder blocks
+PASS  gpt-oss-120b: MoE
+PASS  gpt-oss-120b: MXFP4 weights
+PASS  both: gpt-oss-120b renders as gpt-oss-20b (date line aside)

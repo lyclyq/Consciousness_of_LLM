@@ -63,7 +63,14 @@ fit_seed4.pt the V of fit_q.pt and S = 20261022 + j. Consecutive bases share dra
 layer l+1 of S); at any one layer the five draws are distinct. fit_diag.json: rows, the energy share of the 8 leading directions in
 each fit, the overlap of the 8-dim spaces of fit_q and fit_m (mean squared cosine of the principal angles), and with --compare-fit
 FIT the same overlap with an earlier fit and max |R - R_earlier|.
---check-align (tokenizer only) prints the alignment coverage of every held-out body under every recipient/donor pair of --conds.
+--wording (attribution question only) changes the answer options and keeps the head and the tail of the paper (items/templates.json,
+attribution_wordings): main  你（AI 助手）/ 用户 / 系统 | You (the AI assistant) / The user / The system (the paper);
+pron  你 / 我 / 系统 | You / Me / The system; role  AI 助手 / 用户 / 系统 | The AI assistant / The user / The system. The option keys
+stay self / user / system, so the statistics are those of the main wording; a run with another wording also writes wording.json.
+The fits (--make-fits) always use the main wording. --fixed-date D: templates that write the current date into the conversation
+(gpt-oss) render D (the wording runs of gpt-oss used the date on which their anchor runs, without a fixed date, had rendered).
+--check-align (tokenizer only) prints the alignment coverage of every held-out body under every recipient/donor pair of --conds;
+--show-render (tokenizer only) prints the own and User renderings of the first held-out body.
 Bodies: the held-out (confirmation) bodies of selfindex.items, in list order (--body-ids FILE: only the bodies listed there, in
 its order), after --exclude-first, at most --limit-bodies.
 Outputs in --out: identity.json, items/<cond>__<body id>__o<order>.json (one per item; a run resumes from the items on disk),
@@ -73,8 +80,10 @@ recipient, base_A / base_U / base_S, with a 95% bootstrap interval, 5000 resampl
 usage: python -m selfindex.role_swap --mode single|thinking --model DIR --on-kwargs JSON --lang zh|en --fit-from FIT --band A-B
          --conds ... --out DIR [--question Q] [--region R] [--limit-bodies N] [--batch N] [--max-new N] [--save-gen]
          [--dose-floor DIR [--floor-order O] [--floor-ratio-only]] [--content-fit FILE] [--mask-extra | --pos-compress] [--no-dose]
+         [--wording main|pron|role] [--fixed-date D]
        python -m selfindex.role_swap --make-fits DIR --mode M --model DIR --on-kwargs JSON --lang zh|en --band A-B [--compare-fit FIT]
-       python -m selfindex.role_swap --check-align --mode M --model DIR --on-kwargs JSON --lang zh|en --conds ...
+       python -m selfindex.role_swap --check-align --mode M --model DIR --on-kwargs JSON --lang zh|en --conds ... [--wording W]
+       python -m selfindex.role_swap --show-render --mode M --model DIR --on-kwargs JSON --lang zh|en [--wording W] [--fixed-date D]
        python -m selfindex.role_swap --summarize-only --out DIR
 """
 from __future__ import annotations
@@ -93,7 +102,7 @@ from . import __version__
 from . import items as I
 from .io import atomic
 from .load import checked_tokenizer, find_layers, load_model
-from .render import CLOSE, Renderer, align
+from .render import CLOSE, Renderer, align, template_kwargs
 
 QUESTIONS = ('attr', 'content', 'arith', 'attr_alt', 'attr_num', 'yn_self', 'yn_user')
 ATTR_KIND = {'attr': 'attribution', 'attr_alt': 'attribution_other_wording', 'attr_num': 'attribution_numbered'}
@@ -197,7 +206,7 @@ def run(a, loaded=None):
     band = tuple(range(b0, b1 + 1))
     assert b1 < nL
     lang, kind = a.lang, a.question
-    R = Renderer(tok, json.loads(a.on_kwargs))
+    R = Renderer(tok, template_kwargs(a.on_kwargs, a.fixed_date))
     held = held_out(a)
     dev0 = model.get_input_embeddings().weight.device
     cands = [tok.convert_tokens_to_ids(t) for t in TURN_STARTS]
@@ -224,7 +233,7 @@ def run(a, loaded=None):
             return I.content_question(lang)
         if yn:
             return I.yes_no_question(kind, lang, oi)
-        return I.attr_question(ORDERS[oi], lang, ATTR_KIND[kind])
+        return I.attr_question(ORDERS[oi], lang, ATTR_KIND[kind], a.wording if kind == 'attr' else 'main')
 
     def render(role, b, oi):
         q = question_text(b, oi)
@@ -300,8 +309,14 @@ def run(a, loaded=None):
              'batch': a.batch, 'dose_floor': a.dose_floor, 'floor_targets': {c[0]: c[5] for c in conds if c[5]},
              'content_fit': a.content_fit, 'floor_order': a.floor_order, 'floor_ratio_only': a.floor_ratio_only,
              'record_dose': not a.no_dose, 'mask_extra': a.mask_extra, 'pos_compress': a.pos_compress, 'max_new': a.max_new,
+             'wording': a.wording, 'fixed_date': a.fixed_date,
              'torch': torch.__version__, 'transformers': __import__('transformers').__version__}
     (out / 'identity.json').write_text(json.dumps(ident, indent=1), encoding='utf-8')
+    if a.wording != 'main':  # the record of the wording runs (wording.json), as the runs of the paper wrote it
+        (out / 'wording.json').write_text(json.dumps({'wording': a.wording, 'lang': lang, 'options': I.attr_options(lang, a.wording),
+                                                      'fixed_date': a.fixed_date,
+                                                      'questions_orders_1_2': [I.attr_question(o, lang, wording=a.wording) for o in ORDERS[:2]],
+                                                      'paper_options': I.attr_options(lang)}, ensure_ascii=False, indent=1), encoding='utf-8')
     print(json.dumps(ident), flush=True)
 
     def donor_coords(drole, b, oi, Bk, r):
@@ -498,7 +513,7 @@ def make_fits(a, loaded=None):
     b0, b1 = (int(x) for x in a.band.split('-'))
     band = tuple(range(b0, b1 + 1))
     assert b1 < nL
-    R = Renderer(tok, json.loads(a.on_kwargs))
+    R = Renderer(tok, template_kwargs(a.on_kwargs, a.fixed_date))
     ORDERS = I.orders()
     disc = [b for b in selected_bodies(a) if b['split'] == 'discovery']
     dev0 = model.get_input_embeddings().weight.device
@@ -597,7 +612,7 @@ def check_align(a):
     option orders); print the coverage."""
     from transformers import AutoTokenizer
     tok = checked_tokenizer(AutoTokenizer.from_pretrained(a.model, trust_remote_code=True), a.model)
-    R = Renderer(tok, json.loads(a.on_kwargs))
+    R = Renderer(tok, template_kwargs(a.on_kwargs, a.fixed_date))
     ORDERS = I.orders()
     cands = [tok.convert_tokens_to_ids(t) for t in TURN_STARTS]
     held = [b for b in selected_bodies(a) if b['split'] == 'confirmation']
@@ -606,7 +621,7 @@ def check_align(a):
         cov, reg = [], {'body': [], 'end': [], 'question': []}
         for b in held:
             for oi in (0, 1):
-                q = I.attr_question(ORDERS[oi], a.lang)
+                q = I.attr_question(ORDERS[oi], a.lang, wording=a.wording)
                 out = []
                 for role in (rr, dr):
                     msgs = [{'role': role, 'content': b['body']}, {'role': 'user', 'content': q}]
@@ -620,6 +635,21 @@ def check_align(a):
                 reg['question'].append(sum(r[4] <= i < r[3] for i in ri))
         print(f'{rr} <- {dr}: {len(cov)} items, aligned share min {min(cov):.3f} median {sorted(cov)[len(cov) // 2]:.3f}; aligned positions '
               + ', '.join(f'{k} min {min(v)} median {sorted(v)[len(v) // 2]}' for k, v in reg.items()), flush=True)
+
+
+def show_render(a):
+    """Tokenizer only: print the rendered own and User conversation of the first held-out body with the attribution question in
+    the first option order (in the --wording and with --fixed-date of the run)."""
+    from transformers import AutoTokenizer
+    tok = AutoTokenizer.from_pretrained(a.model, trust_remote_code=True)
+    R = Renderer(tok, template_kwargs(a.on_kwargs, a.fixed_date))
+    q = I.attr_question(I.orders()[0], a.lang, wording=a.wording)
+    print('wording', a.lang, a.wording, 'fixed date', a.fixed_date,
+          json.dumps([I.attr_question(o, a.lang, wording=a.wording) for o in I.orders()], ensure_ascii=False), flush=True)
+    b = [x for x in selected_bodies(a) if x['split'] == 'confirmation'][0]
+    for role in ('assistant', 'user'):
+        ids, _ = R.render([{'role': role, 'content': b['body']}, {'role': 'user', 'content': q}], b['body'])
+        print(f'--- {role} ---\n' + tok.decode(ids), flush=True)
 
 
 def parser():
@@ -658,6 +688,10 @@ def parser():
     p.add_argument('--cpu-offload-gib', type=float, default=0, help='allow weights beyond the GPU budget to stay in CPU memory')
     p.add_argument('--summarize-only', action='store_true', help='rewrite summary.json from the items in --out')
     p.add_argument('--check-align', action='store_true', help='tokenizer only: alignment coverage for every held-out body')
+    p.add_argument('--wording', choices=I.WORDINGS, default='main',
+                   help='answer options of the attribution question: main (the paper), pron (pronouns only) or role (role names only)')
+    p.add_argument('--fixed-date', default=None, help='YYYY-MM-DD: templates that write the current date render this date')
+    p.add_argument('--show-render', action='store_true', help='tokenizer only: print the own and User renderings of one held-out body')
     return p
 
 
@@ -670,14 +704,21 @@ def main(argv=None):
         summarize(Path(args.out))
         return
     missing = [k for k in ('mode', 'model', 'lang') if not getattr(args, k)]
-    if args.check_align:
-        missing += [] if args.conds else ['conds']
+    if args.check_align or args.show_render:
+        missing += [] if args.conds or args.show_render else ['conds']
     elif args.make_fits:
         missing += [] if args.band else ['band']
     else:
         missing += [k for k in ('fit_from', 'band', 'conds', 'out') if not getattr(args, k)]
     if missing:
         p.error('missing: ' + ', '.join('--' + k.replace('_', '-') for k in missing))
+    if args.make_fits and args.wording != 'main':
+        p.error('--make-fits fits on the paper wording; leave --wording at main')
+    if args.wording != 'main' and args.question != 'attr':
+        p.error('--wording changes the attribution question (--question attr) only')
+    if args.show_render:
+        show_render(args)
+        return
     if args.check_align:
         check_align(args)
         return

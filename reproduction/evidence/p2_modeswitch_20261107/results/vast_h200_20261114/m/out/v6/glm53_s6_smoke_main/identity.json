@@ -1,0 +1,32 @@
+{
+ "experiment": "P2_games_thinking",
+ "script_sha256": "134638992c2d854063a5c8e6f471c84bd3167bbdd07f9219b213581e36ee44cd",
+ "role_swap_sha256": "f2362716c97bfc859a53e75fff2d0c69715c2f2d8bb4a30896635edcd06ef670",
+ "suite_sha256": "ad284bb60ee58fcfce7f043cb33ae4b9d684f39ebaf955719302ae7ff994eb98",
+ "model": "/dev/shm/hf_models/zai-org/GLM-5.3-Flash",
+ "on_kwargs": "{}",
+ "items": "/root/glm53/ref/games/games_zh_secret6.json",
+ "items_sha256": "4d27d8a56e0225042b7fb69df118e74b23d709f656306f9c0b06b52dd3d87e05",
+ "games": "secret",
+ "qkind": "main",
+ "n_layers": 45,
+ "band": [
+  0,
+  44
+ ],
+ "fit_from": "/root/glm53/out/mech/fits/fit_q.pt",
+ "lang": "zh",
+ "n_items": 8,
+ "conditions": [
+  "base_A",
+  "base_U",
+  "swU8_A",
+  "swA8_U",
+  "rswU8_A",
+  "rswA8_U"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.6.0+cu124",
+ "transformers": "5.19.0"
+}

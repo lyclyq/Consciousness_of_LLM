@@ -1,0 +1,57 @@
+'<|im_start|>'   -> [248045]
+'<|im_end|>'     -> [248046]
+'<think>'        -> [248068]
+'</think>'       -> [248069]
+'assistant'      -> [74455]
+'user'           -> [846]
+'system'         -> [8678]
+
+===== reply_noturn
+  assistant preserve_thinking=False: TEMPLATE ERROR TemplateError: No user query found in messages.
+  assistant preserve_thinking=True: TEMPLATE ERROR TemplateError: No user query found in messages.
+  user      preserve_thinking=False: IDENTICAL (72 tokens)
+  user      preserve_thinking=True: IDENTICAL (72 tokens)
+  system    preserve_thinking=False: TEMPLATE ERROR TemplateError: No user query found in messages.
+  system    preserve_thinking=True: TEMPLATE ERROR TemplateError: No user query found in messages.
+
+===== think_noturn
+  assistant preserve_thinking=False: TEMPLATE ERROR TemplateError: No user query found in messages.
+  assistant preserve_thinking=True: TEMPLATE ERROR TemplateError: No user query found in messages.
+  user      preserve_thinking=False: DIFFERS at token 1 (native 112 vs ours 70)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'user', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  user      preserve_thinking=True: DIFFERS at token 1 (native 112 vs ours 70)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'user', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  system    preserve_thinking=False: TEMPLATE ERROR TemplateError: No user query found in messages.
+  system    preserve_thinking=True: TEMPLATE ERROR TemplateError: No user query found in messages.
+
+===== reply_turn
+  assistant preserve_thinking=False: IDENTICAL (82 tokens)
+  assistant preserve_thinking=True: DIFFERS at token 3 (native 86 vs ours 82)
+     native: ['<|im_start|>', 'assistant', 'Ċ', '<think>', 'ĊĊ', '</think>', 'ĊĊ', 'è®°å½ķ', 'éĿĴ']
+     ours  : ['<|im_start|>', 'assistant', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4', '1', 'æııè¿°']
+  user      preserve_thinking=False: IDENTICAL (82 tokens)
+  user      preserve_thinking=True: IDENTICAL (82 tokens)
+  system    preserve_thinking=False: IDENTICAL (82 tokens)
+  system    preserve_thinking=True: IDENTICAL (82 tokens)
+
+===== think_turn
+  assistant preserve_thinking=False: DIFFERS at token 1 (native 122 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'assistant', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  assistant preserve_thinking=True: DIFFERS at token 1 (native 126 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'assistant', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  user      preserve_thinking=False: DIFFERS at token 1 (native 122 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'user', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  user      preserve_thinking=True: DIFFERS at token 1 (native 122 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis']
+     ours  : ['<|im_start|>', 'user', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4']
+  system    preserve_thinking=False: DIFFERS at token 3 (native 118 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis', 'Ġset', 'Ġto']
+     ours  : ['<|im_start|>', 'system', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4', '1', 'æııè¿°']
+  system    preserve_thinking=True: DIFFERS at token 3 (native 118 vs ours 80)
+     native: ['<|im_start|>', 'system', 'Ċ', 'Reason', 'ing', 'Ġeffort', 'Ġis', 'Ġset', 'Ġto']
+     ours  : ['<|im_start|>', 'system', 'Ċ', 'è®°å½ķ', 'éĿĴ', 'æ¢§', '4', '1', 'æııè¿°']

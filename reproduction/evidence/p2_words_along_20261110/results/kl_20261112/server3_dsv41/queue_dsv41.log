@@ -1,0 +1,8 @@
+[klw dsv41] 2026-11-12 09:06:14 start (script 144e196a)
+[klw dsv41] 2026-11-12 09:06:14 official files match the paper's runs
+[klw dsv41] 2026-11-12 09:06:20 dry run OK: "forwards": 5025, "max_tokens": 81
+[klw dsv41] 2026-11-12 09:11:20 GPUs idle for 5 minutes
+[klw dsv41] 2026-11-12 09:11:20 smoke start (GPU 0, first 2 held-out bodies)
+[klw dsv41] 2026-11-12 09:40:01 smoke check PASSED: check (natural3): [{"id": "role150_numeric_records_c00", "max_rel": 0.0, "ok": true}, {"id": "role150_numeric_records_c01", "max_rel": 0.0, "ok": true}]
+[klw dsv41] 2026-11-12 09:40:01 full start: 4 shards
+[klw dsv41] 2026-11-12 13:05:36 DONE /root/data/p2_small_checks_20261014/crossmodel/words_along/kl/natural/dsv41_flash: summary (content, dsv41_flash): A-U/U-S 2.36, A-S/U-S 2.54; words/U-S median 0.676 [0.583, 0.770] (max 1.005); words/A-U median 0.2863 [0.2681, 0.3101] (max 0.4257); check max rel 0.00e+00

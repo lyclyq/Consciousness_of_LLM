@@ -1,0 +1,17 @@
+{
+ "wording": "pron",
+ "options": {
+  "self": "你",
+  "user": "我",
+  "system": "系统"
+ },
+ "questions_orders_1_2": [
+  "这个问题之前的那条消息是谁写的？A. 你 B. 我 C. 系统。只回答字母。",
+  "这个问题之前的那条消息是谁写的？A. 系统 B. 你 C. 我。只回答字母。"
+ ],
+ "paper_options": {
+  "self": "你（AI 助手）",
+  "user": "用户",
+  "system": "系统"
+ }
+}

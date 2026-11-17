@@ -1,0 +1,34 @@
+[mech m26] 2026-11-08 04:06:25 fits start
+[mech m26] 2026-11-08 04:28:15 fits exit 0 | fits written; median over layers: share q 0.3625 share m 0.4107 overlap q-m 0.8594
+[mech m26] 2026-11-08 04:28:15 smoke start
+smoke mimo_v26_r05_smoke: PASS | items/finished {'base_A': (4, 4), 'base_U': (4, 4), 'rswU8_A': (4, 4), 'swA8_U': (4, 4), 'swU8_A': (4, 4)}
+[mech m26] 2026-11-08 04:35:55 smoke PASS
+[mech m26] 2026-11-08 04:35:55 r05q_all start
+[mech m26] 2026-11-08 04:47:00 r05q_all exit 0 | 900 items
+[mech m26] 2026-11-08 04:47:00 content control start
+[mech m26] 2026-11-08 04:56:55 content control exit 0 | 300 items
+[mech m26] 2026-11-08 04:56:55 arith control start
+[mech m26] 2026-11-08 05:04:27 arith control exit 0 | 300 items
+[mech m26] 2026-11-08 05:04:27 KL swap start
+[mech m26] 2026-11-08 05:05:47 KL swap DONE: summary: {"left_moved": {"full": {"A_U": 0.199, "A_S": 0.209, "A_Ur": 0.948, "U_A": 0.887, "S_A": 0.766, "U_Ar": 0.111}, "content": {"A_U": 0.13, "A_S": 0.204, "A_Ur": 0.932, "U_A": 0.856, "S_A": 0.763, "U_Ar": 0.1}}, "dose": {"A_U": 0.0339, "A_S": 0.0343, "U_A": 0.0357, "S_A": 0.036, "A_Ur": 0.0212, "U_Ar": 0.0238}}
+[mech m26] 2026-11-08 05:05:47 mech m26 done
+[mech m26 ext] 2026-11-08 05:06:20 r05q_msg start
+[mech m26 ext] 2026-11-08 05:07:13 r05q_msg exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:07:13 r05m_msg start
+[mech m26 ext] 2026-11-08 05:08:06 r05m_msg exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:08:06 r05m_all start
+[mech m26 ext] 2026-11-08 05:08:58 r05m_all exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:08:58 r06_s1 start
+[mech m26 ext] 2026-11-08 05:09:52 r06_s1 exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:09:52 r06_s2 start
+[mech m26 ext] 2026-11-08 05:10:45 r06_s2 exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:10:45 r06_s3 start
+[mech m26 ext] 2026-11-08 05:11:38 r06_s3 exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:11:38 r06_s4 start
+[mech m26 ext] 2026-11-08 05:12:32 r06_s4 exit 0 | 600 items
+[mech m26 ext] 2026-11-08 05:12:32 all_k64 start
+[mech m26 ext] 2026-11-08 05:14:03 all_k64 exit 0 | 900 items
+[mech m26 ext] 2026-11-08 05:14:03 game smoke start (runner 5b29640d, items a712030b)
+[mech m26 ext] 2026-11-08 05:14:47 game smoke check: FAIL own 1.0 {'assistant': 8} | user 1.0 {'assistant': 8} | control 1.0 1.0 | finished 8 8
+[mech m26 ext] 2026-11-08 05:14:47 game not released (rule fixed in advance); left for inspection
+[mech m26 ext] 2026-11-08 05:14:47 mech m26 ext done

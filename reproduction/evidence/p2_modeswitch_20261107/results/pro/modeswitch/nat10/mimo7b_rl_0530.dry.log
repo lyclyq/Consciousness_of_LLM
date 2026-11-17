@@ -1,0 +1,41 @@
+{
+ "bodies": 150,
+ "natural_system_ok": true,
+ "common_body_tokens_min_max": [
+  55,
+  72
+ ],
+ "body0": {
+  "main_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "8a9639818b4a",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  },
+  "main_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "ce11e16aa2e1",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  },
+  "main_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "2471b79d52b6",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  },
+  "natural_A": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "681f73479c8d",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  },
+  "natural_U": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "0fbdad33f2cc",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  },
+  "natural_S": {
+   "close": "<|im_end|>",
+   "prefix_to_close_sha": "0b0a7ad8676d",
+   "tail": "<|im_end|>\n<|im_start|>user\n请根据上文回应。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n"
+  }
+ }
+}
+DRY RUN OK

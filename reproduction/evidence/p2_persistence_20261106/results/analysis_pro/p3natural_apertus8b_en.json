@@ -1,0 +1,144 @@
+{
+ "tag": "apertus8b_en",
+ "order": "natural",
+ "n_layers": 32,
+ "keep_layers": [
+  12,
+  16,
+  19,
+  23,
+  27,
+  31
+ ],
+ "n_held_out": 200,
+ "families": 200,
+ "n_bodies_on_disk": 400,
+ "group": "no_index",
+ "script_identity": {
+  "script_sha256": "fab9c7b22dd202330bf8b2ec125dbafd1aa8e39e065347dc454dfda4ef1fe55c",
+  "model": "/root/hf_models/swiss-ai/Apertus-8B-Instruct-2509",
+  "tmpl_kwargs": {},
+  "lang": "en",
+  "fixed_date": "2026-11-03",
+  "natural_system_ok": false
+ },
+ "M1": {
+  "1": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "2": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "3": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "4": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "5": {
+   "n_bodies": 199,
+   "defined": false
+  },
+  "full": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "empty": {
+   "n_bodies": 200,
+   "defined": false
+  },
+  "6": {
+   "n_bodies": 177,
+   "defined": false
+  },
+  "7": {
+   "n_bodies": 121,
+   "defined": false
+  },
+  "8": {
+   "n_bodies": 57,
+   "defined": false
+  },
+  "9": {
+   "n_bodies": 20,
+   "defined": false
+  },
+  "10": {
+   "n_bodies": 3,
+   "defined": false
+  }
+ },
+ "roles": {
+  "A-U": {
+   "defined": true,
+   "M2_size_kept": 0.9531513952725079,
+   "M2_ci95": [
+    0.9204481843589953,
+    0.9865602937476938
+   ],
+   "M3_direction_cos": 0.6106360460694018,
+   "M3_ci95": [
+    0.5755088774500268,
+    0.6433311324548007
+   ],
+   "C1_median": 287495.3495847217,
+   "C1_ci95": [
+    270176.7063852037,
+    306055.5528798984
+   ],
+   "C1_reliable": true,
+   "total_energy_ratio_sqrt": 0.7995402057167718,
+   "per_layer": {
+    "12": {
+     "size": 0.8322253231137634,
+     "cos": 0.7739167489128855
+    },
+    "16": {
+     "size": 0.9050767576165105,
+     "cos": 0.5994044299163916
+    },
+    "19": {
+     "size": 0.943715222748643,
+     "cos": 0.6116563539943776
+    },
+    "23": {
+     "size": 0.9654441392434633,
+     "cos": 0.5929037592970158
+    },
+    "27": {
+     "size": 0.9625875677963729,
+     "cos": 0.6127868568824817
+    },
+    "31": {
+     "size": 1.4193012789325736,
+     "cos": 0.609615738144426
+    }
+   }
+  },
+  "A-S": {
+   "defined": false
+  },
+  "U-S": {
+   "defined": false
+  }
+ },
+ "body_tokens_full": {
+  "A-U": {
+   "total_ratio": 1.0501682758331299,
+   "common_ratio": 1.1744564602260361,
+   "cos_first_last": 0.8483454760807112,
+   "share_first": 0.13943897655521445,
+   "share_last": 0.1855239116724171
+  }
+ },
+ "verdict": {
+  "prediction": "P2",
+  "M1_no_index_at_any_length": null,
+  "holds": null,
+  "M1_evaluable": false
+ }
+}

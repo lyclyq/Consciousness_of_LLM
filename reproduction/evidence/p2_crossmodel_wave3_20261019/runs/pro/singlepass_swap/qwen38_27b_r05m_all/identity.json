@@ -1,0 +1,26 @@
+{
+ "experiment": "P2_role_swap_single",
+ "script_sha256": "01ab63dd9f1016ce1c44c7dcf0801228482815d92e30555e136359d2a586d7ae",
+ "suite_sha256": "516f117e330e81c95d705c75f07531cbfef23484732d74105415811865573f31",
+ "model": "/root/hf_models/Qwen/Qwen3.8-27B",
+ "on_kwargs": "{\"enable_thinking\": false}",
+ "n_layers": 64,
+ "band": [
+  0,
+  63
+ ],
+ "fit_from": "r05r06_fits/qsp/fit_m.pt",
+ "question": "attr",
+ "region": "all",
+ "lang": "zh",
+ "n_eval": 75,
+ "exclude_first": 0,
+ "conditions": [
+  "swU8_A",
+  "swA8_U"
+ ],
+ "batch": 16,
+ "max_new": 3072,
+ "torch": "2.11.0+cu130",
+ "transformers": "5.8.0"
+}
